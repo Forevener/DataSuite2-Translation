@@ -1,0 +1,334 @@
+# Each key-value pair is on a new line (\n-only, LF separator)
+# Key and value are separated by tab (\t)
+# Lines starting with # are comments and are ignored completely
+# Inline comments are supported after the second tab
+(Missing)	（缺失）
+(missing)	（缺失）
++ Add Categorical Filter	+ 添加分类过滤器
++ Add Numerical Filter	+ 添加数值过滤器
++ Formula	
++ Range Recode	
++ Standardize	
++ Value Recode	
+Add Row	
+Add significance stars to test statistics (e.g., W*)	
+Adjusted p-values display	
+All	全部
+An error occurred while calculating descriptive statistics:	计算描述性统计时发生错误：
+An error occurred while running the normality tests:	运行正态性检验时发生错误：
+Analyzing {variable}...	分析{variable}...
+Anderson-Darling Test	安德森-达林检验
+Apply Filters	应用过滤器
+Apply Selection	应用选择
+Apply preset:	应用预设：
+Available functions:	
+Background color	
+Between	介于
+Bold text	
+Bonferroni	邦弗朗尼
+CI Lower (Proportion)	比例置信区间下限
+CI Upper (Proportion)	比例置信区间上限
+CI for Mean	均值的置信区间
+CI for Median	中位数的置信区间
+CI for Proportion	比例的置信区间
+CI for Standard Deviation	标准差的置信区间
+CI for Variance	方差的置信区间
+CV (%)	变异系数 (%)
+Calculate	计算
+Calculate Frequency Tables	计算频数表
+Calculating descriptive statistics...	计算描述性统计...
+Calculating frequencies for	计算频数：
+Calculating frequencies for {variable}...	计算变量{variable}的频数...
+Calculating frequency tables...	计算频数表中...
+Cancel	取消
+Cases	案例
+Cases: {filtered}/{total}	案例：{filtered}/{total}
+Categorical Filter	分类过滤器
+Categorical Variables	分类变量
+Category (e.g., p ≤ 0.05)	
+Central Tendency	集中趋势度量
+Choose File	选择文件
+Citations	引用
+Clear All Filters	清除所有过滤器
+Click or drag to select multiple variables. Hold Ctrl/Cmd for multiple selection.	点击或拖动选择多个变量。按住Ctrl/Cmd键进行多选。
+Close	关闭
+Coefficient of Variation	变异系数
+Colored background	
+Colored text	
+Compress numerical values into ranges	将数值压缩为范围
+Confidence Intervals	置信区间
+Confidence Level:	置信水平：
+Configure Frequency Tables	配置频数表
+Configure Statistics	配置统计
+Could not determine	无法确定
+Count	计数
+Count (Highest first)	计数（从高到低）
+Count (Lowest first)	计数（从低到高）
+Count of Distinct Values	不同值的数量
+Cramer-von Mises Test	克拉默-冯米塞斯检验
+Create new variable(s)	
+Cumulative %	累计百分比
+Cumulative Count	累计计数
+Cumulative Proportion	
+Custom Percentiles	自定义百分位数
+D'Agostino-Pearson Test	达戈斯蒂诺-皮尔逊检验
+Data Preview	数据预览
+Data Transformation	
+Data Upload & Report	数据上传与报告
+Decimal Places	小数位数
+Define how values should be recoded.	
+Define ranges and their output values.	
+Description (optional)	
+Descriptive Statistics	描述性统计
+Deselect All	取消全选
+Detected Output Variables	
+Dispersion	离散度量
+Display options:	显示选项：
+Distinct	不同值
+Distribution Analysis	分布分析
+ECDF Plot	
+ECDF Plot Options:	
+ECDF Plot: {name}	
+Edit Transformation Rule	
+Equal to (==)	等于 (==)
+Error	错误
+Error calculating descriptive statistics:	计算描述性统计出错：
+Error formatting value for {statKey}:	格式化{statKey}的值时出错：
+Error in Anderson-Darling test:	安德森-达林检验出错：
+Error in Cramer-von Mises test:	克拉默-冯米塞斯检验出错：
+Error in D'Agostino-Pearson test:	达戈斯蒂诺-皮尔逊检验出错：
+Error in Jarque-Bera test:	雅克-贝拉检验出错：
+Error in Kolmogorov-Smirnov test:	科尔莫戈罗夫-斯米尔诺夫检验出错：
+Error in Lilliefors test:	利利福斯检验出错：
+Error in Shapiro-Wilk test:	夏皮罗-威尔克检验出错：
+Error in worker:	工作线程错误：
+Error in {testKey} test for {variable}:	对{variable}进行{testKey}检验时出错：
+Error parsing the file. Please check the file format.	解析文件时出错。请检查文件格式。
+Error parsing the {fileExtension} file. Please check the file format.	解析{fileExtension}文件时出错。请检查文件格式。
+Error parsing {fileExtension}:	解析{fileExtension}时出错：
+Error reading file	读取文件错误
+Error reading the file. Please try again.	读取文件出错。请重试。
+Error running normality tests:	运行正态性检验出错：
+Exact value (e.g., 0.031)	
+Excess Kurtosis	超额峰度
+FDR (Benjamini-Hochberg)	FDR (本杰明尼-霍赫伯格)
+FDR (Benjamini-Yekutieli)	FDR (本杰明尼-耶库提利)
+Failed to initialize WebR:	无法初始化WebR：
+Failed to initialize the statistical engine. Please try again.	无法初始化统计引擎。请重试。
+Failed to run Anderson-Darling test	无法运行安德森-达林检验
+Failed to run Cramer-von Mises test	无法运行克拉默-冯米塞斯检验
+Failed to run D'Agostino-Pearson test	无法运行达戈斯蒂诺-皮尔逊检验
+Failed to run Jarque-Bera test	无法运行雅克-贝拉检验
+Failed to run Kolmogorov-Smirnov test	无法运行科尔莫戈罗夫-斯米尔诺夫检验
+Failed to run Lilliefors test	无法运行利利福斯检验
+Failed to run Shapiro-Wilk test	无法运行夏皮罗-威尔克检验
+Font Family	字体
+Font Size	字体大小
+For numerical variables with many values, values will be grouped into ranges.	对于具有多个值的数值变量，值将被分组到范围内。
+Formula Expression	
+Frequency	频数
+Frequency Tables	频数表
+Functions & Operators	
+Generate Descriptive Statistics	生成描述性统计
+Geometric Mean	几何均值
+Greater than (>)	大于 (>)
+Greater than or equal to (>=)	大于等于 (>=)
+Harmonic Mean	调和均值
+Hide p-values	
+Hochberg	霍赫伯格
+Holm	霍尔姆
+Hommel	霍梅尔
+IQR	四分位距
+Input Variables	
+Insufficient data (n < 5)	数据不足 (n < 5)
+Interpretation	解释
+Interquartile Range	四分位距
+Invalid data format for ECDF plot	
+Invalid data format for violin plot	
+Invert Selection	反选
+Jarque-Bera Test	雅克-贝拉检验
+Kolmogorov-Smirnov Test	科尔莫戈罗夫-斯米尔诺夫检验
+Kurtosis	峰度
+Language	语言
+Less than (<)	小于 (<)
+Less than or equal to (<=)	小于等于 (<=)
+Lilliefors Test	利利福斯检验
+Load Template	
+Loading...	加载中...
+MAD	MAD
+Max	最大值
+Maximum	最大值
+Maximum categories:	最大类别数：
+Mean	均值
+Mean Absolute Deviation	平均绝对偏差
+Mean CI Lower	均值置信区间下限
+Mean CI Upper	均值置信区间上限
+Median	中位数
+Median CI Lower	中位数置信区间下限
+Median CI Upper	中位数置信区间上限
+Median reference	
+Menu	菜单
+Min	最小值
+Min-Max Scaling (0-1 range)	
+Minimum	最小值
+Missing	缺失
+Missing Value Count	缺失值数量
+Mode	众数
+Mode Frequency	众数频率
+N	N
+N/A	不适用
+New Value	
+New value	
+New variable name:	
+Next	下一页
+No analysis results yet. Upload data and run analyses to see results here.	尚无分析结果。上传数据并运行分析以在此处查看结果。
+No data available	无可用数据
+No file selected	未选择文件
+No filters added. Click buttons above to add filters.	未添加过滤器。点击上方按钮添加过滤器。
+No frequency tables could be generated. Please check your variable selection and try again.	无法生成频数表。请检查您的变量选择并重试。
+No valid data available for the selected variables.	所选变量没有有效数据。
+No valid data for ECDF plot	
+No valid data for violin plot	
+None	无
+Nonparametric	非参数化
+Normal distribution	正态分布
+Normality	正态性
+Normality Analysis	正态性分析
+Normality Tests	正态性检验
+Not equal to (!=)	不等于 (!=)
+Not normally distributed	非正态分布
+Number of bins:	分组数量：
+Numerical Filter	数值过滤器
+Numerical Variables	数值变量
+Original Value	
+Original value	
+Output	
+Output Options	
+P-Value Settings	
+P-value Adjustment Method	P值调整方法
+Parametric	参数化
+Percentage	百分比
+Please select at least one normality test to perform.	请至少选择一个要执行的正态性检验。
+Please select at least one numerical variable for normality analysis.	请至少选择一个数值变量进行正态性分析。
+Please select at least one variable for analysis.	请至少选择一个变量进行分析。
+Preparing normality tests...	准备正态性检验...
+Preparing to process file...	准备处理文件...
+Previous	上一页
+Processing data	处理数据
+Processing data ({processedChunks}/{totalChunks})...	处理数据 ({processedChunks}/{totalChunks})...
+Processing data...	处理数据中...
+Processing...	处理中...
+Proportion	比例
+Q1 (25%)	Q1 (25%)
+Q3 (75%)	Q3 (75%)
+Quantiles	分位数
+Quartiles (25%, 75%)	四分位数 (25%, 75%)
+Range Definitions	
+Range: from {min} to {max}, Mean: {mean}	范围：从{min}到{max}，均值：{mean}
+Reading file...	读取文件中...
+Remove this filter	删除此过滤器
+Remove this result	删除此结果
+Remove this table	删除此表
+Replace another variable	
+Replace original values	
+Replace with adjusted values	
+Report as excess kurtosis	报告为超额峰度
+Results	结果
+Rows per page:	每页行数：
+Rule Name	
+Rule type:	
+Run Normality Tests	运行正态性检验
+Running {testName} test for {variableName}...	对{variableName}运行{testName}检验...
+SE (Mean)	均值标准误
+SE (Median)	中位数标准误
+SE (Proportion)	比例标准误
+Sample Size	样本量
+Save Changes	保存
+Save Rule	
+Save as Template	
+Select All	全选
+Select Cases	选择案例
+Select Value(s):	选择值：
+Select Variable:	选择变量：
+Select Variables	选择变量
+Select a data file to upload (supported formats: XLS, XLSX, CSV, TSV, TXT, ODS)	选择要上传的数据文件（支持的格式：XLS, XLSX, CSV, TSV, TXT, ODS）
+Select a variable	选择变量
+Select the variable to be filled with the recoded values:	
+Select variables to transform:	
+Select which normality tests to perform:	选择要执行的正态性检验：
+Set Condition:	设置条件：
+Settings	设置
+Shape	分布形状
+Shapiro-Wilk Test	夏皮罗-威尔克检验
+Show Count	显示计数
+Show Cumulative Count	显示累计计数
+Show Cumulative Percentage	显示累计百分比
+Show Inner Box Plot	
+Show Median Reference Line	
+Show Percentage	显示百分比
+Show Total Row	显示总计行
+Show Valid Percentage	显示有效百分比
+Show both original and adjusted	
+Show interpretation column (when applicable)	
+Significance Level	显著性水平
+Significant p-value formatting	
+Skewness	偏度
+Sort by:	排序方式：
+Specify how the transformation should be applied.	
+Standard Deviation	标准差
+Standard Error of Mean	均值的标准误
+Standard Error of Median	中位数的标准误
+Standard Error of Proportion	比例的标准误
+Standard Errors	标准误
+Standardization Method	
+Std Dev (s)	标准差 (s)
+Std Dev CI Lower	标准差置信区间下限
+Std Dev CI Upper	标准差置信区间上限
+Summary Counts	汇总计数
+Support	支持
+Support the Project	支持项目
+Support the project via YooMoney	通过YooMoney支持项目
+System default	系统默认
+Test Configuration	检验配置
+Test failed	检验失败
+Testing normality of {variableName}... ({index}/{total})	测试{variableName}的正态性... ({index}/{total})
+Text color	
+The following new variables will be created:	
+Total	总计
+Transformation Rules	
+Translation is not found for:	未找到以下内容的翻译：
+Trim percentage:	截尾百分比：
+Trimmed Mean	截尾均值
+Unsupported file format. Please upload XLS, XLSX, CSV, TSV, TXT or ODS files.	不支持的文件格式。请上传XLS、XLSX、CSV、TSV、TXT或ODS文件。
+Upload Data File	上传数据文件
+Upload a file to see data	上传文件以查看数据
+Use Exponential Notation for Large Numbers	对大数使用指数表示法
+Use hex color format (#RRGGBB)	
+Use sample statistics (n-1 denominator)	使用样本统计量（分母为n-1）
+Use v1, v2, v3, etc. to reference your selected variables. Use @NewVariable = expression to create new variables. Example: @Total = v1 + v2 + v3	
+Use v1:v7 syntax for ranges of variables. Example: sum(v1:v7) to sum variables v1 through v7.	
+Valid Percentage	有效百分比
+Value	值
+Value (A-Z)	值（A-Z）
+Value (Z-A)	值（Z-A）
+Value Mappings	
+Values (comma separated):	值（用逗号分隔）：
+Variable	变量
+Variable to replace	
+Variables	变量
+Variables: {selected}/{total}	变量：{selected}/{total}
+Variance	方差
+Variance (s²)	方差 (s²)
+Variance CI Lower	方差置信区间下限
+Variance CI Upper	方差置信区间上限
+Violin Plot	
+Violin Plot Options:	
+Violin Plot: {name}	
+When checked, calculates sample variance/std.dev. with n-1 denominator. When unchecked, calculates population variance/std.dev. with n denominator.	选中时，使用分母n-1计算样本方差/标准差。未选中时，使用分母n计算总体方差/标准差。
+Z-Score (Mean=0, SD=1)	
+Z-Score standardizes data to have mean=0 and standard deviation=1. Min-Max scaling transforms data to a 0-1 range.	
+Zero Count	零值数量
+Zeroes	零值
+Zeroes %	零值百分比
+and	和
+p-value display format	"

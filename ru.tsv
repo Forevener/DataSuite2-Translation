@@ -1,0 +1,995 @@
+# Each key-value pair is on a new line (\n-only, LF separator)
+# Key and value are separated by tab (\t)
+# Lines starting with # are comments and are ignored completely
+# Inline comments are supported after the second tab
+(Missing)	(Пропущено)
+(input)	(ввод)
+(missing)	(пропущено)
++ Add Categorical Filter	+ Добавить категориальный фильтр
++ Add Numerical Filter	+ Добавить числовой фильтр
++ Formula	+ Формула
++ Range Recode	+ Перекодировка диапазонов
++ RegEx Replace	+ Регулярное выражение
++ Standardize	+ Стандартизация
++ Value Recode	+ Перекодировка значений
+A single metric that ranges from -1 to 1. Positive values suggest X influences Y, negative values suggest Y influences X.	Единая метрика с диапазоном от -1 до 1. Положительные значения предполагают, что X влияет на Y, отрицательные значения предполагают, что Y влияет на X.
+APA style (top, bottom, header)	Стиль APA (верх, низ, заголовок)
+About Directional Analysis	О анализе направленности
+About Entropy Imbalance	О несбалансированности энтропии
+Add Row	Добавить строку
+Add significance stars to test statistics (e.g., W*)	Добавить звёздочки значимости к значениям критериев (например, W*)
+Adjusted p-value	Скорректированное p-значение
+Adjusted p-value Matrix	Матрица скорректированных p-значений
+Adjusted p-values display	Отображение скорректированных p-значений
+All	Все
+All Methods	Все методы
+An error occurred while analyzing variables:	Произошла ошибка при анализе переменных:
+An error occurred while calculating descriptive statistics:	Произошла ошибка при расчёте описательной статистики:
+An error occurred while running the correlation analysis:	Произошла ошибка при выполнении корреляционного анализа:
+An error occurred while running the directional analysis:	Произошла ошибка при выполнении направленного анализа:
+An error occurred while running the normality tests:	Произошла ошибка при расчёте критериев нормальности:
+Analysis Planner	Планирование анализа
+Analyze the directional influence between variables using information theory metrics.	Анализ направленного влияния между переменными с использованием метрик теории информации.
+Analyzing variable properties...	Анализ свойств переменных...
+Analyzing {variable}...	Анализ {variable}...
+Anderson-Darling Test	Критерий Андерсона-Дарлинга
+Applied to	Применено к
+Apply	Применить
+Apply Filters	Применить фильтры
+Apply Selection	Применить выбор
+Apply Transformation	Применить преобразование
+Apply preset:	Применить шаблон:
+Are you sure you want to delete this rule? This will remove it from all variables.	Вы уверены, что хотите удалить это правило? Это удалит его из всех переменных.
+Assign measurement scales to variables. Click or drag across cells to quickly assign types.	Указать типы переменных. Нажмите или зажмите для выбора множества переменных
+Asymptotic	Асимптотический
+Asymptotic Approximation	Асимптотическая аппроксимация
+Auto (Recommended)	Автоматически (рекомендуется)
+Auto-detect discretization needs	Автоопределение необходимости дискретизации
+Available functions:	Доступные функции:
+Background color	Цвет фона
+Between	Между
+Bin Calculation Method:	Режим расчёта диапазонов
+Bins	Диапазоны
+Biserial	Бисериальный
+Biserial (continuous-artificial dichotomous)	Бисериальный (непрерывные-синтетические дихотомические)
+Bold text	Полужирный текст
+Bonferroni	Бонферрони
+Bootstrap Replications	Повторы бутстрэпа
+Borderless (header separator only)	Без границ (только разделитель заголовка)
+Box Plot	Ящик-с-усами
+Box Plot Options:	Настройки ящика-с-усами
+CI Lower (Proportion)	Нижняя граница ДИ (доли)
+CI Upper (Proportion)	Верхняя граница ДИ (доли)
+CI for Mean	ДИ для среднего
+CI for Median	ДИ для медианы
+CI for Proportion	ДИ для доли
+CI for Standard Deviation	ДИ для стандартного отклонения
+CI for Variance	ДИ для дисперсии
+CSV (Comma separated)	CSV (разделенный запятыми)
+CSV-2 (Semicolon separated)	CSV-2 (разделенный точкой с запятой)
+CV (%)	КВ (%)
+Calculate	Рассчитать
+Calculate Correlations	Рассчитать корреляции
+Calculate Directional Relationships	Рассчитать направленные отношения
+Calculate Frequency Tables	Рассчитать таблицы частот
+Calculating correlations...	Расчёт корреляций...
+Calculating descriptive statistics...	Расчёт описательной статистики...
+Calculating directional relationships...	Расчет направленных отношений...
+Calculating frequencies for	Расчёт частот для
+Calculating frequencies for {variable}...	Расчёт частот для переменной {variable}...
+Calculating frequency tables...	Расчёт таблиц частот...
+Cancel	Отмена
+Cancel All	Отменить всё
+Case sensitive	С учётом регистра
+Cases	Наблюдения
+Cases: {filtered}/{total}	Наблюдения: {filtered}/{total}
+Cat.	Наим.
+Categorical Filter	Категориальный фильтр
+Categorical Variables	Категориальные переменные
+Category (e.g., p ≤ 0.05)	Категория (например, p ≤ 0.05)
+Central Tendency	Меры центральной тенденции
+Chi-Square	Хи-квадрат
+Chi-Square Approximation (Fastest)	Аппроксимация хи-квадрат (наиболее быстрый)
+Chi-square is recommended for most cases	Хи-квадрат рекомендуется для большинства случаев
+Choose File	Выбрать файл
+Citations	Источники
+Clear All Filters	Очистить все фильтры
+Click or drag checkboxes to select multiple rules.	Нажмите или зажмите для выбора множества правил
+Click or drag to select multiple variables. Hold Ctrl/Cmd for multiple selection.	Нажмите или перетащите для выбора нескольких переменных. Удерживайте Ctrl/Cmd для множественного выбора.
+Close	Закрыть
+Cluster Analysis	Кластерный анализ
+Coefficient of Variation	Коэффициент вариации
+Colored background	Цветной фон
+Colored text	Цветной текст
+Combined with correlation	В матрице корреляций
+Compares H(Y|X) with H(X|Y). If H(Y|X) < H(X|Y), X likely influences Y.	Сравнивает H(Y|X) с H(X|Y). Если H(Y|X) < H(X|Y), X вероятно влияет на Y.
+Compares uncertainty reduction in both directions	Сравнивает снижение неопределенности в обоих направлениях
+Comparison Analysis	Сравнительный анализ
+Compress numerical values into ranges	Сжать числовые значения в диапазоны
+Con.	Непр.
+Condition Column Name	Название столбца замера
+Condition Labels	Метки замеров
+Conditional Entropy	Условная энтропия
+Conditional Entropy Ratio H(Y|X) / H(X|Y)	Отношение условных энтропий H(Y|X) / H(X|Y)
+Confidence Intervals	Доверительные интервалы
+Confidence Level:	Уровень доверия:
+Configuration	Конфигурация
+Configure Frequency Tables	Настроить таблицы частот
+Configure Statistics	Настроить статистику
+Confirmatory Factor Analysis	Конфирматорный факторный анализ
+Constant value	Константа
+Converting row-based data...	Преобразование данных на основе строк...
+Correlation	Корреляция
+Correlation Analysis	Корреляционный анализ
+Correlation Analysis (${getMethodName(method)})	Корреляционный анализ (${getMethodName(method)})
+Correlation Analysis (Pearson's r)	Корреляционный анализ (коэффициент Пирсона r)
+Correlation Method	Метод корреляции
+Correlation Options	Параметры корреляции
+Could not determine	Невозможно определить
+Could not load settings from localStorage:	Не удалось загрузить настройки из localStorage:
+Could not save settings to localStorage:	Не удалось сохранить настройки в localStorage:
+Count	Количество
+Count (Highest first)	Количество (по убыванию)
+Count (Lowest first)	Количество (по возрастанию)
+Count of Distinct Values	Количество уникальных значений
+Cramer's V (categorical-categorical)	V Крамера (категориальные-категориальные)
+Cramer-von Mises Test	Критерий Крамера-фон Мизеса
+Cramér's V	V Крамера
+Create Distribution Plots	Отрисовать графики распределения
+Create new variable(s)	Создать новую переменную(ые)
+Cumulative %	Накопленный %
+Cumulative Count	Накопленная частота
+Cumulative Proportion	Накопленная доля
+Custom Percentiles	Пользовательские перцентили
+D'Agostino-Pearson Test	Критерий Д'Агостино-Пирсона
+Data Preview	Предварительный просмотр данных
+Data Transformation	Преобразование данных
+Data Upload & Preview	Загрузка и просмотр данных
+Decimal Places	Десятичные знаки
+Define how values should be recoded.	Определите, как значения должны быть перекодированы.
+Define ranges and their output values.	Определите диапазоны и их выходные значения.
+Delete	Удалить
+Delete Rule	Удалить правило
+Delimited	С разделителями
+Description	Описание
+Description (optional)	Описание (необязательно)
+Descriptive Statistics	Описательная статистика
+Deselect All	Снять выбор
+Detect Data Types	Определить типы данных
+Detected Output Variables	Обнаруженные выходные переменные
+Direct measure of causal influence direction	Прямое измерение направления причинного влияния
+Directional Analysis	Анализ направленности
+Directional Relationship Analysis	Анализ направленности связей
+Directional analysis uses information theory to infer the likely direction of influence between variables. Unlike correlation, which only measures the strength of association, directional analysis can suggest which variable is more likely to influence the other.	Анализ направленности использует теорию информации для определения вероятного направления влияния между переменными. В отличие от корреляции, которая измеряет только силу связи, направленный анализ может указывать, какая переменная с большей вероятностью влияет на другую.
+Directionality Index	Индекс направленности
+Discretization	Дискретизация
+Discretization Method	Метод дискретизации
+Discretization Options	Параметры дискретизации
+Dispersion	Меры разброса
+Display options:	Параметры отображения:
+Distinct	Различных
+Distribution Analysis	Анализ распределения
+Distribution Plots	Графики распределения
+Download	Скачать
+Download Data File	Скачать файл данных
+ECDF Plot	График ECDF
+ECDF Plot Options:	Настройки графика ECDF:
+ECDF Plot: {name}	График ECDF: {name}
+Edit Rule	Редактировать правило
+Edit Transformation Rule	Редактирование правила преобразования
+Enter a name for this template:	Введите имя для этого шаблона:
+Entropy imbalance detected: variables have significantly different information content	Обнаружен дисбаланс энтропии: переменные имеют значительно разное информационное содержание
+Equal frequency bins	Диапазоны равной частоты
+Equal to (==)	Равно (==)
+Equal width bins	Диапазоны равной ширины
+Error	Ошибка
+Error calculating descriptive statistics:	Ошибка при расчёте описательной статистики:
+Error calculating metrics:	Ошибка при расчете метрик:
+Error checking discretization:	Ошибка при проверке дискретизации:
+Error detecting data types:	Ошибка при определении типов данных:
+Error formatting value for {statKey}:	Ошибка форматирования значения для {statKey}:
+Error in Anderson-Darling test:	Ошибка в расчёте критерия Андерсона-Дарлинга:
+Error in Cramer's V:	Ошибка в V Крамера:
+Error in Cramer-von Mises test:	Ошибка в расчёте критерия Крамера-фон Мизеса:
+Error in D'Agostino-Pearson test:	Ошибка в расчёте критерия Д'Агостино-Пирсона:
+Error in Goodman-Kruskal gamma:	Ошибка в гамме Гудмана-Краскала:
+Error in Jarque-Bera test:	Ошибка в расчёте критерия Жарке-Бера:
+Error in Kendall correlation:	Ошибка в корреляции Кендалла:
+Error in Kolmogorov-Smirnov test:	Ошибка в расчёте критерия Колмогорова-Смирнова:
+Error in Lilliefors test:	Ошибка в расчёте критерия Лиллиефорса:
+Error in Pearson correlation:	Ошибка в корреляции Пирсона:
+Error in Shapiro-Wilk test:	Ошибка в расчёте критерия Шапиро-Уилка:
+Error in Spearman correlation:	Ошибка в корреляции Спирмена:
+Error in biserial correlation:	Ошибка в бисериальной корреляции:
+Error in p-value adjustment:	Ошибка в корректировке p-значений:
+Error in phi coefficient:	Ошибка в коэффициенте фи:
+Error in point-biserial correlation:	Ошибка в точечно-бисериальной корреляции:
+Error in worker:	Ошибка в обработчике:
+Error in {testKey} test for {variable}:	Ошибка в обработке критерия {testKey} для {variable}:
+Error initializing analysis:	Ошибка при инициализации анализа:
+Error loading the application component	Ошибка загрузки компонента приложения
+Error loading the project. The file may be corrupted.	Ошибка при загрузке проекта. Файл может быть поврежден.
+Error parsing Excel/ODS file:	Ошибка при разборе файла Excel/ODS:
+Error parsing JSON file:	Ошибка при разборе файла JSON:
+Error parsing data-t9n-props JSON:	Ошибка при парсинге JSON data-t9n-props:
+Error parsing percentile values:	Ошибка при разборе значений перцентилей:
+Error parsing the JSON file. Please check the format.	Ошибка при разборе файла JSON. Пожалуйста, проверьте формат.
+Error parsing the file. Please check the file format.	Ошибка при анализе файла. Пожалуйста, проверьте формат файла.
+Error parsing the {fileExtension} file. Please check the file format.	Ошибка при анализе файла {fileExtension}. Пожалуйста, проверьте формат файла.
+Error parsing {fileExtension}:	Ошибка при анализе {fileExtension}:
+Error processing project file:	Ошибка при обработке файла проекта:
+Error reading file	Ошибка чтения файла
+Error reading the file. Please try again.	Ошибка чтения файла. Пожалуйста, попробуйте снова.
+Error running correlation analysis:	Ошибка при выполнении корреляционного анализа:
+Error running directional analysis:	Ошибка при выполнении направленного анализа:
+Error running normality tests:	Ошибка при расчёте критериев нормальности:
+Exact value (e.g., 0.031)	Точное p-значение (например, 0.031)
+Excess Kurtosis	Избыточный эксцесс
+Export	Экспорт
+Export All Plots	Экспортировать все графики
+FDR (Benjamini-Hochberg)	FDR (Бенжамини-Хохберг)
+FDR (Benjamini-Yekutieli)	FDR (Бенжамини-Екутели)
+Factor & Principal Component Analysis	Факторный анализ и главные компоненты
+Failed to adjust p-values	Не удалось скорректировать p-значения
+Failed to calculate information theory metrics:	Не удалось рассчитать метрики теории информации:
+Failed to check discretization needs	Не удалось проверить потребности в дискретизации
+Failed to initialize WebR:	Не удалось инициализировать WebR:
+Failed to initialize data for analysis	Не удалось инициализировать данные для анализа
+Failed to initialize the statistical engine. Please try again.	Не удалось инициализировать статистический движок. Пожалуйста, попробуйте снова.
+Failed to run Anderson-Darling test	Не удалось расчитать критерий Андерсона-Дарлинга
+Failed to run Cramer's V	Не удалось выполнить расчет V Крамера
+Failed to run Cramer-von Mises test	Не удалось расчитать критерий Крамера-фон Мизеса
+Failed to run D'Agostino-Pearson test	Не удалось расчитать критерий Д'Агостино-Пирсона
+Failed to run Goodman-Kruskal gamma:	Не удалось выполнить гамму Гудмана-Краскала:
+Failed to run Jarque-Bera test	Не удалось расчитать критерий Жарке-Бера
+Failed to run Kendall correlation	Не удалось выполнить корреляцию Кендалла
+Failed to run Kolmogorov-Smirnov test	Не удалось расчитать критерий Колмогорова-Смирнова
+Failed to run Lilliefors test	Не удалось расчитать критерий Лиллиефорса
+Failed to run Pearson correlation	Не удалось выполнить корреляцию Пирсона
+Failed to run Shapiro-Wilk test	Не удалось расчитать критерий Шапиро-Уилка
+Failed to run Spearman correlation	Не удалось выполнить корреляцию Спирмена
+Failed to run biserial correlation	Не удалось выполнить бисериальную корреляцию
+Failed to run phi coefficient	Не удалось выполнить расчет коэффициента фи
+Failed to run point-biserial correlation	Не удалось выполнить точечно-бисериальную корреляцию
+Fast approximation, good for large samples	Быстрая аппроксимация, хороша для больших выборок
+File Rules	Правила файла
+Font Family	Шрифт
+Font Size	Размер шрифта
+For numerical variables with many values, values will be grouped into ranges.	Для числовых переменных с большим количеством значений будет выполнена группировка по диапазонам.
+Formula	Формула
+Formula Expression	Выражение формулы
+Freedman-Diaconis	Фридман-Диаконис
+Freedman-Diaconis rule	Правило Фридмана-Диакониса
+Frequency	Частота
+Frequency Tables	Таблицы частот
+Full borders (all cells)	Полные границы (все ячейки)
+Functions & Operators	Функции и операторы
+G-Test	G-критерий
+G-Test (Accurate for small samples)	G-критерий (точный для малых выборок)
+Generate Descriptive Statistics	Сгенерировать описательную статистику
+Generate automatically (row numbers)	Создать автоматически (по номерам строк)
+Geometric Mean	Среднее геометрическое
+Global (replace all matches)	Глобально (заменять всё)
+Global Missing Data Method	Глобальная обработка пропущенных значений
+Goodman & Kruskal's γ	γ Гудмана и Краскала
+Goodman & Kruskal's γ (ordinal with ties)	Гамма Гудмана и Краскала γ (порядковые со связанными рангами)
+Greater than (>)	Больше чем (>)
+Greater than or equal to (>=)	Больше или равно (>=)
+Grouped by condition	Группировка по замеру
+Grouped by variable	Группировка по переменной
+HTML Table	HTML таблица
+Harmonic Mean	Среднее гармоническое
+Hide p-values	Скрыть p-значения
+Hide redundant values	Скрыть избыточные значения
+Higher values give more accurate p-values but take longer	Более высокие значения дают более точные p-значения, но занимают больше времени
+Histogram	Гистограмма
+Histogram Options:	Настройки гистограммы
+Hochberg	Хохберг
+Holm	Холм
+Hommel	Хоммель
+Horizontal lines only	Только горизонтальные линии
+IQR	МКР
+Import	Импорт
+Important Note:	Важное примечание:
+Imputation (Replace with calculated values)	Импутация (подстановка рассчитанных значений)
+Imputation Method	Метод подстановки
+Information Gain Ratio	Коэффициент прироста информации
+Information Gain Ratio Difference	Разница коэффициентов прироста информации
+Input Variables	Входные переменные
+Insignificant	Незначимая
+Insufficient data (n < 5)	Недостаточно данных (n < 5)
+Insufficient valid data after conversion	Недостаточно допустимых данных после преобразования
+Interpretation	Интерпретация
+Interquartile Range	Межквартильный размах
+Invalid data format for ECDF plot	Неправильный формат данных для графика ECDF
+Invalid data format for violin plot	Неправильный формат данных для скрипичного графика
+Invert Selection	Инвертировать выбор
+JSON	JSON
+JSON (data only, column-based)	JSON (только данные, по столбцам)
+JSON (data only, row-based - default)	JSON (только данные, построчно - по умолчанию)
+JSON (project)	JSON (проект)
+Jarque-Bera Test	Критерий Жарке-Бера
+Keep Both (Rename)	Оставить (переименовать)
+Kendall's τ	τ Кендалла
+Kendall's τ (ordinal/small samples)	Коэффициент Кендалла τ (порядковые/малые выборки)
+Key Metrics:	Ключевые метрики:
+Kolmogorov-Smirnov Test	Критерий Колмогорова-Смирнова
+Kurtosis	Эксцесс
+Language	Язык
+Leave empty to correlate all variables	Оставьте пустым для корреляции всех переменных
+Left Variables (rows)	Левые переменные (строки)
+Less than (<)	Меньше чем (<)
+Less than or equal to (<=)	Меньше или равно (<=)
+Library	Библиотека
+Lilliefors Test	Критерий Лиллиефорса
+Links measurements from the same subject	Связывает данные субъекта из разных замеров
+Listwise deletion (Remove rows with any missing values)	Полное удаление (пропускать строки с любым количеством пропусков)
+Load Template	Загрузить шаблон
+Loading module...	Загрузка модуля...
+Loading project data...	Загрузка данных проекта...
+Loading...	Загрузка...
+Long format	Длинная таблица
+MAD	САО
+Matches:	Совпадения
+Matrix	Матрица
+Max	Макс
+Maximum	Максимум
+Maximum categories:	Максимум категорий:
+Mean	Среднее значение
+Mean Absolute Deviation	Среднее абсолютное отклонение
+Mean CI Lower	Нижняя граница ДИ для среднего
+Mean CI Upper	Верхняя граница ДИ для среднего
+Measures shared information between variables	Измеряет общую информацию между переменными
+Measures the amount of information shared between variables. Higher values indicate stronger association.	Измеряет количество общей информации между переменными. Более высокие значения указывают на более сильную связь.
+Median	Медиана
+Median CI Lower	Нижняя граница ДИ для медианы
+Median CI Upper	Верхняя граница ДИ для медианы
+Median reference	Медианная линия
+Menu	Меню
+Method	Метод
+Metrics to Calculate	Метрики для расчета
+Microsoft Excel (XLSX)	Microsoft Excel (XLSX)
+Microsoft Excel 97-2003 (XLS)	Microsoft Excel 97-2003 (XLS)
+Microsoft Excel Binary (XLSB)	Microsoft Excel двоичный (XLSB)
+Min	Мин
+Min-Max Scaling (0-1 range)	Масштабирование мин-макс (диапазон 0-1)
+Minimal (top, bottom, header)	Минимальный (верх, низ, заголовок)
+Minimum	Минимум
+Missing	Пропущено
+Missing Data Settings	Настройки пропущенных данных
+Missing Value Count	Количество пропущенных значений
+Mode	Мода
+Mode Frequency	Частота моды
+More accurate for small samples and skewed distributions	Более точен для малых выборок и скошенных распределений
+Most accurate but slowest, uses randomization testing	Наиболее точный, но самый медленный, использует тестирование рандомизацией
+Multiline mode	Многострочный режим
+Mutual Information	Взаимная информация
+Mutual Information (I(X;Y))	Взаимная информация (I(X;Y))
+Mutual Information (MI)	Взаимная информация (MI)
+N	N
+N/A	Н/Д
+Name	Имя
+Name conflict:	Конфликт имён
+Needed	Требуется
+New Value	Новое значение
+New value	Новое значение
+New variable name:	Имя новой переменной:
+Next	Следующая
+No analysis results yet. Upload data and run analyses to see results here.	Результаты анализа отсутствуют. Загрузите данные и запустите анализы, чтобы увидеть результаты здесь.
+No appropriate variables for this correlation method.	Нет подходящих переменных для этого метода корреляции.
+No appropriate variables for this method	Нет подходящих переменных для этого метода
+No data available	Нет доступных данных
+No data found in the JSON file.	Данные не найдены в файле JSON.
+No discretization	Без дискретизации
+No file selected	Файл не выбран
+No filters added. Click buttons above to add filters.	Фильтры не добавлены. Нажмите кнопки выше, чтобы добавить фильтры.
+No frequency tables could be generated. Please check your variable selection and try again.	Не удалось сгенерировать таблицы частот. Пожалуйста, проверьте выбор переменных и попробуйте снова.
+No p-value adjustment method selected. The more tests you run on the same data, the more likely you are to encounter a false discovery.	Метод коррекции p-значений не выбран. Чем больше тестов вы проводите на одних и тех же данных, тем выше вероятность ложного открытия.
+No saved templates found	Сохраненные шаблоны не найдены
+No transformation rules defined yet.	Правила трансформации пока не определены.
+No valid data available for the selected variables.	Нет допустимых данных для выбранных переменных.
+No valid data for ECDF plot	Нет допустимых данных для графика ECDF
+No valid data for violin plot	Нет допустимых данных для скрипичного графика
+No valid data found for selected variables.	Для выбранных переменных не найдено допустимых данных.
+None	Нет
+Nonparametric	Непараметрический
+Normal distribution	Нормальное распределение
+Normality	Нормальность
+Normality Analysis	Анализ нормальности
+Normality Tests	Критерии нормальности
+Normalized information gain in both directions	Нормализованный прирост информации в обоих направлениях
+Normalizes information gain by the entropy of each variable.	Нормализует прирост информации по энтропии каждой переменной.
+Not available	Недоступно
+Not equal to (!=)	Не равно (!=)
+Not needed	Не требуется
+Not normally distributed	Распределение не является нормальным
+Number of Bins	Количество диапазонов
+Number of Conditions/Time Points	Количество замеров
+Number of Permutations	Количество перестановок
+Number of bins:	Количество интервалов:
+Number of input and output variables must match	Количество входных и выходных переменных должно совпадать
+Numerical Filter	Числовой фильтр
+Numerical Variables	Числовые переменные
+OpenDocument (ODS)	OpenDocument (ODS)
+Options	Опции
+Ord.	Ранг.
+Original Value	Исходное значение
+Original value	Старое значение
+Output	Значение
+Output Options	Параметры вывода
+Output variables cannot be the same as input variables	Выходные переменные не могут совпадать с входными переменными
+Overwrite	Перезаписать
+P-Value Methods:	Методы расчета p-значений:
+P-Value Settings	Настройки p-значений
+P-value Adjustment Method	Метод коррекции p-значений
+P-value Display	Отображение p-значений
+Pairwise deletion (Use available data for each pass)	Попарное удаление (использовать все доступные данные на каждом проходе)
+Parametric	Параметрический
+Pearson's r	r Пирсона
+Pearson's r (continuous-continuous)	Коэффициент Пирсона r (непрерывные-непрерывные)
+Percentage	Процент
+Permutation	Перестановки
+Permutation Test (Slowest)	Тест перестановок (самый медленный)
+Phi coefficient	Коэффициент фи
+Phi coefficient (binary-binary)	Коэффициент фи (бинарные-бинарные)
+Please add at least one valid mapping	Пожалуйста, добавьте хотя бы одно корректное соответствие
+Please add at least one valid range	Пожалуйста, добавьте хотя бы один корректный диапазон
+Please enter a formula	Пожалуйста, введите формулу
+Please enter a name for the output variable	Пожалуйста, введите имя для выходной переменной
+Please enter a name for the rule	Пожалуйста, введите имя для правила
+Please select a rule first	Пожалуйста, сначала выберите правило
+Please select at least one input variable	Пожалуйста, выберите хотя бы одну входную переменную
+Please select at least one metric.	Пожалуйста, выберите хотя бы одну метрику.
+Please select at least one normality test to perform.	Пожалуйста, выберите хотя бы один критерий нормальности для выполнения.
+Please select at least one numerical variable for normality analysis.	Пожалуйста, выберите хотя бы одну числовую переменную для анализа нормальности.
+Please select at least one output variable	Пожалуйста, выберите хотя бы одну выходную переменную
+Please select at least one variable for analysis.	Пожалуйста, выберите хотя бы одну переменную для анализа.
+Please select at least one variable from both lists.	Пожалуйста, выберите хотя бы одну переменную из обоих списков.
+Please select at least one variable to analyze.	Пожалуйста, выберите хотя бы одну переменную для анализа.
+Please select at least one variable to use in the formula	Пожалуйста, выберите хотя бы одну переменную для использования в формуле
+Please select at least two variables for analysis.	Пожалуйста, выберите не менее двух переменных для анализа.
+Plot Configuration	Настройки графиков
+Point-biserial	Точечно-бисериальный
+Point-biserial (continuous-dichotomous)	Точечно-бисериальный (непрерывные-дихотомические)
+Positive values suggest X influences Y, negative values suggest Y influences X	Положительные значения предполагают, что X влияет на Y, отрицательные значения предполагают, что Y влияет на X
+Potential Cause Variables (X)	Потенциальные причинные переменные (X)
+Potential Effect Variables (Y)	Потенциальные переменные эффекта (Y)
+Preparing normality tests...	Подготовка к расчёту критериев нормальности...
+Preparing to process file...	Подготовка к обработке файла...
+Preview	Просмотр
+Previous	Предыдущая
+Processing JSON data...	Обработка данных JSON...
+Processing column-based data...	Обработка данных на основе столбцов...
+Processing data	Обработка данных
+Processing data ({processedChunks}/{totalChunks})...	Обработка данных ({processedChunks}/{totalChunks})...
+Processing data...	Обработка данных...
+Processing relationships: {current} of {total} pairs	Обработка отношений: {current} из {total} пар
+Processing...	Обработка...
+Proportion	Доля
+Pull to File	Добавить в файл
+Push to Library	Добавить в библиотеку
+Q-Q Plot	График Q-Q
+Q1 (25%)	Q1 (25%)
+Q3 (75%)	Q3 (75%)
+Quantiles	Квантили
+Quartiles (25%, 75%)	Квартили (25%, 75%)
+R Console	Консоль R
+Range	Диапазон
+Range Definitions	Определения диапазонов
+Range: from {min} to {max}, Mean: {mean}	Размах: от {min} до {max}, среднее: {mean}
+Reading file...	Чтение файла...
+Recode	Перекодировка
+Regression Analysis	Регрессионный анализ
+Reliability Analysis	Анализ надёжности
+Remove this filter	Удалить этот фильтр
+Remove this result	Удалить этот результат
+Remove this table	Удалить эту таблицу
+Replace another variable	Заменить другую переменную
+Replace original values	Заменить исходные значения
+Replace with adjusted values	Заменить оригинальные на скорректированные
+Replacement Text	Заменяющий текст
+Report as excess kurtosis	Показать как избыточный эксцесс
+Result:	Результат
+Results	Результаты
+Right Variables (columns)	Правые переменные (столбцы)
+Rows per page:	Строк на странице:
+Rule Library	Библиотека правил
+Rule Name	Название правила
+Rule created and applied successfully	Правило успешно создано и применено
+Rule type:	Тип правила:
+Rule updated and applied successfully	Правило успешно обновлено и применено
+Run	Запуск
+Run Normality Tests	Рассчитать критерии нормальности
+Running {testName} test for {variableName}...	Расчёт критерия {testName} для {variableName}...
+SE (Mean)	СО (среднего)
+SE (Median)	СО (медианы)
+SE (Proportion)	СО (доли)
+Sample Size	Размер выборки
+Save Changes	Сохранить
+Save Rule	Сохранить правило
+Save as Template	Сохранить как шаблон
+Scott	Скотт
+Scroll to results after analysis	Проматывать страницу к новейшему результату
+Search Pattern (RegEx)	Шаблон поиска
+Select All	Выбрать все
+Select Cases	Выбрать наблюдения
+Select Value(s):	Выберите значение(я):
+Select Variable:	Выберите переменную:
+Select Variables	Выбрать переменные
+Select a data file to upload (supported formats: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)	Выберите файл данных для загрузки (поддерживаемые форматы: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)
+Select a template to load:	Выберите шаблон для загрузки:
+Select a variable	Выберите переменную
+Select desired file format	Выберите желаемый формат файла
+Select the variable to be filled with the recoded values:	Выберите переменную, которая будет заполнена перекодированными значениями:
+Select variables to analyze for directional relationships	Выберите переменные для анализа направленности отношений
+Select variables to transform:	Выберите переменные для преобразования:
+Select variables which should be stacked	Выберите переменные которые будут объединены
+Select which normality tests to perform:	Выберите критерии проверки нормальности для выполнения:
+Select which plots to generate:	Выберите желаемые графики
+Selected: {count}	Выбрано: {count}
+Selection	Выбор
+Separate p-value table	Отдельная таблица
+Set Condition:	Установите условие:
+Settings	Настройки
+Shape	Форма распределения
+Shapiro-Wilk Test	Критерий Шапиро-Уилка
+Show Count	Показать количество
+Show Cumulative Count	Считать накопленную частоту
+Show Cumulative Percentage	Считать накопленный процент
+Show Density Curve	Показывать кривую плотности
+Show Inner Box Plot	Показывать внутренний ящик
+Show Mean	Показывать среднее
+Show Median Reference Line	Показывать медианную линию
+Show Normal Curve	Показывать кривую нормальности
+Show Outliers	Показывать выбросы
+Show Percentage	Показать процент
+Show Total Row	Показать строку итогов
+Show Valid Percentage	Показать валидный процент
+Show both original and adjusted	Показать оригинальные и скорректированные
+Show interpretation column (when applicable)	Отображать колонку интерпретации (когда применимо)
+Significance Level	Уровень значимости
+Significance Method	Метод проверки значимости
+Significance Testing	Проверка значимости
+Significant	Значимая
+Significant p-value formatting	Форматирование значимых p-значений:
+Skewness	Асимметрия
+Skip	Пропустить
+Sort by:	Сортировать по:
+Spearman's ρ	ρ Спирмена
+Spearman's ρ (ordinal/non-normal)	Коэффициент Спирмена ρ (порядковые/не-нормальные)
+Specifically designed for directionality testing	Специально разработан для тестирования направленности
+Specify how the transformation should be applied.	Укажите, как должно применяться преобразование.
+Spreadsheets	Электронные таблицы
+Stacking Pattern	Режим соединения
+Standard Deviation	Стандартное отклонение
+Standard Error of Mean	Стандартная ошибка среднего
+Standard Error of Median	Стандартная ошибка медианы
+Standard Error of Proportion	Стандартная ошибка доли
+Standard Errors	Стандартные ошибки
+Standardization Method	Метод стандартизации
+Standardize	Стандартизация
+Std Dev (s)	Станд. откл. (s)
+Std Dev CI Lower	Нижняя граница ДИ для станд. отклонения
+Std Dev CI Upper	Верхняя граница ДИ для станд. отклонения
+Sturges	Стерджес
+Sturges method	Метод Стёрджеса
+Subject Identifier	Идентификатор субъекта
+Summary Counts	Общие показатели
+Support	Поддержать
+Support the Project	Поддержать проект
+Support the project via YooMoney	Поддержать проект через ЮMoney
+System default	Системный по умолчанию
+TSV (Tab separated)	TSV (разделенный табуляцией)
+TXT (Plain text)	TXT (обычный текст)
+Table Converter	Преобразователь таблиц
+Table Format	Формат таблицы
+Table style:	Стиль таблицы:
+Template loaded successfully	Шаблон успешно загружен
+Template not found	Шаблон не найден
+Template saved successfully	Шаблон успешно сохранен
+Test Configuration	Конфигурация критериев
+Test failed	Сбой расчёта
+Testing normality of {variableName}... ({index}/{total})	Проверка нормальности {variableName}... ({index}/{total})
+Text color	Цвет текста
+The following new variables will be created:	Будут созданы следующие новые переменные:
+This analysis includes entropy-aware directionality metrics that adjust for these imbalances. When you see a warning symbol (⚠) in the results, pay attention to the "Entropy-Aware" column for a potentially more accurate directionality assessment.	Этот анализ включает метрики направленности с учетом энтропии, которые корректируют эти дисбалансы. Когда вы видите предупреждающий символ (⚠) в результатах, обратите внимание на столбец "С учетом энтропии" для потенциально более точной оценки направленности.
+This will replace your current dataset. Consider saving your project first if needed.	Эта операция заменит Ваш набор данных. Возможно, лучше сначала сохранить файл проекта.
+Total	Итого
+Transformation Rules	Правила преобразования
+Translation is not found for:	Перевод отсутствует:
+Trim percentage:	Процент усечения:
+Trimmed Mean	Усечённое среднее
+Type	Тип
+Uncertain	Неопределенно
+Unique Values	Уникальные значения
+Unknown correlation method	Неизвестный метод корреляции
+Unnamed Rule	Безымянное правило
+Unsupported download format	Неподдерживаемый формат скачивания
+Unsupported file format. Please upload XLS, XLSX, CSV, TSV, TXT or ODS files.	Неподдерживаемый формат файла. Пожалуйста, загрузите файлы в формате XLS, XLSX, CSV, TSV, TXT или ODS.
+Unsupported file format. Please upload XLS, XLSX, CSV, TSV, TXT, JSON or ODS files.	Неподдерживаемый формат файла. Пожалуйста, загрузите файлы в формате XLS, XLSX, CSV, TSV, TXT, JSON или ODS.
+Updating UI...	Обновление интерфейса...
+Upload Data File	Загрузить файл данных
+Upload a file to see data	Загрузите файл для просмотра данных
+Use $1, $2, etc. to reference captured groups from the pattern.	Используйте $1, $2 и т. д. для подстановки групп из шаблона
+Use Exponential Notation for Large Numbers	Использовать научный формат для больших чисел
+Use hex color format (#RRGGBB)	Используйте шестнадцатеричный формат цвета (#RRGGBB)
+Use regular expressions to match text patterns.	Используйте регулярные выражения для поиска текста, подходящего под шаблон
+Use sample statistics (n-1 denominator)	Использовать выборочную статистику (знаменатель n-1)
+Use v1, v2, v3, etc. to reference your selected variables. Use @NewVariable = expression to create new variables. Example: @Total = v1 + v2 + v3	Используйте v1, v2, v3 и т.д. для ссылки на выбранные переменные. Используйте выражение @Название = для создания новых переменных. Пример: @Сумма = v1 + v2 + v3
+Use v1:v7 syntax for ranges of variables. Example: sum(v1:v7) to sum variables v1 through v7.	Используйте синтаксис v1:v7 для диапазонов переменных. Пример: sum(v1:v7) для суммирования переменных от v1 до v7.
+V1 before, V1 after, V2 before, V2 after	П1 до, П1 после, П2 до, П2 после
+V1 before, V2 before, V1 after, V2 after	П1 до, П2 до, П1 после, П2 после
+Valid Percentage	Валидный процент
+Value	Значение
+Value (A-Z)	Значение (А-Я)
+Value (Z-A)	Значение (Я-А)
+Value Mappings	Сопоставления значений
+Values (comma separated):	Значения (через запятую):
+Values < 1 suggest X influences Y, values > 1 suggest Y influences X	Значения < 1 предполагают, что X влияет на Y, значения > 1 предполагают, что Y влияет на X
+Variable	Переменная
+Variable 1	Переменная 1
+Variable 2	Переменная 2
+Variable Selection	Выбор переменных
+Variable Selection (Optional)	Выбор переменных (необязательно)
+Variable Types	Типы переменных
+Variable not found in analysis set	Переменная не найдена в наборе анализа
+Variable to replace	Переменная для замены
+Variables	Переменные
+Variables to Stack	Переменные для объединения
+Variables: {selected}/{total}	Переменные: {selected}/{total}
+Variance	Дисперсия
+Variance (s²)	Дисперсия (s²)
+Variance CI Lower	Нижняя граница ДИ для дисперсии
+Variance CI Upper	Верхняя граница ДИ для дисперсии
+Violin Plot	Скрипичный график
+Violin Plot Options:	Настройки скрипичного графика:
+Violin Plot: {name}	Скрипичный график: {name}
+When analyzing variables with significantly different entropy levels (e.g., binary gender vs. continuous income), directional analysis can be biased. Variables with lower entropy tend to appear as "effect" rather than "cause" variables.	При анализе переменных с существенно разными уровнями энтропии (например, бинарный пол и непрерывный доход), направленный анализ может быть смещенным. Переменные с меньшей энтропией чаще выглядят как переменные "эффекта", а не "причины".
+When checked, calculates sample variance/std.dev. with n-1 denominator. When unchecked, calculates population variance/std.dev. with n denominator.	Если отмечено, рассчитывает выборочную дисперсию/станд.откл. со знаменателем n-1. Если не отмечено, рассчитывает дисперсию/станд.откл. генеральной совокупности со знаменателем n.
+While these metrics can suggest the direction of influence, they cannot prove causality. Validation through controlled experiments or domain knowledge is still recommended.	Хотя эти метрики могут указывать направление влияния, они не могут доказать причинность. Рекомендуется проверка через контролируемые эксперименты или экспертные знания предметной области.
+Will create new	Создаст новую
+Will replace existing	Заменит существующую
+Z-Score (Mean=0, SD=1)	Z-оценка (среднее=0, СО=1)
+Z-Score standardizes data to have mean=0 and standard deviation=1. Min-Max scaling transforms data to a 0-1 range.	Z-оценка стандартизирует данные к среднему=0 и стандартному отклонению=1. Масштабирование мин-макс преобразует данные в диапазон от 0 до 1.
+Zero Count	Количество нулей
+Zeroes	Нули
+Zeroes %	Нули %
+and	и
+correlation	корреляция
+moderate	умеренная
+negative	отрицательная
+negligible	пренебрежимая
+p-value	p-значение
+p-value Matrix	Матрица p-значений
+p-value display format	Настройки отображения p-значений
+positive	положительная
+strong	сильная
+variables	переменным
+variables selected	переменных выбрано
+very strong	очень сильная
+very weak	очень слабая
+weak	слабая
+Creating distribution plots...	Создание графиков распределения...
+Creating plots for {variable}...	Создание графиков для переменной {variable}...
+Export SVG	Экспорт SVG
+Export PNG	Экспорт PNG
+Export JPG	Экспорт JPG
+Density	Плотность
+Histogram: {name}	Гистограмма: {name}
+Box Plot: {name}	Ящик с усами: {name}
+Outlier	Выброс
+Theoretical Quantiles	Теоретические квантили
+Sample Quantiles	Выборочные квантили
+Q-Q Plot: {name}	Q-Q график: {name}
+Points close to the line suggest data follows normal distribution	Точки, близкие к линии, указывают на нормальное распределение данных
+Unknown error	Неизвестная ошибка
+Please select at least one plot type." : "Пожалуйста, выберите хотя бы один тип графика.
+No valid data for histogram	Нет корректных данных для гистограммы
+Invalid data format for box plot	Некорректный формат данных для ящика с усами
+No valid data for box plot	Нет корректных данных для ящика с усами
+No valid data for Q-Q plot	Нет корректных данных для Q-Q графика
+(rows - 1) × (cols - 1)	(строк - 1) × (столбцов - 1)
+Achieved power: {power}	Достигнутая мощность: {power}
+Attenuation factor	Коэффициент аттенуации
+Benjamini-Hochberg (FDR)	Бенжамини-Хохберг (FDR)
+Benjamini-Yekutieli (BY)	Бенжамини-Екутели (BY)
+CLES must be between 0 and 1 (exclusive).	CLES должен быть в диапазоне от 0 до 1 (не включая).
+Calculating power...	Расчёт мощности...
+Calculating sample size...	Расчёт размера выборки...
+Cohen's d for paired differences	d Коэна для парных различий
+Cohen's d for t-tests	d Коэна для t-критериев
+Cohen's h for proportion difference	h Коэна для разности долей
+Cohen's {symbol}	{symbol} Коэна
+Cramér's V conversion requires table dimensions (rows and columns, both ≥ 2).	Пересчёт в V Крамера требует указания размеров таблицы (строки и столбцы, оба ≥ 2).
+Degrees of Freedom	Степени свободы
+Denominator df	Знаменатель ст. св.
+Effect Size	Размер эффекта
+Effect Size ({symbol})	Размер эффекта ({symbol})
+Equal allocation maximizes power.	Равное распределение максимизирует мощность.
+Error calculating power: {error}	Ошибка при расчёте мощности: {error}
+Error calculating sample size: {error}	Ошибка при расчёте размера выборки: {error}
+Expected correlation coefficient	Ожидаемый коэффициент корреляции
+Expected observed correlation	Ожидаемая наблюдаемая корреляция
+Hedges' g conversion requires sample size (at least 4) for accurate results.	Пересчёт в g Хеджеса требует размера выборки (не менее 4) для точных результатов.
+Holm / Hochberg / Hommel	Холм / Хохберг / Хоммель
+Loading R libraries	Загрузка библиотек R
+Min. Effect	Мин. эффект
+Minimum detectable effect: {effect}	Минимально обнаруживаемый эффект: {effect}
+NNT conversion requires a valid Control Event Rate (between 0 and 1).	Пересчёт в NNT требует допустимой частоты событий в группе контроля (от 0 до 1).
+Number of Groups	Количество групп
+Number of Pairs	Количество пар
+Number of Predictors	Количество предикторов
+Number of categories minus 1	Количество категорий минус 1
+Numerator df	Числитель ст. св.
+Please enter a valid alpha level.	Пожалуйста, введите допустимый уровень значимости.
+Please enter a valid correlation between -1 and 1.	Пожалуйста, введите допустимое значение корреляции от -1 до 1.
+Please enter a valid effect size.	Пожалуйста, введите допустимый размер эффекта.
+Please enter a valid margin of error.	Пожалуйста, введите допустимую предельную ошибку.
+Please enter a valid number of comparisons (at least 2).	Пожалуйста, введите допустимое количество сравнений (не менее 2).
+Please enter a valid proportion between 0 and 1.	Пожалуйста, введите допустимое значение доли от 0 до 1.
+Please enter a valid size for group {n} (at least 2).	Пожалуйста, введите допустимый размер для группы {n} (не менее 2).
+Please enter a valid standard deviation.	Пожалуйста, введите допустимое стандартное отклонение.
+Please enter a valid value for all parameters.	Пожалуйста, введите допустимые значения для всех параметров.
+Please enter valid values for all fields.	Пожалуйста, введите допустимые значения во все поля.
+Power	Мощность
+Power (1 - β)	Мощность (1 - β)
+Power loss vs equal allocation: {loss}%	Потеря мощности по сравнению с равным распределением: {loss}%
+Required number of items	Необходимое количество пунктов
+Required sample size	Необходимый размер выборки
+Required sample size: {n}	Необходимый размер выборки: {n}
+Sample Size (per group)	Размер выборки (на группу)
+Significance Level (α)	Уровень значимости (α)
+Solving	Решается
+Šidák	Шидак
+This will give you a {conf}% CI with margin of error ±{margin}	Это даст {conf}% ДИ с предельной ошибкой ±{margin}
+To achieve reliability of {target}, you need {required} items ({n} fewer than current).	Для достижения надёжности {target} необходимо {required} пунктов (на {n} меньше текущего).
+To achieve reliability of {target}, you need {required} items ({n} more than current).	Для достижения надёжности {target} необходимо {required} пунктов (на {n} больше текущего).
+Total N	Общий N
+Total Sample Size	Общий размер выборки
+Your true correlation of {true} will appear as approximately {observed} due to measurement error.	Истинная корреляция {true} будет наблюдаться приблизительно как {observed} из-за ошибок измерения.
+total	всего
+{test}: {name}	{test}: {name}
+Please select at least one dependent variable.	
+Please select at least one predictor or covariate.	
+Variables cannot be both dependent and independent: 	
+For linear regression, dependent variables must be numeric: 	
+Running regression analysis...	
+Analysis complete	
+An error occurred while running the regression analysis: 	
+Please select at least one predictor to compare models.	
+Model comparison with more than 15 predictors would generate too many models (2^15 = 32,768). Please reduce the number of predictors.	
+Selected dependent variables are not compatible with the chosen regression type: 	
+This will compare {count} models. This may take a while. Continue?	
+Comparing models...	
+Comparing models for {variable}...	
+Comparison complete	
+An error occurred while comparing models: 	
+Linear Regression	
+Binary Logistic Regression	
+Ordinal Logistic Regression	
+Multinomial Logistic Regression	
+Poisson Regression	
+Negative Binomial Regression	
+Regression	
+Model Fit	
+Coefficients by Outcome Level	
+Coefficients	
+Cut-points between adjacent ordinal categories on the latent variable scale	
+Thresholds (Intercepts)	
+ANOVA	
+Correlations	
+Collinearity Diagnostics	
+Residual Diagnostics	
+Influence Statistics	
+Goodness of Fit	
+Linear	
+Binary Logistic	
+Ordinal Logistic	
+Multinomial Logistic	
+Poisson	
+Negative Binomial	
+Ridge	
+LASSO	
+Elastic Net	
+Regularized	
+{method} {type} Regression	
+Regularization Parameters	
+Outcome:	
+Cross-Validation Summary	
+Model Comparison	
+Regression Type:	
+Dependent Variable:	
+Predictors (dredged):	
+Covariates (fixed):	
+N:	
+Models compared:	
+{pct}% Confidence set:	
+{count} models	
+Model selection uncertainty (entropy):	
+Effective number of models:	
+Model Rankings	
+Model-Averaged Coefficients	
+Variable Importance	
+Intercept only	
+Predictors:	
+Covariates:	
+Predictors in model:	
+Non-zero coefficients:	
+Reference outcome:	
+vs.	
+Reference Categories:	
+Minimum CV error	
+1 SE rule (more regularization)	
+User-specified	
+λ (selected)	
+λ.min (CV optimal)	
+Minimizes cross-validation error	
+λ.1se	
+Largest λ within 1 SE of minimum	
+CV Error (at selected λ)	
+Mean ± SE from 10-fold CV	
+Lambda values tested	
+Lambda range	
+Best CV error	
+At λ = {lambda}	
+Degrees of freedom (at selected λ)	
+Effective number of parameters	
+Metric	
+Note	
+Use	
+Rank	
+Predictors	
+K	
+R²	
+McFadden R²	
+Adj R²	
+Nagelkerke R²	
+AIC	
+AICc	
+ΔAIC	
+Weight	
+Cum. Weight	
+Ev. Ratio	
+Conf. Set	
+Log-lik	
+BIC	
+ΔBIC	
+BIC Wt	
+Apply this model's predictors to selection	
+(Intercept)	
+Term	
+Full Avg	
+SE	
+Cond Avg	
+Importance	
+N Models	
+N+	
+N−	
+Very high importance	
+High importance	
+Moderate importance	
+Low importance	
+Very low importance	
+Adjusted R²	
+F-statistic	
+df (regression, residual)	
+p-value (F)	
+Root MSE	
+McFadden's R²	
+Nagelkerke's R²	
+Cox & Snell R²	
+Null Deviance	
+Residual Deviance	
+χ² (LR test)	
+df	
+p-value (χ²)	
+Log-likelihood	
+Predictor	
+B	
+β	
+RRR	
+RRR {level}% CI	
+Threshold	
+Estimate	
+Significant cut-point	
+Cut-point not significantly different from 0	
+Baseline log-odds	
+Significant: increases relative risk by {factor}x	
+Significant: decreases relative risk by {factor}x	
+Significant positive effect	
+Significant negative effect	
+Not significant	
+VIF	
+Tolerance	
+Shapiro-Wilk (normality)	
+Durbin-Watson (autocorrelation)	
+Breusch-Pagan (heteroscedasticity)	
+Test	
+Statistic	
+Cook's D (max)	
+Cook's D > 1 (n)	
+Potential influential observations	
+No highly influential observations	
+Leverage (max)	
+High leverage points (n)	
+Observations with high leverage	
+No high leverage points	
+Standardized residuals |>3| (n)	
+Potential outliers detected	
+No extreme outliers	
+RESET F-statistic	
+RESET df	
+RESET p-value	
+Model may be misspecified (consider non-linear terms)	
+No evidence of misspecification	
+Hosmer-Lemeshow χ²	
+Hosmer-Lemeshow df	
+Hosmer-Lemeshow p-value	
+Accuracy	
+Sensitivity (Recall)	
+Specificity	
+Positive Predictive Value	
+Negative Predictive Value	
+Confusion Matrix	
+Classification Accuracy	
+Likelihood Ratio χ²	
+LR Test df	
+LR Test p-value	
+Deviance	
+Deviance df	
+Deviance p-value	
+Pearson χ²	
+Pearson χ² p-value	
+Dispersion Parameter	
+Underdispersion detected	
+Overdispersion detected	
+Dispersion within acceptable range	
+Dispersion Interpretation	
+Source	
+SS	
+MS	
+F	
+Zero-order (r)	
+Partial	
+Part (sr)	
+Negligible variance explained	
+Small effect size	
+Medium effect size	
+Large effect size	
+Weak fit	
+Acceptable fit	
+Good fit	
+Excellent fit	
+Minimal shrinkage	
+Acceptable shrinkage	
+Notable shrinkage (possible overfitting)	
+Model is significant	
+Model is not significant	
+Negligible	
+Weak positive	
+Weak negative	
+Moderate positive	
+Moderate negative	
+Strong positive	
+Strong negative	
+Very strong positive	
+Very strong negative	
+Model intercept	
+No collinearity concern	
+Moderate collinearity	
+High collinearity	
+Residuals appear normal	
+Residuals may not be normal	
+No autocorrelation concern	
+Positive autocorrelation possible	
+Negative autocorrelation possible	
+Homoscedasticity assumed	
+Heteroscedasticity detected	
+Low influence	
+Moderate influence	
+High influence	
+Within normal range	
+High leverage point	
+Predictors updated	
+Select variables using the "Variables" button	
+# Do not remove this line
