@@ -1852,6 +1852,7 @@ FABIA	FABIA
 Spectral	Спектральная
 Testing k = {k}	Проверка k = {k}
 Number of Clusters (k)	Число кластеров (k)
+Cluster {n}	Кластер {n}
 Dendrogram	Дендрограмма
 Case clustering	Кластеризация наблюдений
 Variable clustering	Кластеризация переменных
@@ -1898,7 +1899,7 @@ Row Release	Удаление строк
 Column Release	Удаление столбцов
 Residue Threshold (δ)	Порог остатков (δ)
 Maximum allowed mean squared residue	Максимально допустимый средний квадрат остатков
-Alpha	Alpha
+Alpha	Альфа
 Scaling factor for node deletion	Масштабирующий коэффициент для удаления узлов
 Minimum Rows	Минимальное число строк
 Minimum Columns	Минимальное число столбцов
