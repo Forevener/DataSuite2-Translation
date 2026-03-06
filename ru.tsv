@@ -400,7 +400,7 @@ Run	Запуск
 {count} rule(s) pushed to library	{count} правил(о) отправлено в библиотеку
 {count} skipped	{count} пропущено
 Categorical Filter	Категориальный фильтр
-M. Khukhrin	М. Хухрин
+M. S. Khukhrin	М. С. Хухрин
 Remove this filter	Удалить этот фильтр
 ×	×
 Select Variable:	Выберите переменную:
@@ -2458,8 +2458,8 @@ Cohen's w	w Коэна
 Hedges' g	g Хеджеса
 Correlation r	Корреляция r
 R-squared (R²)	R-квадрат (R²)
-Eta-squared (η²)	Ηта-квадрат (η²)
-Partial η²	Частный η²
+Eta-squared (η²)	Эта-квадрат (η²)
+Partial η²	Частичная η²
 Cohen's h	h Коэна
 Odds Ratio	Отношение шансов
 CLES	CLES
@@ -2627,4 +2627,25 @@ negligible	пренебрежимый
 small	малый
 medium	средний
 large	большой
+Glass' Δ	Δ Гласса
+Welch's d	d Уэлча
+Point-biserial r	Точечно-бисериальный r
+Eta-squared	Эта-квадрат
+Omega-squared	Омега-квадрат
+Rank-biserial r	Рангово-бисериальный r
+Cliff's Delta	Дельта Клиффа
+Common language ES	Общеязыковой РВ
+Cohen's d_z	d_z Коэна
+Hedges' g_z	g_z Хеджеса
+Matched-pairs rank-biserial r	Рангово-бисериальный r для связанных пар
+Wilcoxon r	r Уилкоксона
+Epsilon-squared	Эпсилон-квадрат
+Eta-squared (H)	Эта-квадрат (H)
+Partial Eta-squared	Частичная Эта-квадрат
+Wilks' Lambda	Лямбда Уилка
+Pillai's Trace	След Пиллая
+Hotelling's Trace	След Хотеллинга
+Roy's Largest Root	Наибольший корень Роя
+Export All Plots	Экспорт всех графиков
+Major 3 (ML, PA, MINRES)	3 основных (МП, ГО, МинОст)
 # Comment to ensure the last entry gets trailing newline, better to preserve
