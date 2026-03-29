@@ -42,7 +42,7 @@ Not available	Недоступно
 Loading module...	Загрузка модуля...
 Some modules failed to load	Некоторые модули не удалось загрузить
 Upload data file	Загрузить файл данных
-Select a data file to upload (supported formats: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)	Выберите файл данных для загрузки (поддерживаемые форматы: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)
+Select one or more data files to upload (supported formats: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)	Выберите файл(ы) данных для загрузки (поддерживаемые форматы: XLS, XLSX, CSV, TSV, TXT, ODS, JSON)
 Choose file	Выбрать файл
 No file selected	Файл не выбран
 Download data file	Скачать файл данных
@@ -239,7 +239,10 @@ Sheet	Лист
 Size	Размер
 Merge strategy	Стратегия объединения
 Append rows	Добавить строки
-Join columns	Объединить столбцы
+Join columns	Добавить столбцы
+Main sheet	Основной лист
+Key column for row matching	Ключевой столбец для сопоставления строк (идентификатор)
+Add key	Добавить ключ
 Add grouping variable	Добавить группирующую переменную
 Column name	Название столбца
 Sheet labels	Метки листов
@@ -340,7 +343,7 @@ Min-Max (0-1)	Мин-Макс (0-1)
 Delete {count} selected rule(s) from the library?	Удалить {count} выбранных правил из библиотеки?
 {count} rule(s) deleted	{count} правил(о) удалено
 Invalid JSON format	Неверный формат JSON
-Invalid file format. Expected DataSuite rules export.	Неверный формат файла. Ожидается экспорт правил DataSuite.
+Invalid file format. Expected DataSuite rules or project export.	Неверный формат файла. Ожидается файл правил или проекта DataSuite.
 No rules found in file	В файле не найдено правил
 Import complete: {imported} added	Импорт завершён: добавлено {imported}
 {replaced} replaced	{replaced} заменено
@@ -384,11 +387,16 @@ Export to DOCX	Экспорт в DOCX
 Clear all results	Очистить все результаты
 p (adj)	p (кор.)
 {level}% CI	{level}% ДИ
+{count} files selected	{count} файлов выбрано
 Preparing to process file...	Подготовка к обработке файла...
 Reading file...	Чтение файла...
 Unsupported file format. Please upload XLS, XLSX, CSV, TSV, TXT, JSON or ODS files.	Неподдерживаемый формат файла. Пожалуйста, загрузите файлы в формате XLS, XLSX, CSV, TSV, TXT, JSON или ODS.
-Error parsing the {fileExtension} file. Please check the file format.	Ошибка при анализе файла {fileExtension}. Пожалуйста, проверьте формат файла.
+Reading files...	Чтение файлов...
+Reading {name}...	Чтение {name}...
+No data found in the selected files.	Данные не найдены в выбранных файлах.
 Analyzing sheets...	Анализ листов...
+Error processing the selected files. Please check the file formats.	Ошибка при обработке выбранных файлов. Пожалуйста, проверьте форматы файлов.
+Error parsing the {fileExtension} file. Please check the file format.	Ошибка при анализе файла {fileExtension}. Пожалуйста, проверьте формат файла.
 Error parsing the file. Please check the file format.	Ошибка при анализе файла. Пожалуйста, проверьте формат файла.
 Error reading the file. Please try again.	Ошибка чтения файла. Пожалуйста, попробуйте снова.
 Processing JSON data...	Обработка данных JSON...
@@ -404,10 +412,12 @@ Exclude	Исключить
 Merge with matched column	Объединить с совпавшим столбцом
 Merge with unmatched column	Объединить с несовпавшим столбцом
 No data found in the file.	В файле не найдено данных.
+{count} unmatched rows were appended at the end.	{count} несовпавших строк были добавлены в конце.
 Select at least one sheet	Выберите хотя бы один лист
 Selected sheets contain no data	Выбранные листы не содержат данных
 Columns were reordered to match across sheets.	Столбцы были переупорядочены для согласования между листами.
-Sheets have different row counts. Join is positional — rows must be pre-aligned.	Листы имеют разное количество строк. Объединение позиционное — строки должны быть предварительно выровнены.
+Key values are not unique in the main sheet. Consider adding another key column.	Значения ключа не уникальны в основном листе. Лучше добавить еще один ключевой столбец.
+Sheets have different row counts. Join is positional — rows must be pre-aligned.	Листы имеют разное количество строк. Объединение позиционное — расположение строк должно совпадать.
 
 # === distribution-view ===
 Frequency tables	Таблицы частот
@@ -924,6 +934,7 @@ Comparison	Сравнение
 ES	РЭ
 {es} CI	{es} ДИ
 {es} SE	{es} SE
+{n} variable(s) failed analysis:	Переменные не прошли анализ ({n} шт.):
 Significant difference	Значимое различие
 No significant difference	Незначимое различие
 Group 1	Группа 1
@@ -2775,7 +2786,7 @@ Solving	Решается
 Numerator df	Числитель ст. св.
 Denominator df	Знаменатель ст. св.
 
-# === Skipped ===
+# === Orphaned ===
 Binary logistic	Бинарная логистическая
 Ordinal logistic	Порядковая логистическая
 Multinomial logistic	Мультиномиальная логистическая
