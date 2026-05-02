@@ -332,3 +332,3527 @@ Zeroes	零值
 Zeroes %	零值百分比
 and	和
 p-value display format	"
+
+# === core ===
+Data upload & preview	
+Comparison analysis	
+Correlation analysis	
+Directional analysis	
+Reliability analysis	
+Factor & principal component analysis	
+Confirmatory factor analysis	
+Cluster analysis	
+Regression analysis	
+Time to event analysis	
+Time series analysis	
+Analysis planner	
+Documentation	
+R console	
+Please consider citing the works used in your analysis	
+Key references	
+Additional references	
+M. S. Khukhrin	
+Loading module...	
+Some modules failed to load	
+Select one or more data files to upload (supported formats: XLS, XLSX, CSV, TSV, TXT, ODS, JSON, SAV, DTA, SAS7BDAT, XPT, POR)	
+Download data file	
+Select desired file format	
+CSV (Comma separated)	
+CSV-2 (Semicolon separated)	
+TSV (Tab separated)	
+TXT (Plain text)	
+Microsoft Excel (XLSX)	
+Microsoft Excel 97-2003 (XLS)	
+Microsoft Excel Binary (XLSB)	
+OpenDocument (ODS)	
+HTML table	
+JSON (data only, row-based - default)	
+JSON (data only, column-based)	
+JSON (project)	
+Download	
+Delimited	
+Spreadsheets	
+JSON	
++ Value recode	
++ Range recode	
++ RegEx replace	
+Rule library	
+No transformation rules defined yet.	
+Search pattern (RegEx)	
+Use regular expressions to match text patterns.	
+Replacement text	
+Use $1, $2, etc. to reference captured groups from the pattern.	
+Options	
+Global (replace all matches)	
+Case sensitive	
+Multiline mode	
+Preview	
+Matches:	
+Result:	
+e.g., \d{3}-\d{3}-\d{4}	
+e.g., ($1) $2-$3	
+e.g., Score_Transformed	
+Selection	
+Variable types	
+Assign measurement scales to variables. Click or drag across cells to quickly assign types.	
+Con.	
+Ord.	
+Cat.	
+Apply	
++ Add categorical filter	
++ Add numerical filter	
+Reset to defaults	
+Export	
+Import	
+Console	
+Plots	
+No plots yet. Use plot(), hist(), etc. in the console.	
+Run	
+Table converter	
+Configuration	
+Stacking pattern	
+Grouped by condition	
+V1 before, V2 before, V1 after, V2 after	
+Grouped by variable	
+V1 before, V1 after, V2 before, V2 after	
+Number of conditions/time points	
+Condition column name	
+Condition labels	
+Subject identifier	
+Generate automatically (row numbers)	
+Links measurements from the same subject	
+Variables to stack	
+Select variables which should be stacked	
+variables selected	
+This will replace your current dataset. Consider saving your project first if needed.	
+Apply transformation	
+File rules	
+Click or drag checkboxes to select multiple rules.	
+Name	
+Type	
+Description	
+Selected: {count}	
+Push to library	
+Library	
+Pull to file	
+Delete	
+Name conflict:	
+Overwrite	
+Keep both (rename)	
+Skip	
+Cancel all	
+Import spreadsheet	
+Sheets	
+Sheet	
+Size	
+Merge strategy	
+Append rows	
+Join columns	
+Main sheet	
+Key column for row matching	
+Add key	
+No key selected — rows will be matched by position	
+Add grouping variable	
+Column name	
+Sheet labels	
+Column mapping	
+Some columns could not be matched by name across sheets. Choose how to resolve each one.	
+Header rows	
+OK	
+Invalid settings file	
+Display	
+Statistics	
+Appearance	
+Missing data	
+Plotting	
+Precision mode	
+Significant figures (fractional only)	
+Significant figures	
+Precision: descriptives & percentages	
+Precision: statistics & coefficients	
+Precision: p-values	
+Scroll to results after analysis	
+Confidence level	
+Bootstrap replications	
+Assumption test significance level	
+Moderate	
+Severe	
+VIF collinearity thresholds	
+Excellent	
+Acceptable	
+Poor	
+RMSEA fit cutoffs	
+CFI fit cutoffs	
+TLI fit cutoffs	
+SRMR fit cutoffs	
+Borderline	
+HTMT discriminant validity cutoffs	
+Very strong	
+Strong	
+Weak	
+Very weak	
+Correlation strength bands	
+Normalized mutual information bands	
+Bold significant p-values	
+Color significant p-values	
+Highlight significant p-values	
+Table style	
+Full borders (all cells)	
+APA style (top, bottom, header)	
+Borderless (header separator only)	
+Horizontal lines only	
+Minimal (top, bottom, header)	
+Indicator color: good	
+Indicator color: bad	
+Indicator color: uncertain	
+Global missing data method	
+Pairwise deletion (Use available data for each pass)	
+Listwise deletion (Remove rows with any missing values)	
+Imputation (Replace with calculated values)	
+Imputation method	
+Constant value	
+Heatmap high color	
+Heatmap mid color	
+Heatmap low color	
+Maximum point spacing (px)	
+Cannot assign numeric type to text variables: {vars}. Use Transform to convert them first.	
+The following variables already exist: {vars}. Do you want to overwrite them?	
+{label} computed for {computed} complete cases out of {total} total cases. Remaining cases will have NA.	
+{label} computed for {computed} complete cases out of {filtered} filtered cases ({total} total). Remaining cases will have NA.	
+{label} inserted successfully: {vars}	
+Outside	
+Available commands:	
+R documentation:	
+R help resources:	
+  example(func)         Run examples for a function	
+  help(), ?function     Are not implemented in WebR yet	
+Useful R commands:	
+  ls()                  List objects in environment	
+  str(x)                Show structure of object	
+  head(x), tail(x)      First/last rows of data	
+  summary(x)            Statistical summary	
+  list.files()          List files in working directory	
+Resetting R session...	
+R session has been reset.	
+No data loaded in the application.	
+Current data bound to "df"	
+Uploading {filename}...	
+File uploaded: {path}	
+Upload failed: {error}	
+Usage: /output <variable>	
+Example: /output df	
+Object not found: {name}	
+Cannot output object: {name}	
+Output sent to results: {name}	
+Failed to output: {error}	
+Usage: /download <filename>	
+Example: /download output.csv	
+Downloading {path}...	
+Download started: {filename}	
+Download failed: {error}	
+Make sure the file exists. Use list.files() to see available files.	
+Plots cleared.	
+No plots to output.	
+All plots sent to results.	
+Invalid plot number. Use 1-{max} or "all".	
+Plot {num} sent to results.	
+Failed to adjust p-values	
+Unknown command: {cmd}	
+R Plots	
+R: All plots	
+Invalid pattern: {error}	
+Please add at least one valid mapping	
+Please add at least one valid range	
+Please enter a formula	
+Please enter a search pattern	
+Invalid regex pattern: {error}	
+Are you sure you want to delete this rule?	
+Warning: the following rules use variables affected by this rule:	
+Please enter a name for the rule	
+Please select at least one input variable	
+Please enter a name for the output variable	
+Please select at least one output variable	
+Number of input and output variables must match	
+Output variables cannot be the same as input variables	
+Applied to	
+variables	
+Will replace existing	
+Will create new	
+(input)	
+Edit rule	
+Delete rule	
+Rule updated and applied successfully	
+Rule created and applied successfully	
+Invalid rule	
+Z-Score	
+Min-Max (0-1)	
+{count} rule(s) pushed to library	
+{count} skipped	
+{count} rule(s) pulled to file	
+Delete {count} selected rule(s) from the library?	
+{count} rule(s) deleted	
+Invalid JSON format	
+Invalid file format. Expected DataSuite rules or project export.	
+No rules found in file	
+Import complete: {imported} added	
+{replaced} replaced	
+{skipped} skipped	
+Import failed: {error}	
+Some rules in the import file already exist in the library. Click OK to replace existing rules, or Cancel to skip duplicates.	
+Replace	
+Skip duplicates	
+Rules exported successfully	
+No rules in current file	
+Library is empty	
+Click or drag to select	
+In library	
+In file	
+Condition	
+Use column	
+measurement(s) per condition	
+Variables don't divide evenly by conditions	
+Select variables to see preview	
+... {count} more ...	
+Variables being stacked:	
+... {count} more rows ...	
+rows	
+Not enough variables selected for the number of conditions	
+Variables don't divide evenly - some may be ignored	
+Cannot apply transformation - check configuration	
+Data transformed successfully! 	
+rows created	
+Unsupported download format	
+DOCX library not loaded	
+No results to export	
+Preparing export...	
+Exporting result {current} of {total}...	
+Generating document...	
+Export failed: 	
+JSZip library not loaded	
+No plots to export	
+Exporting plot {current} of {total}...	
+Generating ZIP file...	
+Are you sure you want to clear all results?	
+Export all plots	
+Export to DOCX	
+Clear all results	
+p (adj)	
+{level}% CI	
+{count} files selected	
+Unsupported file format. Please upload XLS, XLSX, CSV, TSV, TXT, JSON, ODS, SAV, DTA, SAS7BDAT, XPT or POR files.	
+Reading files...	
+Reading {name}...	
+No data found in the selected files.	
+Analyzing sheets...	
+Error processing the selected files. Please check the file formats.	
+Processing JSON data...	
+Error parsing the JSON file. Please check the format.	
+Loading project data...	
+Updating UI...	
+Error loading the project. The file may be corrupted.	
+Processing column-based data...	
+No data found in the JSON file.	
+Converting row-based data...	
+Loading R libraries	
+Reading data file...	
+Extracting data...	
+Processing metadata...	
+Value labels	
+{count} recode rules created from value labels	
+Initializing R...	
+Preparing import...	
+Import data file	
+Keep as new column	
+Exclude	
+Merge with matched column	
+Merge with unmatched column	
+No data found in the file.	
+{count} unmatched rows were appended at the end.	
+None - assume row correspondence	
+Deselected {count} mostly-empty variables: {vars}	
+Select at least one sheet	
+Selected sheets contain no data	
+Columns were reordered to match across sheets.	
+Key values are not unique in the main sheet. Consider adding another key column.	
+Sheets have different row counts. Join is positional — rows must be pre-aligned.	
+
+# === distribution-view ===
+Shapiro-Wilk test	
+Anderson-Darling test	
+Lilliefors test	
+Kolmogorov-Smirnov test	
+D'Agostino-Pearson test	
+Jarque-Bera test	
+Cramer-von Mises test	
+Distribution plots	
+Create distribution plots	
+Plot configuration	
+Select which plots to generate:	
+Histogram	
+Box plot	
+Q-Q plot	
+Histogram options:	
+Show density curve	
+Show normal curve	
+Bin calculation method:	
+Auto (Recommended)	
+Sturges	
+Scott	
+Freedman-Diaconis	
+Box plot options:	
+Show outliers	
+Show mean	
+Show notch (median CI)	
+Show data points	
+Q-Q plot options:	
+Show confidence band	
+Please select at least one plot type.	
+Creating distribution plots...	
+Creating plots for {variable}...	
+Histogram: {name}	
+Box plot: {name}	
+Q-Q plot: {name}	
+Unknown error	
+
+# === comparison-view ===
+No valid data for histogram	
+Export SVG	
+Export PNG	
+Export JPG	
+Invalid data format for box plot	
+No valid data for box plot	
+Upper whisker	
+Lower whisker	
+No valid data for Q-Q plot	
+Density	
+Normal	
+Outlier	
+Data points	
+Notch = 95% CI of median	
+Theoretical quantiles	
+Sample quantiles	
+Points close to the line suggest data follows normal distribution	
+{level}% CI (DKW)	
+Analysis type	
+Independent samples	
+Dependent samples (repeated measures)	
+Mixed model (between + within subjects)	
+This analysis requires long format data.	
+Convert to long format	
+Variable selection	
+Unselected variables will be treated as dependent variables	
+Grouping variables	
+Condition variables (within-subjects)	
+Variables representing repeated measures or within-subjects conditions	
+Subject ID	
+Covariates	
+Check assumptions	
+Run comparison analysis	
+Analysis setup	
+Analysis strategy	
+Analyze each variable separately	
+Runs independent analyses for each grouping variable	
+Combine variables into subgroups	
+Creates factorial subgroups and analyzes them together	
+Number of groups/conditions	
+Statistical test	
+Test direction	
+Two-tailed (Group 1 ≠ Group 2)	
+One-tailed (Group 1 > Group 2)	
+One-tailed (Group 1 < Group 2)	
+Equivalence (TOST): |μ₁ − μ₂| < Δ	
+Non-inferiority: μ₁ − μ₂ > −Δ	
+Superiority: μ₁ − μ₂ > Δ	
+Minimal effect (MET): |μ₁ − μ₂| > Δ	
+Equivalence bound (Δ)	
+Raw	
+Standardized (Cohen's d)	
+Include post-hoc tests	
+Pairwise comparison table format	
+Matrix format	
+Long format	
+Include effect sizes	
+Include classification (ROC) analysis	
+Optimal threshold rule	
+Youden's J (max sens + spec − 1)	
+Closest to (0, 1)	
+Cost-weighted	
+Cost asymmetry ratio	
+Both directional thresholds will be shown.	
+Classification metrics at optimal threshold	
+AUC confidence interval	
+DeLong	
+Bootstrap	
+Compare AUCs (pairwise DeLong's test)	
+Summary statistics	
+Standard error	
+Percentiles (Q1, Q3, IQR)	
+Minimum and maximum	
+Mean rank (for rank-based tests)	
+Joint frequency table	
+Include visualization	
+Mean and error bar plot	
+Paired lines plot	
+Paired lines options:	
+Show mean line	
+Interaction plot	
+Interaction plot options:	
+Show error bars	
+Forest plot	
+ROC curve	
+Use this converter if your data has groups or conditions in separate columns	
+Standard	
+Equivalence	
+Cohen's d	
+Hedges' g	
+Glass' Δ	
+Welch's d	
+Point-biserial r	
+Eta-squared	
+Omega-squared	
+Rank-biserial r	
+Cliff's delta	
+Common language ES	
+Cohen's d_z	
+Hedges' g_z	
+Matched-pairs rank-biserial r	
+Wilcoxon r	
+Epsilon-squared	
+Eta-squared (H)	
+Partial eta-squared	
+Cramér's V	
+Phi coefficient	
+Cohen's w	
+Wilks' lambda	
+Pillai's trace	
+Hotelling's trace	
+Roy's largest root	
+Testing covariance matrices	
+Checking multicollinearity	
+Testing multivariate normality	
+Testing covariate assumptions	
+Checking expected frequencies	
+Testing within-subjects normality	
+Testing sphericity	
+Building recommendations	
+Testing normality {name}	
+Testing variance homogeneity {name}	
+Subject ID required for Mauchly's sphericity test	
+Sphericity test requires 3 or more conditions (current: {count})	
+Some groups have too few observations (need > {min} per group)	
+Need at least 2 groups	
+Singular covariance matrix in group {group}	
+Singular pooled covariance matrix	
+Non-finite result	
+Normality assumption violated	
+Multivariate normality violated	
+Homogeneity of variance violated	
+Sphericity violated — consider Greenhouse-Geisser correction	
+Covariance matrices not homogeneous	
+Dependent variables are multicollinear (|r| > 0.90)	
+Homogeneity of regression slopes violated	
+Covariate confounded with treatment	
+Linearity assumption violated	
+Expected frequencies too low (cells < 5)	
+Failed to run formula-based test: 	
+Failed to run table-based test: 	
+Failed to run paired table test: 	
+Failed to run paired test: 	
+Failed to run information-theoretic test: 	
+Mixed ANOVA requires a between-subjects grouping variable.	
+Mixed ANOVA requires a within-subjects condition variable.	
+Mixed ANOVA requires a subject ID variable to identify paired observations.	
+Mixed ANOVA requires at least 2 groups. Found {nGroups} group(s).	
+Mixed ANOVA requires at least 2 conditions. Found {nConditions} condition(s).	
+Failed to run Mixed ANOVA: 	
+Failed to run Factorial ANOVA: 	
+Failed to run ANCOVA: 	
+MANCOVA requires error degrees of freedom (N - groups - covariates) ≥ number of dependent variables. You have {nObs} observations, {nGroups} groups, {nCovariates} covariates, and {nDVs} dependent variables. Error df = {errorDf} < {nDVs} DVs. Consider reducing the number of dependent variables or covariates, or increasing sample size.	
+The dependent variable matrix is rank-deficient (rank {rank} < {nDVs} variables). This may be due to multicollinearity among dependent variables or insufficient unique observations. Consider removing redundant or highly correlated variables.	
+Failed to run MANCOVA: 	
+MANOVA requires error degrees of freedom (N - groups) ≥ number of dependent variables. You have {nObs} observations, {nGroups} groups, and {nDVs} dependent variables. Error df = {errorDf} < {nDVs} DVs. Consider reducing the number of dependent variables or increasing sample size.	
+Failed to run MANOVA: 	
+Repeated measures MANOVA requires a subject ID variable to identify paired observations.	
+Repeated measures MANOVA requires at least 2 conditions. Found {nConditions} condition(s).	
+Repeated measures MANOVA requires more subjects than dependent variables. You have {nSubjects} subjects and {nDVs} dependent variables. Consider reducing the number of dependent variables or increasing sample size.	
+The response matrix is rank-deficient (rank {rank} < {nCols} columns). This may be due to multicollinearity, missing data patterns, or insufficient subjects. Consider removing redundant variables or conditions.	
+Failed to run Repeated Measures MANOVA: 	
+Mixed MANOVA requires a between-subjects grouping variable.	
+Mixed MANOVA requires a within-subjects condition variable.	
+Mixed MANOVA requires a subject ID variable to identify paired observations.	
+Mixed MANOVA requires at least 2 groups. Found {nGroups} group(s).	
+Mixed MANOVA requires at least 2 conditions. Found {nConditions} condition(s).	
+Mixed MANOVA requires more subjects than dependent variables within each group. You have {nSubjects} subjects, {nGroups} groups, and {nDVs} dependent variables. Error df = {errorDf} < {nDVs} DVs. Consider reducing the number of dependent variables or increasing sample size.	
+Failed to run Mixed MANOVA: 	
+Analyzing {name}	
+Running mixed ANOVA for {name}	
+Setting up factorial ANOVA	
+Running ANOVA for {name}	
+Running ANCOVA for {name}	
+Running multivariate tests	
+Computing follow-up tests	
+Computing adjusted means	
+Computing group statistics	
+Validating data	
+Computing condition statistics	
+Computing descriptive statistics	
+ROC analysis: {name}	
+Fisher's exact test requires a 2x2 contingency table. Consider using Chi-square test instead.	
+Expected reshaped columns not found. Available columns:	
+Cochran's Q test requires 3 or more conditions, found 	
+McNemar's test requires binary data (2×2 table). Use Stuart-Maxwell test for polytomous data (3+ categories).	
+Stuart-Maxwell test requires a square contingency table (same categories at both time points)	
+Stuart-Maxwell test requires at least 2×2 table	
+Cochran's Q test requires at least 2 conditions	
+Cochran's Q test requires binary data (exactly 2 unique values), found 	
+Cochran's Q test cannot be computed: all subjects have the same response pattern	
+Insufficient data for ROC	
+Export 	
+Threshold	
+Sensitivity	
+Specificity	
+PPV	
+NPV	
+No valid data for mean/error plot	
+Paired lines plot requires at least two conditions	
+No valid data for paired lines plot	
+No valid data for interaction plot	
+Effect size	
+No valid data for forest plot	
+False positive rate (1 − specificity)	
+True positive rate (sensitivity)	
+No valid data for ROC plot	
+Tukey HSD	
+Pairwise t-tests using pooled ANOVA error (p-adjusted)	
+Dunn's test	
+Pairwise paired t-tests (p-adjusted)	
+Pairwise Wilcoxon signed-rank tests (p-adjusted)	
+Independent samples t-test	
+Welch's t-test (unequal variances)	
+Mann-Whitney U test	
+One-way ANOVA	
+Kruskal-Wallis test	
+Mutual information test	
+Jensen-Shannon divergence test	
+Paired samples t-test	
+Wilcoxon signed-rank test	
+Repeated measures ANOVA	
+Friedman test	
+Factorial ANOVA	
+ANCOVA (Analysis of Covariance)	
+MANCOVA (Multivariate ANCOVA)	
+Chi-square test of independence	
+Fisher's exact test	
+McNemar's test	
+Stuart-Maxwell test	
+Cochran's Q test	
+MANOVA	
+Repeated measures MANOVA	
+Mixed ANOVA	
+Mixed MANOVA	
+(Pairwise comparisons)	
+({delta} Cohen's d, converted to raw)	
+Significantly greater (one-tailed)	
+Significantly less (one-tailed)	
+No significant directional difference	
+negligible effect	
+small effect	
+medium effect	
+large effect	
+[lower, upper] = {level}% CI of difference	
+{symbol} = test statistic, df = degrees of freedom, p = p-value	
+{symbol} = effect size	
+Legend:	
+Failed	
+n = {value}	
+M = {value}	
+Mdn = {value}	
+Mode = {modes} @ {pct}%	
+Mode = {modes}	
+SD = {value}	
+SE = {value}	
+{level}% CI [{lower}, {upper}]	
+Q1 = {value}	
+Q3 = {value}	
+IQR = {value}	
+Min = {value}	
+Max = {value}	
+Mean rank = {value}	
+Not significant	
+P-values adjusted using {method}	
+Mauchly's test of sphericity	
+{method} results	
+{variable} (Between)	
+{variable} (Within)	
+Multivariate tests for {variable}	
+Significant	
+Diff	
+Diff = mean difference	
+[lower, upper] = {level}% CI	
+p = p-value	
+Predicted group = membership signalled by higher scores	
+N = total (predicted/other)	
+CI method: {method}	
+Brier = mean squared error of min-max-rescaled scores against group labels (lower is better)	
+Sensitivity / specificity are displayed for the predicted group	
+PPV / NPV = predictive values	
+Δ AUC = AUC(Variable 1) − AUC(Variable 2). Z = DeLong's test statistic for the difference between paired AUCs on the same subjects.	
+Pairwise analysis summary:	
+{vars} variable(s) analyzed with {comps} total pairwise comparison(s)	
+All variables failed analysis.	
+See errors below.	
+Direction confirmed	
+Unexpected direction	
+No pairwise comparisons available.	
+Pairwise comparisons:	
+Contingency table:	
+Note: expected frequencies shown in parentheses	
+Factorial ANOVA:	
+Significant interaction	
+Significant main effect	
+No interaction	
+No main effect	
+Error:	
+ANCOVA:	
+(covariate)	
+(factor)	
+Adjusted means (estimated marginal means)	
+Post-hoc comparisons (adjusted means)	
+Post-hoc analysis failed:	
+Mixed ANOVA:	
+(within)	
+(between)	
+Sphericity violated; use corrected p-values	
+Sphericity assumption met	
+Post-hoc comparisons	
+Between-subjects comparisons (Group)	
+Within-subjects comparisons (Condition)	
+Simple effects: Group comparisons within each Condition	
+Simple effects: Condition comparisons within each Group	
+Adjusted group means (estimated marginal means)	
+Covariates:	
+Dependent variables:	
+Between-subjects:	
+Within-subjects:	
+Condition:	
+Grouping:	
+Multivariate tests	
+Covariate multivariate tests (Pillai)	
+Univariate follow-up tests (Mixed ANOVAs)	
+Univariate follow-up tests (One-way ANOVAs)	
+MANCOVA results	
+Univariate follow-up tests (ANCOVAs)	
+Post-hoc for:	
+Method:	
+Pass	
+Fail	
+Skipped	
+Partial	
+n < 3	
+n > 5000	
+MV normal	
+MV non-normal	
+Insufficient data	
+Singular covariance	
+Multivariate normality could not be computed:	
+Equal variances	
+Unequal variances	
+Sphericity assumed	
+Sphericity violated	
+Box's M test could not be computed:	
+Homogeneous	
+Non-homogeneous	
+Linear	
+Not linear	
+Independent	
+Confounded	
+Adequate	
+Low frequencies	
+Overall test results	
+Factorial ANOVA results	
+Mixed ANOVA results	
+ANCOVA results	
+Pairwise comparisons	
+Classification (ROC) analysis	
+Batch analysis {current}/{total}: {test} ({iv})	
+Pseudo-factorial analysis: {test} ({iv})	
+Comparison analysis: {test} ({iv})	
+Comparison	
+Equivalence (TOST)	
+Non-inferiority	
+Superiority	
+Minimal effect (MET)	
+{group} N	
+{group} Mean	
+{group} Median	
+{group} Mode	
+{group} SD	
+{group} SE	
+{group} {level}% CI	
+{group} Q1	
+{group} Q3	
+{group} IQR	
+{group} Min	
+{group} Max	
+{group} Mean Rank	
+{level}% CI of Difference	
+p (lower)	
+p (upper)	
+p (MET)	
+p (equiv)	
+ES	
+{es} CI	
+{es} SE	
+{n} variable(s) failed analysis:	
+Equivalent (within Δ = {delta})	
+Equivalence not established (Δ = {delta})	
+Non-inferior (Δ = {delta})	
+Non-inferiority not established (Δ = {delta})	
+Superior (Δ = {delta})	
+Superiority not established (Δ = {delta})	
+Meaningful effect (|d| > Δ = {delta})	
+No meaningful effect (Δ = {delta})	
+Significant difference	
+No significant difference	
+Group 1	
+Group 2	
+Equivalent	
+Not equivalent	
+Non-inferior	
+Not non-inferior	
+Superior	
+Not superior	
+Meaningful effect	
+No meaningful effect	
+Effect	
+Group	
+Raw mean	
+SD	
+Adjusted mean	
+SE	
+Contrast	
+Difference	
+ε (GG)	
+p (GG)	
+Adjusted p-value	
+Main effect of group was not significant (p = {p}). Interpret comparisons with caution.	
+Interaction was significant (p = {p}). Consider simple effects analysis below for more accurate interpretation.	
+Main effect of condition was not significant (p = {p}). Interpret comparisons with caution.	
+Interaction was not significant (p = {p}). Main effect comparisons above may be more appropriate.	
+Mixed MANOVA results	
+MANOVA results	
+Test statistic	
+Approx. F	
+Num. df	
+Den. df	
+Covariate	
+Pillai	
+Dependent variable	
+Descriptive statistics by {variable} (between-subjects)	
+Descriptive statistics by {variable} (within-subjects)	
+Descriptive statistics by {var1} × {var2}	
+Descriptive statistics by group	
+Pairwise t-tests (pooled SD) with {adjustment} adjustment	
+Dunn's test with {adjustment} adjustment	
+Pairwise paired t-tests with {adjustment} adjustment	
+Pairwise Wilcoxon signed-rank tests with {adjustment} adjustment	
+Conover's test with {adjustment} adjustment	
+Nemenyi test	
+No	
+Normality (Shapiro-Wilk)	
+{passed} of {total} tests passed	
+No testable groups	
+Multivariate normality (Mardia's test)	
+Skewness or kurtosis violated in one or more groups	
+Multivariate normality assumed	
+Homogeneity of variance (Levene's test)	
+{count} of {total} variables show unequal variances	
+Equal variances assumed	
+Sphericity (Mauchly's)	
+{count} of {total} variables violate sphericity	
+Homogeneity of covariance matrices (Box's M)	
+Covariance matrices differ across groups (p < 0.001)	
+Covariance matrices are homogeneous	
+Multicollinearity	
+{count} pair(s) with |r| > 0.90	
+No multicollinearity detected (max |r| = {r})	
+Homogeneity of regression slopes	
+{count} interaction(s) significant — slopes differ across groups	
+Regression slopes are homogeneous	
+Linearity (Covariate–DV)	
+{count} covariate-DV pair(s) show no linear relationship	
+Linear relationships confirmed	
+Covariate independence	
+{count} covariate(s) differ across groups	
+Covariates independent of treatment	
+Expected frequencies	
+{count} variable(s) have cells with expected frequency < 5	
+All expected frequencies adequate	
+Assumption	
+Status	
+Notes	
+Summary	
+Recommended tests	
+Not recommended	
+Test recommendations	
+Normality tests (Shapiro-Wilk)	
+Skewness χ²	
+Skew. p	
+Kurtosis Z	
+Kurt. p	
+p-value	
+Sphericity (Mauchly's test)	
+χ² (approx.)	
+Metric	
+Box's M test	
+Variable 1	
+Variable 2	
+Multicollinearity — flagged pairs (|r| > 0.90)	
+DV	
+F (interaction)	
+Linearity (covariate–dv relationship)	
+Covariate independence from treatment	
+Min. expected	
+Cells < 5	
+Total cells	
+Assumption test results	
+Assumptions	
+Predicted group	
+AUC	
+Brier	
+Worse to misclassify	
+Accuracy	
+Threshold optimized by Youden's J (max sensitivity + specificity − 1).	
+Threshold optimized by closest point to (0, 1).	
+Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown per row.	
+Δ AUC	
+Please select at least two variables for analysis.	
+No dependent variables available. Please adjust your variable selection.	
+Please select at least one grouping variable for independent samples analysis.	
+Please select at least one condition variable for dependent samples analysis.	
+Please select a Subject ID variable for dependent samples analysis.	
+Please select at least one grouping variable for mixed design analysis.	
+Please select at least one condition variable for mixed design analysis.	
+Please select a Subject ID variable for mixed design analysis.	
+The {test} test requires at least two dependent variables.	
+The {test} test requires at least one covariate variable.	
+Equivalence bound (Δ) must be a positive number.	
+Please select at least one grouping or condition variable.	
+Checking assumptions...	
+Assumption tests completed	
+An error occurred while checking assumptions: 	
+Running comparison analysis...	
+An error occurred while running the comparison analysis: 	
+Analysis failed for variable: {variable}	
+Adjusting p-values globally...	
+Failed to apply global p-value adjustment	
+Batch analysis completed: {count} analyses with global p-value adjustment	
+Unknown test type: {test}	
+Variable "{name}" has {count} unique values - verify it's categorical, not continuous	
+Group "{group}" has only {count} observation(s) - results may be unreliable	
+Cannot generate {count} factorial groups (limit: {limit}). Use batch analysis instead, or reduce grouping variables.	
+{count} factorial groups will be created - this may take a moment	
+Group "{group}" has no observations	
+{count} pairwise comparisons possible - strongly consider p-value adjustment	
+Failed to adjust p-values: 	
+Factorial analysis preview:	
+{count} combined subgroups will be created and analyzed together	
+Batch analysis preview:	
+{count} separate analyses will be conducted (one per grouping variable)	
+P-values will be adjusted globally across all tests	
+{count} groups detected:	
+...and {count} more groups	
+{count} pairwise comparisons possible	
+Warnings:	
+...and {count} more warnings	
+Mean and error bar: {name}	
+Paired lines: {name}	
+ROC curve: {name}	
+Interaction plot: {name}	
+Distribution comparison	
+
+# === descriptive-view ===
+Generate descriptive statistics	
+Central tendency	
+Trimmed mean	
+Range	
+Standard deviation	
+Interquartile range	
+Mean absolute deviation	
+Coefficient of variation	
+Sample size	
+Count of distinct values	
+Missing value count	
+Zero count	
+Custom percentiles	
+Standard errors	
+Standard error of mean	
+Standard error of median	
+Standard error of proportion	
+Confidence intervals	
+CI for mean	
+CI for median	
+CI for proportion	
+CI for standard deviation	
+CI for variance	
+Trimmed mean ({pct}%)	
+Variance (σ²)	
+Std Dev (σ)	
+Mean CI lower ({level}%)	
+Mean CI upper ({level}%)	
+Median CI lower ({level}%)	
+Median CI upper ({level}%)	
+Std dev CI lower ({level}%)	
+Std dev CI upper ({level}%)	
+Variance CI lower ({level}%)	
+Variance CI upper ({level}%)	
+
+# === correlation-view ===
+Variable selection (optional)	
+Leave empty to correlate all variables	
+Left variables (rows)	
+Right variables (columns)	
+Calculate correlations	
+Correlation options	
+Correlation method	
+Pearson's r	
+Spearman's ρ	
+Kendall's τ	
+Blomqvist's β	
+Polychoric correlation	
+Polyserial correlation	
+Somers' D	
+Goodman & Kruskal's γ	
+Point-biserial	
+Biserial	
+Correlation ratio (η²)	
+Normalized mutual information	
+Adjusted mutual information	
+Rajski's coherence coefficient	
+Theil's U	
+Append raw MI	
+Append entropies	
+Hoeffding's D	
+Chatterjee's ξ	
+Distance correlation	
+Mixed/Auto (automatically selects best method)	
+Table format	
+Matrix	
+Visualization	
+Edge bundling	
+Force-directed graph	
+Correlogram	
+Scatterplots	
+P-value display	
+Separate p-value table	
+Combined with correlation	
+Hide redundant values	
+Calculating {var1} - {var2}	
+No significant correlations with current settings	
+Insufficient data for scatterplot	
+Association: 	
+Correlation: 	
+No p-value adjustment method selected. The more tests you run on the same data, the more likely you are to encounter a false discovery.	
+No appropriate variables for this correlation method.	
+Calculating correlations	
+An error occurred while running the correlation analysis:	
+Correlation network	
+Significant very strong positive correlation	
+Significant very strong negative correlation	
+Significant very strong correlation	
+Significant strong positive correlation	
+Significant strong negative correlation	
+Significant strong correlation	
+Significant moderate positive correlation	
+Significant moderate negative correlation	
+Significant moderate correlation	
+Significant weak positive correlation	
+Significant weak negative correlation	
+Significant weak correlation	
+Significant very weak positive correlation	
+Significant very weak negative correlation	
+Significant very weak correlation	
+Significant negligible positive correlation	
+Significant negligible negative correlation	
+Significant negligible correlation	
+Insignificant very strong positive correlation	
+Insignificant very strong negative correlation	
+Insignificant very strong correlation	
+Insignificant strong positive correlation	
+Insignificant strong negative correlation	
+Insignificant strong correlation	
+Insignificant moderate positive correlation	
+Insignificant moderate negative correlation	
+Insignificant moderate correlation	
+Insignificant weak positive correlation	
+Insignificant weak negative correlation	
+Insignificant weak correlation	
+Insignificant very weak positive correlation	
+Insignificant very weak negative correlation	
+Insignificant very weak correlation	
+Insignificant negligible positive correlation	
+Insignificant negligible negative correlation	
+Insignificant negligible correlation	
+Significant very strong association	
+Significant strong association	
+Significant moderate association	
+Significant weak association	
+Significant very weak association	
+Significant negligible association	
+Insignificant very strong association	
+Insignificant strong association	
+Insignificant moderate association	
+Insignificant weak association	
+Insignificant very weak association	
+Insignificant negligible association	
+Direction: row → column	
+Adjusted p-value matrix	
+p-value matrix	
+Method	
+Coefficient	
+MI	
+H(var₁)	
+H(var₂)	
+Mixed/Auto correlation	
+No appropriate variables for this method	
+
+# === directional-view ===
+Directional Relationship Analysis	
+Analyze the directional influence between variables using information theory metrics.	
+Select variables to analyze for directional relationships	
+Potential Cause Variables (X)	
+Potential Effect Variables (Y)	
+Detect Data Types	
+Calculate Directional Relationships	
+Metrics to Calculate	
+Mutual Information	
+Measures shared information between variables	
+Conditional Entropy	
+Compares uncertainty reduction in both directions	
+Information Gain Ratio	
+Normalized information gain in both directions	
+Directionality Index	
+Direct measure of causal influence direction	
+Discretization Options	
+Auto-detect discretization needs	
+Discretization Method	
+No discretization	
+Equal width bins	
+Equal frequency bins	
+Sturges method	
+Freedman-Diaconis rule	
+Number of Bins	
+Significance Testing	
+Significance Method	
+Chi-Square Approximation (Fastest)	
+G-Test (Accurate for small samples)	
+Asymptotic Approximation	
+Permutation Test (Slowest)	
+All Methods	
+Chi-square is recommended for most cases	
+Number of Permutations	
+Higher values give more accurate p-values but take longer	
+About Directional Analysis	
+Directional analysis uses information theory to infer the likely direction of influence between variables. Unlike correlation, which only measures the strength of association, directional analysis can suggest which variable is more likely to influence the other.	
+Key Metrics:	
+Mutual Information (MI)	
+Measures the amount of information shared between variables. Higher values indicate stronger association.	
+Compares H(Y|X) with H(X|Y). If H(Y|X) < H(X|Y), X likely influences Y.	
+Normalizes information gain by the entropy of each variable.	
+A single metric that ranges from -1 to 1. Positive values suggest X influences Y, negative values suggest Y influences X.	
+Important Note:	
+While these metrics can suggest the direction of influence, they cannot prove causality. Validation through controlled experiments or domain knowledge is still recommended.	
+About Entropy Imbalance	
+When analyzing variables with significantly different entropy levels (e.g., binary gender vs. continuous income), directional analysis can be biased. Variables with lower entropy tend to appear as "effect" rather than "cause" variables.	
+This analysis includes entropy-aware directionality metrics that adjust for these imbalances. When you see a warning symbol (⚠) in the results, pay attention to the "Entropy-Aware" column for a potentially more accurate directionality assessment.	
+P-Value Methods:	
+Chi-square	
+Fast approximation, good for large samples	
+G-Test	
+More accurate for small samples and skewed distributions	
+Asymptotic	
+Specifically designed for directionality testing	
+Permutation	
+Most accurate but slowest, uses randomization testing	
+Failed to initialize data for analysis	
+Variable not found in analysis set	
+Failed to check discretization needs	
+Insufficient valid data (minimum 10 rows needed)	
+Please select at least one variable from both lists.	
+Please select at least one metric.	
+Calculating directional relationships...	
+Processing relationships: {current} of {total} pairs	
+An error occurred while running the directional analysis: 	
+Analyzing variable properties...	
+An error occurred while analyzing variables: 	
+Values < 1 suggest X influences Y, values > 1 suggest Y influences X	
+Positive values suggest X influences Y, negative values suggest Y influences X	
+Entropy imbalance detected: variables have significantly different information content	
+Uncertain	
+No valid data found for selected variables.	
+Direction Legend:	
+↑ (Blue) - Row variable likely influences column variable	
+↓ (Red) - Column variable likely influences row variable	
+↔ (Grey) - No clear directional influence	
+
+# === reliability-view ===
+Internal consistency	
+Reproducibility	
+Item response theory	
+Reverse-scored items (optional)	
+Select items that need to be reverse-scored before analysis	
+Calculate reliability	
+Reliability metrics	
+Cronbach's alpha (α)	
+McDonald's omega (ω)	
+Composite reliability (CR)	
+Split-half reliability	
+Guttman's lambda (λ4, λ6)	
+Average variance extracted (AVE)	
+Coefficient H	
+Revelle's beta (β)	
+Greatest lower bound (GLB)	
+Item statistics	
+Scale statistics	
+Item-total correlations (corrected & item-rest)	
+Reliability if item deleted (all selected metrics)	
+Inter-item correlation matrix	
+Advanced options	
+Confidence intervals for reliability estimates	
+Data layout	
+Condition variable (rater, time point)	
+Remaining selected variables will be analyzed as score variables	
+Calculate reproducibility	
+Metrics	
+Intraclass correlation (ICC)	
+Model	
+One-way random	
+Two-way random	
+Two-way mixed	
+Form	
+Single measures	
+Average measures	
+Cohen's / Fleiss' kappa (κ)	
+Krippendorff's alpha	
+Kendall's W	
+Pearson correlation (test-retest)	
+Spearman correlation (test-retest)	
+SEM & SDC	
+Model settings	
+Dimensionality	
+Unidimensional	
+Exploratory	
+Confirmatory	
+Number of dimensions	
+Rotation method	
+None (unrotated)	
+Varimax	
+Quartimax	
+Equamax	
+Varimin	
+Geomin T	
+Bentler's Invariant T	
+Bifactor	
+Oblimin	
+Promax	
+Quartimin	
+Simplimax	
+Cluster	
+Geomin Q	
+Bentler's Invariant Q	
+Biquartimin	
+Correlated factors (oblique)	
+Estimate factor covariances. Uncheck to constrain factors to be orthogonal.	
+mirt syntax	
+Copy	
+Model type	
+Auto (detect from data)	
+Estimation method	
+EM	
+EM and QMCEM are very slow at 3+ dimensions and may not converge. MHRM is recommended — it is much faster and produces standard errors for item parameters.	
+Scoring method	
+EAP	
+WLE	
+Advanced tuning	
+SE calculation	
+Default	
+Sandwich (robust)	
+Cross-product	
+Complete-data	
+Latent distribution	
+Gaussian	
+Empirical histogram	
+Optimizer	
+Newton–Raphson	
+Nelder–Mead	
+Quadrature points	
+Fine (91)	
+Very fine (121)	
+EM accelerator	
+Ramsay	
+Convergence tolerance	
+Max iterations	
+DIF analysis (optional)	
+Grouping variable	
+Select a categorical variable to test for differential item functioning	
+Anchor items	
+Items not selected as anchors will be tested for DIF. Default: all items as anchors (free baseline).	
+Diagnostics & Mokken	
+Run IRT analysis	
+AISP lowerbound (H)	
+Item parameters	
+Model fit summary	
+Item fit statistics	
+Person ability estimates (θ)	
+Reliability and separation indices	
+Person fit statistics	
+Local dependence (Q3 and LD-X²)	
+Model comparison (LR tests)	
+Conditional SEM per person	
+Score conversion table (raw → θ)	
+Expected scores by dimension	
+Compare dimensionalities	
+Compare against unconstrained exploratory	
+Factor loadings	
+Factor correlations	
+Item Characteristic Curves (ICCs)	
+Information and test characteristic curves	
+Wright map (person-item map)	
+Factor loadings heatmap	
+Orthogonal	
+Oblique	
+Dichotomous	
+Polytomous	
+Partially compensatory (MD only)	
+mirt default	
+Failed to calculate reliability metrics:	
+Failed to calculate reproducibility metrics:	
+Calculating Cronbach's alpha	
+Calculating factor analysis	
+Calculating split-half reliability	
+Calculating McDonald's omega	
+Calculating GLB	
+Calculating drop table	
+Analyzing {variable}	
+Bootstrapping CIs	
+Analysis complete	
+Failed to run IRT analysis:	
+Checking unidimensionality	
+Checking subject quality	
+Loading mokken package	
+Computing scalability coefficients	
+Checking monotonicity	
+Checking invariant item ordering	
+Checking local independence	
+Computing MS reliability	
+Running automated item selection	
+Fitting IRT model	
+Computing model fit	
+Extracting item parameters	
+Estimating person abilities	
+Computing item fit	
+Computing person fit	
+Computing reliability indices	
+Computing score conversion table	
+Computing local dependence	
+Comparing models	
+Running DIF analysis	
+Computing conditional SEM	
+Preparing plot data	
+Extracting factor loadings	
+Extracting factor correlations	
+Computing expected scores by dimension	
+Comparing against unconstrained exploratory	
+Comparing dimensionalities	
+Ability (θ)	
+P(correct)	
+Item Characteristic Curves	
+Category response curves	
+Expected score	
+Expected score curves	
+Information	
+Information curves	
+Test info ({dim})	
+Test information	
+Expected total score	
+Test Characteristic Curve	
+Reliability	
+Conditional reliability	
+Ability / Difficulty (θ)	
+Persons	
+Items	
+Invalid syntax: {line}	
+Item index {idx} out of range (1–{max})	
+Unknown variable: {name}	
+At least two factors are required.	
+Non-numeric variable — IRT requires numeric items.	
+Too many unique values ({count}) — does not appear to be a categorical item. Set variable type to ordinal if this is an ordered scale.	
+Non-integer values detected — not suitable for IRT. Set variable type to ordinal if this is an ordered scale.	
+At least two suitable items are required for IRT analysis.	
+At least 2 dimensions are required for exploratory MIRT.	
+At least two factors must be defined for confirmatory MIRT.	
+Each factor must have at least one indicator assigned.	
+Not assigned to any factor in the confirmatory model.	
+An error occurred during IRT analysis: 	
+{count} persons with extreme response patterns (all minimum or all maximum) were excluded from person-level statistics.	
+Plot could not be rendered: {name}	
+dichotomous	
+polytomous	
+complete cases	
+Mean off-diagonal Q3 = {mean} (subtracted to form Q3*, Marais 2013).	
+Items:	
+Sample size:	
+Variable types were not explicitly set for some items. Classification was inferred from unique value counts. For best results, set variable types in the data view.	
+Excluded variables:	
+Grouping variable:	
+Very small sample (N < 100). IRT parameter estimates will be unstable.	
+Small sample for 2PL model (N < 200). Consider Rasch model for more stable estimates.	
+Small sample for 3PL model (N < 500). Guessing parameter requires large samples.	
+Small sample for 3PLu model (N < 500). Upper asymptote parameter requires large samples.	
+Small sample for 4PL model (N < 1000). Guessing and upper asymptote parameters require very large samples.	
+Sample size (N = {n}) appears adequate for the selected model.	
+Item	
+Categories	
+Missing %	
+Item summary	
+Unidimensionality check	
+Could not compute: {error}	
+Mokken scale analysis	
+Diagnostics	
+IRT preliminary analysis	
+IRT analysis	
+First eigenvalue	
+Second eigenvalue	
+Ratio (1st / 2nd)	
+Strong evidence for unidimensionality (ratio ≥ 3).	
+Moderate evidence for unidimensionality (ratio ≥ 2).	
+Weak evidence for unidimensionality (ratio < 2). Consider multidimensional models.	
+Eigenvalues based on Pearson correlations (polychoric computation failed). For binary/ordinal items, eigenvalues may underestimate the first factor.	
+High missing (> 50% items)	
+Longstring ≥ {n} consecutive identical responses	
+Low response variability (IRV < 0.5)	
+Low person-total correlation (r < 0.1)	
+Low resampled individual reliability (RIR < 0.3)	
+Mahalanobis distance outlier (p < .001)	
+Flag	
+Issue	
+% of sample	
+Flagged subjects may produce unreliable person parameter estimates. Review before running IRT analysis.	
+No subject quality concerns detected.	
+Insert quality flags into dataset	
+Subject quality	
+Total scale	
+Loevinger's H: ≥ 0.5 strong, 0.4–0.5 moderate, 0.3–0.4 weak, < 0.3 unscalable.	
+Item-pair scalability (H_ij)	
+No significant monotonicity violations detected.	
+Violations	
+Max violation	
+z(max)	
+Items with monotonicity violations may not conform to a nonparametric IRT model.	
+No significant IIO violations detected — items maintain consistent ordering across θ.	
+H_T coefficient: {value}. Values ≥ 0.3 support IIO.	
+Invariant item ordering	
+No significant local dependence detected (rest-score method).	
+Item pair	
+Item pairs with conditional dependence may inflate reliability.	
+Local independence (rest-score)	
+Nonparametric reliability	
+Molenaar–Sijtsma (ρ)	
+Unselected	
+Scale	
+{count} item(s) not selected into any scale at H ≥ {lb}. These items may not fit the scale.	
+All items selected into a single scale at H ≥ {lb} — supports unidimensionality.	
+Items distributed across {count} scales at H ≥ {lb} — consider multidimensional structure.	
+Unscalable	
+Log-likelihood	
+Index	
+M2 p-value	
+Statistic	
+Detail	
+Good model fit (RMSEA < 0.05).	
+Acceptable model fit (RMSEA < 0.08).	
+Poor model fit (RMSEA ≥ 0.08). Consider a different model.	
+M2 statistic could not be computed: {error}	
+Model fit	
+Model comparison	
+2PL + graded	
+2PL + GPCM	
+Mixed dichotomous/polytomous data: 2PL is kept for binary items in both fits; only the polytomous parametrisation differs. Lower AIC/BIC favours that category model.	
+Likelihood ratio test: χ² = {x2}, df = {df}, p = {p}	
+Discrimination (a)	
+Difficulty (b)	
+Threshold {n}	
+SE(b{n})	
+Intercept (d)	
+Intercept {n}	
+Mean location	
+Guessing (c)	
+Upper asymptote (u)	
+Infit MNSQ	
+Outfit MNSQ	
+MDISC: multidimensional discrimination (vector length of a-parameters). Mean location: −mean(intercepts) / MDISC — an approximate summary for polytomous items, not a standard IRT quantity.	
+MDISC: multidimensional discrimination (vector length of a-parameters). MDIFF: multidimensional difficulty (−intercept / MDISC).	
+Discrimination: > 1.0 high, 0.65–1.0 moderate, < 0.65 low. Difficulty: higher values = harder items.	
+Infit/Outfit MNSQ: 0.5–1.5 productive for measurement. Values > 2.0 suggest degrading measurement.	
+Infit/Outfit MNSQ: 0.5–1.5 band is a Rasch convention shown for reference. With varying slopes, these fit statistics have different distributional properties.	
+Standard errors not available — EM/QMCEM estimation does not compute the information matrix for multidimensional models. Use MHRM for standard errors.	
+No item pairs flagged by Q3 (|Q3| > 0.2, |Q3*| > 0.2) or LD-X² (p < .05). Local independence assumption is supported.	
+Item 1	
+Item 2	
+|Q3| > 0.2 or |Q3*| > 0.2 and LD-X² p < .05 suggest local dependence. Consider combining or removing one item from each flagged pair.	
+|Q3| > 0.2 or |Q3*| > 0.2 suggests local dependence. No pairs were flagged by LD-X² (all p ≥ .05).	
+LD-X² p < .05 suggests local dependence. No pairs exceeded the Q3 threshold (|Q3|, |Q3*| > 0.2).	
+Dimension	
+Mean θ	
+SD θ	
+Min θ	
+Max θ	
+Mean SE	
+Insert θ, SE, and Zh into dataset	
+Insert θ and SE into dataset	
+Person ability estimates	
+Persons with |Zh| > 2	
+Persons with outfit > 1.5	
+Criterion	
+Outfit > 1.5 cutoff is a Rasch convention shown for reference. With non-Rasch models, Zh is the more reliable person-fit indicator.	
+Person fit	
+{n} of {total} respondents excluded from reliability computation (θ or SE non-finite — typically extreme response patterns under ML scoring). Consider EAP or MAP scoring for bounded estimates.	
+Separation	
+Targeting	
+Reliability and separation	
+Marginal reliability	
+Person separation	
+Item reliability	
+Item reliability (Rasch-style)	
+Item separation	
+Item separation (Rasch-style)	
+Test targeting (person − item mean)	
+Raw score	
+θ (equating)	
+SE(θ) (equating)	
+θ (EAPsum)	
+SE(θ) (EAPsum)	
+Differential item functioning (DIF)	
+Standardized factor loadings from rotated solution. Values > 0.3 indicate meaningful loading.	
+Factor	
+Expected total score when varying one dimension while holding others at θ = 0.	
+Dimensions	
+Structure	
+The confirmatory model is nested in the exploratory one at the same dimensionality: a non-significant p-value indicates the specified constraints are tenable; a significant p-value suggests the exploratory structure fits meaningfully better.	
+Confirmatory vs exploratory fit	
+Lower AIC/BIC values indicate better fit. LR test compares adjacent dimensionalities.	
+Dimensionality comparison	
+Good	
+Questionable	
+High (≥ 4 strata)	
+Adequate (≥ 3 strata)	
+Low (2 strata)	
+Very low (< 2 strata)	
+Well targeted	
+Moderately targeted	
+Test too easy for sample	
+Test too hard for sample	
+Please select at least two variables (scale items) for reliability analysis.	
+At least two numerical variables are required for reliability analysis.	
+Please select at least one reliability metric to calculate.	
+Calculating reliability...	
+An error occurred while running the reliability analysis: 	
+Calculating reliability metrics...	
+Negative correlation - check reverse scoring	
+Very weak discrimination	
+Poor discrimination	
+Good discrimination	
+Possible floor effect	
+Possible ceiling effect	
+Low variance (flat responses)	
+CR +{value}	
+Split-Half +{value}	
+AVE +{value}	
+GLB +{value}	
+Deletion would improve:	
+Please select both a subject ID and a condition variable.	
+Subject ID and condition variable must be different.	
+No score variables remaining. Select more variables besides subject ID and condition.	
+Please select at least one reproducibility metric.	
+Calculating reproducibility metrics...	
+An error occurred while running the reproducibility analysis: 	
+Scale items:	
+Reverse-scored items:	
+Excluded (non-numerical):	
+Good item	
+Subject ID:	
+Condition variable:	
+Number of conditions:	
+Score variables:	
+Select numerical variables to enable reverse scoring	
+Item analysis	
+Poor convergent validity	
+Acceptable convergent validity	
+Good convergent validity	
+Unacceptable	
+Excellent (possible redundancy)	
+McDonald's omega (ω total)	
+Split-half (Spearman-Brown)	
+Guttman's lambda 4 (λ4)	
+Guttman's lambda 6 (λ6)	
+Failed to converge	
+Number of items	
+Number of cases	
+Scale mean	
+Scale SD	
+Scale variance	
+Corrected item-total r	
+Item-Rest r	
+α if deleted	
+ω if deleted	
+CR if deleted	
+Split-half if deleted	
+λ4 if deleted	
+λ6 if deleted	
+AVE if deleted	
+H if deleted	
+β if deleted	
+GLB if deleted	
+Continuous variables	
+Ordinal variables	
+Pearson r	
+Spearman ρ	
+SEM	
+SDC	
+κ	
+Krippendorff's α	
+Reproducibility analysis	
+Slight	
+Fair	
+Substantial	
+Almost perfect	
+
+# === sem-view ===
+No numerical variables selected.	
+Could not detect factor structure. Variables should be named like 'factor_item' (e.g., 'anx_1', 'anx_2').	
+Select numerical variables to define the model	
+Remove factor	
+Add factor	
+Remove loading	
+Remove second-order factor	
+Add second-order factor	
+Eigenvalue	
+Note: showing first {limit} of {total} components for clarity.	
+Component	
+Component number	
+Factor number	
+Scree plot	
+Actual data	
+Kaiser (λ=1)	
+Simulated data	
+Resampled data	
+Export as SVG	
+Recommended number of components:	
+Recommended number of factors:	
+Kaiser criterion (eigenvalue > 1): {count} components	
+Kaiser criterion (eigenvalue > 1): {count} factors	
+Elbow method: {count} components	
+Elbow method: {count} factors	
+Parallel analysis: {count} components	
+Parallel analysis: {count} factors	
+CFA Path Diagram	
+Component Path Diagram	
+Schmid-Leiman Hierarchical Structure	
+Bifactor Structure	
+Factor Path Diagram	
+Loadings:	
+Positive	
+Negative	
+Covariance	
+n.s.	
+Residual covariances	
+Select variable...	
+Add	
+Run CFA	
+Factor scaling	
+Marker variable (first loading = 1)	
+Fixed variance (factor variance = 1)	
+Allow factors to correlate	
+ML (maximum likelihood)	
+MLM (robust ML, Satorra-Bentler)	
+MLMVS (robust ML, Satterthwaite)	
+MLMV (robust ML, scale-shifted)	
+DWLS (diagonally weighted LS)	
+ULS (unweighted LS)	
+WLS (weighted LS)	
+GLS (generalized LS)	
+Invariance testing	
+Disabled	
+Listwise deletion	
+FIML (full information ML)	
+Standardization	
+Unstandardized	
+Completely standardized	
+Standardized (latent only)	
+Bootstrap confidence intervals	
+Uses bias-corrected accelerated (BCa) intervals. Replications controlled in Settings.	
+Parameter estimates	
+Modification indices	
+Factor reliability (CR, AVE)	
+Residual correlation matrix	
+Discriminant validity	
+lavaan syntax	
+First residual covariance variable	
+Second residual covariance variable	
+Finalizing...	
+Fitting CFA model (bootstrapped — may take a while)	
+Fitting CFA model	
+Extracting results	
+Extracting parameter estimates	
+Computing R-squared	
+Computing reliability metrics	
+Computing discriminant validity	
+Computing modification indices	
+Computing residual correlations	
+Checking missing data	
+Checking covariance matrix	
+Checking high correlations	
+Computing Mahalanobis distances	
+Checking sample size adequacy	
+Checking for ordinal variables	
+Fitting {n} models	
+Extracting fit indices	
+Running model comparisons	
+Done	
+Fitting configural model	
+Fitting metric model	
+Fitting scalar model	
+Fitting strict model	
+Computing model comparisons	
+Extracting per-group parameters	
+Extracting latent means	
+Model restored	
+Factor not found: {name}	
+Please select two variables.	
+Please select two different variables.	
+This residual covariance is already specified.	
+Please define a model with at least 2 indicators, or select at least 2 numerical variables.	
+No factors defined	
+Factor {name} needs at least 2 indicators (has {count})	
+Second-order factor {name} needs at least 2 first-order factors (has {count})	
+Model is under-identified (df = {df})	
+Model is just-identified (df = 0) — fit indices may not be meaningful	
+Model validation failed:	
+Running CFA...	
+Error running CFA: 	
+Group variable not found in data.	
+At least 2 groups are required for invariance testing. Found {count}.	
+Running partial invariance testing...	
+Running invariance testing...	
+Error running invariance testing: 	
+0 (ref)	
+Model {n}	
+Error comparing models: 	
+Could not compute	
+Copied to clipboard	
+Line {n}: missing factor name before =~	
+Line {n}: no indicators after =~	
+Line {n}: no variable after ~~	
+Line {n}: unrecognized syntax (expected =~ or ~~)	
+Factor {factor} references itself as an indicator	
+Duplicate indicator {name} in factor {factor}	
+Syntax imported successfully	
+No residual covariances specified	
+Groups	
+At least 2 groups are required for invariance testing.	
+At least one group has fewer observations ({n}) than free parameters ({p}). Results may be unreliable or estimation may fail.	
+At least one group has fewer than 50 observations. Consider whether sample size is adequate.	
+Issues detected	
+- review the diagnostics below before running CFA	
+Data looks good	
+- no major issues detected	
+({total} total, {complete} complete cases)	
+N:parameter ratio:	
+(potentially underpowered, recommend 5-10:1)	
+Factors:	
+Indicators:	
+Estimator:	
+(bootstrap, {reps} replications)	
+Degrees of freedom:	
+Free parameters:	
+Suggestions:	
+Warning:	
+Model did not converge. Results may be unreliable.	
+Per-group χ² contributions (configural)	
+Note:	
+The configural model shows poor fit. Invariance constraints are being applied to a model that does not adequately represent the data in at least one group. Consider improving model specification before interpreting invariance results.	
+Configural model failed:	
+Loadings freed	
+Intercepts freed	
+Residual variances freed	
+Freed parameters:	
+df = {df}, p = {p}	
+90% CI [{lower}, {upper}]	
+p-close = {value}	
+Heywood case (negative variance)	
+Consider using FIML for missing data handling.	
+Low variance detected in: {variables}.	
+Non-normality detected. Consider using a robust estimator (MLM, MLMVS).	
+Covariance matrix is not positive-definite. Check for linear dependencies or highly correlated variables.	
+Covariance matrix is ill-conditioned. Some variables may be nearly collinear.	
+High correlations (r > 0.85) detected between some variables. This may cause estimation problems.	
+Multivariate non-normality detected. Consider using a robust estimator (MLM, MLMVS, MLMV).	
+{nOutliers} potential multivariate outlier(s) detected ({percentOutliers}% of cases). Consider inspecting these cases.	
+Sample size may be inadequate. Recommend at least 5-10 cases per variable.	
+Sample size ({nComplete} complete cases) is below the minimum required for robust weight matrix estimation ({gammaMinN} = p(p+1)/2). DWLS, WLS, and robust ML estimators (MLM, MLMVS) may fail or produce unreliable results. Consider using ML or reducing the number of variables.	
+Likely ordinal variables detected: {variables}. Consider using DWLS estimator for ordinal data.	
+Checking {n} indicators specified in the model	
+Checking all {n} selected variables (no model defined yet)	
+Sample size (n)	
+Cases per variable	
+Min. N for weight matrix (p(p+1)/2)	
+Complete cases are below the weight matrix threshold. DWLS, WLS, and robust ML estimators (MLM, MLMVS) may fail or produce unreliable results. Consider using ML or reducing the number of variables.	
+Total missing	
+Positive definite	
+Minimum eigenvalue	
+Condition number	
+Covariance matrix	
+Mardia's skewness	
+Non-normal	
+Mardia's kurtosis	
+Multivariate normality	
+Result	
+Cases checked	
+Chi-square threshold (p < .001)	
+Degrees of freedom	
+Mahalanobis outlier detection	
+Cases with Mahalanobis distance exceeding the chi-square critical value (p < .001) may be multivariate outliers. Inspect these cases before proceeding.	
+Mahal. Distance	
+Outlier cases	
+High correlations (r > 0.85) — {count} pairs	
+Non-normal variables	
+Low variance variables	
+User-marked + detected	
+User-marked	
+Auto-detected	
+Ordinal variables detected. Consider using the DWLS estimator, which is specifically designed for ordinal data.	
+Recommendations:	
+CFA data diagnostics	
+CFA diagnostics	
+Restore this model	
+Remove from comparison	
+Add to comparison	
+Check for highly correlated indicators (r > 0.9)	
+Check for linear dependencies between variables	
+Try removing variables with very low variance	
+Consider using a different estimator (e.g., DWLS)	
+Try simplifying the model (fewer factors or cross-loadings)	
+Check for highly correlated indicators	
+Consider a different estimator	
+Sample size may be insufficient for model complexity	
+CFA	
+Factor covariances/correlations	
+Factor variances	
+Residual variances	
+R² (variance explained)	
+Factor reliability	
+Standardized residual correlations	
+Measurement invariance testing ({count} freed)	
+Measurement invariance testing	
+Invariance	
+With smaller group sizes, practical fit criteria (ΔCFI ≤ .01, ΔRMSEA ≤ .015) are generally more reliable than the χ² difference test, which tends to be oversensitive.	
+Metric invariance — parameter differences	
+Scalar invariance — parameter differences	
+Strict invariance — parameter differences	
+Re-run with freed parameters	
+Mixed	
+Configural	
+Metric (weak)	
+Scalar (strong)	
+Strict	
+Did not converge	
+Baseline	
+Level	
+Verdict	
+Invariance comparison	
+Metric invariance holds — factor loadings are equivalent across groups.	
+Metric invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
+Metric invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
+Scalar invariance holds — intercepts are equivalent, allowing latent mean comparisons across groups.	
+Scalar invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
+Scalar invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
+Strict invariance holds — residual variances are equivalent across groups.	
+Strict invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
+Strict invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
+Parameter	
+Mean Δ	
+Scalar invariance was not established — latent mean comparisons should be interpreted with caution.	
+{group} (Est.)	
+Latent means are estimated from the scalar invariance model. The first group serves as the reference (means fixed to 0).	
+Latent mean differences	
+χ² (Scaled)	
+χ² (Chi-square)	
+Sample-adjusted BIC	
+Details	
+Robust/scaled indices reported for the selected estimator.	
+Indicator	
+Std. Estimate	
+Factor 1	
+Factor 2	
+Std. (Correlation)	
+Negative variance estimates detected. This suggests model misspecification or estimation problems.	
+Below threshold	
+Cronbach's α	
+McDonald's ω	
+Composite reliability	
+AVE	
+Values below 0.85 indicate good discriminant validity. Values 0.85–0.90 are borderline.	
+HTMT (heterotrait-monotrait ratio)	
+Diagonal shows √AVE. Off-diagonal correlations should be smaller than √AVE of both factors.	
+Fornell-Larcker criterion	
+EPC	
+Suggested residual covariances	
+Cross-loadings change the theoretical factor structure. Apply only when theoretically justified.	
+Suggested cross-loadings	
+Other modification indices	
+Modifications should be theoretically justified, not purely data-driven. Applying many modifications risks overfitting to sample-specific variance.	
+No substantial modification indices found.	
+Fit indices comparison	
+Chi-square difference test is valid for nested models only. A significant result indicates the more constrained model fits significantly worse.	
+Chi-square difference tests	
+No nested model pairs detected. Compare using information criteria (AIC, BIC) — lower values indicate better fit.	
+Model comparison notes	
+Please enter lavaan syntax first.	
+No factor definitions (=~) found in syntax.	
+
+# === factor-view ===
+Factor analysis & principal component analysis	
+Step 1: method & settings	
+Correlation type	
+Pearson	
+Spearman	
+Mixed (polychoric/polyserial)	
+Extraction method	
+Principal components (PCA)	
+Maximum likelihood	
+Principal axis factoring	
+Minimum residual	
+Unweighted least squares	
+Weighted least squares	
+Generalized least squares	
+Minimum sample size weighted χ²	
+Minimum rank	
+Alpha factoring	
+Step 2: determine number of factors	
+Analyze data suitability and compare solutions to find optimal number	
+Factor/component range to test	
+Run parallel analysis	
+Show scree plot	
+Show per-variable MSA	
+Analyze & determine factors	
+Step 3: run full analysis	
+Extract factors/components with selected settings	
+Number of factors/components	
+Select from Step 2 results or enter manually	
+Compare extraction methods	
+Analysis options	
+Kaiser normalization	
+Cannot be used for Promax and Equamax rotations	
+Loadings matrix	
+Communalities	
+Variance explained	
+Factor/Component correlations	
+Schmid-Leiman transformation	
+Schmid-Leiman factor scores	
+Anti-image correlations	
+Anti-image covariances	
+Factor/Component scores	
+Path diagram	
+Regression	
+Bartlett	
+Anderson-Rubin	
+Regression: maximizes correlation; Bartlett: unbiased; Anderson-Rubin: orthogonal	
+Loadings display threshold	
+Hide loadings below this value in the output table	
+Run full analysis	
+Select extraction methods to compare for the same factor solution:	
+Quick selection	
+Major 3 (ML, PA, MINRES)	
+Extraction methods	
+Maximum likelihood (ML)	
+Principal axis factoring (PA)	
+Minimum residual (MINRES)	
+Unweighted least squares (ULS)	
+Weighted least squares (WLS)	
+Generalized least squares (GLS)	
+Minimum sample size weighted χ² (MINCHI)	
+Minimum rank (MINRANK)	
+Note: at least 2 methods must be selected for comparison.	
+Run comparison	
+Factor analysis methods	
+Failed to check data suitability for factor analysis	
+Failed to compare factor solutions	
+Failed to compare extraction methods:	
+Running parallel analysis	
+Generating random datasets	
+Computing PCA parallel analysis	
+Computing FA parallel analysis	
+Comparing factor solutions	
+Computing very simple structure (VSS)	
+Testing {n}-component solution	
+Testing {n}-factor solution	
+Finalizing comparison	
+Running pre-analysis diagnostics	
+Extracting factors/components	
+Processing results	
+Preparing output	
+Computing anti-image matrices	
+Computing scores	
+Computing Schmid-Leiman transformation	
+Computing Schmid-Leiman scores	
+Checking for estimation issues	
+Preparing extraction comparison	
+Running {method} extraction	
+Computing Tucker's congruence coefficients	
+Please select at least 3 variables for factor analysis.	
+Invalid factor range. Minimum must be at least 1, and maximum must be greater than or equal to minimum.	
+Maximum factors must be less than the number of variables.	
+Warning: KMO value is below 0.5, indicating that factor analysis may not be appropriate for this data.	
+Warning: Bartlett's test is not significant (p > {alpha}), indicating that variables may not be sufficiently correlated for factor analysis.	
+An error occurred during model selection: {message}	
+Number of factors must be between 1 and the number of variables minus 1.	
+Please select at least 2 extraction methods to compare.	
+Comparing extraction methods...	
+An error occurred during extraction comparison: {message}	
+Running factor analysis...	
+The correlation matrix is not positive definite (minimum eigenvalue: {minEigen}). Maximum Likelihood estimation cannot proceed. Consider using MinRes or Principal Axis extraction instead, or check for linear dependencies among variables.	
+Perfect or near-perfect correlations detected between variables: {pairs}. This causes singularity in the correlation matrix. Remove one variable from each pair before proceeding.	
+Factor extraction failed: {message}	
+An unexpected error occurred: {message}	
+Variables with SMC > 0.99 detected (potential Heywood cases): {variables}. These variables are almost perfectly predicted by other variables and may cause estimation problems, especially with ML extraction.	
+Very high correlations (|r| > 0.9) detected: {pairs}. This may indicate multicollinearity.	
+Very small sample size (n = {n}). Factor analysis typically requires at least 50 observations, preferably 100+ for stable results.	
+Low observations-to-variables ratio ({ratio}:1). A ratio of at least 5:1 is recommended for stable factor solutions.	
+Ultra-Heywood case detected: communality > 1.0 for variables: {variables}. Values: {values}. This indicates a serious estimation problem. The solution may be unreliable. Consider reducing the number of factors or using a different extraction method.	
+Heywood case detected: communality ≈ 1.0 for variables: {variables}. This suggests these variables may be over-determined by the factors. Consider reducing the number of factors or examining the variable structure.	
+{count} negative eigenvalue(s) detected in the reduced correlation matrix. This may indicate that more factors were extracted than the data support.	
+Unknown warning	
+{label} score data is missing. Cannot insert into dataset.	
+Variables:	
+{n_cases} cases, {n_variables} variables	
+Multicollinearity detected	
+Variables with MSA < 0.5 should be considered for removal	
+Blue highlight: eigenvalue > 1 (Kaiser criterion)	
+Complexity: 1.0 = simple structure (each variable loads on one factor); higher values indicate cross-loading	
+VSS: very simple structure criterion (higher = better fit); subscript indicates allowed complexity per variable	
+{n} cases	
+Diagonal contains measure of sampling adequacy (MSA) for each variable	
+Showing first 10 cases of {count} computed scores ({method} method)	
+Excellent fit	
+Good fit	
+Mediocre fit	
+Poor fit	
+Excellent variance coverage	
+Good variance coverage	
+Adequate variance coverage	
+Low variance coverage	
+Acceptable fit	
+Cutoff threshold	
+Highlight threshold	
+Sort by	
+Original order	
+Highest loading	
+Update table	
+Bold: |loading| ≥ {highlight}; Blank: |loading| < {cutoff}	
+Yellow communality: < 0.4 (variable may not fit well)	
+MSA interpretation (diagonal):	
+Meritorious	
+Mediocre/Middling	
+Miserable	
+Group factors:	
+g = general factor; F1, F2, ... = orthogonalized group factors; h² = communality; u² = uniqueness; p² = % variance from g; com = complexity	
+Number of factors:	
+Extraction methods compared:	
+Overall factor solution similarity:	
+Mean congruence across all method pairs:	
+(Excellent - solutions are essentially equivalent)	
+(Good - solutions are fairly similar)	
+(Poor - solutions differ substantially)	
+Minimum congruence (most dissimilar pair):	
+Maximum congruence (most similar pair):	
+Bold: best value for that metric (lower RMSEA/BIC/SABIC/SRMR/Complexity, higher CFI/TLI/h² are better)	
+Tucker's congruence coefficient interpretation (Lorenzo-Seva & ten Berge, 2006):	
+Factors can be considered equal	
+Fair similarity	
+Different factors	
+No rotation	
+Varimax rotation	
+Oblimin rotation	
+Promax rotation	
+Quartimax rotation	
+Equamax rotation	
+Varimin rotation	
+Geomin T rotation	
+Bentler's Invariant T rotation	
+Bifactor rotation	
+Quartimin rotation	
+Biquartimin rotation	
+Simplimax rotation	
+Geomin Q rotation	
+Bentler's Invariant Q rotation	
+Cluster rotation	
+Analysis failed - {methodName}	
+PCA	
+EFA	
+Analysis failed	
+Data suitability tests	
+Per-variable measure of sampling adequacy (MSA)	
+Model comparison table	
+Model selection - {methodName}	
+Model selection	
+Kaiser-Meyer-Olkin (KMO) measure	
+Bartlett's test of sphericity	
+Correlation matrix determinant	
+Test	
+Marvelous	
+Middling	
+Mediocre	
+Variance %	
+Mean h²	
+Complexity	
+Hyperplane	
+Number of components:	
+Model fit indices	
+Component loadings	
+Component path diagram	
+Factor path diagram	
+Component correlations	
+Anti-Image correlation matrix	
+Anti-Image covariance matrix	
+Component scores	
+Factor scores	
+Insert scores into dataset	
+Principal component analysis - {rotationName}	
+Exploratory factor analysis, {extractionName} extraction - {rotationName}	
+Chi-square test	
+RMSEA [90% CI]	
+Comparative fit index (CFI)	
+Tucker-Lewis index (TLI)	
+SRMR (RMS residual)	
+Corrected SRMR	
+Sample-size adjusted BIC (SABIC)	
+Fit (proportion of variance)	
+Off-diagonal fit	
+Objective function	
+Diagnostics & warnings	
+SS loadings	
+Proportion var	
+Cumulative var	
+Communality	
+Case	
+Omega reliability coefficients	
+Variance decomposition	
+Hierarchical factor loadings	
+Hierarchical path diagram	
+Insert SLT scores into dataset	
+Schmid-Leiman transformation, {extraction} extraction - {rotation}	
+Schmid-Leiman	
+Strong general factor	
+Moderate general factor	
+Weak general factor	
+Excellent reliability	
+Good reliability	
+Acceptable reliability	
+Poor reliability	
+Essentially unidimensional	
+Moderate multidimensionality	
+Substantial multidimensionality	
+Omega hierarchical (ωh)	
+Omega total (ωt)	
+Explained common variance (ECV)	
+Omega subscale F{index} (ωs)	
+General (g)	
+% of total	
+Communality: total variance explained by all factors	
+Uniqueness: variance not explained by factors (1 - h²)	
+Proportion of common variance due to general factor (g² / h²)	
+Complexity: number of factors the variable loads on (1 = simple structure)	
+Fit metrics comparison	
+Tucker's congruence coefficients	
+Extraction method comparison - {rotation}	
+Extraction comparison	
+Extraction	
+
+# === regression-view ===
+Simple	
+Advanced	
+Dependent variable(s)	
+Select one or more outcome variables (batch analysis if multiple)	
+Predictors	
+Select independent variables for the model	
+Mediators	
+Select variables that transmit the effect of predictors on the outcome	
+Moderators	
+Select variables that change the strength of the predictor-outcome relationship	
+Select control variables to include in the model	
+Model setup	
+Regression type	
+Linear (continuous outcome)	
+Binomial logistic (binary outcome)	
+Ordinal logistic (ordered categorical)	
+Multinomial logistic (unordered categorical)	
+Poisson (count data)	
+Negative binomial (overdispersed counts)	
+Classic (OLS/MLE)	
+Ridge (L2 regularization)	
+LASSO (L1 regularization)	
+Elastic net (L1 + L2)	
+Elastic net mixing (α)	
+0 = Ridge, 1 = LASSO, between = mix	
+Single regression analysis	
+Lambda selection	
+Minimum CV error (lambda.min)	
+1 SE rule (lambda.1se)	
+Manual	
+Lambda value	
+Additional statistics	
+Zero-order correlations	
+Part and partial correlations	
+ANOVA table	
+Odds ratios with confidence intervals	
+Conditional indirect effects (moderated mediation)	
+Collinearity diagnostics (VIF/Tolerance)	
+Residual diagnostics (normality, autocorrelation, heteroscedasticity)	
+Influence statistics (Cook's D, leverage, outliers)	
+Goodness of fit (Hosmer-Lemeshow, deviance)	
+Cross-validated AUC (out-of-sample)	
+Number of folds (k)	
+Repetitions	
+Stratified k-fold, repeated with different seeds; the metric is computed once per repetition and the reported CI reflects across-repetition variability of the modelling procedure.	
+Run regression	
+Compare all possible predictor combinations using information criteria. Covariates are fixed in all models.	
+Maximum models to display (0 or empty for all)	
+Minimum predictors	
+Maximum predictors	
+Model-averaged coefficients	
+Extended model statistics (BIC weights, log-likelihood)	
+Compare models	
+Failed to run regression analysis	
+Failed to compare models	
+Failed to run regularized regression	
+CV repetition {current} of {total}	
+Bootstrap iteration {current} of {total}	
+${message}	
+Generating model combinations	
+Fitting {count} models (filtered from {total} combinations)	
+Fitting model {current} of {total}	
+Calculating model weights	
+Calculating model-averaged coefficients	
+Calculating variable importance	
+Preparing results	
+Preparing data	
+Fitting regularized model	
+Extracting coefficients	
+Compiling model statistics	
+Extracting regularization path	
+Finalizing	
+Fitted probabilities are not a matrix	
+Need at least two outcome classes	
+ROC not available	
+Model frame and y length mismatch	
+Cannot map model frame back to df	
+Too few cases per class for the requested k	
+All CV repetitions failed	
+Class levels not available	
+Model frame and outcome length mismatch	
+Ordinal ROC requires at least 3 outcome levels	
+Fitting regression model	
+Calculating collinearity diagnostics	
+Running residual diagnostics	
+Calculating influence statistics	
+Building ANOVA table	
+Running goodness of fit tests	
+Running classification (ROC) analysis	
+Cross-validating AUC	
+Running mediation analysis	
+Running simple slopes analysis	
+Bootstrapping indirect effects	
+Finalizing results	
+Fitting outcome model	
+Fitting mediator equations	
+Computing path effects	
+Insert mediator	
+Add interaction	
+Remove edge	
+Search variables	
+Incomplete equation	
+Variable cannot predict itself	
+Circular reference	
+Please select at least one dependent variable.	
+Please select at least one predictor or covariate.	
+Mediation analysis requires at least one predictor.	
+Moderation analysis requires at least one predictor.	
+Variables cannot be both dependent and independent: 	
+For linear regression, dependent variables must be numeric: 	
+Insufficient observations ({n}) for the number of model parameters ({p}). Reduce the number of variables or add more data.	
+Running regression analysis...	
+An error occurred while running the regression analysis: 	
+Please define a model in the path builder.	
+The model contains syntax errors. Please fix them before running.	
+Please define at least one equation in the path builder.	
+The model contains circular references. Please remove cycles before running.	
+The model has no outcome variables. Every variable is used as a predictor somewhere.	
+No valid outcome systems found in the model.	
+Running path analysis...	
+An error occurred while running the path analysis: 	
+Please select at least one predictor to compare models.	
+Selected dependent variables are not compatible with the chosen regression type: 	
+This will compare {count} models. This may take a while. Continue?	
+Comparing models...	
+Comparing models for {variable}...	
+Comparison complete	
+An error occurred while comparing models: 	
+Intercept only	
+Apply this model's predictors to selection	
+Macro-average ({used}/{total} classes)	
+Predictors updated	
+Outcome:	
+Regression type:	
+Dependent variable:	
+Predictors (dredged):	
+Mediators (fixed):	
+Moderators (interactions dredged):	
+Covariates (fixed):	
+Models compared:	
+{pct}% confidence set:	
+{count} models	
+Model selection uncertainty (entropy):	
+Effective number of models:	
+Predictors:	
+Predictors in model:	
+Non-zero coefficients:	
+Reference outcome:	
+vs.	
+Reference categories:	
+Use	
+Very high importance	
+High importance	
+Moderate importance	
+Low importance	
+Very low importance	
+Significant cut-point	
+Cut-point not significantly different from 0	
+Baseline log-odds	
+Significant: increases relative risk by {factor}x	
+Significant: decreases relative risk by {factor}x	
+Significant positive effect	
+Significant negative effect	
+Potential influential observations	
+No highly influential observations	
+Observations with high leverage	
+No high leverage points	
+Potential outliers detected	
+No extreme outliers	
+Model may be misspecified (consider non-linear terms)	
+No evidence of misspecification	
+Underdispersion detected	
+Overdispersion detected	
+Dispersion within acceptable range	
+Negligible variance explained	
+Small effect size	
+Medium effect size	
+Large effect size	
+Weak fit	
+Minimal shrinkage	
+Acceptable shrinkage	
+Notable shrinkage (possible overfitting)	
+Model is significant	
+Model is not significant	
+Model intercept	
+No collinearity concern	
+Moderate collinearity	
+High collinearity	
+Residuals appear normal	
+Residuals may not be normal	
+No autocorrelation concern	
+Positive autocorrelation possible	
+Negative autocorrelation possible	
+Homoscedasticity assumed	
+Heteroscedasticity detected	
+Low influence	
+Moderate influence	
+High influence	
+Within normal range	
+High leverage point	
+Select variables using the "Variables" button	
+Linear regression	
+Binary logistic regression	
+Ordinal logistic regression	
+Multinomial logistic regression	
+Poisson regression	
+Negative binomial regression	
+Outcome model fit	
+Outcome model coefficients	
+Term	
+(Intercept)	
+Direct	
+Indirect	
+Path	
+Boot SE	
+{level}% Boot CI	
+Effect decomposition	
+ANOVA	
+Correlations	
+Collinearity diagnostics	
+Residual diagnostics	
+Influence statistics	
+Goodness of fit	
+Path analysis ({regressionType}): {outcome}	
+Path analysis	
+Coefficients by outcome level	
+Coefficients	
+Cut-points between adjacent ordinal categories on the latent variable scale	
+Thresholds (Intercepts)	
+Mediation analysis	
+Moderation analysis	
+Conditional indirect effects	
+{regressionType}: {depVar}	
+Ridge	
+LASSO	
+Elastic Net	
+Regularized	
+Regularization parameters	
+Cross-validation summary	
+{method} {type} regression	
+Regularized regression analysis	
+Model rankings	
+Variable importance	
+Interaction importance	
+Indirect effects are point estimates (Sobel test). Use targeted regression with bootstrap for confirmatory analysis.	
+Mediation paths	
+Model comparison ({regressionType}): {depVar}	
+Regression model comparison	
+Minimum CV error	
+1 SE rule (more regularization)	
+User-specified	
+λ (selected)	
+λ.min (CV optimal)	
+Minimizes cross-validation error	
+λ.1se	
+Largest λ within 1 SE of minimum	
+CV error (at selected λ)	
+Mean ± SE from 10-fold CV	
+Lambda values tested	
+Lambda range	
+Best CV error	
+At λ = {lambda}	
+Degrees of freedom (at selected λ)	
+Effective number of parameters	
+Note	
+Rank	
+Interactions	
+McFadden R²	
+Adj R²	
+Nagelkerke's R²	
+AUC {level}% CI	
+Adjusted p (vs best)	
+p (vs best)	
+Weight	
+Cum. Weight	
+Ev. Ratio	
+Conf. Set	
+Log-lik	
+BIC wt	
+Full avg	
+Cond avg	
+Importance	
+N models	
+Interaction	
+Avg indirect	
+Weighted indirect	
+Σ weights	
+Best Sobel p	
+Adjusted R²	
+F-statistic	
+df (regression, residual)	
+p-value (F)	
+Root MSE	
+McFadden's R²	
+Cox & Snell R²	
+Null deviance	
+Residual deviance	
+χ² (LR test)	
+p-value (χ²)	
+Predictor	
+RRR {level}% CI	
+Estimate	
+Tolerance	
+Shapiro-Wilk (normality)	
+Durbin-Watson (autocorrelation)	
+Breusch-Pagan (heteroscedasticity)	
+Cook's D (max)	
+Cook's D > 1 (n)	
+Leverage (max)	
+High leverage points (n)	
+Standardized residuals |>3| (n)	
+RESET F-statistic	
+RESET df	
+RESET p-value	
+Hosmer-Lemeshow χ²	
+Hosmer-Lemeshow df	
+Hosmer-Lemeshow p-value	
+Classification accuracy	
+Likelihood ratio χ²	
+LR test df	
+LR test p-value	
+Deviance	
+Deviance df	
+Deviance p-value	
+Pearson χ²	
+Pearson χ² p-value	
+Dispersion parameter	
+Dispersion interpretation	
+ROC analysis failed: {message}	
+CV AUC	
+CV {level}% CI	
+CV Brier	
+N (positive / negative)	
+Cross-validated AUC unavailable: {message}	
+Out-of-sample estimate: stratified {k}-fold CV repeated {reps}/{total} times on {n} cases; CI reflects across-repetition variability.	
+Missing a positive	
+False alarm	
+Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown.	
+Macro-average	
+Micro-average	
+Hand-Till M (multiclass AUC)	
+Class / aggregate	
+Multiclass Brier score: {brier} (cross-validated: {cvBrier}). Lower is better.	
+Multiclass Brier score: {brier}. Lower is better.	
+Per-class AUC measures one-vs-rest discrimination quality. Actual classification at predict time uses argmax across all class probabilities — see Goodness of fit for the argmax confusion matrix.	
+Class	
+Per-class threshold optimized by Youden's J (max sensitivity + specificity − 1).	
+Per-class threshold optimized by closest point to (0, 1).	
+ROC curves (one-vs-rest): {name}	
+Mean cutpoint AUC	
+Kendall's tau-c	
+Cutpoint / summary	
+AUC / value	
+CV AUC / value	
+Per-cutpoint AUC measures discrimination at each ordering threshold. Actual classification at predict time uses argmax across class probabilities — see Goodness of fit for the argmax confusion matrix.	
+Cutpoint	
+Per-cutpoint threshold optimized by Youden's J (max sensitivity + specificity − 1).	
+Per-cutpoint threshold optimized by closest point to (0, 1).	
+ROC curves (per cutpoint): {name}	
+Residual	
+Source	
+Zero-order (r)	
+Part (sr)	
+Negligible	
+Weak positive	
+Weak negative	
+Moderate positive	
+Moderate negative	
+Strong positive	
+Strong negative	
+Very strong positive	
+Very strong negative	
+Path a (X → M)	
+Path b (M → Y)	
+Total effect (c)	
+Direct effect (c')	
+Indirect effect (a×b)	
+Proportion mediated	
+Bootstrap CI ({level}%)	
+Moderator level	
+Slope	
+Indirect effect	
+Index of moderated mediation	
+
+# === tte-view ===
+Time variable	
+Duration until event or censoring (numeric, non-negative)	
+Upper bound	
+Upper limit of the interval when the exact event time is unknown. Use NA for right-censored observations.	
+Upper bound variable	
+Event indicator	
+Variable marking whether the event occurred	
+Event variable	
+Level roles	
+Assign each observed level a role. Two or more non-censored roles unlock competing-risks methods.	
+Select an event variable to see its levels	
+Entry time (left-truncation)	
+Delayed-entry variable. Leave blank when all subjects are followed from time zero.	
+Grouping / strata	
+Categorical variable. Splits curves in non-parametric analysis; stratifies the baseline in Cox regression.	
+Predictors for regression methods (Cox, parametric, competing risks)	
+Analysis method	
+Non-parametric survival curve	
+Cox proportional hazards regression	
+Parametric survival regression	
+Cumulative incidence (competing risks)	
+Competing-risks regression	
+Censoring	
+Right-censored	
+Interval-censored	
+Left-truncation is handled separately via the entry-time variable.	
+Non-parametric options	
+Cumulative incidence options	
+Estimator	
+Kaplan-Meier (survival function)	
+Nelson-Aalen (cumulative hazard)	
+When interval censoring is selected, Turnbull NPMLE is used automatically.	
+Group comparison test	
+Log-rank (ρ = 0)	
+Peto-Peto (ρ = 1)	
+Fleming-Harrington (ρ = 0.5)	
+Skip test	
+Applied when a grouping variable is set. Pairwise comparisons use the same weights.	
+Survival probabilities at	
+Space-separated time points. Leave empty to use quartiles of observed time.	
+Confidence interval band	
+Censoring tick marks	
+Cox regression options	
+Ties handling	
+Efron (default)	
+Breslow	
+Exact partial likelihood	
+Robust (sandwich) variance	
+Proportional hazards test (Schoenfeld residuals)	
+Log-log plot vs grouping variable	
+Functional form check (martingale residuals)	
+Influence diagnostics (dfbetas)	
+Concordance (C-index)	
+Parametric regression options	
+Distribution family	
+Weibull	
+Exponential	
+Log-normal	
+Log-logistic	
+Gompertz (proportional hazards)	
+Compare all (AIC ranking)	
+Weibull, exponential, log-normal, log-logistic, and Gaussian are AFT models. Gompertz is a proportional-hazards parametric model.	
+Overlay fitted curves on Kaplan-Meier	
+Competing-risks regression options	
+Approach	
+Cause-specific hazards (Cox per cause)	
+Fine-Gray subdistribution hazards	
+Cause-specific answers "what drives this cause?". Fine-Gray answers "what drives the risk of experiencing this cause first?".	
+Cox regression requires at least one covariate	
+Unknown distribution: {dist}	
+Gompertz (PH) is not available for interval-censored data	
+Left truncation is not available for interval-censored data	
+Competing-risks regression requires at least one cause	
+Cause-specific Cox requires at least one covariate	
+Fine-Gray regression requires at least one covariate	
+Fitting survival curves	
+Computing medians and summaries	
+Evaluating survival at specified times	
+Running log-rank family test	
+Fitting Cox model	
+Computing baseline survival	
+Testing proportional hazards	
+Martingale residuals	
+Influence diagnostics	
+Log-log curves	
+Computing Kaplan-Meier reference	
+Estimating cumulative incidence	
+Fitting cause-specific Cox for cause {cause}	
+Fitting Fine-Gray model for cause {cause}	
+Gompertz parameters not found	
+Cause	
+cause	
+Survival function	
+Time	
+Survival probability	
+No valid data for survival curve	
+Cumulative hazard	
+Cumulative hazard H(t)	
+No valid data for cumulative hazard	
+Hazard ratios	
+Hazard ratio (log scale)	
+No residual data available	
+Schoenfeld residuals	
+Dfbetas residuals	
+Subject index	
+Log-log plot	
+log(Time)	
+log(−log S(t))	
+No valid data for log-log plot	
+Martingale residual	
+KM vs parametric fit	
+No valid data for overlay plot	
+AIC comparison	
+No AIC values available	
+Cumulative incidence	
+No valid data for CIF plot	
+{method} is not implemented yet	
+Select an upper-bound variable for interval censoring	
+Upper-bound variable must be numeric: {var}	
+No complete rows available for analysis	
+Running survival analysis...	
+An error occurred: 	
+Please select a time variable	
+Please select an event variable	
+Time variable must be numeric: {var}	
+Mark at least one level of the event variable as 'Event'	
+Entry-time variable must be numeric: {var}	
+Too few events ({events}) for {params} {method} parameters — the fit will be singular. Reduce the number of covariates or collect more data.	
+Low events-per-variable ratio ({events} events / {params} parameters) for {method}. Results may be unstable; ≥ 10 EPV is recommended.	
+Interval censoring for Cox regression is not yet available	
+Cox regression	
+Fitting Cox model...	
+parametric regression (worst case: Gompertz)	
+parametric regression	
+Fitting parametric model...	
+compare all	
+Interval censoring for cumulative incidence is not available	
+Cumulative incidence requires at least two non-censored event roles	
+Estimating cumulative incidence...	
+Interval censoring for competing-risks regression is not available	
+Competing-risks regression requires at least one covariate	
+Competing-risks regression requires at least two non-censored event roles	
+Left truncation is not available for Fine-Gray regression	
+Fine-Gray regression	
+cause-specific Cox	
+Fitting competing-risks regression...	
+Fit did not converge	
+Event variable has no observed values	
+Event variable has {count} distinct values — too many for role assignment (max {max}). Pick a discrete event indicator or recode the variable.	
+Censored	
+Event	
+Event (cause 2)	
+Event (cause 3)	
+Event (cause 4)	
+-- Select time variable --	
+-- Select upper-bound variable --	
+-- Select event variable --	
+-- None --	
+{count} rows excluded due to missing values or unassigned event levels	
+Stratum	
+Events	
+Median survival	
+Curve summary	
+Survival probabilities at time points	
+Lower	
+Upper	
+N at risk	
+Log-rank	
+Peto-Peto	
+Fleming-Harrington	
+Group comparison	
+χ²	
+Log-rank family tests do not support left truncation — the entry-time variable was ignored when computing the test (curves still account for it).	
+Turnbull NPMLE (interval-censored)	
+Survival (Fleming-Harrington)	
+Kaplan-Meier survival	
+Survival curve	
+Turnbull NPMLE: confidence bands, cumulative hazard, and the log-rank test are not available for interval-censored data in this checkpoint.	
+Median is the right endpoint of the first NPMLE support interval with S ≤ 0.5; not interpolated.	
+Survival: {timeVar} by {groupVar} (event: {eventVar})	
+Survival: {timeVar} (event: {eventVar})	
+Non-parametric survival	
+Yes	
+Model summary	
+Ties method	
+Robust SE	
+Likelihood ratio	
+Wald	
+Score (log-rank)	
+Overall tests	
+Hazard ratio forest plot	
+GLOBAL	
+Proportional hazards test	
+Log-log plot by {groupVar}	
+Proportional-hazards visual check	
+Log-log plot requires a grouping variable	
+Martingale residuals: {var}	
+Influence (dfbetas summary)	
+max |dfbetas|	
+mean |dfbetas|	
+Dfbetas residuals per subject	
+Baseline survival by strata	
+Baseline survival	
+Reference: numeric covariates at their mean, factor covariates at their dummy-coded mean (population proportion).	
+Cox regression: {timeVar} ~ {covs} + strata({groupVar}) (event: {eventVar})	
+Cox regression: {timeVar} ~ {covs} (event: {eventVar})	
+Cox proportional hazards	
+Distribution	
+{groupVar} is included as a covariate (one term per non-reference level), not as a stratifying variable. Parametric AFT/PH families share a single baseline.	
+AIC ranking	
+Fit	
+AIC by distribution	
+Time ratio	
+KM vs parametric overlay is not available for interval-censored data	
+Kaplan-Meier by {groupVar}	
+Kaplan-Meier	
+Kaplan-Meier reference	
+Smooth survival overlay could not be derived for this fit	
+KM vs parametric fit by {groupVar}	
+Kaplan-Meier vs parametric fit	
+Parametric ({dist}): {timeVar} ~ {covs} by {groupVar} (event: {eventVar})	
+Parametric ({dist}): {timeVar} ~ {covs} (event: {eventVar})	
+Parametric ({dist}): {timeVar} (event: {eventVar})	
+Cumulative incidence summary	
+Gray's K-sample test	
+Cumulative incidence by {groupVar}	
+Cumulative incidence curves	
+Cumulative incidence: {timeVar} by {groupVar} (event: {eventVar})	
+Cumulative incidence: {timeVar} (event: {eventVar})	
+Fit summary	
+Grouping variable is ignored for Fine-Gray regression. Add it to covariates if you want to test its effect.	
+Sub-distribution hazards: {cause}	
+Cause-specific hazards: {cause}	
+Overall tests: {cause}	
+Sub-distribution hazard ratios	
+Cause-specific hazard ratios	
+sHR (log scale)	
+HR (log scale)	
+sHR forest plot	
+HR forest plot	
+Fine-Gray	
+Cause-specific	
+{approach} competing risks: {timeVar} ~ {covs} + strata({groupVar}) (event: {eventVar})	
+{approach} competing risks: {timeVar} ~ {covs} (event: {eventVar})	
+
+# === timeseries-view ===
+Date, datetime, or numeric index ordering the observations. Required.	
+Frequency will be auto-detected after selection.	
+Series	
+One or more numeric variables to analyse over time.	
+Stack on one axis (overlay instead of facet)	
+Grouping	
+Categorical variable. Runs the analysis per group.	
+Frequency override	
+Manual seasonal period. Leave blank to use auto-detection from the time variable.	
+Check data	
+Exploration (plot, ACF/PACF, decomposition, stationarity)	
+Smoothing (moving average, exponential smoothing)	
+ARIMA / SARIMA modelling	
+Forecasting (horse-race + rolling-origin CV)	
+Spectral / change-points	
+Transform stack	
+Optional pre-modelling transforms. Box-Cox is auto-applied inside fitting methods that support it; override here if you want explicit control.	
+Replace outliers	
+Box-Cox override	
+λ value	
+Leave empty to use the auto-picked value.	
+Exploration options	
+Decomposition	
+STL (recommended)	
+Classical additive	
+Classical multiplicative	
+Skip decomposition	
+Stationarity tests	
+Augmented Dickey-Fuller (ADF)	
+KPSS	
+Phillips-Perron	
+Smoothing options	
+Moving average	
+Simple exponential smoothing (SES)	
+Holt (level + trend)	
+Holt-Winters (level + trend + seasonality)	
+Moving-average window	
+ARIMA / SARIMA options	
+Specification	
+Auto (auto.arima)	
+Manual (p, d, q)(P, D, Q)	
+p	
+d	
+q	
+P	
+D	
+Q	
+Seasonal orders are disabled because the active frequency is 1.	
+Ljung-Box test on residuals	
+ACF of residuals	
+Residual normality (Q-Q + Shapiro)	
+Forecast options	
+Horizon	
+Number of future periods to forecast.	
+Evaluate on holdout (auto-disabled when N is too small)	
+Rolling-origin cross-validation	
+Number of origins	
+Flag in-sample anomalies (residual outliers, 3·MAD rule)	
+Spectral / change-points options	
+Periodogram	
+Bai-Perron change-points	
+Time-axis diagnostics	
+Per-series diagnostics	
+Analysing {name}	
+Compiling exploration results	
+Smoothing {name}	
+Compiling smoothing results	
+Fitting ARIMA on {name}	
+Compiling ARIMA results	
+Forecasting {name} with {method}	
+Compiling forecast results	
+Spectral analysis on {name}	
+Compiling spectral results	
+P = {period}	
+No series data to plot	
+Time series	
+Date	
+ACF	
+PACF	
+ACF / PACF could not be computed	
+Autocorrelation	
+Lag	
+No decomposition data to plot	
+Observed	
+Trend	
+Seasonal	
+Remainder	
+No data to plot	
+Series with overlay	
+No forecast data to plot	
+Forecast	
+Other methods	
+Anomaly	
+No periodogram data to plot	
+Frequency (cycles per observation)	
+log₁₀(spectrum)	
+Mean-shift breakpoints	
+Segment mean	
+Breakpoint	
+Select a time variable	
+Select at least one series variable	
+Series variable must be numeric: {var}	
+Not enough parseable time points (need at least 3)	
+Running diagnostics	
+Error running diagnostics: 	
+Outlier replacement enabled in transform stack	
+Running exploration analysis	
+Error running exploration: 	
+{count} outlier(s) replaced	
+{count} missing value(s) imputed	
+Box-Cox λ = {lambda}	
+Transform stack: 	
+{label} must be a number ≥ {min}	
+Running smoothing	
+Error running smoothing: 	
+Fitting ARIMA	
+Error fitting ARIMA: 	
+Fitted	
+Ljung-Box (lag = {lag}, df = {df})	
+Shapiro-Wilk on residuals	
+Running forecast horse-race	
+Error running forecast: 	
+Rolling-origin CV: {a} of {n} origins × horizon {h}	
+Rolling-origin CV: {n} origins × horizon {h}	
+Rolling-origin CV requested but series too short — skipped	
+Holdout: {n} observations	
+Holdout requested but series too short — skipped	
+No validation — methods listed in original order	
+Enable at least one of Periodogram or Breakpoints	
+Running spectral analysis	
+Error running spectral analysis: 	
+RMSE (CV)	
+RMSE (holdout)	
+MAE (CV)	
+MAE (holdout)	
+Exploration	
+Smoothing	
+Forecasting	
+Sub-hourly spacing — frequency = 60 (per-hour cycle)	
+Hourly spacing — frequency = 24 (per-day cycle)	
+Daily spacing — frequency = 7 (weekly cycle)	
+Weekly spacing — frequency = 52 (yearly cycle)	
+Monthly spacing — frequency = 12 (yearly cycle)	
+Quarterly spacing — frequency = 4 (yearly cycle)	
+Yearly spacing — frequency = 1 (no shorter cycle)	
+Using frequency override = {f}.	
+Time variable could not be parsed as numeric or date.	
+Numeric time variable — frequency = 1 (no seasonality assumed)	
+Using frequency override = {f} (auto-detected: {auto}).	
+Strong seasonal pattern — try SARIMA or Holt-Winters.	
+Non-stationary — try ARIMA with d ≥ 1.	
+Stationary — try exponential smoothing or stationary ARMA.	
+Series is short (< 30 observations) — favour naive baselines and watch for overfitting.	
+Checking {n} observations across {s} series at frequency {f} ({g} groups).	
+Checking {n} observations across {s} series at frequency {f}.	
+Frequency used	
+Dropped rows (unparseable time)	
+Observations	
+Regular spacing	
+Gap count	
+Duplicate timestamps	
+Time axis	
+Time axis (per group)	
+Diagnostics could not be computed for this series.	
+Series: {name}	
+Missing values	
+Suggested d (ndiffs)	
+Suggested D (nsdiffs)	
+Box-Cox λ (auto)	
+Outliers detected	
+Replace {count} outlier(s) in this series before modelling?	
+Time series data fitness	
+Data fitness	
+STL	
+Decomposition skipped — disabled in options.	
+Decomposition skipped — frequency must be greater than 1.	
+Decomposition skipped — series too short for the chosen frequency (need ≥ 2 × period observations).	
+Multiplicative decomposition requires strictly positive values; skipped.	
+Decomposition failed — the series may not support the requested method.	
+Series is stationary	
+Series is non-stationary	
+Seasonality detection skipped — series too short (need ≥ 8 observations).	
+Seasonality detection failed — periodogram could not be computed.	
+Seasonality detection skipped — no usable spectral ordinates.	
+uncorrected	
+Stationary at α = 0.05	
+Non-stationary at α = 0.05	
+Inconclusive	
+Exploring {n} observations across {s} series at frequency {f} ({g} groups).	
+Exploring {n} observations across {s} series at frequency {f}.	
+{count} missing value(s) interpolated in {name} before ACF / PACF and stationarity tests.	
+Interpolation failed for {name} — stationarity and Ljung-Box tests skipped.	
+ACF / PACF: {name}	
+Decomposition ({method}): {name}	
+Decomposition: {name}	
+Null hypothesis	
+Conclusion	
+Stationarity tests: {name}	
+Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} — series shows serial dependence.	
+Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} — no significant autocorrelation.	
+Decomposition strength for {name}: trend = {trend}, seasonal = {seasonal} (0–1, higher = stronger).	
+No additional significant seasonal periods detected for {name} at α = {alpha} ({adjustment}).	
+Period (obs)	
+Cycles per obs	
+Fisher's g	
+Share of variance	
+Harmonic of {period} (×{n})	
+Detected seasonal periods: {name}	
+Spectral concentration (Fisher's g-test on the periodogram); not the same as Hyndman's seasonal strength shown above.	
+{count} decomposition-residual anomaly point(s) flagged in {name}.	
+Time series exploration	
+Series too short for the chosen method.	
+Method requires a seasonal frequency greater than 1.	
+Model could not be fitted on this series.	
+Group: {name}	
+Smoothing {n} observations across {s} series at frequency {f} ({g} groups).	
+Smoothing {n} observations across {s} series at frequency {f}.	
+Smoothed: {name} ({method})	
+Curve is on the median scale (Box-Cox back-transformed without bias correction).	
+Time series smoothing	
+Fitting auto.arima on {n} observations across {s} series at frequency {f} ({g} groups).	
+Fitting auto.arima on {n} observations across {s} series at frequency {f}.	
+Fitting manual ARIMA on {n} observations across {s} series at frequency {f} ({g} groups).	
+Fitting manual ARIMA on {n} observations across {s} series at frequency {f}.	
+ARIMA: {name}	
+ARIMA: {name} — {order}	
+σ² (residual variance)	
+z	
+Neighbouring orders (information criteria)	
+Order	
+Observed vs fitted: {name}	
+Residual ACF: {name}	
+Residual autocorrelation test	
+Residual Q-Q: {name}	
+Normality test	
+W	
+ARIMA	
+Naive	
+Drift	
+Seasonal naïve	
+ETS	
+Auto-ARIMA	
+Theta	
+STL + ETS	
+✓ Active	
+Forecasting {h} periods on {n} observations across {s} series at frequency {f} ({g} groups).	
+Forecasting {h} periods on {n} observations across {s} series at frequency {f}.	
+Forecast: {name}	
+No forecast methods could be fit on this series.	
+Periodogram skipped — disabled in options.	
+Periodogram skipped — series too short (need ≥ 8 observations).	
+Periodogram failed on this series.	
+Breakpoints skipped — disabled in options.	
+Breakpoints skipped — strucchange package could not be loaded.	
+Breakpoints skipped — series too short (need ≥ 20 observations).	
+Breakpoint search failed on this series.	
+Periodogram skipped.	
+Periodogram: {name}	
+Period (observations)	
+Frequency (cycles/obs)	
+Spectral power	
+Breakpoints skipped.	
+Breakpoints: {name}	
+No breakpoints detected — series mean is stable.	
+Row	
+Mean before	
+Mean after	
+Spectral analysis on {n} observations across {s} series at frequency {f} ({g} groups).	
+Spectral analysis on {n} observations across {s} series at frequency {f}.	
+Spectral	
+
+# === cluster-view ===
+Clustering mode	
+Case clustering	
+Variable clustering	
+Biclustering	
+Clustering algorithm	
+K-Means	
+K-Medoids (PAM)	
+Hierarchical	
+Biclustering algorithm	
+BiMax	
+Plaid	
+FABIA	
+Cheng & Church	
+Distance metric	
+Euclidean	
+Manhattan	
+Maximum (Chebyshev)	
+Canberra	
+Minkowski	
+Linkage method	
+Ward's (D2)	
+Complete	
+Average (UPGMA)	
+Single	
+Centroid	
+McQuitty (WPGMA)	
+Ward's linkage assumes Euclidean distances. Results may be suboptimal with other metrics.	
+Initialization method	
+Hartigan-Wong	
+Lloyd	
+Forgy	
+MacQueen	
+Number of random starts	
+Higher values reduce chance of suboptimal solution	
+Maximum iterations	
+Number of singular vectors	
+Number of eigenvectors to consider	
+Normalization method	
+Log	
+IRRC (iterative row/column)	
+Bistochastization	
+Background model	
+Row + column effects	
+Constant only	
+Maximum layers (biclusters)	
+Upper limit for automatic detection	
+Row release	
+Column release	
+Residue threshold (δ)	
+Maximum allowed mean squared residue	
+Alpha	
+Scaling factor for node deletion	
+Minimum rows	
+Minimum columns	
+Binarization threshold	
+Values above threshold become 1, below become 0	
+Sparseness prior (loadings)	
+Sparseness of factor loadings	
+Sparseness prior (factors)	
+Sparseness of factors	
+Number of iterations	
+Step 2: determine optimal k	
+Compare solutions across a range of cluster numbers to find the optimal k	
+Analyze & determine k	
+Cluster range to test	
+Show elbow plot (within-cluster SS)	
+Show silhouette plot	
+Show gap statistic plot	
+Show dendrogram	
+Compare solutions across a range of bicluster numbers to find the optimal k	
+Compare solutions	
+Bicluster range to test	
+Show variance explained plot	
+Show coherence plot	
+Show coverage plot	
+Stability analysis (bootstrap, slower)	
+F-statistic diagnostics (slower)	
+Consensus scoring (slower)	
+Automatic detection	
+This algorithm determines the optimal number of biclusters automatically.	
+Run clustering with selected number of clusters	
+Number of clusters (k)	
+Run cluster analysis	
+Validity metrics	
+Silhouette analysis	
+Calinski-Harabasz index	
+Davies-Bouldin index	
+Dunn index	
+Cluster profiles (means per variable)	
+Cluster sizes and distribution	
+Within-cluster sum of squares	
+Between-cluster sum of squares	
+Cluster centers (medoids)	
+Silhouette plot	
+Hierarchical options	
+Dendrogram	
+Optimize leaf ordering	
+Variable contribution to clustering	
+Run biclustering analysis	
+Number of biclusters (k)	
+Bicluster summary table	
+Membership tables (rows and columns)	
+Bicluster profiles (means per variable)	
+Coherence per bicluster	
+Overlap analysis	
+Heatmap visualization	
+Row dendrogram	
+Column dendrogram	
+Failed to compare cluster solutions	
+Failed to run cluster analysis	
+Computing gap statistic (Monte Carlo)	
+Testing k = {k}	
+Computing Hartigan's index	
+Running clustering	
+Computing validity metrics	
+Computing cluster profiles	
+Computing additional metrics	
+Computing variable contribution	
+Failed to compare bicluster solutions	
+Failed to run biclustering analysis	
+Finding optimal k	
+Running biclustering	
+Computing bicluster metrics	
+Building bicluster summary	
+Building membership tables	
+Computing bicluster profiles	
+Computing coherence metrics	
+Computing overlap analysis	
+Preparing heatmap data	
+Computing row dendrogram	
+Computing column dendrogram	
+Running stability analysis (bootstrap)	
+Stability for k = {k}	
+Running F-statistic diagnostics	
+F-statistic for k = {k}	
+Running consensus analysis	
+Consensus for k = {k}	
+No gap statistic data available	
+No silhouette data available	
+No dendrogram data available	
+Could not build dendrogram structure	
+No data to display	
+No heatmap data available	
+Within-Cluster SS	
+Silhouette score	
+Gap statistic	
+Avg: {value}	
+Silhouette width	
+Height	
+{n} observations	
+Column	
+Cell	
+Coverage (%)	
+Row Effects	
+Column Effects	
+Prop. Significant (p < 0.05)	
+{row}, {col}: {value} (Bicluster {n})	
+Biclusters:	
+Please select at least two numerical variables for cluster analysis.	
+Maximum clusters must be greater than minimum.	
+Maximum clusters ({k}) cannot exceed the number of variables ({n}).	
+Not enough complete cases ({n}) for the requested maximum clusters ({k}).	
+Comparing variable cluster solutions...	
+Comparing cluster solutions...	
+An error occurred during cluster comparison: 	
+Number of clusters must be at least 2.	
+Number of clusters ({k}) cannot exceed the number of variables ({n}).	
+Not enough complete cases ({n}) for {k} clusters.	
+Running variable cluster analysis...	
+Running cluster analysis...	
+An error occurred during cluster analysis: 	
+Cluster assignment data is missing. Cannot insert into dataset.	
+Cluster assignments	
+Bicluster membership data is missing. Cannot insert into dataset.	
+All bicluster variables already exist in the dataset.	
+Bicluster memberships	
+Please select at least two numerical variables for biclustering analysis.	
+Maximum biclusters must be greater than minimum.	
+Not enough complete cases ({n}) for the requested maximum biclusters ({k}).	
+Comparing bicluster solutions...	
+An error occurred during bicluster comparison: 	
+Number of biclusters must be at least 1.	
+Not enough complete cases ({n}) for {k} biclusters.	
+Running biclustering analysis...	
+An error occurred during biclustering analysis: 	
+No biclusters were found. Try adjusting the algorithm parameters.	
+Mode:	
+Algorithm:	
+(standardized)	
+Variables to cluster	
+Complete cases	
+Suggested k (silhouette):	
+Suggested k (gap statistic):	
+Complete cases used	
+Medoid row indices:	
+Between-cluster sum of squares:	
+Variance explained:	
+Matrix size:	
+Suggested k:	
+Based on variance explained elbow detection	
+Biclusters found:	
+Row coverage:	
+Column coverage:	
+Cell coverage:	
+Row overlap:	
+Column overlap:	
+Solution comparison	
+Elbow plot (within-cluster SS)	
+Silhouette score by k	
+Gap statistic by k	
+Variable cluster solution comparison	
+Cluster solution comparison	
+Variable cluster comparison	
+Cluster comparison	
+Warnings	
+Cluster validity metrics	
+Cluster sizes	
+Variable cluster assignments	
+Cluster profiles (variable means)	
+Medoids are actual observations that represent each cluster center.	
+Cluster Medoids	
+Variable silhouette plot	
+Variable dendrogram	
+Insert cluster assignments into dataset	
+Variable cluster analysis results	
+Cluster analysis results	
+Some clusters contain only a single variable. Consider reducing the number of clusters.	
+Low silhouette score ({score}) suggests variables do not form clear clusters	
+Highly unbalanced clusters: smallest cluster has only {pct}% of cases ({n} observations)	
+Some clusters have very few observations (n = {n}). Results may be unstable.	
+Extreme size imbalance: largest cluster is {ratio}x bigger than smallest	
+Low silhouette score ({score}) suggests no substantial cluster structure	
+Moderate silhouette score ({score}) indicates weak cluster structure	
+{pct}% of observations have negative silhouette (may be assigned to wrong cluster)	
+Low variance explained ({pct}%). Clusters may not capture the data structure well.	
+Within SS	
+Variance explained (%)	
+Smallest cluster	
+Largest cluster	
+Silhouette	
+Calinski-Harabasz	
+Davies-Bouldin	
+Dunn	
+Gap	
+Hartigan	
+Average silhouette width	
+Higher is better	
+Lower is better	
+Strong structure	
+Reasonable structure	
+Weak structure	
+No substantial structure	
+Cluster {n}	
+Overall	
+Eta²	
+Average coherence (MSR)	
+Mean squared residue	
+Coverage	
+Stability analysis (bootstrap)	
+Stability (Jaccard)	
+F-statistic diagnostics	
+Consensus scoring	
+Consensus score (Jaccard)	
+Bicluster solution comparison	
+Bicluster comparison	
+Overview	
+Bicluster summary	
+Variable membership	
+Bicluster profiles (variable means)	
+Overlap analysis (Jaccard Index)	
+Heatmap	
+Insert bicluster memberships into dataset	
+Biclustering results	
+Cheng & Church (CC)	
+Found	
+Var. Expl. (%)	
+Δ var. (%)	
+Avg MSR	
+Avg overlap	
+Cell cov. (%)	
+Stability	
+Row sig. (%)	
+Col sig. (%)	
+Consensus	
+Bicluster	
+Rows	
+Columns	
+Mean value	
+MSR	
+Bicluster {n}	
+Row variance	
+Column variance	
+
+# === planner-view ===
+Plan your study with power analysis, effect size conversion, and more.	
+Power analysis	
+Test type	
+One-sample t-test	
+Pearson correlation	
+Multiple regression	
+Chi-square goodness of fit	
+One-sample proportion	
+Two-sample proportion	
+Solve for	
+Power	
+Effect size ({symbol})	
+Cohen's d for t-tests	
+Significance level (α)	
+Power (1 - β)	
+Sample size (per group)	
+Tails	
+Two-tailed (μ ≠ μ₀)	
+One-tailed (μ > μ₀)	
+One-tailed (μ < μ₀)	
+Number of groups	
+Numerator df (effect)	
+Degrees of freedom for the effect of interest	
+Denominator df (error)	
+Number of predictors	
+Number of categories minus 1	
+Parameters used	
+Sensitivity analysis	
+Show power curve	
+Configure parameters and click Calculate to see results.	
+Quick reference: effect size conventions	
+Measure	
+Small	
+Medium	
+Large	
+Cohen's f	
+Cohen's f²	
+Effect size converter	
+Input effect size type	
+Correlation r	
+R-squared (R²)	
+Eta-squared (η²)	
+Partial η²	
+Omega-squared (ω²)	
+Cohen's h	
+Odds ratio	
+CLES	
+NNT	
+Optional: improves Hedges' g accuracy	
+Table dimensions (for Cramér's V)	
+Optional: needed for Cramér's V calculation	
+Proportions (for Cohen's h)	
+Optional: needed for Cohen's h calculation	
+Degrees of freedom (for partial η²)	
+Optional: needed for partial η² calculation	
+Control event rate (for NNT)	
+Optional: defaults to 0.50 if not specified	
+Convert	
+Converted effect sizes	
+Interpretations based on Cohen's conventions	
+Enter an effect size value to see conversions to other metrics.	
+Alpha correction planner	
+Number of comparisons	
+Family-wise alpha level	
+Calculate thresholds	
+Adjusted significance thresholds	
+Threshold for the i-th smallest p-value. Sequential methods compare each p₍ᵢ₎ to its threshold.	
+Hommel ≥ Hochberg ≥ Holm in power	
+Enter the number of planned comparisons to see adjusted alpha thresholds.	
+Scale length planning (Spearman-Brown)	
+Estimate reliability changes when adding or removing items.	
+Current reliability	
+Current number of items	
+Target reliability	
+Calculate required items	
+Scale length results	
+Reliability by number of items	
+Projected reliability	
+How it works	
+The Spearman-Brown formula predicts reliability for different scale lengths. Doubling items increases reliability, but with diminishing returns.	
+Correlation attenuation	
+See how measurement error affects observed correlations.	
+True/expected correlation	
+Reliability of measure X (α or ω)	
+Reliability of measure Y (α or ω)	
+Calculate attenuation	
+Attenuation results	
+Why this matters	
+Low reliability attenuates (weakens) observed correlations. A true correlation of r = 0.50 between variables measured with reliability of 0.70 each will appear as r ≈ 0.35 in your data.	
+Precision planning (CI width)	
+Calculate sample size needed to achieve a desired confidence interval width.	
+Estimate type	
+Correlation	
+Expected standard deviation	
+Estimate from pilot data or literature	
+Expected proportion	
+Use 0.5 for maximum variance (most conservative)	
+Expected correlation	
+Desired margin of error (±)	
+Half-width of the confidence interval	
+Calculate sample size	
+Precision planning results	
+Sample size by margin of error	
+Margin (±)	
+Determine sample size based on desired precision rather than power.	
+When to use this	
+Use precision planning when your goal is estimation accuracy (e.g., "I want to estimate the mean within ±2 points") rather than hypothesis testing.	
+Group allocation optimizer	
+Explore how unequal group sizes affect statistical power.	
+Group sizes	
+Effect size (Cohen's d)	
+Calculate power	
+Allocation results	
+Power by allocation ratio	
+Ratio	
+See how different group allocations affect your study's power.	
+Equal group sizes (1:1) maximize power. Unequal allocations reduce power but may be necessary due to practical constraints (e.g., rare conditions, cost differences).	
+t-tests	
+Proportions	
+columns	
+df effect	
+df error	
+requires df values	
+requires proportions	
+requires table dimensions	
+requires base rate	
+negligible	
+small	
+medium	
+large	
+Generating power curve...	
+Error generating power curve	
+Sensitivity heatmap - coming soon	
+Calculating power...	
+Error calculating power: {error}	
+Please enter a valid value for all parameters.	
+Required sample size: {n}	
+Achieved power: {power}	
+Minimum detectable effect: {effect}	
+Please enter a valid effect size.	
+Cramér's V conversion requires table dimensions (rows and columns, both ≥ 2).	
+NNT conversion requires a valid control event rate (between 0 and 1).	
+CLES must be between 0 and 1 (exclusive).	
+Hedges' g conversion requires sample size (at least 4) for accurate results.	
+Please enter a valid number of comparisons (at least 2).	
+Šidák	
+Holm / Hochberg / Hommel	
+Benjamini-Hochberg (FDR)	
+Benjamini-Yekutieli (BY)	
+Please enter valid values for all fields.	
+Expected observed correlation	
+Attenuation factor	
+Your true correlation of {true} will appear as approximately {observed} due to measurement error.	
+Please enter a valid standard deviation.	
+Please enter a valid proportion between 0 and 1.	
+Please enter a valid correlation between -1 and 1.	
+Please enter a valid margin of error.	
+Calculating sample size...	
+Error calculating sample size: {error}	
+Required sample size	
+This will give you a {conf}% CI with margin of error ±{margin}	
+Please enter a valid size for group {n} (at least 2).	
+Please enter a valid alpha level.	
+Total N	
+Equal allocation maximizes power.	
+Power loss vs equal allocation: {loss}%	
+Required number of items	
+To achieve reliability of {target}, you need {required} items ({n} more than current).	
+To achieve reliability of {target}, you need {required} items ({n} fewer than current).	
+Min. effect	
+Cohen's d for paired differences	
+Number of pairs	
+Total sample size	
+Expected correlation coefficient	
+Cohen's h for proportion difference	
+Cohen's {symbol}	
+(rows - 1) × (cols - 1)	
+Solving	
+Numerator df	
+Denominator df	
