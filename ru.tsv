@@ -17,7 +17,7 @@ Correlation analysis	Корреляционный анализ
 Directional analysis	Анализ направленности
 Reliability analysis	Анализ надёжности
 Factor & principal component analysis	Факторный анализ и главные компоненты
-Confirmatory factor analysis	Конфирматорный факторный анализ
+Structural equation modeling	Моделирование структурными уравнениями
 Cluster analysis	Кластерный анализ
 Regression analysis	Регрессионный анализ
 Time to event analysis	Анализ времени до события
@@ -221,6 +221,8 @@ Use exponential notation for large numbers	Использовать научны
 Scroll to results after analysis	Проматывать страницу к новейшему результату
 Confidence level	Уровень доверия
 Bootstrap replications	Повторы бутстрэпа
+Bootstrap seed (empty = random)	Зерно бутстрэпа (пустое = случайное)
+Reproducibility seed (empty = random)	Зерно воспроизводимости (пустое = случайное)
 Assumption test significance level	Уровень значимости для проверки допущений
 Moderate	Умеренная
 Severe	Высокая
@@ -240,6 +242,8 @@ Weak	Слабая
 Very weak	Очень слабая
 Correlation strength bands	Шкала силы корреляции
 Normalized mutual information bands	Шкала нормализованной взаимной информации
+Correlation ratio (η²) bands	Диапазоны корреляционного отношения (η²)
+Cramér's V bands	Диапазоны V Крамера
 p-value display format	Настройки отображения p-значений
 Exact value (e.g., 0.031)	Точное p-значение (например, 0.031)
 Category (e.g., p ≤ 0.05)	Категория (например, p ≤ 0.05)
@@ -288,6 +292,7 @@ Heatmap high color	Высокая температура
 Heatmap mid color	Средняя температура
 Heatmap low color	Низкая температура
 Maximum point spacing (px)	Минимальное расстояние между точками
+Cancelling...	Отмена...
 Processing...	Обработка...
 Remove this result	Удалить этот результат
 Cannot assign numeric type to text variables: {vars}. Use Transform to convert them first.	Невозможно назначить числовой тип текстовым переменным: {vars}. Сначала преобразуйте их с помощью Transform.
@@ -415,14 +420,6 @@ Variables don't divide evenly - some may be ignored	Переменные не д
 Cannot apply transformation - check configuration	Не удаётся применить преобразование — проверьте конфигурацию
 Data transformed successfully! 	Данные успешно преобразованы! 
 rows created	строк создано
-No numerical variables selected.	Числовые переменные не выбраны.
-Could not detect factor structure. Variables should be named like 'factor_item' (e.g., 'anx_1', 'anx_2').	Не удалось определить структуру факторов. Переменные должны быть названы по шаблону 'фактор_индикатор' (например, 'anx_1', 'anx_2').
-Select numerical variables to define the model	Выберите числовые переменные для задания модели
-Remove factor	Удалить фактор
-Add factor	Добавить фактор
-Remove loading	Удалить нагрузку
-Remove second-order factor	Удалить фактор второго порядка
-Add second-order factor	Добавить фактор второго порядка
 Unsupported download format	Неподдерживаемый формат файла
 DOCX library not loaded	Библиотека DOCX не загружена
 No results to export	Нет результатов для экспорта
@@ -485,11 +482,6 @@ Sheets have different row counts. Join is positional — rows must be pre-aligne
 
 # === distribution-view ===
 Frequency tables	Таблицы частот
-Overlay mode does not support these plot types and they have been skipped: {plots}	Режим наложения не поддерживает эти типы графиков, они пропущены: {plots}
-Box plot (overlay)	Ящик с усами (наложение)
-Violin plot (overlay)	Скрипичная диаграмма (наложение)
-ECDF plot (overlay)	График ЭФР (наложение)
-Q-Q plot (overlay, {dist})	Q-Q график (наложение, {dist})
 Calculate frequency tables	Рассчитать таблицы частот
 Configure frequency tables	Настроить таблицы частот
 Display options:	Параметры отображения:
@@ -497,7 +489,7 @@ Show count	Показать количество
 Show percentage	Показать процент
 Show valid percentage	Показать валидный процент
 Show total row	Показать строку итогов
-Show cumulative count	Считать накопленную частоту
+Show cumulative valid count	Показывать накопленное количество (валидных)
 Show cumulative valid percentage	Показывать накопленный валидный процент
 Sort by:	Сортировать по:
 Count (Highest first)	Количество (по убыванию)
@@ -514,6 +506,7 @@ Equal-count (quantile)	Равное количество (квантильные
 Normality analysis	Анализ нормальности
 Run normality tests	Рассчитать критерии нормальности
 Test configuration	Конфигурация критериев
+Include sample size (N)	Включать объём выборки (N)
 Select which normality tests to perform:	Выберите критерии проверки нормальности для выполнения:
 Shapiro-Wilk test	Критерий Шапиро-Уилка
 Shapiro-Francia test	Критерий Шапиро–Франсия
@@ -528,7 +521,6 @@ Plot configuration	Настройки графиков
 Select which plots to generate:	Выберите желаемые графики
 Overlay variables on one plot (box, violin, ECDF, Q-Q)	Наложить переменные на один график (ящик, скрипка, ЭФР, Q-Q)
 Histogram	Гистограмма
-Q-Q plot ({dist})	Q-Q график ({dist})
 Box plot	Коробчатый график
 Q-Q plot	График Q-Q
 Violin plot	Скрипичный график
@@ -550,6 +542,13 @@ Show notch (median CI)	Показывать вырез (ДИ медианы)
 Show data points	Показывать точки данных
 Q-Q plot options:	Настройки графика Q-Q
 Reference distribution:	Эталонное распределение:
+Normal	Нормальное
+Student's t	Стьюдента (t)
+Exponential	Экспоненциальное
+Uniform	Равномерное
+Lognormal	Логнормальное
+Degrees of freedom:	Степени свободы:
+Leave empty to use max(2, n − 1). The floor of 2 keeps the Student-t inverse-CDF and density well defined for very small samples; smaller values are clamped to 2.	Оставьте пустым, чтобы использовать max(2, n − 1). Нижняя граница 2 обеспечивает корректную определённость обратной функции распределения и плотности Стьюдента для очень малых выборок; меньшие значения приводятся к 2.
 Show confidence band	Показывать доверительный интервал
 Detrended (residuals vs reference)	Детрендированный (остатки от эталона)
 Violin plot options:	Настройки скрипичного графика:
@@ -561,41 +560,80 @@ Wilson (pointwise)	Уилсона (поточечная)
 DKW (simultaneous)	DKW (одновременная)
 Wilson narrows near 0 and 1 (covers each F(x) individually); DKW has constant thickness and covers the whole curve simultaneously.	Полоса Уилсона сужается у 0 и 1 (покрывает каждое F(x) по отдельности); DKW имеет постоянную ширину и покрывает всю кривую одновременно.
 Analyzing {variable}...	Анализ {variable}...
+more	ещё
+Outliers	Выбросы
 Upper whisker	Верхний ус
 Lower whisker	Нижний ус
+residual	остаток
+sample	выборочное
+theoretical	теоретическое
 Frequency	Частота
+No valid data for histogram	Нет валидных данных для гистограммы
+Density and normal curve overlays are suppressed for sparse-integer data (bin widths vary widely).	Кривые плотности и нормального распределения скрыты для разреженных целочисленных данных (ширины интервалов сильно различаются).
+skew = {skew}, ex.kurt = {kurt}	асимм. = {skew}, эксцесс = {kurt}
 Density	Плотность
-Normal	Нормальное
-Student's t	Стьюдента (t)
-Uniform	Равномерное
-Lognormal	Логнормальное
-Leave empty to use max(2, n − 1). The floor of 2 keeps the Student-t reference line well defined (finite variance) for very small samples.	Оставьте пустым, чтобы использовать max(2, n − 1). Нижняя граница 2 обеспечивает корректность t-эталона (конечную дисперсию) на очень малых выборках.
+Invalid data format for box plot	Некорректный формат данных для ящика с усами
+No valid data for box plot	Нет валидных данных для ящика с усами
+No valid data for box plot (all groups excluded for insufficient data or zero variance)	Нет данных для ящика с усами (все группы исключены из-за недостаточности данных или нулевой дисперсии)
+Excluded (n < 2): {names}	Исключены (n < 2): {names}
+Excluded zero-variance: {names}	Исключены группы с нулевой дисперсией: {names}
 Outlier	Выброс
 Data points	Точки данных
 Notch = 95% CI of median	Вырез = 95% ДИ медианы
 Theoretical quantiles	Теоретические квантили
 Sample quantiles	Выборочные квантили
+Sample quantiles (log scale)	Выборочные квантили (логарифмическая шкала)
+Theoretical quantiles (normal, sample log-transformed)	Теоретические квантили (нормальные, выборка логарифмирована)
+No valid data for Q-Q plot after excluding {n} non-positive value(s)	Нет корректных данных для Q-Q графика после исключения {n} неположительных значений
+No valid data for Q-Q plot	Нет валидных данных для Q-Q графика
+Q-Q plot requires at least 3 valid observations	Q-Q график требует не менее 3 корректных наблюдений
+Q-Q plot requires variation in the sample	Q-Q график требует разброса значений в выборке
+Exponential Q-Q plot requires non-negative values	График Q-Q для экспоненциального распределения требует неотрицательных значений
+Excluded {n} non-positive value(s)	Исключено {n} неположительных значений
+Points close to the horizontal line suggest data follows the reference distribution	Точки, близкие к горизонтальной линии, указывают на соответствие данных эталонному распределению
+Points close to the line suggest data follows the reference distribution	Точки, близкие к линии, указывают на соответствие данных эталонному распределению
+Q-Q plot (overlay, {dist})	Q-Q график (наложение, {dist})
+Theoretical quantiles (normal)	Теоретические квантили (нормальные)
+Standardized sample quantiles	Стандартизованные выборочные квантили
+Q-Q overlay is only available for normal and lognormal references	Совмещённый Q-Q график доступен только для нормального и логнормального распределений
+Standardized log(sample) quantiles	Стандартизованные квантили log(выборки)
+No valid data for Q-Q overlay after excluding {n} non-positive value(s)	Нет корректных данных для Q-Q графика (наложение) после исключения {n} неположительных значений
+No valid data for Q-Q overlay	Нет корректных данных для Q-Q графика (наложение)
+Invalid data format for violin plot	Некорректный формат данных для скрипичного графика
+No valid data for violin plot	Нет валидных данных для скрипичного графика
+No valid data for violin plot (all groups excluded for insufficient data or zero variance)	Нет данных для скрипичного графика (все группы исключены из-за недостаточности данных или нулевой дисперсии)
 IQR	МКР
 Cumulative proportion	Накопленная доля
+Invalid data format for ECDF plot	Некорректный формат данных для графика ЭФР
+No valid data for ECDF plot	Нет валидных данных для графика ЭФР
 Median reference	Медианная линия
 {level}% CI (DKW)	{level}% ДИ (ДКВ)
+{level}% CI (Wilson)	{level}%-я ДИ (Уилсона)
 Please select at least one variable for analysis.	Пожалуйста, выберите хотя бы одну переменную для анализа.
 Calculating frequency tables...	Расчёт таблиц частот...
+Calculation cancelled.	Вычисление отменено.
 An error occurred while calculating frequency tables:	Произошла ошибка при расчёте таблиц частот:
 Calculating frequencies for {variable}...	Расчёт частот для переменной {variable}...
 Total	Итого
 Please select at least one plot type.	Выберите хотя бы один тип графика.
 Please select at least one numerical variable for distribution plots.	Выберите хотя бы одну числовую переменную для построения графиков распределения.
+Overlay mode does not support the selected plot types (histogram and Q-Q with non-normal references). Pick a compatible plot or disable overlay.	Режим наложения не поддерживает выбранные типы графиков (гистограмма и Q-Q с ненормальным эталоном). Выберите совместимый тип или отключите наложение.
 Creating distribution plots...	Создание графиков распределения...
 An error occurred while creating distribution plots:	Произошла ошибка при построении графиков распределения:
+Q-Q plot ({dist})	Q-Q график ({dist})
 Creating plots for {variable}...	Создание графиков для переменной {variable}...
 Count	Количество
 Percentage	Процент
 Valid percentage	Валидный процент
-Cumulative count	Накопленная частота
+Cumulative valid count	Накопленное количество (валидных)
 Cumulative valid %	Накопленный валидный %
 Note: requested {requested} bins, but tied values collapsed boundaries — showing {actual} bins.	Запрошено {requested} интервалов, но совпадающие значения схлопнули границы — отображается {actual}.
-Cumulative %	Накопленный %
+No selected variables had valid numerical data for overlay plots.	Ни одна из выбранных переменных не содержит корректных числовых данных для графиков с наложением.
+Excluded from overlay (no valid numerical data): {names}	Исключены из наложения (нет валидных числовых данных): {names}
+Overlay mode does not support these plot types and they have been skipped: {plots}	Режим наложения не поддерживает эти типы графиков, они пропущены: {plots}
+Box plot (overlay)	Ящик с усами (наложение)
+Violin plot (overlay)	Скрипичная диаграмма (наложение)
+ECDF plot (overlay)	График ЭФР (наложение)
 Histogram: {name}	Гистограмма: {name}
 Box plot: {name}	Коробчатый график: {name}
 Violin plot: {name}	Скрипичный график: {name}
@@ -605,15 +643,20 @@ Please select at least one numerical variable for normality analysis.	Пожал
 Please select at least one normality test to perform.	Пожалуйста, выберите хотя бы один критерий нормальности для выполнения.
 Preparing normality tests...	Подготовка к расчёту критериев нормальности...
 An error occurred while running the normality tests:	Произошла ошибка при расчёте критериев нормальности:
-Unknown error	Неизвестная ошибка
+Test failed	Сбой расчёта
 Could not determine	Невозможно определить
 No evidence against normality	Нет свидетельств против нормальности
 Evidence against normality	Есть свидетельства против нормальности
-evidence against normality	есть свидетельства против нормальности
 no evidence against normality	нет свидетельств против нормальности
+evidence against normality	есть свидетельства против нормальности
+mixed evidence	неоднозначные свидетельства
 {reject}/{valid} tests ({fail} failed):	{reject}/{valid} критериев ({fail} с ошибкой):
 {reject}/{total} tests:	{reject}/{total} критериев:
-Test failed	Сбой расчёта
+Insufficient data (n = {n}, need n ≥ {min})	Недостаточно данных (n = {n}, требуется n ≥ {min})
+Sample too large (n = {n}, maximum n = {max})	Выборка слишком велика (n = {n}, максимум n = {max})
+Test error: {msg}	Ошибка теста: {msg}
+Unknown error	Неизвестная ошибка
+N	N
 Interpretation	Интерпретация
 Normality tests	Критерии нормальности
 Normality	Нормальность
@@ -629,9 +672,6 @@ Trimmed mean	Усечённое среднее
 Trim percentage:	Процент усечения:
 Geometric mean	Среднее геометрическое
 Harmonic mean	Среднее гармоническое
-HL pseudomedian	Псевдомедиана Х-Л
-HL CI lower ({level}%)	Нижняя граница ДИ Х-Л ({level}%)
-HL CI upper ({level}%)	Верхняя граница ДИ Х-Л ({level}%)
 Hodges-Lehmann pseudomedian	Псевдомедиана Ходжеса-Лемана
 Dispersion	Меры разброса
 Minimum	Минимум
@@ -643,6 +683,7 @@ Winsorized standard deviation	Винзоризованное стандартн�
 Winsorization percentage:	Процент винзоризации:
 Interquartile range	Межквартильный размах
 Mean absolute deviation	Среднее абсолютное отклонение
+Median absolute deviation	Медианное абсолютное отклонение
 Coefficient of variation	Коэффициент вариации
 Shape	Форма распределения
 Skewness	Асимметрия
@@ -650,7 +691,7 @@ Kurtosis	Эксцесс
 Report as excess kurtosis	Показать как избыточный эксцесс
 SE/CI method:	Метод SE/ДИ:
 Analytical (normal-theory)	Аналитический (нормальная теория)
-Bootstrap (percentile)	Бутстрэп (процентильный)
+Bootstrap (BCa)	Бутстрэп (BCa)
 Summary counts	Общие показатели
 Sample size	Объём выборки
 Count of distinct values	Количество уникальных значений
@@ -659,8 +700,6 @@ Zero count	Количество нулей
 Mild outliers (1.5·IQR)	Умеренные выбросы (1,5·МКР)
 Extreme outliers (3·IQR)	Экстремальные выбросы (3·МКР)
 Modified Z outliers (|M| > 3.5)	Модифицированные Z-выбросы (|M| > 3,5)
-Shannon H (nats)	Энтропия Шеннона (наты)
-Pielou's J	J Пиелу
 Quantiles	Квантили
 Quartiles (25%, 75%)	Квартили (25%, 75%)
 Custom percentiles	Пользовательские перцентили
@@ -685,38 +724,52 @@ CI for skewness	ДИ для асимметрии
 CI for kurtosis	ДИ для эксцесса
 Use sample statistics (n-1 denominator)	Использовать выборочную статистику (знаменатель n-1)
 When checked, calculates sample variance/std.dev. with n-1 denominator. When unchecked, calculates population variance/std.dev. with n denominator.	Если отмечено, рассчитывает выборочную дисперсию/станд.откл. со знаменателем n-1. Если не отмечено, рассчитывает дисперсию/станд.откл. генеральной совокупности со знаменателем n.
+e.g. 10, 90	напр. 10, 90
 Calculating descriptive statistics...	Расчёт описательной статистики...
-Calculation cancelled.	Вычисление отменено.
 An error occurred while calculating descriptive statistics:	Произошла ошибка при расчёте описательной статистики:
+IQR is 0 — at least half the data sits at a single value, so the rule can't flag outliers.	МКР равен 0 — не менее половины наблюдений принимают одно и то же значение, поэтому правило не может выявить выбросы.
+MAD is 0 — more than half the data is identical to the median, so the rule can't flag outliers.	МАО равно 0 — более половины наблюдений совпадают с медианой, поэтому правило не может выявить выбросы.
 CV is undefined when the data crosses zero or the mean is zero.	Коэффициент вариации не определён, когда данные пересекают ноль или среднее равно нулю.
+Bootstrap SE/CI is unreliable — bias/acceleration could not be estimated for this sample. The point estimate is still valid.	Бутстрэп-оценка SE/ДИ ненадёжна — для этой выборки не удалось оценить смещение/ускорение. Точечная оценка остаётся корректной.
 Sample size is too small to achieve the requested coverage at exact discrete levels.	Объём выборки слишком мал, чтобы достичь требуемого уровня доверия при точных дискретных значениях.
 Proportion statistics are only defined for binary categoricals (exactly two non-missing levels).	Статистики доли определены только для бинарных категориальных переменных (ровно два непропущенных уровня).
+Computing Hodges-Lehmann pseudomedian	Вычисление псевдомедианы Ходжеса–Лемана
+Hodges-Lehmann for {variable}...	Ходжес–Леман для {variable}...
 Missing	Пропусков
 Distinct	Различных
+Shannon H (nats)	Энтропия Шеннона (наты)
+Pielou's J	J Пиелу
+No mode	Нет моды
+Mode frequency	Частота моды
+N/A	Н/Д
 Zeroes	Нули
 Zeroes %	Нули %
 Inlier range (1.5·IQR)	Диапазон значений без выбросов (1,5·МКР)
 Inlier range (3·IQR)	Диапазон значений без выбросов (3·МКР)
 Modified Z outliers (|M|>3.5)	Модифицированные Z-выбросы (|M|>3,5)
 Inlier range (modified Z)	Диапазон значений без выбросов (модифиц. Z)
-N/A	Н/Д
-All	Все
-Mode frequency	Частота моды
 Trimmed mean ({pct}%)	Усечённое среднее ({pct}%)
+HL pseudomedian	Псевдомедиана Х-Л
+HL CI lower ({level}%)	Нижняя граница ДИ Х-Л ({level}%)
+HL CI upper ({level}%)	Верхняя граница ДИ Х-Л ({level}%)
 Variance (s²)	Дисперсия (s²)
 Variance (σ²)	Дисперсия (σ²)
 Std Dev (s)	Ст. откл. (s)
 Std Dev (σ)	Ст. откл. (σ)
 Winsorized SD ({pct}%)	Винзоризованное СО ({pct}%)
-MAD	САО
-CV (%)	КВ (%)
+Mean AD	САО
+Median AD	МАО
+CV (%, s)	КВ (%, s)
+CV (%, σ)	КВ (%, σ)
 Excess kurtosis	Избыточный эксцесс
 Q1 (25%)	К1 (25%)
 Q3 (75%)	К3 (75%)
 SE (Mean)	SE среднего
 SE (Median)	SE медианы
-SE (Skewness)	SE асимметрии
-SE (Kurtosis)	SE эксцесса
+bootstrap	бутстрэп
+normal	норм.
+SE (Skewness, {method})	SE асимметрии ({method})
+SE (Kurtosis, {method})	SE эксцесса ({method})
 Mean CI lower ({level}%)	Нижняя граница ДИ среднего ({level}%)
 Mean CI upper ({level}%)	Верхняя граница ДИ среднего ({level}%)
 Median CI lower ({level}%)	Нижняя граница ДИ медианы ({level}%)
@@ -725,10 +778,10 @@ Std dev CI lower ({level}%)	Нижняя граница ДИ ст. откл. ({l
 Std dev CI upper ({level}%)	Верхняя граница ДИ ст. откл. ({level}%)
 Variance CI lower ({level}%)	Нижняя граница ДИ дисперсии ({level}%)
 Variance CI upper ({level}%)	Верхняя граница ДИ дисперсии ({level}%)
-Skew CI lower ({level}%)	Нижняя граница ДИ асимметрии ({level}%)
-Skew CI upper ({level}%)	Верхняя граница ДИ асимметрии ({level}%)
-Kurt CI lower ({level}%)	Нижняя граница ДИ эксцесса ({level}%)
-Kurt CI upper ({level}%)	Верхняя граница ДИ эксцесса ({level}%)
+Skew CI lower ({level}%, {method})	Нижняя граница ДИ асимметрии ({level}%, {method})
+Skew CI upper ({level}%, {method})	Верхняя граница ДИ асимметрии ({level}%, {method})
+Kurt CI lower ({level}%, {method})	Нижняя граница ДИ эксцесса ({level}%, {method})
+Kurt CI upper ({level}%, {method})	Верхняя граница ДИ эксцесса ({level}%, {method})
 Category	Категория
 Proportion	Доля
 SE (Proportion)	SE доли
@@ -752,9 +805,9 @@ Condition variables (within-subjects)	Переменные замеров (вн�
 Variables representing repeated measures or within-subjects conditions	Переменные, представляющие повторные замеры или внутригрупповые условия
 Subject ID	ID испытуемого
 Covariates	Ковариаты
+Analysis setup	Настройка анализа
 Check assumptions	Проверить допущения
 Run comparison analysis	Запустить сравнительный анализ
-Analysis setup	Настройка анализа
 Analysis strategy	Стратегия анализа
 Analyze each variable separately	Анализировать каждую переменную отдельно
 Runs independent analyses for each grouping variable	Запускает независимые анализы для каждой группирующей переменной
@@ -788,6 +841,7 @@ Both directional thresholds will be shown.	Будут показаны поро�
 Classification metrics at optimal threshold	Метрики классификации при оптимальном пороге
 AUC confidence interval	Доверительный интервал AUC
 DeLong	Делонга
+Bootstrap	Бутстрэп
 Compare AUCs (pairwise DeLong's test)	Сравнить AUC (попарный критерий Делонга)
 Summary statistics	Сводная статистика
 Standard error	Стандартная ошибка
@@ -827,6 +881,7 @@ Eta-squared (H)	Эта-квадрат (H)
 Partial eta-squared	Частичная Эта-квадрат
 Cramér's V	V Крамера
 Phi coefficient	Коэффициент фи
+Odds ratio	Отношение шансов
 Cohen's w	w Коэна
 Wilks' lambda	Лямбда Уилка
 Pillai's trace	След Пиллая
@@ -913,6 +968,11 @@ Cochran's Q test requires binary data (exactly 2 unique values), found 	Крит
 Cochran's Q test cannot be computed: all subjects have the same response pattern	Критерий Q Кохрана невозможно вычислить: у всех субъектов одинаковая структура ответов
 Insufficient data for ROC	Недостаточно данных для ROC-анализа
 Export 	Экспорт 
+Threshold	Порог
+Sensitivity	Чувствительность
+Specificity	Специфичность
+PPV	PPV
+NPV	NPV
 No valid data for mean/error plot	Нет корректных данных для графика средних с ошибками
 Paired lines plot requires at least two conditions	График парных линий требует не менее двух условий
 No valid data for paired lines plot	Нет корректных данных для графика парных линий
@@ -1221,11 +1281,8 @@ Assumptions	Допущения
 Predicted group	Предсказываемая группа
 AUC	AUC
 Brier	Брайер
-N	N
 Worse to misclassify	Хуже ошибиться с
-Sensitivity	Чувствительность
-PPV	PPV
-NPV	NPV
+Accuracy	Точность
 Threshold optimized by Youden's J (max sensitivity + specificity − 1).	Порог оптимизирован по J Юдена (макс. чувствительность + специфичность − 1).
 Threshold optimized by closest point to (0, 1).	Порог оптимизирован как ближайшая точка к (0, 1).
 Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown per row.	Порог оптимизирован по взвешенному по стоимости J Юдена — для каждой строки показаны оба направления асимметричной стоимости.
@@ -1280,6 +1337,10 @@ Variable selection (optional)	Выбор переменных (необязат�
 Leave empty to correlate all variables	Оставьте пустым для корреляции всех переменных
 Left variables (rows)	Левые переменные (строки)
 Right variables (columns)	Правые переменные (столбцы)
+Control for (Pearson/Spearman/Kendall only)	Контролировать (только Пирсон/Спирмен/Кендалл)
+Partial (residualize both)	Частная (исключить влияние из обеих)
+Semi-partial (residualize variable 1 only)	Получастная (исключить влияние только из переменной 1)
+Semi-partial (residualize variable 2 only)	Получастная (исключить влияние только из переменной 2)
 Calculate correlations	Рассчитать корреляции
 Correlation options	Параметры корреляции
 Correlation method	Метод корреляции
@@ -1288,6 +1349,7 @@ Spearman's ρ	ρ Спирмена
 Kendall's τ	τ Кендалла
 Blomqvist's β	β Бломквиста
 Polychoric correlation	Полихорическая корреляция
+Tetrachoric correlation	Тетрахорическая корреляция
 Polyserial correlation	Полисериальная корреляция
 Somers' D	D Сомерса
 Goodman & Kruskal's γ	γ Гудмана и Краскала
@@ -1298,12 +1360,15 @@ Normalized mutual information	Нормализованная взаимная и
 Adjusted mutual information	Скорректированная взаимная информация
 Rajski's coherence coefficient	Коэффициент когерентности Райского
 Theil's U	U Тейла
-Append raw MI	Добавить исходную MI
-Append entropies	Добавить энтропии
 Hoeffding's D	D Хёффдинга
 Chatterjee's ξ	ξ Чаттерджи
 Distance correlation	Дистанционная корреляция
-Mixed/Auto (automatically selects best method)	Смешанный/Авто (автоматический выбор наилучшего метода)
+Mixed/auto (automatically selects best method)	Смешанный/авто (автоматический выбор метода)
+Append raw MI	Добавить исходную MI
+Append entropies	Добавить энтропии
+P-value method	Метод расчёта p-значения
+Analytic chi² (fast, tests independence)	Аналитический хи² (быстро, проверяет независимость)
+Permutation (slower, tests the reported coefficient)	Перестановочный (медленнее, проверяет указанный коэффициент)
 Table format	Формат таблицы
 Matrix	Матрица
 Visualization	Визуализация
@@ -1311,23 +1376,61 @@ Edge bundling	Граф со связыванием рёбер
 Force-directed graph	Силовой граф
 Correlogram	Коррелограмма
 Scatterplots	Диаграммы рассеяния
+Analytic (closed-form where supported)	Аналитические (формулы в закрытой форме, где возможно)
+Percentile bootstrap (any method)	Перцентильный бутстрэп (любой метод)
+Equivalence margin (TOST)	Граница эквивалентности (TOST)
+Tests evidence for absence of correlation (|r| &lt; Δ). Analytic only — currently covers Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, and Goodman-Kruskal γ.	Проверяет свидетельства в пользу отсутствия корреляции (|r| &lt; Δ). Только аналитически — в настоящий момент поддерживает Пирсона, Спирмена, Кендалла, точечно-бисериальный, бисериальный, полисериальный, полихорический, тетрахорический, D Сомерса и γ Гудмана-Краскела.
 P-value display	Отображение p-значений
 Separate p-value table	Отдельная таблица
 Combined with correlation	В матрице корреляций
 Hide redundant values	Скрыть избыточные значения
+Test for differences between correlations	Проверка различий между корреляциями
+Comparison structure	Структура сравнения
+No comparison	Без сравнения
+Within each row variable	Внутри каждой строковой переменной
+Within each column variable	Внутри каждой столбцовой переменной
+Against a reference cell	Относительно опорной ячейки
+Between groups	Между группами
+Pattern equality (single sample)	Равенство структуры (одна выборка)
+Equality across groups	Равенство между группами
+Reference cell	Опорная ячейка
+Strongest |r|	Наибольшее |r|
+Weakest |r|	Наименьшее |r|
+Compare across (variable)	Сравнить по (переменная)
+Signed correlations (−1 to +1)	Знаковые корреляции (−1…+1)
+Unsigned dependence measures (0 to 1)	Беззнаковые меры зависимости (0…1)
+Special	Особые
+Confidence interval method	Метод доверительного интервала
+0 (off)	0 (выкл.)
+Largest |r| considered practically zero. Leave empty to skip.	Наибольшее |r|, считаемое практически нулевым. Оставьте пустым, чтобы пропустить.
+p-value display options	Параметры отображения p-значений
+Pairwise	Попарные
+Joint	Совместные
 Calculating {var1} - {var2}	Расчёт {var1} - {var2}
+Computing confidence intervals	Вычисление доверительных интервалов
+Bootstrapping correlations	Бутстрэп корреляций
 No significant correlations with current settings	Нет значимых корреляций при текущих настройках
 Insufficient data for scatterplot	Недостаточно данных для диаграммы рассеяния
 Association: 	Связь: 
 Correlation: 	Корреляция: 
+Comparison group variable has fewer than 2 groups; nothing to compare.	Группирующая переменная содержит менее 2 групп; сравнивать нечего.
+Computing correlations for group {group}	Вычисление корреляций для группы {group}
+Bootstrap for group {group} (asymmetric — both directions)	Бутстрэп для группы {group} (асимметричный — обе стороны)
+Bootstrap for group {group}	Бутстрэп для группы {group}
+No compatible variable pairs found for {methodName} bootstrap (e.g. no continuous × discrete combination). Difference tests will be skipped.	Не найдено совместимых пар переменных для бутстрэпа {methodName} (например, нет комбинации непрерывная × дискретная). Тесты различий будут пропущены.
+Computing supplementary correlations for difference tests	Вычисление дополнительных корреляций для тестов различий
+weakest |r|	наименьшее |r|
+strongest |r|	наибольшее |r|
+Closed-form test unavailable for this cell; bootstrap not yet implemented.	Аналитический тест недоступен для этой ячейки; бутстрэп пока не реализован.
+Cauchy combination p ({k} component tests)	Комбинированное p по Коши ({k} компонентных тестов)
+Jennrich χ² (equality of 2 group matrices)	χ² Дженнриха (равенство 2 групповых матриц)
+Wald χ² on Olkin-Siotani Σ (equality of {k} group matrices)	χ² Вальда на Σ Олкина–Сиотани (равенство {k} групповых матриц)
+Steiger pattern-equality χ²	χ² равенства структуры по Стейгеру
 No p-value adjustment method selected. The more tests you run on the same data, the more likely you are to encounter a false discovery.	Метод коррекции p-значений не выбран. Чем больше тестов вы проводите на одних и тех же данных, тем выше вероятность ложного срабатывания.
 No appropriate variables for this correlation method.	Нет подходящих переменных для этого метода корреляции.
 Calculating correlations	Вычисление корреляций
+This comparison structure requires a Compare-across variable.	Эта структура сравнения требует переменной «Сравнить по».
 An error occurred while running the correlation analysis:	Произошла ошибка при выполнении корреляционного анализа:
-Correlation network	Корреляционная сеть
-Force-directed graph - {methodName}	Силовой граф — {methodName}
-Scatterplots - {methodName}	Диаграммы рассеяния — {methodName}
-Correlogram - {methodName}	Коррелограмма — {methodName}
 Significant very strong positive correlation	Значимая очень сильная положительная корреляция
 Significant very strong negative correlation	Значимая очень сильная отрицательная корреляция
 Significant very strong correlation	Значимая очень сильная корреляция
@@ -1374,6 +1477,8 @@ Insufficient data for Chatterjee's ξ	Недостаточно данных дл
 Insufficient data for Hoeffding's D (need at least 5)	Недостаточно данных для D Хёффдинга (нужно не менее 5)
 Insufficient data for distance correlation	Недостаточно данных для дистанционной корреляции
 No concordant or discordant pairs	Нет конкордантных или дискордантных пар
+Tetrachoric requires both variables to be binary	Тетрахорическая корреляция требует двух бинарных переменных
+Insufficient complete cases for partial correlation given the covariates	Недостаточно полных наблюдений для частной корреляции с учётом ковариат
 Significant very strong association	Значимая очень сильная связь
 Significant strong association	Значимая сильная связь
 Significant moderate association	Значимая умеренная связь
@@ -1386,18 +1491,60 @@ Insignificant moderate association	Незначимая умеренная св�
 Insignificant weak association	Незначимая слабая связь
 Insignificant very weak association	Незначимая очень слабая связь
 Insignificant negligible association	Незначимая пренебрежимо малая связь
+Reference cell: {ref} ({picker}, {symbol} = {r})	Опорная ячейка: {ref} ({picker}, {symbol} = {r})
+No comparisons available for this structure.	Нет доступных сравнений для этой структуры.
+Group A	Группа A
+Group B	Группа B
+Compared cell	Сравниваемая ячейка
+Pair A	Пара A
+Pair B	Пара B
+Statistic	Статистика
+Test: percentile bootstrap (B = {B}) of Δr. Single-sample structures share row-index draws across pairs to preserve dependence; between-groups draws are independent per group.	Тест: процентильный бутстрэп (B = {B}) для Δr. Структуры с одной выборкой используют общую выборку индексов строк по всем парам, чтобы сохранить зависимость; для групп выборки независимы.
+Test: Fisher z for independent correlations.	Тест: z Фишера для независимых корреляций.
+Test: Williams' T2 for dependent overlapping correlations (Steiger 1980).	Тест: T2 Уильямса для зависимых перекрывающихся корреляций (Стейгер, 1980).
+Test: Williams' T2 (overlapping cells) or Steiger Z (non-overlapping cells, Olkin–Finn covariance).	Тест: T2 Уильямса (перекрывающиеся ячейки) или Z Стейгера (неперекрывающиеся ячейки, ковариация Олкина–Финна).
+Closed-form diff tests are derived for zero-order correlations; semi-partial mode routes through the bootstrap so the Δr variance comes from resampling rather than a plug-in Fisher-z formula.	Аналитические тесты различий выведены для корреляций нулевого порядка; полу-частный режим идёт через бутстрэп, поэтому дисперсия Δr берётся из перевыборки, а не из подстановочной формулы z Фишера.
+Closed-form variance is canonical for Pearson; Spearman/Kendall use it as a plug-in approximation (asymptotically valid for ranks).	Аналитическая дисперсия канонична для Пирсона; для Спирмена/Кендалла она используется как подстановочное приближение (асимптотически справедливо для рангов).
+Closed-form variance is derived for zero-order correlations; partials use it as a plug-in with df = n − k − 3 (Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware difference test.	Аналитическая дисперсия выведена для корреляций нулевого порядка; для частных используется как plug-in с df = n − k − 3 (Wilcox 2009, §10.11). Для теста различия с учётом частной структуры переключитесь на бутстрэп-доверительные интервалы.
+Pairwise — within each row variable	Попарные — внутри каждой строковой переменной
+Pairwise — within each column variable	Попарные — внутри каждой столбцовой переменной
+Pairwise — against a reference cell	Попарные — относительно опорной ячейки
+Pairwise — between groups (same pair, different groups)	Попарные — между группами (одна и та же пара, разные группы)
+Joint — pattern equality (single sample)	Совместные — равенство структуры (одна выборка)
+Joint — equality of correlation matrices across groups	Совместные — равенство корреляционных матриц между группами
+Difference tests for {methodName} are not available on this path. Closed-form covers Pearson, Spearman, and Kendall (including partials); bootstrap covers most other methods (including asymmetric ones) but is only run when "Confidence intervals" is set to analytic or bootstrap. Mixed mode has no diff test.	Тесты различий для {methodName} в этом режиме недоступны. Аналитический путь покрывает Пирсона, Спирмена и Кендалла (включая частные); бутстрэп покрывает большинство остальных методов (включая асимметричные), но запускается только когда «Доверительные интервалы» установлены в «аналитический» или «бутстрэп». В смешанном режиме теста различий нет.
+Comparison of correlations - {methodName}	Сравнение корреляций — {methodName}
+Comparison of correlations	Сравнение корреляций
+No valid cells available for the omnibus test.	Нет допустимых ячеек для общего критерия.
+Test	Критерий
+Asymptotic covariance is canonical for Pearson; Spearman/Kendall use it as a plug-in approximation.	Асимптотическая ковариация канонична для Пирсона; для Спирмена/Кендалла она используется как подстановочное приближение.
+Olkin–Siotani covariance is derived for zero-order correlations; partials use it as a plug-in with df = n − k − 3 (Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware omnibus test.	Ковариация Олкина–Сиотани выведена для корреляций нулевого порядка; для частных используется как plug-in с df = n − k − 3 (Wilcox 2009, §10.11). Для общего критерия с учётом частной структуры переключитесь на бутстрэп-доверительные интервалы.
 Direction: row → column	Направление: строка → столбец
+Semi-partial: variable 1 residualized on {covariates}	Получастная: из переменной 1 удалено влияние ({covariates})
+Semi-partial: variable 2 residualized on {covariates}	Получастная: из переменной 2 удалено влияние ({covariates})
+Partial: both variables residualized on {covariates}	Частная: из обеих переменных удалено влияние ({covariates})
 Correlation analysis - {methodName}	Корреляционный анализ — {methodName}
+Correlation	Корреляция
 Adjusted p-value matrix	Матрица скорректированных p-значений
 p-value matrix	Матрица p-значений
 Method	Метод
 Coefficient	Коэффициент
+p (eq)	p (экв.)
+p (eq, adj)	p (экв., скорр.)
 MI	ИМ
 H(var₁)	H(перем₁)
 H(var₂)	H(перем₂)
-Mixed/Auto correlation	Смешанная/Авто корреляция
+Mixed/auto correlation	Смешанная/авто корреляция
 No appropriate variables for this method	Нет подходящих переменных для этого метода
 Correlation network - {methodName}	Корреляционная сеть — {methodName}
+Correlation network	Корреляционная сеть
+Force-directed graph - {methodName}	Силовой граф — {methodName}
+{var} (ranks) | {controls}	{var} (ранги) | {controls}
+{var} | {controls}	{var} | {controls}
+Scatterplots - {methodName}	Диаграммы рассеяния — {methodName}
+Grouped scatterplots - {methodName}	Сгруппированные диаграммы рассеяния — {methodName}
+Grouped scatterplots	Сгруппированные диаграммы рассеяния
+Correlogram - {methodName}	Коррелограмма — {methodName}
 
 # === directional-view ===
 Directional Relationship Analysis	Анализ направленности связей
@@ -1616,9 +1763,9 @@ Calculating split-half reliability	Вычисление надёжности р�
 Calculating McDonald's omega	Вычисление омеги Макдоналда
 Calculating GLB	Вычисление GLB
 Calculating drop table	Вычисление таблицы удаления
-Analyzing {variable}	Анализ {variable}
 Bootstrapping CIs	Бутстрэп доверительных интервалов
 Bootstrapping CIs ({b}/{n_boot})	Бутстрэп ДИ ({b}/{n_boot})
+Analyzing {variable}	Анализ {variable}
 Analysis complete	Анализ завершён
 Failed to run IRT analysis:	Не удалось выполнить IRT-анализ:
 Checking unidimensionality	Проверка одномерности
@@ -1665,6 +1812,14 @@ Conditional reliability	Условная надёжность
 Ability / Difficulty (θ)	Способность / Трудность (θ)
 Persons	Испытуемые
 Items	Пункты
+No numerical variables selected.	Числовые переменные не выбраны.
+Could not detect factor structure. Variables should be named like 'factor_item' (e.g., 'anx_1', 'anx_2').	Не удалось определить структуру факторов. Переменные должны быть названы по шаблону 'фактор_индикатор' (например, 'anx_1', 'anx_2').
+Select numerical variables to define the model	Выберите числовые переменные для задания модели
+Remove factor	Удалить фактор
+Add factor	Добавить фактор
+Remove loading	Удалить нагрузку
+Remove second-order factor	Удалить фактор второго порядка
+Add second-order factor	Добавить фактор второго порядка
 Invalid syntax: {line}	Неверный синтаксис: {line}
 Item index {idx} out of range (1–{max})	Индекс пункта {idx} вне диапазона (1–{max})
 Unknown variable: {name}	Неизвестная переменная: {name}
@@ -1751,7 +1906,6 @@ Unscalable	Непригодна для шкалы
 Log-likelihood	Логарифм правдоподобия
 Index	Индекс
 M2 p-value	p-значение M2
-Statistic	Статистика
 Detail	Подробности
 Good model fit (RMSEA < 0.05).	Хорошая подгонка модели (RMSEA < 0.05).
 Acceptable model fit (RMSEA < 0.08).	Приемлемая подгонка модели (RMSEA < 0.08).
@@ -1817,6 +1971,8 @@ SE(θ) (equating)	SE(θ) (эквейтинг)
 θ (EAPsum)	θ (EAPsum)
 SE(θ) (EAPsum)	SE(θ) (EAPsum)
 Differential item functioning (DIF)	Дифференциальное функционирование пунктов (DIF)
+Anchor items (held invariant across groups): {items}	Якорные пункты (инвариантны между группами): {items}
+No anchor items were specified. Every item is tested against a free-mean / free-variance focal-group baseline (Woods 2009). Identification rests on the cross-group constraints — consider designating known invariant items as anchors for stronger DIF inference.	Якорные пункты не заданы. Каждый пункт проверяется относительно базовой модели со свободными средним и дисперсией в фокальной группе (Вудс, 2009). Идентификация модели опирается на межгрупповые ограничения — для более надёжных выводов о ДФП имеет смысл указать заведомо инвариантные пункты в качестве якорей.
 Standardized factor loadings from rotated solution. Values > 0.3 indicate meaningful loading.	Стандартизованные факторные нагрузки из вращённого решения. Значения > 0.3 — содержательная нагрузка.
 Factor	Фактор
 Expected total score when varying one dimension while holding others at θ = 0.	Ожидаемый суммарный балл при изменении одного измерения и фиксации остальных на θ = 0.
@@ -1836,9 +1992,7 @@ Well targeted	Хорошо нацелен
 Moderately targeted	Умеренно нацелен
 Test too easy for sample	Тест слишком лёгкий для выборки
 Test too hard for sample	Тест слишком трудный для выборки
-Please select at least two variables (scale items) for reliability analysis.	Выберите не менее двух переменных (пунктов шкалы) для анализа надёжности.
 At least two numerical variables are required for reliability analysis.	Для анализа надёжности необходимо не менее двух числовых переменных.
-Please select at least one reliability metric to calculate.	Выберите хотя бы одну метрику надёжности для вычисления.
 Calculating reliability...	Вычисление надёжности...
 An error occurred while running the reliability analysis: 	Произошла ошибка при выполнении анализа надёжности: 
 Calculating reliability metrics...	Вычисление метрик надёжности...
@@ -1869,6 +2023,7 @@ Condition variable:	Переменная условия:
 Number of conditions:	Число условий:
 Score variables:	Переменные оценок:
 Select numerical variables to enable reverse scoring	Выберите числовые переменные для включения обратного оценивания
+Scale-level statistics (mean, SD, variance) are computed on complete cases only; item-level statistics use all available observations under pairwise deletion.	Статистики уровня шкалы (среднее, СО, дисперсия) рассчитываются только по полным наблюдениям; статистики уровня пункта используют все доступные значения при попарном удалении.
 Item analysis	Анализ пунктов
 Poor convergent validity	Слабая конвергентная валидность
 Acceptable convergent validity	Приемлемая конвергентная валидность
@@ -1876,9 +2031,7 @@ Good convergent validity	Хорошая конвергентная валидн�
 Unacceptable	Неприемлемо
 Excellent (possible redundancy)	Отлично (возможная избыточность)
 McDonald's ω (total)	ω Макдональда (полная)
-McDonald's omega (ω total)	Омега Макдоналда (ω total)
-Split-half (Spearman-Brown)	Расщепление (Спирмен-Браун)
-Guttman's lambda 4 (λ4)	Лямбда Гуттмана 4 (λ4)
+Mean split-half (Brown-corrected)	Среднее по разбиениям пополам (с поправкой Брауна)
 Guttman's lambda 6 (λ6)	Лямбда Гуттмана 6 (λ6)
 Failed to converge	Не удалось сойтись
 Number of items	Количество пунктов
@@ -1907,8 +2060,8 @@ SEM	SEM
 SDC	SDC
 Cohen's κ	κ Коэна
 Fleiss' κ	κ Флейсса
-κ	κ
 Krippendorff's α	α Криппендорфа
+Pearson and Spearman correlations are only available for exactly 2 conditions (test-retest design).	Корреляции Пирсона и Спирмена доступны только при ровно 2 условиях (схема тест-ретест).
 Reproducibility analysis	Анализ воспроизводимости
 Slight	Слабое
 Fair	Удовлетворительное
@@ -1952,13 +2105,11 @@ Loadings matrix	Матрица нагрузок
 Communalities	Общности
 Variance explained	Объяснённая дисперсия
 Factor/component correlations	Корреляции факторов/компонент
-Factor/Component correlations	Корреляции факторов/компонент
 Schmid-Leiman transformation	Преобразование Шмида-Леймана
 Schmid-Leiman factor scores	Факторные оценки Шмида-Леймана
 Anti-image correlations	Корреляции анти-образа
 Anti-image covariances	Ковариации анти-образа
 Factor/component scores	Значения факторов/компонент
-Factor/Component scores	Оценки факторов/компонент
 Path diagram	Диаграмма путей
 Regression	Регрессия
 Bartlett	Bartlett
@@ -2134,11 +2285,11 @@ Model selection	Выбор модели
 Kaiser-Meyer-Olkin (KMO) measure	Мера Кайзера-Мейера-Олкина (KMO)
 Bartlett's test of sphericity	Критерий сферичности Бартлетта
 Correlation matrix determinant	Детерминант корреляционной матрицы
-Test	Критерий
 Marvelous	Превосходно
 Middling	Приемлемо
 Mediocre	Посредственно
 Variance %	% дисперсии
+Cumulative %	Накопленный %
 Mean h²	Среднее h²
 Complexity	Сложность
 Hyperplane	Гиперплоскость
@@ -2150,8 +2301,6 @@ Factor path diagram	Путевая диаграмма факторов
 Component correlations	Корреляции компонент
 Anti-image correlation matrix	Матрица антиобраза корреляций
 Anti-image covariance matrix	Матрица антиобраза ковариаций
-Anti-Image correlation matrix	Матрица корреляций анти-образа
-Anti-Image covariance matrix	Матрица ковариаций анти-образа
 Component scores	Оценки компонент
 Factor scores	Факторные оценки
 Insert scores into dataset	Добавить оценки в набор данных
@@ -2336,7 +2485,6 @@ Selected dependent variables are not compatible with the chosen regression type:
 This will compare {count} models — likely many minutes to hours.{mod} Continue?	Будет сравнено {count} моделей — вероятно, от многих минут до часов.{mod} Продолжить?
 This will compare {count} models — expect a noticeable wait.{mod} Continue?	Будет сравнено {count} моделей — ожидается заметное ожидание.{mod} Продолжить?
 This will compare {count} models. Continue?	Будет сравнено {count} моделей. Продолжить?
-This will compare {count} models. This may take a while. Continue?	Будет выполнено сравнение {count} моделей. Это может занять некоторое время. Продолжить?
 Comparing models...	Сравнение моделей...
 Comparing models for {variable}...	Сравнение моделей для {variable}...
 Comparison complete	Сравнение завершено
@@ -2360,11 +2508,11 @@ Models compared:	Моделей сравнивается:
 {count} models	{count} модел
 Model selection uncertainty (entropy):	Неопределённость выбора модели (энтропия):
 Effective number of models:	Эффективное число моделей:
+vs.	vs.
 Predictors:	Предикторы:
 Predictors in model:	Предикторы в модели:
 Non-zero coefficients:	Ненулевые коэффициенты:
 Reference outcome:	Референтный исход:
-vs.	vs.
 Reference categories:	Референтные категории:
 Use	Использовать
 Very high importance	Очень высокая важность
@@ -2379,19 +2527,6 @@ Significant: increases relative risk by {factor}x	Значимо: увеличи
 Significant: decreases relative risk by {factor}x	Значимо: уменьшает относительный риск в {factor} раз
 Significant positive effect	Значимый положительный эффект
 Significant negative effect	Значимый отрицательный эффект
-Potential influential observations	Потенциально влиятельные наблюдения
-No highly influential observations	Высоко влиятельных наблюдений не обнаружено
-Observations with high leverage	Наблюдения с высоким значением рычага
-No high leverage points	Точек с высоким рычагом не обнаружено
-|DFFITS| (max)	|DFFITS| (макс.)
-|DFFITS| > 2·√(p/n) ≈ {t} (n)	|DFFITS| > 2·√(p/n) ≈ {t} (n)
-Observations changing their own fitted value	Наблюдения, изменяющие собственное предсказанное значение
-No high-DFFITS observations	Нет наблюдений с высоким DFFITS
-COVRATIO outside 1 ± 3p/n = [{lo}, {hi}] (n)	COVRATIO вне 1 ± 3p/n = [{lo}, {hi}] (n)
-Observations distorting coefficient precision	Наблюдения, искажающие точность коэффициентов
-No COVRATIO outliers	Нет выбросов по COVRATIO
-Potential outliers detected	Обнаружены потенциальные выбросы
-No extreme outliers	Экстремальных выбросов нет
 Model may be misspecified (consider non-linear terms)	Модель может быть неверно специфицирована (рассмотрите нелинейные члены)
 No evidence of misspecification	Признаков неверной спецификации нет
 Underdispersion detected	Обнаружено занижение дисперсии
@@ -2452,7 +2587,6 @@ Coefficients by outcome level	Коэффициенты по уровням ис�
 Coefficients	Коэффициенты
 Cut-points between adjacent ordinal categories on the latent variable scale	Точки разреза между смежными порядковыми категориями на шкале латентной переменной
 Thresholds (intercepts)	Пороги (свободные члены)
-Thresholds (Intercepts)	Пороговые значения (точки пересечения)
 Mediation analysis	Анализ медиации
 Moderation analysis	Анализ модерации
 Conditional indirect effects	Условные косвенные эффекты
@@ -2493,15 +2627,24 @@ Minimizes cross-validation error	Минимизирует ошибку крос�
 Largest λ within 1 SE of minimum	Наибольший λ в пределах 1 SE от минимума
 CV error (at selected λ)	Ошибка КВ (при выбранном λ)
 Mean ± SE from 10-fold CV	Среднее ± SE по 10-кратной КВ
+Parameter	Параметр
+Note	Примечание
+R² (deviance ratio)	R² (отношение девианс)
+Deviance ratio (pseudo-R²)	Отношение девианс (псевдо-R²)
+McFadden's R²	R² Макфаддена
+Null deviance	Нулевое отклонение
+{pct}% retained	{pct}% сохранено
+< 10% retained	< 10% сохранено
+Selected	Выбрано
+Excluded (shrunk to 0)	Исключено (сжато до 0)
+Estimate	Оценка
+Shrinkage	Сжатие
 Lambda values tested	Проверено значений лямбда
 Lambda range	Диапазон лямбда
 Best CV error	Наилучшая ошибка КВ
 At λ = {lambda}	При λ = {lambda}
 Degrees of freedom (at selected λ)	Степени свободы (при выбранном λ)
 Effective number of parameters	Эффективное число параметров
-Note	Примечание
-R² (deviance ratio)	R² (отношение девианс)
-Deviance ratio (pseudo-R²)	Отношение девианс (псевдо-R²)
 Rank	Ранг
 Interactions	Взаимодействия
 McFadden R²	R² МакФаддена
@@ -2530,21 +2673,12 @@ F-statistic	F-статистика
 df (regression, residual)	df (регрессия, остаток)
 p-value (F)	p-значение (F)
 Root MSE	Корень СКО
-McFadden's R²	R² Макфаддена
 Cox & Snell R²	R² Кокса–Снелла
-Null deviance	Нулевое отклонение
-{pct}% retained	{pct}% сохранено
-< 10% retained	< 10% сохранено
-Selected	Выбрано
-Excluded (shrunk to 0)	Исключено (сжато до 0)
 Residual deviance	Остаточное отклонение
 χ² (LR test)	χ² (критерий LR)
 p-value (χ²)	p-значение (χ²)
 Predictor	Предиктор
 RRR {level}% CI	RRR {level}% ДИ
-Threshold	Порог
-Estimate	Оценка
-Shrinkage	Сжатие
 Tolerance	Толерантность
 VIFs are computed on the centered model design — interaction terms shed the "non-essential" collinearity they otherwise inherit from their parent variables. Grouped categorical predictors are reported as a single GVIF row (squared GVIF^(1/(2·Df)) so it is comparable to a plain VIF).	VIF вычисляются на центрированной матрице модели — члены взаимодействий сбрасывают «несущественную» коллинеарность, которую они иначе наследуют от исходных переменных. Сгруппированные категориальные предикторы представлены одной строкой GVIF (возведённый в квадрат GVIF^(1/(2·Df)) для сопоставимости с обычным VIF).
 Shapiro-Wilk (normality)	Шапиро–Уилк (нормальность)
@@ -2560,16 +2694,23 @@ None above the size-aware threshold	Нет превышающих порог с 
 Leverage (max)	Точка рычага (макс.)
 Leverage > 2p/n ≈ {t} (n)	Рычаг > 2p/n ≈ {t} (n)
 High leverage observations	Наблюдения с высоким рычагом
-High leverage points (n)	Точки с высоким рычагом (n)
+No high leverage points	Точек с высоким рычагом не обнаружено
+|DFFITS| (max)	|DFFITS| (макс.)
+|DFFITS| > 2·√(p/n) ≈ {t} (n)	|DFFITS| > 2·√(p/n) ≈ {t} (n)
+Observations changing their own fitted value	Наблюдения, изменяющие собственное предсказанное значение
+No high-DFFITS observations	Нет наблюдений с высоким DFFITS
+COVRATIO outside 1 ± 3p/n = [{lo}, {hi}] (n)	COVRATIO вне 1 ± 3p/n = [{lo}, {hi}] (n)
+Observations distorting coefficient precision	Наблюдения, искажающие точность коэффициентов
+No COVRATIO outliers	Нет выбросов по COVRATIO
 Standardized residuals |>3| (n)	Стандартизованные остатки |>3| (n)
+Potential outliers detected	Обнаружены потенциальные выбросы
+No extreme outliers	Экстремальных выбросов нет
 RESET F-statistic	F-статистика RESET
 RESET df	df RESET
 RESET p-value	p-значение RESET
 Hosmer-Lemeshow χ²	χ² Хосмера–Лемешова
 Hosmer-Lemeshow df	df Хосмера–Лемешова
 Hosmer-Lemeshow p-value	p-значение Хосмера–Лемешова
-Accuracy	Точность
-Specificity	Специфичность
 Classification accuracy	Точность классификации
 Likelihood ratio χ²	χ² отношения правдоподобия
 LR test df	df критерия LR
@@ -2614,7 +2755,6 @@ Per-cutpoint threshold optimized by closest point to (0, 1).	Порог по т�
 ROC curves (per cutpoint): {name}	ROC-кривые (по точкам отсечения): {name}
 Residual	Остаток
 Type II sums of squares: each term's marginal contribution given all other terms in the model.	Суммы квадратов типа II: маржинальный вклад каждого члена при условии всех остальных членов в модели.
-Source	Источник
 Zero-order (r)	Нулевого порядка (r)
 Part (sr)	Частная (sr)
 Negligible	Пренебрежимый
@@ -2695,7 +2835,6 @@ Concordance (C-index)	Конкордация (C-индекс)
 Parametric regression options	Опции параметрической регрессии
 Distribution family	Семейство распределений
 Weibull	Вейбулл
-Exponential	Экспоненциальное
 Log-normal	Логнормальное
 Log-logistic	Логлогистическое
 Gompertz (proportional hazards)	Гомпертц (пропорциональные риски)
@@ -2886,17 +3025,6 @@ Cause-specific	по причинам
 {approach} competing risks: {timeVar} ~ {covs} (event: {eventVar})	Конкурирующие риски ({approach}): {timeVar} ~ {covs} (событие: {eventVar})
 
 # === timeseries-view ===
-more	ещё
-Outliers	Выбросы
-Sample quantiles (log scale)	Выборочные квантили (логарифмическая шкала)
-Excluded {n} non-positive value(s)	Исключено {n} неположительных значений
-Points close to the horizontal line suggest data follows the reference distribution	Точки, близкие к горизонтальной линии, указывают на соответствие данных эталонному распределению
-Points close to the line suggest data follows the reference distribution	Точки, близкие к линии, указывают на соответствие данных эталонному распределению
-Q-Q plot (overlay)	Q-Q график (наложение)
-Theoretical quantiles (normal)	Теоретические квантили (нормальные)
-Standardized sample quantiles	Стандартизованные выборочные квантили
-Standardized log(sample) quantiles	Стандартизованные квантили log(выборки)
-{level}% CI (Wilson)	{level}%-я ДИ (Уилсона)
 Date, datetime, or numeric index ordering the observations. Required.	Дата, дата-время или числовой индекс, упорядочивающий наблюдения. Обязательное поле.
 Frequency will be auto-detected after selection.	Частота будет определена автоматически после выбора.
 Series	Ряды
@@ -3465,18 +3593,8 @@ Row variance	Дисперсия строк
 Column variance	Дисперсия столбцов
 
 # === sem-view ===
-Orthogonal (0)	Ортогональные (0)
-Scaling reference	Опорная переменная масштабирования
-Diagram appears once you define a measurement or structural model.	Диаграмма появится после задания измерительной или структурной модели.
-SEM Path Diagram	Диаграмма путей МСУ
-Measurement Model	Измерительная модель
-Path Diagram	Диаграмма путей
-Residual covariances	Остаточные ковариации
-Defined parameters	Определённые параметры
-Intercepts	Интерцепты
+Covariances	Ковариации
 Select variable...	Выберите переменную...
-No covariances specified	Ковариации не заданы
-No defined parameters	Определённые параметры отсутствуют
 Add	Добавить
 Indirect effects	Косвенные эффекты
 Predictor (X)	Предиктор (X)
@@ -3513,7 +3631,6 @@ Estimate intercepts	Оценивать интерцепты
 Off by default; lavaan flips this on automatically under FIML. Required for latent mean comparisons or mediation involving means.	По умолчанию выключено; при FIML lavaan включает автоматически. Требуется для сравнения латентных средних и медиации со средними.
 Free observed-variable intercepts	Свободные интерцепты наблюдаемых переменных
 Free latent-variable intercepts	Свободные интерцепты латентных переменных
-Bootstrap	Бутстрэп
 Bootstrap confidence intervals	Доверительные интервалы (бутстрэп)
 Uses bias-corrected accelerated (BCa) intervals. Replications controlled in Settings.	Используются скорректированные по смещению ускоренные интервалы (BCa). Число репликаций задаётся в настройках.
 Parameter estimates	Оценки параметров
@@ -3532,11 +3649,6 @@ This edge participates in a feedback cycle (non-recursive model)	Это ребр
 Remove path	Удалить путь
 Finalizing...	Завершение...
 Computing CFA-specific metrics	Вычисление метрик, специфичных для КФА
-Extracting results	Извлечение результатов
-Extracting parameter estimates	Извлечение оценок параметров
-Computing R-squared	Вычисление R-квадрат
-Computing modification indices	Вычисление индексов модификации
-Computing residual correlations	Вычисление остаточных корреляций
 Checking missing data	Проверка пропущенных данных
 Checking covariance matrix	Проверка матрицы ковариаций
 Checking high correlations	Проверка высоких корреляций
@@ -3547,7 +3659,6 @@ Fitting {n} models	Подгонка {n} моделей
 Extracting fit indices	Извлечение индексов подгонки
 Running model comparisons	Выполнение сравнений моделей
 Done	Готово
-Error running SEM: 	Ошибка выполнения МСУ: 
 Fitting configural model	Подгонка конфигуральной модели
 Fitting metric model	Подгонка метрической модели
 Fitting scalar model	Подгонка скалярной модели
@@ -3557,6 +3668,17 @@ Extracting per-group parameters	Извлечение параметров по �
 Extracting latent means	Извлечение латентных средних
 Fitting model (bootstrapped — may take a while)	Подгонка модели с бутстрэпом (может занять долгое время)
 Fitting model	Подгонка модели
+Extracting results	Извлечение результатов
+Extracting parameter estimates	Извлечение оценок параметров
+Computing R-squared	Вычисление R-квадрат
+Computing modification indices	Вычисление индексов модификации
+Computing residual correlations	Вычисление остаточных корреляций
+Diagram appears once you define a measurement or structural model.	Диаграмма появится после задания измерительной или структурной модели.
+SEM Path Diagram	Диаграмма путей МСУ
+Measurement Model	Измерительная модель
+Path Diagram	Диаграмма путей
+Orthogonal (0)	Ортогональные (0)
+Scaling reference	Опорная переменная масштабирования
 Model restored	Модель восстановлена
 Factor not found: {name}	Фактор не найден: {name}
 Cannot regress a variable on itself.	Переменная не может регрессировать сама на себя.
@@ -3583,6 +3705,7 @@ Multi-group invariance is supported for CFA only. Group variable ignored.	Мно
 Running CFA...	Выполнение КФА...
 Error running CFA: 	Ошибка при выполнении КФА: 
 Running SEM...	Выполняется МСУ...
+Error running SEM: 	Ошибка выполнения МСУ: 
 Group variable not found in data.	Переменная группы не найдена в данных.
 At least 2 groups are required for invariance testing. Found {count}.	Для проверки инвариантности требуется не менее 2 групп. Найдено: {count}.
 Running partial invariance testing...	Выполнение проверки частичной инвариантности...
@@ -3605,6 +3728,8 @@ Lavaan parsed our model text differently than expected, so the visual editor has
 Some statements are kept as text-only.	Часть инструкций сохранена только в текстовом виде.
 Your model uses lavaan syntax this UI does not fully understand. The statements are preserved exactly in the syntax area, but are not editable through the widgets.	Ваша модель использует синтаксис lavaan, который интерфейс не до конца понимает. Эти инструкции сохранены в поле синтаксиса как есть, но не редактируются через виджеты.
 Copied to clipboard	Скопировано в буфер обмена
+No covariances specified	Ковариации не заданы
+No defined parameters	Определённые параметры отсутствуют
 Groups	Группы
 At least 2 groups are required for invariance testing.	Для проверки инвариантности требуется не менее 2 групп.
 At least one group has fewer observations ({n}) than free parameters ({p}). Results may be unreliable or estimation may fail.	В одной из групп наблюдений ({n}) меньше, чем свободных параметров ({p}). Результаты могут быть ненадёжными или оценка может завершиться ошибкой.
@@ -3623,7 +3748,6 @@ Indicators:	Индикаторы:
 (requested {requested}; lavaan upgraded for ordered indicators)	(запрошен {requested}; lavaan переключил из-за порядковых индикаторов)
 Estimator:	Метод оценки:
 (bootstrap, {reps} replications)	(бутстрэп, {reps} повторений)
-Degrees of freedom:	Степени свободы:
 Free parameters:	Свободные параметры:
 Suggestions:	Рекомендации:
 Warning:	Предупреждение:
@@ -3680,11 +3804,15 @@ Low variance variables	Переменные с низкой дисперсией
 User-marked + detected	Отмечено пользователем + обнаружено
 User-marked	Отмечено пользователем
 Auto-detected	Обнаружено автоматически
+Source	Источник
 Ordinal variables detected. Consider using the DWLS estimator, which is specifically designed for ordinal data.	Обнаружены порядковые переменные. Рассмотрите использование метода DWLS, специально предназначенного для порядковых данных.
 Recommendations:	Рекомендации:
 CFA data diagnostics	Диагностика данных КФА
 CFA diagnostics	Диагностика КФА
-Structural equation modeling	Моделирование структурными уравнениями
+Confirmatory factor analysis	Конфирматорный факторный анализ
+CFA	КФА
+Show standardized estimates:	Показать стандартизованные оценки:
+Latent only	Только латентные
 Restore this model	Восстановить эту модель
 Remove from comparison	Убрать из сравнения
 Add to comparison	Добавить в сравнение
@@ -3697,11 +3825,10 @@ Check for highly correlated indicators	Проверьте наличие сил�
 Consider a different estimator	Рассмотрите другой метод оценки
 Sample size may be insufficient for model complexity	Объём выборки может быть недостаточным для сложности модели
 Structural regressions	Структурные регрессии
-Covariances	Ковариации
-CFA	КФА
-Show standardized estimates:	Показать стандартизованные оценки:
-Latent only	Только латентные
 Factor covariances/correlations	Ковариации/корреляции факторов
+Residual covariances	Остаточные ковариации
+Defined parameters	Определённые параметры
+Intercepts	Интерцепты
 Factor variances	Дисперсии факторов
 Residual variances	Остаточные дисперсии
 R² (variance explained)	R² (объяснённая дисперсия)
@@ -3734,7 +3861,6 @@ Scalar invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRM
 Strict invariance holds — residual variances are equivalent across groups.	Строгая инвариантность подтверждена — остаточные дисперсии эквивалентны между группами.
 Strict invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	Строгая инвариантность не подтверждена. Рассмотрите освобождение неинвариантных параметров (частичная инвариантность).
 Strict invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	Строгая инвариантность: критерии расходятся. Сравните практические критерии соответствия (ΔCFI, ΔRMSEA) с критерием разности χ².
-Parameter	Параметр
 Mean Δ	Среднее Δ
 Scalar invariance was not established — latent mean comparisons should be interpreted with caution.	Скалярная инвариантность не установлена — сравнение латентных средних следует интерпретировать с осторожностью.
 {group} (Est.)	{group} (Оценка)
@@ -3828,7 +3954,6 @@ Eta-squared (η²)	Эта-квадрат (η²)
 Partial η²	Частичная η²
 Omega-squared (ω²)	Омега-квадрат (ω²)
 Cohen's h	h Коэна
-Odds ratio	Отношение шансов
 CLES	CLES
 NNT	NNT
 Optional: improves Hedges' g accuracy	Необязательно: повышает точность g Хеджеса
@@ -3875,7 +4000,6 @@ Low reliability attenuates (weakens) observed correlations. A true correlation o
 Precision planning (CI width)	Планирование точности (ширина ДИ)
 Calculate sample size needed to achieve a desired confidence interval width.	Рассчитайте размер выборки для достижения желаемой ширины доверительного интервала.
 Estimate type	Тип оценки
-Correlation	Корреляция
 Expected standard deviation	Ожидаемое стандартное отклонение
 Estimate from pilot data or literature	Оценка по пилотным данным или литературе
 Expected proportion	Ожидаемая доля
