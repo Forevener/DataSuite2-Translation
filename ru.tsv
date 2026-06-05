@@ -202,6 +202,9 @@ Some columns could not be matched by name across sheets. Choose how to resolve e
 Header rows	Строки заголовков
 Citations	Источники
 OK	OK
+Cancelling...	Отмена...
+Processing...	Обработка...
+Remove this result	Удалить этот результат
 Invalid settings file	Некорректный файл настроек
 Display	Отображение
 Statistics	Статистика
@@ -292,9 +295,6 @@ Heatmap high color	Высокая температура
 Heatmap mid color	Средняя температура
 Heatmap low color	Низкая температура
 Maximum point spacing (px)	Минимальное расстояние между точками
-Cancelling...	Отмена...
-Processing...	Обработка...
-Remove this result	Удалить этот результат
 Cannot assign numeric type to text variables: {vars}. Use Transform to convert them first.	Невозможно назначить числовой тип текстовым переменным: {vars}. Сначала преобразуйте их с помощью Transform.
 Range: from {min} to {max}, mean: {mean}	Размах: от {min} до {max}, среднее: {mean}
 The following variables already exist: {vars}. Do you want to overwrite them?	Следующие переменные уже существуют: {vars}. Перезаписать их?
@@ -492,10 +492,10 @@ Show total row	Показать строку итогов
 Show cumulative valid count	Показывать накопленное количество (валидных)
 Show cumulative valid percentage	Показывать накопленный валидный процент
 Sort by:	Сортировать по:
+Value (ascending)	Значение (по возрастанию)
+Value (descending)	Значение (по убыванию)
 Count (Highest first)	Количество (по убыванию)
 Count (Lowest first)	Количество (по возрастанию)
-Value (A-Z)	Значение (А-Я)
-Value (Z-A)	Значение (Я-А)
 For numerical variables with many values, values will be grouped into ranges.	Для числовых переменных с большим количеством значений будет выполнена группировка по диапазонам.
 Compress numerical values into ranges	Сжать числовые значения в диапазоны
 Maximum categories:	Максимум категорий:
@@ -569,7 +569,7 @@ sample	выборочное
 theoretical	теоретическое
 Frequency	Частота
 No valid data for histogram	Нет валидных данных для гистограммы
-Density and normal curve overlays are suppressed for sparse-integer data (bin widths vary widely).	Кривые плотности и нормального распределения скрыты для разреженных целочисленных данных (ширины интервалов сильно различаются).
+Density and normal-curve overlays are hidden for this discrete layout — values are spaced evenly rather than to scale.	Наложения плотности и нормальной кривой скрыты для этой дискретной компоновки — значения расположены равномерно, а не в масштабе.
 skew = {skew}, ex.kurt = {kurt}	асимм. = {skew}, эксцесс = {kurt}
 Density	Плотность
 Invalid data format for box plot	Некорректный формат данных для ящика с усами
@@ -577,9 +577,10 @@ No valid data for box plot	Нет валидных данных для ящик�
 No valid data for box plot (all groups excluded for insufficient data or zero variance)	Нет данных для ящика с усами (все группы исключены из-за недостаточности данных или нулевой дисперсии)
 Excluded (n < 2): {names}	Исключены (n < 2): {names}
 Excluded zero-variance: {names}	Исключены группы с нулевой дисперсией: {names}
+Notch omitted — n too small for the median CI: {names}	Вырез не показан — n слишком мало для ДИ медианы: {names}
 Outlier	Выброс
 Data points	Точки данных
-Notch = 95% CI of median	Вырез = 95% ДИ медианы
+Notch = {level}% CI of median	Надрез = {level}% ДИ медианы
 Theoretical quantiles	Теоретические квантили
 Sample quantiles	Выборочные квантили
 Sample quantiles (log scale)	Выборочные квантили (логарифмическая шкала)
@@ -599,6 +600,7 @@ Q-Q overlay is only available for normal and lognormal references	Совмещё
 Standardized log(sample) quantiles	Стандартизованные квантили log(выборки)
 No valid data for Q-Q overlay after excluding {n} non-positive value(s)	Нет корректных данных для Q-Q графика (наложение) после исключения {n} неположительных значений
 No valid data for Q-Q overlay	Нет корректных данных для Q-Q графика (наложение)
+Legend shows the first {shown} of {total} groups (all are plotted)	В легенде показаны первые {shown} из {total} групп (все они отображены на графике)
 Invalid data format for violin plot	Некорректный формат данных для скрипичного графика
 No valid data for violin plot	Нет валидных данных для скрипичного графика
 No valid data for violin plot (all groups excluded for insufficient data or zero variance)	Нет данных для скрипичного графика (все группы исключены из-за недостаточности данных или нулевой дисперсии)
@@ -622,11 +624,13 @@ Creating distribution plots...	Создание графиков распред�
 An error occurred while creating distribution plots:	Произошла ошибка при построении графиков распределения:
 Q-Q plot ({dist})	Q-Q график ({dist})
 Creating plots for {variable}...	Создание графиков для переменной {variable}...
+No valid (non-missing) data for this variable.	Нет валидных (непропущенных) данных для этой переменной.
 Count	Количество
 Percentage	Процент
 Valid percentage	Валидный процент
 Cumulative valid count	Накопленное количество (валидных)
 Cumulative valid %	Накопленный валидный %
+Cumulative columns are hidden under a count-based sort — sort by value to show them.	Накопительные столбцы скрыты при сортировке по количеству — отсортируйте по значению, чтобы показать их.
 Note: requested {requested} bins, but tied values collapsed boundaries — showing {actual} bins.	Запрошено {requested} интервалов, но совпадающие значения схлопнули границы — отображается {actual}.
 No selected variables had valid numerical data for overlay plots.	Ни одна из выбранных переменных не содержит корректных числовых данных для графиков с наложением.
 Excluded from overlay (no valid numerical data): {names}	Исключены из наложения (нет валидных числовых данных): {names}
@@ -653,6 +657,7 @@ mixed evidence	неоднозначные свидетельства
 {reject}/{valid} tests ({fail} failed):	{reject}/{valid} критериев ({fail} с ошибкой):
 {reject}/{total} tests:	{reject}/{total} критериев:
 Insufficient data (n = {n}, need n ≥ {min})	Недостаточно данных (n = {n}, требуется n ≥ {min})
+Zero variance (all values are identical)	Нулевая дисперсия (все значения одинаковы)
 Sample too large (n = {n}, maximum n = {max})	Выборка слишком велика (n = {n}, максимум n = {max})
 Test error: {msg}	Ошибка теста: {msg}
 Unknown error	Неизвестная ошибка
@@ -796,6 +801,7 @@ Analysis type	Тип анализа
 Independent samples	Независимые выборки (разные группы)
 Dependent samples (repeated measures)	Зависимые выборки (повторные измерения)
 Mixed model (between + within subjects)	Смешанная модель (зависимые + независимые)
+One sample (vs. reference value)	Одна выборка (относительно эталонного значения)
 This analysis requires long format data.	Для этого анализа требуются данные в длинном формате.
 Convert to long format	Преобразовать в длинный формат
 Variable selection	Выбор переменных
@@ -804,6 +810,9 @@ Grouping variables	Группирующие переменные
 Condition variables (within-subjects)	Переменные замеров (внутригрупповые)
 Variables representing repeated measures or within-subjects conditions	Переменные, представляющие повторные замеры или внутригрупповые условия
 Subject ID	ID испытуемого
+Reference value (μ₀)	Эталонное значение (μ₀)
+Each selected variable is tested against this value.	Каждая выбранная переменная проверяется относительно этого значения.
+Set per variable	Задать для каждой переменной
 Covariates	Ковариаты
 Analysis setup	Настройка анализа
 Check assumptions	Проверить допущения
@@ -827,6 +836,7 @@ Equivalence bound (Δ)	Граница эквивалентности (Δ)
 Raw	Сырое
 Standardized (Cohen's d)	Стандартизированное (d Коэна)
 Include post-hoc tests	Включить апостериорные проверки
+Apply continuity correction	Применять поправку на непрерывность
 Pairwise comparison table format	Формат таблицы попарных сравнений
 Matrix format	Формат матрицы
 Long format	Длинная таблица
@@ -871,60 +881,100 @@ Eta-squared	Эта-квадрат
 Omega-squared	Омега-квадрат
 Rank-biserial r	Рангово-бисериальный r
 Cliff's delta	Дельта Клиффа
-Common language ES	Общеязыковой РВ
+Common language ES	Общеязыковая ВЭ
+Variance ratio	Отношение дисперсий
 Cohen's d_z	d_z Коэна
 Hedges' g_z	g_z Хеджеса
-Matched-pairs rank-biserial r	Рангово-бисериальный r для связанных пар
 Wilcoxon r	r Уилкоксона
+Proportion above μ₀	Доля значений выше μ₀
+Matched-pairs rank-biserial r	Рангово-бисериальный r для связанных пар
 Epsilon-squared	Эпсилон-квадрат
 Eta-squared (H)	Эта-квадрат (H)
+Kendall's W	W Кендалла
 Partial eta-squared	Частичная Эта-квадрат
+Partial omega-squared	Частичная Омега-квадрат
 Cramér's V	V Крамера
 Phi coefficient	Коэффициент фи
+Cohen's g	g Коэна
 Odds ratio	Отношение шансов
 Cohen's w	w Коэна
-Wilks' lambda	Лямбда Уилка
-Pillai's trace	След Пиллая
-Hotelling's trace	След Хотеллинга
-Roy's largest root	Наибольший корень Роя
+Cohen's w (Q)	w Коэна (Q)
+Cochran's average φ²	Средний φ² Кокрана
 Testing covariance matrices	Проверка ковариационных матриц
 Checking multicollinearity	Проверка мультиколлинеарности
 Testing multivariate normality	Проверка многомерной нормальности
 Testing covariate assumptions	Проверка допущений о ковариатах
 Checking expected frequencies	Проверка ожидаемых частот
-Testing within-subjects normality	Проверка внутригрупповой нормальности
 Testing sphericity	Проверка сферичности
+Sample	Выборка
+Testing per-cell normality	Проверка нормальности по ячейкам
+Testing variance homogeneity	Проверка однородности дисперсий
 Building recommendations	Формирование рекомендаций
+Residuals	Остатки
 Testing normality {name}	Проверка нормальности {name}
 Testing variance homogeneity {name}	Проверка однородности дисперсий {name}
+Testing residual normality {name}	Проверка нормальности остатков {name}
+Testing per-cell normality {name}	Проверка нормальности по ячейкам {name}
 Subject ID required for Mauchly's sphericity test	ID субъекта обязателен для критерия сферичности Мочли
 Sphericity test requires 3 or more conditions (current: {count})	Критерий сферичности требует 3 или более условий (текущее: {count})
-Some groups have too few observations (need > {min} per group)	В некоторых группах слишком мало наблюдений (необходимо > {min} на группу)
-Need at least 2 groups	Необходимо не менее 2 групп
-Singular covariance matrix in group {group}	Сингулярная ковариационная матрица в группе {group}
-Singular pooled covariance matrix	Сингулярная объединённая ковариационная матрица
-Non-finite result	Не-конечный результат
+Box's M test could not be computed: some groups have too few observations (need > {min} per group)	M-критерий Бокса не удалось вычислить: в некоторых группах слишком мало наблюдений (нужно > {min} на группу)
+Box's M test could not be computed: need at least 2 groups	M-критерий Бокса не удалось вычислить: требуется не менее 2 групп
+Box's M test could not be computed: all observations were dropped after listwise deletion	M-критерий Бокса не удалось вычислить: все наблюдения отброшены после построчного удаления
+Box's M test could not be computed: singular covariance matrix in group {group}	M-критерий Бокса не удалось вычислить: вырожденная ковариационная матрица в группе {group}
+Box's M test could not be computed: singular pooled covariance matrix	M-критерий Бокса не удалось вычислить: вырожденная объединённая ковариационная матрица
+Box's M test could not be computed: non-finite result	M-критерий Бокса не удалось вычислить: нечисловой результат
+Box's M test could not be computed: need at least 2 between-subjects groups	M-критерий Бокса не удалось вычислить: требуется не менее 2 межгрупповых групп
+Box's M test could not be computed: need at least 2 within-subjects conditions	M-критерий Бокса не удалось вычислить: требуется не менее 2 внутригрупповых условий
+Box's M test could not be computed: smallest between × within cell has only {n} complete subject(s) (need ≥ 5)	M-критерий Бокса не удалось вычислить: в наименьшей ячейке межгрупповой × внутригрупповой только {n} полных испытуемых (нужно ≥ 5)
+Box's M test could not be computed: wide-reshape produced fewer than 2 response columns	M-критерий Бокса не удалось вычислить: преобразование в широкий формат дало менее 2 столбцов отклика
+Box's M test could not be computed: biotools::boxM failed (likely singular within-cell covariance)	M-критерий Бокса не удалось вычислить: сбой biotools::boxM (вероятно, вырожденная ковариация внутри ячейки)
+Multicollinearity needs at least two dependent variables	Мультиколлинеарность требует не менее двух зависимых переменных
+Normality of model residuals violated	Нарушена нормальность остатков модели
+Normality of per-condition marginals violated (proxy for residual normality)	Нормальность маргинальных распределений по условиям нарушена (приближение для нормальности остатков)
 Normality assumption violated	Допущение о нормальности нарушено
+Normality violated, but every group has n ≥ 30 — parametric test is robust by the central limit theorem	Нормальность нарушена, но во всех группах n ≥ 30 — параметрический критерий устойчив в силу центральной предельной теоремы
+Normality could not be assessed (sample too small) — treat parametric results cautiously or consider an exact/nonparametric test	Не удалось проверить нормальность (слишком малая выборка) — интерпретируйте результаты параметрических критериев с осторожностью или используйте точный/непараметрический критерий
+Normality not tested (large samples) — parametric test is robust by the central limit theorem	Нормальность не проверялась (большие выборки) — параметрический критерий устойчив в силу центральной предельной теоремы
+Normality could not be assessed — interpret parametric results with caution	Не удалось проверить нормальность — интерпретируйте результаты параметрических критериев с осторожностью
+Some groups too large to test for normality — parametric test is robust by the central limit theorem	Некоторые группы слишком велики для проверки нормальности — параметрический критерий устойчив в силу центральной предельной теоремы
+Ignores magnitude — lower power than the Wilcoxon signed-rank test	Игнорирует величину — мощность ниже, чем у критерия знаковых рангов Уилкоксона
+Non-parametric fallback for mixed designs — lower power than Mixed ANOVA when its normality assumption holds	Непараметрическая замена для смешанных планов — ниже мощность, чем у смешанного дисперсионного анализа, когда выполняется допущение о нормальности
+Asymmetric distribution — the signed-rank test assumes symmetry; the sign test makes no such assumption	Асимметричное распределение — критерий знаковых рангов предполагает симметрию; критерий знаков такого предположения не требует
+Asymmetric differences — the signed-rank test assumes symmetry; interpret with caution	Асимметричные разности — критерий знаковых рангов предполагает симметрию; интерпретируйте с осторожностью
 Multivariate normality violated	Многомерная нормальность нарушена
+Multivariate normality could not be verified — ensure adequate complete cases per group	Не удалось проверить многомерную нормальность — обеспечьте достаточное число полных наблюдений в каждой группе
+Multivariate normality could not be verified for some groups — ensure adequate complete cases per group	Не удалось проверить многомерную нормальность в некоторых группах — обеспечьте достаточное число полных наблюдений в каждой группе
 Homogeneity of variance violated	Однородность дисперсий нарушена
 Sphericity violated — consider Greenhouse-Geisser correction	Сферичность нарушена — рекомендуется коррекция Гринхауса-Гейссера
+Box's M significant — verify cell sizes before treating as a violation	M-критерий Бокса значим — проверьте размеры ячеек, прежде чем считать это нарушением
 Covariance matrices not homogeneous	Ковариационные матрицы неоднородны
 Dependent variables are multicollinear (|r| > 0.90)	Зависимые переменные мультиколлинеарны (|r| > 0,90)
 Homogeneity of regression slopes violated	Однородность наклонов регрессии нарушена
 Covariate confounded with treatment	Ковариата связана с воздействием
 Linearity assumption violated	Допущение о линейности нарушено
-Expected frequencies too low (cells < 5)	Ожидаемые частоты слишком малы (ячейки < 5)
+Not assessed — specify the full model to evaluate	Не оценено — укажите полную модель для оценки
+Requires a two-group comparison	Требуется сравнение двух групп
+Requires two or more grouping factors	Требуется два или более группирующих фактора
+Requires a factor with two or more levels	Требуется фактор с двумя или более уровнями
 Failed to run formula-based test: 	Не удалось рассчитать критерий на основе формулы: 
+Failed to run Kolmogorov-Smirnov test: 	Не удалось рассчитать критерий Колмогорова–Смирнова: 
 Failed to run table-based test: 	Не удалось рассчитать табличный критерий: 
+Paired test: {count} subject(s) had duplicate (subject, condition) rows; results may be on a reshape-aggregated subset.	Парный критерий: у {count} испытуемых обнаружены дублирующиеся строки (испытуемый, условие); результаты могут относиться к подмножеству данных после агрегации reshape.
 Failed to run paired table test: 	Не удалось рассчитать парный табличный критерий: 
 Failed to run paired test: 	Не удалось рассчитать парный критерий: 
+Failed to run one-sample test: 	Не удалось выполнить одновыборочный критерий: 
 Failed to run information-theoretic test: 	Не удалось рассчитать информационно-теоретический критерий: 
-Mixed ANOVA requires a between-subjects grouping variable.	Смешанный дисперсионный анализ требует межгрупповой группирующей переменной.
-Mixed ANOVA requires a within-subjects condition variable.	Смешанный дисперсионный анализ требует внутригрупповой переменной замера.
+Mixed ANOVA requires at least one between-subjects grouping variable.	Смешанный дисперсионный анализ требует хотя бы одной межгрупповой группирующей переменной.
+Mixed ANOVA requires at least one within-subjects condition variable.	Смешанный дисперсионный анализ требует хотя бы одной внутригрупповой переменной условия.
 Mixed ANOVA requires a subject ID variable to identify paired observations.	Смешанный дисперсионный анализ требует переменной ID субъекта для идентификации связанных наблюдений.
-Mixed ANOVA requires at least 2 groups. Found {nGroups} group(s).	Смешанный дисперсионный анализ требует не менее 2 групп. Обнаружено: {nGroups}.
-Mixed ANOVA requires at least 2 conditions. Found {nConditions} condition(s).	Смешанный дисперсионный анализ требует не менее 2 замеров. Обнаружено: {nConditions}.
+Between-subjects factor {var} must have at least 2 levels (found {n}).	Межгрупповой фактор {var} должен иметь не менее 2 уровней (найдено {n}).
+Within-subjects factor {var} must have at least 2 levels (found {n}).	Внутригрупповой фактор {var} должен иметь не менее 2 уровней (найдено {n}).
 Failed to run Mixed ANOVA: 	Не удалось выполнить смешанный дисперсионный анализ: 
+ART-ANOVA requires at least one between-subjects grouping variable.	ART-ANOVA требует хотя бы одной межгрупповой группирующей переменной.
+ART-ANOVA requires at least one within-subjects condition variable.	ART-ANOVA требует хотя бы одной внутригрупповой переменной условия.
+ART-ANOVA requires a subject ID variable to identify paired observations.	ART-ANOVA требует переменной ID субъекта для идентификации связанных наблюдений.
+Covariate(s) {vars} were ignored — ART-ANOVA's alignment is undefined for continuous predictors. Use Mixed ANOVA to include covariates.	Ковариаты {vars} были проигнорированы — выравнивание ART-ANOVA не определено для непрерывных предикторов. Чтобы включить ковариаты, используйте смешанный дисперсионный анализ.
+Failed to run ART-ANOVA: 	Не удалось выполнить ART-ANOVA: 
 Failed to run Factorial ANOVA: 	Не удалось выполнить многофакторный дисперсионный анализ: 
 Failed to run ANCOVA: 	Не удалось выполнить ANCOVA: 
 MANCOVA requires error degrees of freedom (N - groups - covariates) ≥ number of dependent variables. You have {nObs} observations, {nGroups} groups, {nCovariates} covariates, and {nDVs} dependent variables. Error df = {errorDf} < {nDVs} DVs. Consider reducing the number of dependent variables or covariates, or increasing sample size.	MANCOVA требует, чтобы число степеней свободы ошибки (N − группы − ковариаты) ≥ числа зависимых переменных. У вас {nObs} наблюдений, {nGroups} групп, {nCovariates} ковариат и {nDVs} зависимых переменных. df ошибки = {errorDf} < {nDVs} зав. перем. Рассмотрите сокращение числа зависимых переменных или ковариат, или увеличение объёма выборки.
@@ -937,15 +987,16 @@ Repeated measures MANOVA requires at least 2 conditions. Found {nConditions} con
 Repeated measures MANOVA requires more subjects than dependent variables. You have {nSubjects} subjects and {nDVs} dependent variables. Consider reducing the number of dependent variables or increasing sample size.	MANOVA с повторными измерениями требует больше испытуемых, чем зависимых переменных. У вас {nSubjects} испытуемых и {nDVs} зависимых переменных. Рассмотрите сокращение числа зависимых переменных или увеличение объёма выборки.
 The response matrix is rank-deficient (rank {rank} < {nCols} columns). This may be due to multicollinearity, missing data patterns, or insufficient subjects. Consider removing redundant variables or conditions.	Матрица откликов имеет неполный ранг (ранг {rank} < {nCols} столбцов). Это может быть связано с мультиколлинеарностью, паттернами пропущенных данных или недостаточным количеством испытуемых. Рассмотрите удаление избыточных переменных или условий.
 Failed to run Repeated Measures MANOVA: 	Не удалось выполнить MANOVA с повторными измерениями: 
-Mixed MANOVA requires a between-subjects grouping variable.	Смешанный MANOVA требует межгрупповой группирующей переменной.
-Mixed MANOVA requires a within-subjects condition variable.	Смешанный MANOVA требует внутригрупповой переменной замера.
+Mixed MANOVA requires at least one between-subjects grouping variable.	Смешанный MANOVA требует хотя бы одной межгрупповой группирующей переменной.
+Mixed MANOVA requires at least one within-subjects condition variable.	Смешанный MANOVA требует хотя бы одной внутригрупповой переменной условия.
 Mixed MANOVA requires a subject ID variable to identify paired observations.	Смешанный MANOVA требует переменной ID субъекта для идентификации связанных наблюдений.
-Mixed MANOVA requires at least 2 groups. Found {nGroups} group(s).	Смешанный MANOVA требует не менее 2 групп. Обнаружено: {nGroups}.
-Mixed MANOVA requires at least 2 conditions. Found {nConditions} condition(s).	Смешанный MANOVA требует не менее 2 замеров. Обнаружено: {nConditions}.
-Mixed MANOVA requires more subjects than dependent variables within each group. You have {nSubjects} subjects, {nGroups} groups, and {nDVs} dependent variables. Error df = {errorDf} < {nDVs} DVs. Consider reducing the number of dependent variables or increasing sample size.	Смешанная MANOVA требует больше испытуемых, чем зависимых переменных в каждой группе. У вас {nSubjects} испытуемых, {nGroups} групп и {nDVs} зависимых переменных. df ошибки = {errorDf} < {nDVs} зав. перем. Рассмотрите сокращение числа зависимых переменных или увеличение объёма выборки.
+Mixed MANOVA requires at least 2 dependent variables.	Смешанный MANOVA требует не менее 2 зависимых переменных.
+Mixed MANOVA needs more subjects than dependent variables within each between-cell crossing. {n} subjects, {cells} between-cell combinations, {d} DVs → error df ≈ {df} < {d}. Reduce DVs or factors, or add subjects.	Смешанному MANOVA нужно больше испытуемых, чем зависимых переменных, в каждом межгрупповом сочетании ячеек. {n} испытуемых, {cells} межгрупповых сочетаний, {d} ЗП → df ошибки ≈ {df} < {d}. Уменьшите число ЗП или факторов либо добавьте испытуемых.
+The response matrix is rank-deficient (rank {rank} < {nCols} columns). Likely multicollinearity, missing-data patterns, or too few subjects.	Матрица откликов имеет неполный ранг (ранг {rank} < {nCols} столбцов). Вероятны мультиколлинеарность, паттерны пропусков или слишком мало испытуемых.
 Failed to run Mixed MANOVA: 	Не удалось выполнить смешанный MANOVA: 
 Analyzing {name}	Анализ {name}
 Running mixed ANOVA for {name}	Выполнение смешанного дисперсионного анализа для {name}
+Running ART-ANOVA for {name}	Выполняется ART-ANOVA для {name}
 Setting up factorial ANOVA	Настройка факторного дисперсионного анализа
 Running ANOVA for {name}	Выполнение дисперсионного анализа для {name}
 Running ANCOVA for {name}	Выполнение ANCOVA для {name}
@@ -955,49 +1006,76 @@ Computing adjusted means	Вычисление скорректированных
 Computing group statistics	Вычисление статистик по группам
 Validating data	Проверка данных
 Computing condition statistics	Вычисление статистик по замерам
+Computing per-DV univariate follow-ups	Вычисление одномерных последующих тестов по каждой ЗП
 Computing descriptive statistics	Вычисление описательных статистик
 ROC analysis: {name}	ROC-анализ: {name}
+Kolmogorov-Smirnov test requires exactly two groups	Критерий Колмогорова–Смирнова требует ровно двух групп
 Fisher's exact test requires a 2x2 contingency table. Consider using Chi-square test instead.	Точный критерий Фишера требует таблицу сопряжённости 2x2. Рассмотрите возможность использования критерия хи-квадрат.
 Expected reshaped columns not found. Available columns:	Ожидаемые столбцы после преобразования не найдены. Доступные столбцы:
 Cochran's Q test requires 3 or more conditions, found 	Критерий Q Кохрана требует 3 или более замеров, найдено 
 McNemar's test requires binary data (2×2 table). Use Stuart-Maxwell test for polytomous data (3+ categories).	Критерий Макнемара требует бинарных данных (таблица 2×2). Используйте критерий Стюарта-Максвелла для политомных данных (3+ категории).
 Stuart-Maxwell test requires a square contingency table (same categories at both time points)	Критерий Стюарта-Максвелла требует квадратной таблицы сопряжённости (одинаковые категории в обеих временных точках)
 Stuart-Maxwell test requires at least 2×2 table	Критерий Стюарта-Максвелла требует таблицы не менее 2×2
-Cochran's Q test requires at least 2 conditions	Критерий Q Кохрана требует не менее 2 замеров
 Cochran's Q test requires binary data (exactly 2 unique values), found 	Критерий Q Кохрана требует бинарных данных (ровно 2 уникальных значения), найдено 
 Cochran's Q test cannot be computed: all subjects have the same response pattern	Критерий Q Кохрана невозможно вычислить: у всех субъектов одинаковая структура ответов
+Zero variance — the one-sample t-test is undefined for a constant variable.	Нулевая дисперсия — одновыборочный t-критерий не определён для постоянной переменной.
+All observations equal the reference value; the sign test is undefined.	Все наблюдения равны эталонному значению; критерий знаков не определён.
+Reference value (mu0) is missing or not finite.	Эталонное значение (mu0) отсутствует или не является конечным.
+At least 2 non-missing observations are required.	Требуется не менее 2 непропущенных наблюдений.
+ART_SINGULAR_DF	ART_SINGULAR_DF
 Insufficient data for ROC	Недостаточно данных для ROC-анализа
+ART-ANOVA could not estimate denominator degrees of freedom (singular covariance matrix). This usually means too few subjects per between-cell, or a between/within factor that is collinear with another.	ART-ANOVA не удалось оценить число степеней свободы знаменателя (вырожденная ковариационная матрица). Обычно это означает слишком мало испытуемых в межгрупповой ячейке либо коллинеарность межгруппового/внутригруппового фактора с другим.
 Export 	Экспорт 
 Threshold	Порог
 Sensitivity	Чувствительность
 Specificity	Специфичность
 PPV	PPV
 NPV	NPV
-No valid data for mean/error plot	Нет корректных данных для графика средних с ошибками
+Worse to misclassify	Хуже ошибиться с
+No valid data for mean/error plot (all groups excluded for insufficient data)	Нет корректных данных для графика средних с погрешностями (все группы исключены из-за недостатка данных)
+Error bars show the {level}% confidence interval of the mean	Планки погрешностей показывают {level}% доверительный интервал среднего
 Paired lines plot requires at least two conditions	График парных линий требует не менее двух условий
 No valid data for paired lines plot	Нет корректных данных для графика парных линий
-No valid data for interaction plot	Нет корректных данных для графика взаимодействия
+Excluded {count} unpaired observation(s) from longer condition(s)	Исключено {count} непарных наблюдений из более длинных условий
+No valid data for interaction plot (all cells excluded for insufficient data)	Нет корректных данных для графика взаимодействия (все ячейки исключены из-за недостатка данных)
+Error bars show the {level}% within-subject confidence interval (Morey, 2008)	Планки погрешностей показывают {level}% внутрисубъектный доверительный интервал (Мори, 2008)
+Excluded (incomplete within-subject data): {count}	Исключено (неполные внутрисубъектные данные): {count}
 Effect size	Размер эффекта
 No valid data for forest plot	Нет корректных данных для лесовидной диаграммы
+Missing a positive	Пропуск положительного
+False alarm	Ложная тревога
 False positive rate (1 − specificity)	Доля ложно положительных (1 − специфичность)
 True positive rate (sensitivity)	Доля истинно положительных (чувствительность)
 No valid data for ROC plot	Нет данных для построения ROC-графика
 Tukey HSD	HSD Тьюки
 Pairwise t-tests using pooled ANOVA error (p-adjusted)	Попарные t-критерии с объединённой ошибкой ANOVA (скорректированное p)
 Dunn's test	Критерий Данна
+Games-Howell test	Критерий Геймса–Хауэлла
 Pairwise paired t-tests (p-adjusted)	Попарные t-тесты для зависимых выборок (скорр. p)
 Pairwise Wilcoxon signed-rank tests (p-adjusted)	Попарные тесты Вилкоксона (скорр. p)
+Conover's test	Критерий Коновера
+Nemenyi test	Тест Неменьи
 Independent samples t-test	t-критерий для независимых выборок
 Welch's t-test (unequal variances)	t-критерий Уэлча (неравные дисперсии)
 Mann-Whitney U test	Критерий Манна–Уитни
+Brunner-Munzel test	Критерий Бруннера–Манцеля
 One-way ANOVA	Однофакторный дисперсионный анализ
+Welch's one-way ANOVA	Однофакторный дисперсионный анализ Уэлча
 Kruskal-Wallis test	Критерий Краскела–Уоллиса
+Kolmogorov-Smirnov test	Критерий Колмогорова–Смирнова
+Anderson-Darling k-sample test	k-выборочный критерий Андерсона–Дарлинга
+F-test for equality of variances	F-критерий равенства дисперсий
+Bartlett's test	Критерий Бартлетта
+Fligner-Killeen test	Критерий Флигнера–Килина
 Mutual information test	Критерий взаимной информации
 Jensen-Shannon divergence test	Критерий дивергенции Йенсена–Шеннона
 Paired samples t-test	t-критерий для парных выборок
 Wilcoxon signed-rank test	Критерий знаковых рангов Вилкоксона
 Repeated measures ANOVA	Дисперсионный анализ с повторными измерениями
 Friedman test	Критерий Фридмана
+One-sample t-test	Одновыборочный t-критерий
+One-sample Wilcoxon signed-rank test	Одновыборочный критерий знаковых рангов Уилкоксона
+Sign test	Критерий знаков
 Factorial ANOVA	Многофакторный дисперсионный анализ
 ANCOVA (Analysis of Covariance)	ANCOVA (Анализ ковариаций)
 MANCOVA (Multivariate ANCOVA)	MANCOVA (Многомерный ANCOVA)
@@ -1009,21 +1087,27 @@ Cochran's Q test	Критерий Q Кокрена
 MANOVA	MANOVA
 Repeated measures MANOVA	MANOVA с повторными измерениями
 Mixed ANOVA	Смешанный дисперсионный анализ
+ART-ANOVA (Aligned Rank Transform)	ART-ANOVA (преобразование выровненных рангов)
 Mixed MANOVA	Смешанный MANOVA
+P-values adjusted using {method}	P-значения скорректированы методом {method}
+{vars} variable(s) analyzed with {comps} total pairwise comparison(s)	{vars} переменных проанализировано, {comps} попарных сравнений
 (Pairwise comparisons)	(Попарные сравнения)
+{direction} — Δ = {delta}	{direction} — Δ = {delta}
 ({delta} Cohen's d, converted to raw)	({delta} d Коэна, переведено в исходные единицы)
+Not computed — a group has n < 2	Не вычислено — в одной из групп n < 2
+Haldane-Anscombe continuity correction applied (b or c = 0)	Применена поправка на непрерывность Холдейна–Анскомба (b или c = 0)
+Bootstrap percentile CI	Процентильный бутстрэп-ДИ
+Mauchly's test of sphericity	Критерий сферичности Мочли
 Significantly greater (one-tailed)	Значимо больше (односторонний)
 Significantly less (one-tailed)	Значимо меньше (односторонний)
 No significant directional difference	Нет значимого направленного различия
-negligible effect	незначительный эффект
-small effect	малый эффект
-medium effect	средний эффект
-large effect	большой эффект
+Pairwise comparisons: {var}	Попарные сравнения: {var}
 [lower, upper] = {level}% CI of difference	[нижн., верхн.] = {level}% ДИ разности
 {symbol} = test statistic, df = degrees of freedom, p = p-value	{symbol} = значение критерия, df = степени свободы, p = p-значение
 {symbol} = effect size	{symbol} = размер эффекта
 Legend:	Обозначения:
 Failed	Не выполнено
+Contingency table: {var}	Таблица сопряжённости: {var}
 n = {value}	n = {value}
 M = {value}	M = {value}
 Mdn = {value}	Мед = {value}
@@ -1039,90 +1123,93 @@ Min = {value}	Мин = {value}
 Max = {value}	Макс = {value}
 Mean rank = {value}	Средний ранг = {value}
 Not significant	Незначимо
-P-values adjusted using {method}	P-значения скорректированы методом {method}
-Mauchly's test of sphericity	Критерий сферичности Мочли
+Factorial ANOVA: {var}	Факторный дисперсионный анализ: {var}
+Post-hoc analysis failed: {message}	Сбой апостериорного анализа: {message}
+Simple effects: {target} comparisons at each level of {within}	Простые эффекты: сравнения {target} на каждом уровне {within}
+Error: {message}	Ошибка: {message}
+ANCOVA: {var}	ANCOVA: {var}
+Adjusted cell means ({factors})	Скорректированные средние по ячейкам ({factors})
+Marginal means for {factor}	Маргинальные средние для {factor}
+{label}: {var}	{label}: {var}
 {method} results	Результаты {method}
-{variable} (Between)	{variable} (межгрупповой)
-{variable} (Within)	{variable} (внутригрупповой)
+{dropped} of {total} subjects were dropped (listwise) for missing one or more within-subject cells.	{dropped} из {total} испытуемых исключены (построчно) из-за отсутствия одной или нескольких внутригрупповых ячеек.
+{label}: {message}	{label}: {message}
+Adjusted p-values within each multivariate effect's univariate follow-up family (K = {k} dependent variable(s), method: {method})	Скорректированные p-значения внутри семейства одномерных последующих тестов каждого многомерного эффекта (K = {k} зависимых переменных, метод: {method})
+Dependent variables: {dvs} | Grouping: {grouping} | Covariates: {covs}	Зависимые переменные: {dvs} | Группировка: {grouping} | Ковариаты: {covs}
 Multivariate tests for {variable}	Многомерные критерии для {variable}
+Post-hoc for: {var}	Апостериорный анализ для: {var}
+Method: {method} with {adjustment} adjustment	Метод: {method} с поправкой {adjustment}
+Method: {method}	Метод: {method}
 Significant	Значимая
 Diff	Разн
+{label} = test statistic	{label} = тестовая статистика
 Diff = mean difference	Разн = разность средних
 [lower, upper] = {level}% CI	[нижняя, верхняя] = {level}% ДИ
 p = p-value	p = p-значение
+subjects	испытуемых
+Between-subjects	Межсубъектный
+Within-subjects	Внутрисубъектный
+Multivariate normality could not be computed: {note}	Многомерную нормальность не удалось вычислить: {note}
 Predicted group = membership signalled by higher scores	Предсказываемая группа = принадлежность, на которую указывают более высокие значения
 N = total (predicted/other)	N = всего (предсказываемая/другая)
 CI method: {method}	Метод ДИ: {method}
-Brier = mean squared error of min-max-rescaled scores against group labels (lower is better)	Брайер = среднеквадратическая ошибка оценок, приведённых к [0, 1] методом min-max, относительно меток групп (меньше — лучше)
+Scaled Brier = mean squared error of min-max-rescaled scores against group labels (not on the probability scale; comparable across DVs with different units; lower is better)	Шкалированный Брайер = среднеквадратичная ошибка между шкалированными по диапазону скорами и метками групп (не на шкале вероятностей; сопоставим между ЗП с разными единицами; чем меньше, тем лучше)
 Sensitivity / specificity are displayed for the predicted group	Чувствительность / специфичность показаны для предсказываемой группы
 PPV / NPV = predictive values	PPV / NPV = прогностические ценности
 Δ AUC = AUC(Variable 1) − AUC(Variable 2). Z = DeLong's test statistic for the difference between paired AUCs on the same subjects.	Δ AUC = AUC(Переменная 1) − AUC(Переменная 2). Z = статистика критерия Делонга для разности парных AUC, рассчитанных на одних и тех же испытуемых.
+P-values not adjusted	P-значения не скорректированы
 Pairwise analysis summary:	Сводка попарного анализа:
-{vars} variable(s) analyzed with {comps} total pairwise comparison(s)	{vars} переменных проанализировано, {comps} попарных сравнений
 All variables failed analysis.	Все переменные не прошли анализ.
 See errors below.	См. ошибки ниже.
+Sphericity violated; use corrected p-values	Сферичность нарушена; используйте скорректированные p-значения
+Sphericity assumption met	Допущение о сферичности выполнено
 Direction confirmed	Направление подтверждено
 Unexpected direction	Неожиданное направление
 No pairwise comparisons available.	Попарные сравнения недоступны.
-Pairwise comparisons:	Попарные сравнения:
 Error	Ошибка
-Contingency table:	Таблица сопряжённости:
 Note: expected frequencies shown in parentheses	Примечание: ожидаемые частоты указаны в скобках
-Factorial ANOVA:	Многофакторный дисперсионный анализ:
+Post-hoc comparisons	Апостериорные сравнения
 Significant interaction	Значимое взаимодействие
 Significant main effect	Значимый главный эффект
 No interaction	Нет взаимодействия
 No main effect	Нет главного эффекта
-Error:	Ошибка:
-ANCOVA:	ANCOVA:
 (covariate)	(ковариата)
 (factor)	(фактор)
 Adjusted means (estimated marginal means)	Скорректированные средние (оценённые краевые средние)
 Post-hoc comparisons (adjusted means)	Апостериорные сравнения (скорректированные средние)
-Post-hoc analysis failed:	Апостериорный анализ не выполнен:
-Mixed ANOVA:	Смешанный дисперсионный анализ:
+(between × within)	(межгрупповой × внутригрупповой)
 (within)	(внутригрупповой)
 (between)	(межгрупповой)
-Sphericity violated; use corrected p-values	Сферичность нарушена; используйте скорректированные p-значения
-Sphericity assumption met	Допущение о сферичности выполнено
-Post-hoc comparisons	Апостериорные сравнения
-Between-subjects comparisons (Group)	Межгрупповые сравнения (группа)
-Within-subjects comparisons (Condition)	Внутригрупповые сравнения (замер)
-Simple effects: Group comparisons within each Condition	Простые эффекты: сравнения групп в каждом замере
-Simple effects: Condition comparisons within each Group	Простые эффекты: сравнения замеров в каждой группе
-Adjusted group means (estimated marginal means)	Скорректированные средние по группам (оценённые краевые средние)
-Covariates:	Ковариаты:
-Dependent variables:	Зависимые переменные:
-Between-subjects:	Межгрупповые:
-Within-subjects:	Внутригрупповые:
-Condition:	Замер:
-Grouping:	Группировка:
+Diagnostics:	Диагностика:
 Multivariate tests	Многомерные критерии
 Covariate multivariate tests (Pillai)	Многомерный критерий ковариации (Пиллай)
-Univariate follow-up tests (Mixed ANOVAs)	Одномерные последующие критерии (смешанный дисперсионный анализ)
-Univariate follow-up tests (One-way ANOVAs)	Одномерные последующие критерии (однофакторный дисперсионный анализ)
+Marginal means by factor	Маргинальные средние по факторам
 MANCOVA results	Результаты MANCOVA
 Univariate follow-up tests (ANCOVAs)	Одномерные последующие критерии (ANCOVA)
-Post-hoc for:	Апостериорные критерии для:
-Method:	Метод:
 Pass	Пройдено
 Fail	Не пройдено
 Skipped	Пропущено
-Partial	Частичные
 n < 3	n < 3
 n > 5000	n > 5000
+All subjects	Все испытуемые
 MV normal	МВ норм.
 MV non-normal	МВ ненорм.
 Insufficient data	Недостаточно данных
 Singular covariance	Сингулярная ковариация
-Multivariate normality could not be computed:	Многомерная нормальность не может быть вычислена:
+Could not compute	Не удалось вычислить
+Symmetric	Симметрично
+Asymmetric	Асимметрично
+n < 8	n < 8
 Equal variances	Равные дисперсии
 Unequal variances	Неравные дисперсии
 Sphericity assumed	Сферичность предполагается
 Sphericity violated	Сферичность нарушена
-Box's M test could not be computed:	M-критерий Бокса не может быть вычислен:
+Not testable (< 3 levels)	Не проверяется (< 3 уровней)
+Not available	Недоступно
+Box's M uses a fixed α = 0.001 (Tabachnick & Fidell): the test is oversensitive at large n, so this threshold is deliberately independent of the analysis significance level.	Критерий Бокса M использует фиксированный α = 0,001 (Табачник и Фиделл): критерий слишком чувствителен при больших n, поэтому этот порог намеренно не зависит от уровня значимости анализа.
 Homogeneous	Однородные
 Non-homogeneous	Неоднородные
+Not applicable	Неприменимо
 Linear	Линейная
 Not linear	Нелинейно
 Independent	Независимые
@@ -1132,17 +1219,21 @@ Low frequencies	Низкие частоты
 Overall test results	Общие результаты критерия
 Factorial ANOVA results	Результаты факторного дисперсионного анализа
 Mixed ANOVA results	Результаты смешанного дисперсионного анализа
+ART-ANOVA results	Результаты ART-ANOVA
 ANCOVA results	Результаты ANCOVA
 Pairwise comparisons	Попарные сравнения
 Classification (ROC) analysis	Классификационный анализ (ROC)
 Batch analysis {current}/{total}: {test} ({iv})	Пакетный анализ {current}/{total}: {test} ({iv})
 Pseudo-factorial analysis: {test} ({iv})	Псевдо-многофакторный анализ: {test} ({iv})
+One-sample comparison: {test}	Одновыборочное сравнение: {test}
 Comparison analysis: {test} ({iv})	Сравнительный анализ: {test} ({iv})
 Comparison	Сравнение
 Equivalence (TOST)	Эквивалентность (TOST)
 Non-inferiority	Нехужесть
 Superiority	Превосходство
 Minimal effect (MET)	Минимальный эффект (MET)
+standardized by robust spread (MAD)	стандартизовано робастным разбросом (MAD)
+standardized by pooled SD	стандартизовано объединённым стандартным отклонением
 {group} N	{group} N
 {group} Mean	{group} Среднее
 {group} Median	{group} Медиана
@@ -1156,7 +1247,13 @@ Minimal effect (MET)	Минимальный эффект (MET)
 {group} Min	{group} Мин
 {group} Max	{group} Макс
 {group} Mean Rank	{group} Средний ранг
+{level}% CI of estimate	{level}% ДИ оценки
 {level}% CI of Difference	{level}% ДИ разности
+p (two-sided)	p (двусторонний)
+ε (GG)	ε (GG)
+p (GG)	p (GG)
+ε (HF)	ε (HF)
+p (HF)	p (HF)
 p (lower)	p (нижн.)
 p (upper)	p (верх.)
 p (MET)	p (MET)
@@ -1164,6 +1261,12 @@ p (equiv)	p (экви.)
 ES	РЭ
 {es} CI	{es} ДИ
 {es} SE	{es} SE
+Δ₂ CI	ДИ Δ₂
+Δ₂ SE	СО Δ₂
+{dv}: test undefined — singular variance matrix (S is rank-deficient).	{dv}: критерий не определён — вырожденная ковариационная матрица (S имеет неполный ранг).
+{dv}: variance matrix is rank-deficient — categorical structure was collapsed before inversion; treat the test as approximate.	{dv}: ковариационная матрица имеет неполный ранг — категориальная структура была свёрнута перед обращением; считайте результат приближённым.
+{dv}: success coded as "{label}" (the higher of the two observed values).	{dv}: «успех» закодирован как «{label}» (большее из двух наблюдавшихся значений).
+{dv}: {count} observation(s) equal to μ₀ were dropped as ties from the sign test.	{dv}: {count} наблюдений, равных μ₀, отброшено как совпадения в критерии знаков.
 {n} variable(s) failed analysis:	Переменные не прошли анализ ({n} шт.):
 Equivalent (within Δ = {delta})	Эквивалент (в пределах Δ = {delta})
 Equivalence not established (Δ = {delta})	Эквивалентность не установлена (Δ = {delta})
@@ -1175,6 +1278,14 @@ Meaningful effect (|d| > Δ = {delta})	Значимый эффект (|d| > Δ =
 No meaningful effect (Δ = {delta})	Нет значимого эффекта (Δ = {delta})
 Significant difference	Значимое различие
 No significant difference	Незначимое различие
+negligible agreement	пренебрежимо малая согласованность
+weak agreement	слабая согласованность
+moderate agreement	умеренная согласованность
+strong agreement	сильная согласованность
+negligible effect	незначительный эффект
+small effect	малый эффект
+medium effect	средний эффект
+large effect	большой эффект
 Group 1	Группа 1
 Group 2	Группа 2
 Equivalent	Эквивалентны
@@ -1185,21 +1296,23 @@ Superior	Превосходит
 Not superior	Не превосходит
 Meaningful effect	Значимый эффект
 No meaningful effect	Нет значимого эффекта
+Significantly greater	Значимо больше
+Significantly less	Значимо меньше
 Effect	Эффект
+Contrast	Контраст
+Difference	Разность
+SE	SE
+Main effect: {name}	Главный эффект: {name}
+Interaction: {name}	Взаимодействие: {name}
+Omnibus main effect was not significant (p = {p}). Interpret comparisons with caution.	Главный эффект незначим (p = {p}). Интерпретируйте сравнения с осторожностью.
+Omnibus interaction was not significant (p = {p}). Interpret comparisons with caution.	Взаимодействие незначимо (p = {p}). Интерпретируйте сравнения с осторожностью.
+η²p CI	ДИ η²p
 Group	Группа
 Raw mean	Исходное среднее
 SD	SD
 Adjusted mean	Скорректированное среднее
-SE	SE
-Contrast	Контраст
-Difference	Разность
-ε (GG)	ε (GG)
-p (GG)	p (GG)
-Adjusted p-value	Скорректированное p-значение
-Main effect of group was not significant (p = {p}). Interpret comparisons with caution.	Главный эффект группы незначим (p = {p}). Интерпретируйте сравнения с осторожностью.
-Interaction was significant (p = {p}). Consider simple effects analysis below for more accurate interpretation.	Взаимодействие значимо (p = {p}). Для более точной интерпретации рассмотрите анализ простых эффектов ниже.
-Main effect of condition was not significant (p = {p}). Interpret comparisons with caution.	Главный эффект замера незначим (p = {p}). Интерпретируйте сравнения с осторожностью.
-Interaction was not significant (p = {p}). Main effect comparisons above may be more appropriate.	Взаимодействие незначимо (p = {p}). Более подходящими могут быть сравнения главных эффектов выше.
+Level	Уровень
+ART-ANOVA	ART-ANOVA
 Mixed MANOVA results	Результаты смешанного MANOVA
 MANOVA results	Результаты MANOVA
 Test statistic	Значение критерия
@@ -1208,47 +1321,60 @@ Num. df	Числ. df
 Den. df	Знам. df
 Covariate	Ковариата
 Pillai	Pillai
+Univariate follow-up tests (Mixed ANCOVAs)	Одномерные дополнительные тесты (смешанный ковариационный анализ)
+Univariate follow-up tests (Mixed ANOVAs)	Одномерные последующие критерии (смешанный дисперсионный анализ)
+Univariate follow-up tests (Repeated-measures ANCOVAs)	Одномерные дополнительные тесты (ковариационный анализ с повторными измерениями)
+Univariate follow-up tests (Repeated-measures ANOVAs)	Одномерные дополнительные тесты (дисперсионный анализ с повторными измерениями)
+Univariate follow-up tests (One-way ANCOVAs)	Одномерные дополнительные тесты (однофакторный ковариационный анализ)
+Univariate follow-up tests (One-way ANOVAs)	Одномерные последующие критерии (однофакторный дисперсионный анализ)
 Dependent variable	Зависимая переменная
+Factor	Фактор
 Descriptive statistics by {variable} (between-subjects)	Описательные статистики по {variable} (межгрупповые)
 Descriptive statistics by {variable} (within-subjects)	Описательные статистики по {variable} (внутригрупповые)
 Descriptive statistics by {var1} × {var2}	Описательные статистики по {var1} × {var2}
 Descriptive statistics by group	Описательные статистики по группам
-Pairwise t-tests (pooled SD) with {adjustment} adjustment	Попарные t-критерии (объединённое SD), поправка: {adjustment}
-Dunn's test with {adjustment} adjustment	Критерий Данна, поправка: {adjustment}
-Pairwise paired t-tests with {adjustment} adjustment	Попарные парные t-тесты с поправкой: {adjustment}
-Pairwise Wilcoxon signed-rank tests with {adjustment} adjustment	Попарные тесты Вилкоксона с поправкой: {adjustment}
-Conover's test with {adjustment} adjustment	Тест Коновера с поправкой: {adjustment}
-Nemenyi test	Тест Нeменьи
+Pairwise t-tests (pooled SD)	Попарные t-критерии (объединённое СКО)
+Pairwise paired t-tests	Попарные парные t-критерии
+Pairwise Wilcoxon signed-rank tests	Попарные критерии знаковых рангов Уилкоксона
 No	Нет
 Normality (Shapiro-Wilk)	Нормальность (Шапиро-Уилк)
 {passed} of {total} tests passed	Пройдено {passed} из {total} проверок
 No testable groups	Нет проверяемых групп
 Multivariate normality (Mardia's test)	Многомерная нормальность (критерий Мардиа)
 Skewness or kurtosis violated in one or more groups	Асимметрия или эксцесс нарушены в одной или нескольких группах
+Not assessed — too few complete cases per group	Не оценено — слишком мало полных наблюдений в группах
 Multivariate normality assumed	Многомерная нормальность предполагается
-Homogeneity of variance (Levene's test)	Однородность дисперсий (критерий Левена)
+Homogeneity of variance (Levene's test, Brown-Forsythe)	Однородность дисперсий (критерий Левена, Брауна–Форсайта)
 {count} of {total} variables show unequal variances	{count} из {total} переменных имеют неравные дисперсии
 Equal variances assumed	Равенство дисперсий предполагается
-Sphericity (Mauchly's)	Сферичность (критерий Мочли)
+Homogeneity of variance by condition (Levene's test, Brown-Forsythe)	Однородность дисперсий по условиям (критерий Левена, Брауна–Форсайта)
+{count} of {total} variable × condition cells show unequal variances	{count} из {total} ячеек переменная × условие имеют неравные дисперсии
+Sphericity (Mauchly's test)	Сферичность (критерий Мочли)
+Not assessed — no testable variables	Не оценено — нет переменных для проверки
 {count} of {total} variables violate sphericity	{count} из {total} переменных нарушают сферичность
-Homogeneity of covariance matrices (Box's M)	Однородность ковариационных матриц (M Бокса)
+Box's M was significant (p < 0.001); check cell sizes before treating as a violation	M-критерий Бокса оказался значим (p < 0.001); проверьте размеры ячеек, прежде чем считать это нарушением
 Covariance matrices differ across groups (p < 0.001)	Ковариационные матрицы различаются между группами (p < 0,001)
 Covariance matrices are homogeneous	Ковариационные матрицы однородны
+Homogeneity of covariance matrices (Box's M)	Однородность ковариационных матриц (M Бокса)
 Multicollinearity	Мультиколлинеарность
 {count} pair(s) with |r| > 0.90	{count} пар(ы) с |r| > 0,90
 No multicollinearity detected (max |r| = {r})	Мультиколлинеарность не обнаружена (макс. |r| = {r})
 Homogeneity of regression slopes	Однородность наклонов регрессии
 {count} interaction(s) significant — slopes differ across groups	{count} взаимодействий(е) значимо — наклоны различаются между группами
 Regression slopes are homogeneous	Наклоны регрессии однородны
+Not assessed	Не оценено
 Linearity (Covariate–DV)	Линейность (ковариата–ЗП)
-{count} covariate-DV pair(s) show no linear relationship	{count} пар(ы) ковариат–ЗП не показывают линейной связи
+{count} covariate-DV pair(s) show a nonlinear (curved) relationship	{count} пар(ы) ковариат–ЗП показывают нелинейную (криволинейную) связь
 Linear relationships confirmed	Линейные связи подтверждены
 Covariate independence	Независимость ковариат
 {count} covariate(s) differ across groups	{count} ковариат(ы) различаются между группами
 Covariates independent of treatment	Ковариаты независимы от воздействия
 Expected frequencies	Ожидаемые частоты
-{count} variable(s) have cells with expected frequency < 5	{count} переменных имеют ячейки с ожидаемой частотой < 5
+{count} variable(s) have cells with expected frequency < 5 — Fisher's exact test preferred	{count} переменных имеют ячейки с ожидаемой частотой < 5 — предпочтителен точный критерий Фишера
 All expected frequencies adequate	Все ожидаемые частоты достаточны
+Symmetry	Симметрия
+{count} variable(s) asymmetric — affects the signed-rank test	Асимметричных переменных: {count} — влияет на критерий знаковых рангов
+Distribution(s) symmetric	Распределения симметричны
 Assumption	Допущение
 Status	Статус
 Notes	Примечания
@@ -1262,7 +1388,7 @@ Skew. p	Асим. p
 Kurtosis Z	Эксцесс Z
 Kurt. p	Эксц. p
 p-value	p-значение
-Sphericity (Mauchly's test)	Сферичность (критерий Мочли)
+Symmetry (D'Agostino skewness test)	Симметрия (критерий асимметрии Д'Агостино)
 χ² (approx.)	χ² (прибл.)
 Metric	Показатель
 Box's M test	Критерий M Бокса
@@ -1276,17 +1402,23 @@ Covariate independence from treatment	Независимость ковариа�
 Min. expected	Мин. ожидаемая
 Cells < 5	Ячейки < 5
 Total cells	Всего ячеек
+% cells < 5	% ячеек < 5
 Assumption test results	Результаты проверки допущений
 Assumptions	Допущения
 Predicted group	Предсказываемая группа
 AUC	AUC
-Brier	Брайер
-Worse to misclassify	Хуже ошибиться с
+Scaled Brier	Шкалированный Брайер
 Accuracy	Точность
 Threshold optimized by Youden's J (max sensitivity + specificity − 1).	Порог оптимизирован по J Юдена (макс. чувствительность + специфичность − 1).
 Threshold optimized by closest point to (0, 1).	Порог оптимизирован как ближайшая точка к (0, 1).
 Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown per row.	Порог оптимизирован по взвешенному по стоимости J Юдена — для каждой строки показаны оба направления асимметричной стоимости.
 Δ AUC	Δ AUC
+Per-cell normality skipped: {n} between × within cells exceed the {cap}-cell cap; showing per-marginal-factor results instead.	Проверка нормальности по ячейкам пропущена: {n} ячеек (межгрупповые × внутригрупповые) превышают предел в {cap} ячеек; вместо этого показаны результаты по маргинальным факторам.
+Per-cell normality could not be computed; showing per-marginal-factor results instead.	Не удалось вычислить нормальность по ячейкам; вместо этого показаны результаты по маргинальным факторам.
+Tested on the within-subjects model residuals — the normality assumption repeated-measures ANOVA rests on (Shapiro-Wilk's level is approximate here, as these residuals are not independent).	Проверено на остатках внутрисубъектной модели — это предположение о нормальности, на котором основан дисперсионный анализ с повторными измерениями (уровень значимости критерия Шапиро-Уилка здесь приближённый, так как эти остатки не являются независимыми).
+No subject ID provided — showing per-condition marginal normality as a proxy for residual normality.	Subject ID не указан — показана маргинальная нормальность по условиям как приближение для нормальности остатков.
+AUC comparison (DeLong's test)	Сравнение AUC (критерий Делонга)
+Please select at least one variable for one-sample analysis.	Выберите хотя бы одну переменную для одновыборочного анализа.
 Please select at least two variables for analysis.	Пожалуйста, выберите не менее двух переменных для анализа.
 No dependent variables available. Please adjust your variable selection.	Нет доступных зависимых переменных. Скорректируйте выбор переменных.
 Please select at least one grouping variable for independent samples analysis.	Выберите хотя бы одну группирующую переменную для анализа независимых выборок.
@@ -1295,6 +1427,8 @@ Please select a Subject ID variable for dependent samples analysis.	Выбери
 Please select at least one grouping variable for mixed design analysis.	Выберите хотя бы одну группирующую переменную для анализа смешанного дизайна.
 Please select at least one condition variable for mixed design analysis.	Выберите хотя бы одну переменную условия для анализа смешанного дизайна.
 Please select a Subject ID variable for mixed design analysis.	Выберите переменную ID субъекта для анализа смешанного дизайна.
+Please enter a finite reference value (μ₀).	Введите конечное эталонное значение (μ₀).
+Reference value (μ₀) for {variable} must be a finite number.	Эталонное значение (μ₀) для переменной {variable} должно быть конечным числом.
 The {test} test requires at least two dependent variables.	Критерий {test} требует не менее двух зависимых переменных.
 The {test} test requires at least one covariate variable.	Критерий {test} требует не менее одной переменной-ковариаты.
 Equivalence bound (Δ) must be a positive number.	Граница эквивалентности (Δ) должна быть положительным числом.
@@ -1308,6 +1442,8 @@ Analysis failed for variable: {variable}	Анализ не выполнен дл
 Adjusting p-values globally...	Глобальная корректировка p-значений...
 Failed to apply global p-value adjustment	Не удалось применить глобальную коррекцию p-значений
 Batch analysis completed: {count} analyses with global p-value adjustment	Пакетный анализ завершён: {count} анализов с глобальной коррекцией p-значений
+Batch analysis completed: {count} analyses	Пакетный анализ завершён: {count} анализов
+ROC analysis failed: {error}	Сбой ROC-анализа: {error}
 Unknown test type: {test}	Неизвестный тип критерия: {test}
 Variable "{name}" has {count} unique values - verify it's categorical, not continuous	Переменная «{name}» имеет {count} уникальных значений — убедитесь, что она категориальная, а не непрерывная
 Group "{group}" has only {count} observation(s) - results may be unreliable	Группа «{group}» содержит только {count} наблюдений — результаты могут быть ненадёжными
@@ -1316,6 +1452,7 @@ Cannot generate {count} factorial groups (limit: {limit}). Use batch analysis in
 Group "{group}" has no observations	Группа «{group}» не содержит наблюдений
 {count} pairwise comparisons possible - strongly consider p-value adjustment	Возможно {count} попарных сравнений — настоятельно рекомендуется коррекция p-значений
 Failed to adjust p-values: 	Не удалось скорректировать p-значения: 
+Paired-lines plot for {var}: dropped {count} subject(s) with duplicate condition rows	График парных линий для {var}: пропущено субъектов с дублирующимися строками условий: {count}
 Factorial analysis preview:	Предпросмотр факторного анализа:
 {count} combined subgroups will be created and analyzed together	{count} объединённых подгруппы будут созданы и проанализированы совместно
 Batch analysis preview:	Предпросмотр пакетного анализа:
@@ -1329,10 +1466,14 @@ Warnings:	Предупреждения:
 Mean and error bar: {name}	Среднее и полосы ошибок: {name}
 Paired lines: {name}	Парные линии: {name}
 ROC curve: {name}	ROC-кривая: {name}
-Interaction plot: {name}	График взаимодействия: {name}
+Interaction plot: {name} ({f1} × {f2})	График взаимодействия: {name} ({f1} × {f2})
 Distribution comparison	Сравнение распределений
+Distribution	Распределение
 
 # === correlation-view ===
+Checking assumptions for {var1} - {var2}	Проверка допущений для {var1} - {var2}
+Normality violated — Bartlett's and the F-test are sensitive to it; use the rank-based Fligner-Killeen test	Нормальность нарушена — критерий Бартлетта и F-критерий чувствительны к её нарушению; используйте ранговый критерий Флигнера–Килина
+Unequal variances/shapes — Mann-Whitney's location-shift interpretation may not hold; consider the Brunner-Munzel test	Неравные дисперсии/формы — интерпретация критерия Манна–Уитни как сдвига положения может не выполняться; рассмотрите критерий Бруннера–Манцеля
 Variable selection (optional)	Выбор переменных (необязательно)
 Leave empty to correlate all variables	Оставьте пустым для корреляции всех переменных
 Left variables (rows)	Левые переменные (строки)
@@ -1378,7 +1519,7 @@ Correlogram	Коррелограмма
 Scatterplots	Диаграммы рассеяния
 Analytic (closed-form where supported)	Аналитические (формулы в закрытой форме, где возможно)
 Percentile bootstrap (any method)	Перцентильный бутстрэп (любой метод)
-Equivalence margin (TOST)	Граница эквивалентности (TOST)
+Negligible-correlation margin (TOST)	Граница пренебрежимо малой корреляции (TOST)
 Tests evidence for absence of correlation (|r| &lt; Δ). Analytic only — currently covers Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, and Goodman-Kruskal γ.	Проверяет свидетельства в пользу отсутствия корреляции (|r| &lt; Δ). Только аналитически — в настоящий момент поддерживает Пирсона, Спирмена, Кендалла, точечно-бисериальный, бисериальный, полисериальный, полихорический, тетрахорический, D Сомерса и γ Гудмана-Краскела.
 P-value display	Отображение p-значений
 Separate p-value table	Отдельная таблица
@@ -1413,6 +1554,7 @@ No significant correlations with current settings	Нет значимых кор
 Insufficient data for scatterplot	Недостаточно данных для диаграммы рассеяния
 Association: 	Связь: 
 Correlation: 	Корреляция: 
+max	макс
 Comparison group variable has fewer than 2 groups; nothing to compare.	Группирующая переменная содержит менее 2 групп; сравнивать нечего.
 Computing correlations for group {group}	Вычисление корреляций для группы {group}
 Bootstrap for group {group} (asymmetric — both directions)	Бутстрэп для группы {group} (асимметричный — обе стороны)
@@ -1431,6 +1573,15 @@ No appropriate variables for this correlation method.	Нет подходящи�
 Calculating correlations	Вычисление корреляций
 This comparison structure requires a Compare-across variable.	Эта структура сравнения требует переменной «Сравнить по».
 An error occurred while running the correlation analysis:	Произошла ошибка при выполнении корреляционного анализа:
+Checking assumptions	Проверка допущений
+Assumption checks are not available for this method.	Проверка допущений недоступна для этого метода.
+An error occurred while checking correlation assumptions:	Произошла ошибка при проверке допущений корреляции:
+heavy ties — use exact p-values	много связей — используйте точные p-значения
+{method}: {checks} not met	{method}: нарушены допущения ({checks})
+{method}: sparse cells, {fix}	{method}: разреженные ячейки, {fix}
+primary	основной
+underlying bivariate normality rejected — polychoric/polyserial estimates may be biased	латентная двумерная нормальность отвергнута — оценки полихорической/полисериальной корреляции могут быть смещены
+dependence the chosen measure misses — consider distance correlation, mutual information, or Hoeffding's D	зависимость, которую выбранная мера не улавливает — рассмотрите дистанционную корреляцию, взаимную информацию или D Хёффдинга
 Significant very strong positive correlation	Значимая очень сильная положительная корреляция
 Significant very strong negative correlation	Значимая очень сильная отрицательная корреляция
 Significant very strong correlation	Значимая очень сильная корреляция
@@ -1525,12 +1676,50 @@ Semi-partial: variable 2 residualized on {covariates}	Получастная: и
 Partial: both variables residualized on {covariates}	Частная: из обеих переменных удалено влияние ({covariates})
 Correlation analysis - {methodName}	Корреляционный анализ — {methodName}
 Correlation	Корреляция
+Marginal normality (Shapiro-Wilk)	Маргинальная нормальность (Шапиро–Уилк)
+bivariate normality	двумерная нормальность
+linearity	линейность
+homoscedasticity	гомоскедастичность
+influential points	влиятельные точки
+Prefer Spearman/Kendall	Предпочесть Спирмена/Кендалла
+Pearson appropriate	Пирсон подходит
+Pair	Пара
+Bivariate normality	Двумерная нормальность
+Linearity (RESET)	Линейность (RESET)
+Homoscedasticity (Breusch-Pagan)	Гомоскедастичность (Бройш–Паган)
+Influential points (Cook's D)	Влиятельные точки (D Кука)
+Influential count (Cook's D > 1)	Число влиятельных точек (D Кука > 1)
+Borderline / high-leverage	Пограничные / высокий рычаг
+Recommendation	Рекомендация
+Per-pair diagnostics	Диагностика по парам
+Correlation assumptions	Допущения корреляции
+Distinct values	Уникальных значений
+Tied fraction	Доля связей
+Max single-value share	Макс. доля одного значения
+Heavy ties	Много связей
+Tie burden	Связи (совпадающие значения)
+Heavy ties detected (tied fraction above {threshold} for at least one variable). Prefer exact or permutation-based p-values — the asymptotic approximations these rank methods use assume few ties.	Обнаружено много связей (доля связей превышает {threshold} хотя бы для одной переменной). Предпочтительны точные или перестановочные p-значения — асимптотические приближения, используемые этими ранговыми методами, предполагают малое число связей.
+Tie burden - {methodName}	Связи (совпадающие значения) - {methodName}
+Use Fisher's exact test	Использовать точный критерий Фишера
+Use Monte-Carlo or Fisher–Freeman–Halton	Использовать Монте-Карло или Фишера–Фримена–Холтона
+χ² approximation adequate	χ²-приближение приемлемо
+Table size (R × C)	Размер таблицы (R × C)
+Min expected count	Мин. ожидаемая частота
+Cells with expected < 5	Ячейки с ожидаемой < 5
+Adequate expected counts	Достаточные ожидаемые частоты
+Latent bivariate normality	Латентная двумерная нормальность
+Monotonic dependence (dCor)	Монотонная зависимость (dCor)
+Suitable methods	Подходящие методы
+Per-pair method suitability	Применимость методов по парам
+Expected cell counts (Cochran's rule)	Ожидаемые частоты в ячейках (правило Кокрена)
+Expected cell counts - {methodName}	Ожидаемые частоты в ячейках - {methodName}
+Expected cell counts	Ожидаемые частоты в ячейках
 Adjusted p-value matrix	Матрица скорректированных p-значений
 p-value matrix	Матрица p-значений
 Method	Метод
 Coefficient	Коэффициент
-p (eq)	p (экв.)
-p (eq, adj)	p (экв., скорр.)
+p (Δ)	p (Δ)
+p (Δ, adj)	p (Δ, скорр.)
 MI	ИМ
 H(var₁)	H(перем₁)
 H(var₂)	H(перем₂)
@@ -1544,6 +1733,10 @@ Force-directed graph - {methodName}	Силовой граф — {methodName}
 Scatterplots - {methodName}	Диаграммы рассеяния — {methodName}
 Grouped scatterplots - {methodName}	Сгруппированные диаграммы рассеяния — {methodName}
 Grouped scatterplots	Сгруппированные диаграммы рассеяния
+Comparator variables	Сравниваемые переменные
+Anchored on {var}	Якорная переменная: {var}
+Anchor-overlay scatterplots - {methodName}	Совмещённые диаграммы рассеяния — {methodName}
+Anchor-overlay scatterplots	Совмещённые диаграммы рассеяния
 Correlogram - {methodName}	Коррелограмма — {methodName}
 
 # === directional-view ===
@@ -1664,7 +1857,6 @@ Single measures	Единичные измерения
 Average measures	Усреднённые измерения
 Cohen's / Fleiss' kappa (κ)	Каппа Коэна / Флейса (κ)
 Krippendorff's alpha	Альфа Криппендорфа
-Kendall's W	W Кендалла
 Pearson correlation (test-retest)	Корреляция Пирсона (тест-ретест)
 Spearman correlation (test-retest)	Корреляция Спирмена (тест-ретест)
 SEM & SDC	SEM и SDC
@@ -1974,7 +2166,6 @@ Differential item functioning (DIF)	Дифференциальное функц�
 Anchor items (held invariant across groups): {items}	Якорные пункты (инвариантны между группами): {items}
 No anchor items were specified. Every item is tested against a free-mean / free-variance focal-group baseline (Woods 2009). Identification rests on the cross-group constraints — consider designating known invariant items as anchors for stronger DIF inference.	Якорные пункты не заданы. Каждый пункт проверяется относительно базовой модели со свободными средним и дисперсией в фокальной группе (Вудс, 2009). Идентификация модели опирается на межгрупповые ограничения — для более надёжных выводов о ДФП имеет смысл указать заведомо инвариантные пункты в качестве якорей.
 Standardized factor loadings from rotated solution. Values > 0.3 indicate meaningful loading.	Стандартизованные факторные нагрузки из вращённого решения. Значения > 0.3 — содержательная нагрузка.
-Factor	Фактор
 Expected total score when varying one dimension while holding others at θ = 0.	Ожидаемый суммарный балл при изменении одного измерения и фиксации остальных на θ = 0.
 Dimensions	Измерения
 Structure	Структура
@@ -1993,6 +2184,7 @@ Moderately targeted	Умеренно нацелен
 Test too easy for sample	Тест слишком лёгкий для выборки
 Test too hard for sample	Тест слишком трудный для выборки
 At least two numerical variables are required for reliability analysis.	Для анализа надёжности необходимо не менее двух числовых переменных.
+Please select at least one reliability metric to calculate.	Пожалуйста, выберите как минимум одну метрику надёжности для расчёта.
 Calculating reliability...	Вычисление надёжности...
 An error occurred while running the reliability analysis: 	Произошла ошибка при выполнении анализа надёжности: 
 Calculating reliability metrics...	Вычисление метрик надёжности...
@@ -2032,6 +2224,7 @@ Unacceptable	Неприемлемо
 Excellent (possible redundancy)	Отлично (возможная избыточность)
 McDonald's ω (total)	ω Макдональда (полная)
 Mean split-half (Brown-corrected)	Среднее по разбиениям пополам (с поправкой Брауна)
+Guttman's lambda 4 (λ4)	Лямбда Гуттмана 4 (λ4)
 Guttman's lambda 6 (λ6)	Лямбда Гуттмана 6 (λ6)
 Failed to converge	Не удалось сойтись
 Number of items	Количество пунктов
@@ -2510,6 +2703,7 @@ Model selection uncertainty (entropy):	Неопределённость выбо
 Effective number of models:	Эффективное число моделей:
 vs.	vs.
 Predictors:	Предикторы:
+Covariates:	Ковариаты:
 Predictors in model:	Предикторы в модели:
 Non-zero coefficients:	Ненулевые коэффициенты:
 Reference outcome:	Референтный исход:
@@ -2723,14 +2917,13 @@ Pearson χ² p-value	p-значение χ² Пирсона
 Dispersion parameter	Параметр дисперсии
 Dispersion interpretation	Интерпретация дисперсии
 ROC analysis failed: {message}	Не удалось выполнить ROC-анализ: {message}
+Brier	Брайер
 CV AUC	КВ AUC
 CV {level}% CI	КВ {level}% ДИ
 CV Brier	КВ Брайер
 N (positive / negative)	N (положительные / отрицательные)
 Cross-validated AUC unavailable: {message}	Перекрёстно-проверенный AUC недоступен: {message}
 Out-of-sample estimate: stratified {k}-fold CV repeated {reps}/{total} times on {n} cases; CI reflects across-repetition variability.	Внепрогнозная оценка: стратифицированная {k}-блочная CV, повторённая {reps}/{total} раз на {n} наблюдениях; доверительный интервал отражает изменчивость между повторениями.
-Missing a positive	Пропуск положительного
-False alarm	Ложная тревога
 Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown.	Порог оптимизирован по взвешенному по стоимости J Юдена — показаны оба направления асимметрии.
 Macro-average	Макро-среднее
 Micro-average	Микро-среднее
@@ -2756,6 +2949,7 @@ ROC curves (per cutpoint): {name}	ROC-кривые (по точкам отсеч
 Residual	Остаток
 Type II sums of squares: each term's marginal contribution given all other terms in the model.	Суммы квадратов типа II: маржинальный вклад каждого члена при условии всех остальных членов в модели.
 Zero-order (r)	Нулевого порядка (r)
+Partial	Частичные
 Part (sr)	Частная (sr)
 Negligible	Пренебрежимый
 Weak positive	Слабая положительная
@@ -2986,7 +3180,6 @@ Reference: numeric covariates at their mean, factor covariates at their dummy-co
 Cox regression: {timeVar} ~ {covs} + strata({groupVar}) (event: {eventVar})	Регрессия Кокса: {timeVar} ~ {covs} + strata({groupVar}) (событие: {eventVar})
 Cox regression: {timeVar} ~ {covs} (event: {eventVar})	Регрессия Кокса: {timeVar} ~ {covs} (событие: {eventVar})
 Cox proportional hazards	Пропорциональные риски Кокса
-Distribution	Распределение
 {groupVar} is included as a covariate (one term per non-reference level), not as a stratifying variable. Parametric AFT/PH families share a single baseline.	Переменная {groupVar} включена в качестве ковариаты (один термин на уровень, отличный от референсного), а не в качестве стратифицирующей переменной. Параметрические AFT/PH модели имеют единую базовую кривую.
 AIC ranking	Рейтинг по AIC
 Fit	Сходимость
@@ -3714,7 +3907,6 @@ Error running invariance testing: 	Ошибка при проверке инва
 0 (ref)	0 (реф.)
 Model {n}	Модель {n}
 Error comparing models: 	Ошибка сравнения моделей: 
-Could not compute	Не удалось вычислить
 Lavaan could not parse the text the editor produced.	Lavaan не смог разобрать текст, сформированный редактором.
 Expected:	Ожидалось:
 Got:	Получено:
@@ -3749,6 +3941,7 @@ Indicators:	Индикаторы:
 Estimator:	Метод оценки:
 (bootstrap, {reps} replications)	(бутстрэп, {reps} повторений)
 Free parameters:	Свободные параметры:
+Error:	Ошибка:
 Suggestions:	Рекомендации:
 Warning:	Предупреждение:
 Model did not converge. Results may be unreliable.	Модель не сошлась. Результаты могут быть ненадёжными.
@@ -3849,7 +4042,6 @@ Scalar (strong)	Скалярная (сильная)
 Strict	Строгая
 Did not converge	Не сошлась
 Baseline	Базовая
-Level	Уровень
 Verdict	Заключение
 Invariance comparison	Сравнение инвариантности
 Metric invariance holds — factor loadings are equivalent across groups.	Метрическая инвариантность подтверждена — факторные нагрузки эквивалентны между группами.
@@ -3913,7 +4105,6 @@ Please contact the developer.	Обратитесь к разработчику.
 Plan your study with power analysis, effect size conversion, and more.	Планируйте исследование с помощью анализа мощности, конвертации размера эффекта и других инструментов.
 Power analysis	Анализ мощности
 Test type	Тип критерия
-One-sample t-test	Одновыборочный t-критерий
 Pearson correlation	Корреляция Пирсона
 Multiple regression	Множественная регрессия
 Chi-square goodness of fit	Хи-квадрат: критерий согласия
