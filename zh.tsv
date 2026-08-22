@@ -451,7 +451,7 @@ Join columns
 Main sheet	
 Key column for row matching	
 Add key	
-No key selected — rows will be matched by position	
+No key selected – rows will be matched by position	
 Add grouping variable	
 Column name	
 Sheet labels	
@@ -674,7 +674,7 @@ Select at least one sheet
 Selected sheets contain no data	
 Columns were reordered to match across sheets.	
 Key values are not unique in the main sheet. Consider adding another key column.	
-Sheets have different row counts. Join is positional — rows must be pre-aligned.	
+Sheets have different row counts. Join is positional – rows must be pre-aligned.	
 
 # === distribution-view ===
 Shapiro-Wilk test	
@@ -847,7 +847,7 @@ Non-finite result
 Normality assumption violated	
 Multivariate normality violated	
 Homogeneity of variance violated	
-Sphericity violated — consider Greenhouse-Geisser correction	
+Sphericity violated – consider Greenhouse-Geisser correction	
 Covariance matrices not homogeneous	
 Dependent variables are multicollinear (|r| > 0.90)	
 Homogeneity of regression slopes violated	
@@ -1177,7 +1177,7 @@ Multicollinearity
 {count} pair(s) with |r| > 0.90	
 No multicollinearity detected (max |r| = {r})	
 Homogeneity of regression slopes	
-{count} interaction(s) significant — slopes differ across groups	
+{count} interaction(s) significant – slopes differ across groups	
 Regression slopes are homogeneous	
 Linearity (Covariate–DV)	
 {count} covariate-DV pair(s) show no linear relationship	
@@ -1207,7 +1207,7 @@ Metric
 Box's M test	
 Variable 1	
 Variable 2	
-Multicollinearity — flagged pairs (|r| > 0.90)	
+Multicollinearity – flagged pairs (|r| > 0.90)	
 DV	
 F (interaction)	
 Linearity (covariate–dv relationship)	
@@ -1224,7 +1224,7 @@ Worse to misclassify
 Accuracy	
 Threshold optimized by Youden's J (max sensitivity + specificity − 1).	
 Threshold optimized by closest point to (0, 1).	
-Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown per row.	
+Threshold optimized by cost-weighted Youden's J – both directions of asymmetric cost are shown per row.	
 Δ AUC	
 Please select at least two variables for analysis.	
 No dependent variables available. Please adjust your variable selection.	
@@ -1350,8 +1350,8 @@ Hide redundant values
 Calculating {var1} - {var2}	
 No significant correlations with current settings	
 Insufficient data for scatterplot	
-Association: 	
-Correlation: 	
+Association:	
+Correlation:	
 No p-value adjustment method selected. The more tests you run on the same data, the more likely you are to encounter a false discovery.	
 No appropriate variables for this correlation method.	
 Calculating correlations	
@@ -1569,7 +1569,7 @@ Model type
 Auto (detect from data)	
 Estimation method	
 EM	
-EM and QMCEM are very slow at 3+ dimensions and may not converge. MHRM is recommended — it is much faster and produces standard errors for item parameters.	
+EM and QMCEM are very slow at 3+ dimensions and may not converge. MHRM is recommended – it is much faster and produces standard errors for item parameters.	
 Scoring method	
 EAP	
 WLE	
@@ -1685,9 +1685,9 @@ Invalid syntax: {line}
 Item index {idx} out of range (1–{max})	
 Unknown variable: {name}	
 At least two factors are required.	
-Non-numeric variable — IRT requires numeric items.	
-Too many unique values ({count}) — does not appear to be a categorical item. Set variable type to ordinal if this is an ordered scale.	
-Non-integer values detected — not suitable for IRT. Set variable type to ordinal if this is an ordered scale.	
+Non-numeric variable – IRT requires numeric items.	
+Too many unique values ({count}) – does not appear to be a categorical item. Set variable type to ordinal if this is an ordered scale.	
+Non-integer values detected – not suitable for IRT. Set variable type to ordinal if this is an ordered scale.	
 At least two suitable items are required for IRT analysis.	
 At least 2 dimensions are required for exploratory MIRT.	
 At least two factors must be defined for confirmatory MIRT.	
@@ -1749,7 +1749,7 @@ Violations
 Max violation	
 z(max)	
 Items with monotonicity violations may not conform to a nonparametric IRT model.	
-No significant IIO violations detected — items maintain consistent ordering across θ.	
+No significant IIO violations detected – items maintain consistent ordering across θ.	
 H_T coefficient: {value}. Values ≥ 0.3 support IIO.	
 Invariant item ordering	
 No significant local dependence detected (rest-score method).	
@@ -1761,8 +1761,8 @@ Molenaar–Sijtsma (ρ)
 Unselected	
 Scale	
 {count} item(s) not selected into any scale at H ≥ {lb}. These items may not fit the scale.	
-All items selected into a single scale at H ≥ {lb} — supports unidimensionality.	
-Items distributed across {count} scales at H ≥ {lb} — consider multidimensional structure.	
+All items selected into a single scale at H ≥ {lb} – supports unidimensionality.	
+Items distributed across {count} scales at H ≥ {lb} – consider multidimensional structure.	
 Unscalable	
 Log-likelihood	
 Index	
@@ -1790,12 +1790,12 @@ Guessing (c)
 Upper asymptote (u)	
 Infit MNSQ	
 Outfit MNSQ	
-MDISC: multidimensional discrimination (vector length of a-parameters). Mean location: −mean(intercepts) / MDISC — an approximate summary for polytomous items, not a standard IRT quantity.	
+MDISC: multidimensional discrimination (vector length of a-parameters). Mean location: −mean(intercepts) / MDISC – an approximate summary for polytomous items, not a standard IRT quantity.	
 MDISC: multidimensional discrimination (vector length of a-parameters). MDIFF: multidimensional difficulty (−intercept / MDISC).	
 Discrimination: > 1.0 high, 0.65–1.0 moderate, < 0.65 low. Difficulty: higher values = harder items.	
 Infit/Outfit MNSQ: 0.5–1.5 productive for measurement. Values > 2.0 suggest degrading measurement.	
 Infit/Outfit MNSQ: 0.5–1.5 band is a Rasch convention shown for reference. With varying slopes, these fit statistics have different distributional properties.	
-Standard errors not available — EM/QMCEM estimation does not compute the information matrix for multidimensional models. Use MHRM for standard errors.	
+Standard errors not available – EM/QMCEM estimation does not compute the information matrix for multidimensional models. Use MHRM for standard errors.	
 No item pairs flagged by Q3 (|Q3| > 0.2, |Q3*| > 0.2) or LD-X² (p < .05). Local independence assumption is supported.	
 Item 1	
 Item 2	
@@ -1816,7 +1816,7 @@ Persons with outfit > 1.5
 Criterion	
 Outfit > 1.5 cutoff is a Rasch convention shown for reference. With non-Rasch models, Zh is the more reliable person-fit indicator.	
 Person fit	
-{n} of {total} respondents excluded from reliability computation (θ or SE non-finite — typically extreme response patterns under ML scoring). Consider EAP or MAP scoring for bounded estimates.	
+{n} of {total} respondents excluded from reliability computation (θ or SE non-finite – typically extreme response patterns under ML scoring). Consider EAP or MAP scoring for bounded estimates.	
 Separation	
 Targeting	
 Reliability and separation	
@@ -2000,7 +2000,7 @@ lavaan syntax
 First residual covariance variable	
 Second residual covariance variable	
 Finalizing...	
-Fitting CFA model (bootstrapped — may take a while)	
+Fitting CFA model (bootstrapped – may take a while)	
 Fitting CFA model	
 Extracting results	
 Extracting parameter estimates	
@@ -2036,7 +2036,7 @@ No factors defined
 Factor {name} needs at least 2 indicators (has {count})	
 Second-order factor {name} needs at least 2 first-order factors (has {count})	
 Model is under-identified (df = {df})	
-Model is just-identified (df = 0) — fit indices may not be meaningful	
+Model is just-identified (df = 0) – fit indices may not be meaningful	
 Model validation failed:	
 Running CFA...	
 Error running CFA: 	
@@ -2124,7 +2124,7 @@ Mahalanobis outlier detection
 Cases with Mahalanobis distance exceeding the chi-square critical value (p < .001) may be multivariate outliers. Inspect these cases before proceeding.	
 Mahal. Distance	
 Outlier cases	
-High correlations (r > 0.85) — {count} pairs	
+High correlations (r > 0.85) – {count} pairs	
 Non-normal variables	
 Low variance variables	
 User-marked + detected	
@@ -2156,9 +2156,9 @@ Measurement invariance testing ({count} freed)
 Measurement invariance testing	
 Invariance	
 With smaller group sizes, practical fit criteria (ΔCFI ≤ .01, ΔRMSEA ≤ .015) are generally more reliable than the χ² difference test, which tends to be oversensitive.	
-Metric invariance — parameter differences	
-Scalar invariance — parameter differences	
-Strict invariance — parameter differences	
+Metric invariance – parameter differences	
+Scalar invariance – parameter differences	
+Strict invariance – parameter differences	
 Re-run with freed parameters	
 Mixed	
 Configural	
@@ -2170,18 +2170,18 @@ Baseline
 Level	
 Verdict	
 Invariance comparison	
-Metric invariance holds — factor loadings are equivalent across groups.	
+Metric invariance holds – factor loadings are equivalent across groups.	
 Metric invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
 Metric invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
-Scalar invariance holds — intercepts are equivalent, allowing latent mean comparisons across groups.	
+Scalar invariance holds – intercepts are equivalent, allowing latent mean comparisons across groups.	
 Scalar invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
 Scalar invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
-Strict invariance holds — residual variances are equivalent across groups.	
+Strict invariance holds – residual variances are equivalent across groups.	
 Strict invariance was not supported. Consider freeing non-invariant parameters (partial invariance).	
 Strict invariance: criteria disagree. Review practical fit criteria (ΔCFI, ΔRMSEA) alongside the χ² difference test.	
 Parameter	
 Mean Δ	
-Scalar invariance was not established — latent mean comparisons should be interpreted with caution.	
+Scalar invariance was not established – latent mean comparisons should be interpreted with caution.	
 {group} (Est.)	
 Latent means are estimated from the scalar invariance model. The first group serves as the reference (means fixed to 0).	
 Latent mean differences	
@@ -2215,7 +2215,7 @@ No substantial modification indices found.
 Fit indices comparison	
 Chi-square difference test is valid for nested models only. A significant result indicates the more constrained model fits significantly worse.	
 Chi-square difference tests	
-No nested model pairs detected. Compare using information criteria (AIC, BIC) — lower values indicate better fit.	
+No nested model pairs detected. Compare using information criteria (AIC, BIC) – lower values indicate better fit.	
 Model comparison notes	
 Please enter lavaan syntax first.	
 No factor definitions (=~) found in syntax.	
@@ -2816,14 +2816,14 @@ Cross-validated AUC unavailable: {message}
 Out-of-sample estimate: stratified {k}-fold CV repeated {reps}/{total} times on {n} cases; CI reflects across-repetition variability.	
 Missing a positive	
 False alarm	
-Threshold optimized by cost-weighted Youden's J — both directions of asymmetric cost are shown.	
+Threshold optimized by cost-weighted Youden's J – both directions of asymmetric cost are shown.	
 Macro-average	
 Micro-average	
 Hand-Till M (multiclass AUC)	
 Class / aggregate	
 Multiclass Brier score: {brier} (cross-validated: {cvBrier}). Lower is better.	
 Multiclass Brier score: {brier}. Lower is better.	
-Per-class AUC measures one-vs-rest discrimination quality. Actual classification at predict time uses argmax across all class probabilities — see Goodness of fit for the argmax confusion matrix.	
+Per-class AUC measures one-vs-rest discrimination quality. Actual classification at predict time uses argmax across all class probabilities – see Goodness of fit for the argmax confusion matrix.	
 Class	
 Per-class threshold optimized by Youden's J (max sensitivity + specificity − 1).	
 Per-class threshold optimized by closest point to (0, 1).	
@@ -2833,7 +2833,7 @@ Kendall's tau-c
 Cutpoint / summary	
 AUC / value	
 CV AUC / value	
-Per-cutpoint AUC measures discrimination at each ordering threshold. Actual classification at predict time uses argmax across class probabilities — see Goodness of fit for the argmax confusion matrix.	
+Per-cutpoint AUC measures discrimination at each ordering threshold. Actual classification at predict time uses argmax across class probabilities – see Goodness of fit for the argmax confusion matrix.	
 Cutpoint	
 Per-cutpoint threshold optimized by Youden's J (max sensitivity + specificity − 1).	
 Per-cutpoint threshold optimized by closest point to (0, 1).	
@@ -2991,7 +2991,7 @@ Please select an event variable
 Time variable must be numeric: {var}	
 Mark at least one level of the event variable as 'Event'	
 Entry-time variable must be numeric: {var}	
-Too few events ({events}) for {params} {method} parameters — the fit will be singular. Reduce the number of covariates or collect more data.	
+Too few events ({events}) for {params} {method} parameters – the fit will be singular. Reduce the number of covariates or collect more data.	
 Low events-per-variable ratio ({events} events / {params} parameters) for {method}. Results may be unstable; ≥ 10 EPV is recommended.	
 Interval censoring for Cox regression is not yet available	
 Cox regression	
@@ -3012,7 +3012,7 @@ cause-specific Cox
 Fitting competing-risks regression...	
 Fit did not converge	
 Event variable has no observed values	
-Event variable has {count} distinct values — too many for role assignment (max {max}). Pick a discrete event indicator or recode the variable.	
+Event variable has {count} distinct values – too many for role assignment (max {max}). Pick a discrete event indicator or recode the variable.	
 Censored	
 Event	
 Event (cause 2)	
@@ -3036,7 +3036,7 @@ Peto-Peto
 Fleming-Harrington	
 Group comparison	
 χ²	
-Log-rank family tests do not support left truncation — the entry-time variable was ignored when computing the test (curves still account for it).	
+Log-rank family tests do not support left truncation – the entry-time variable was ignored when computing the test (curves still account for it).	
 Turnbull NPMLE (interval-censored)	
 Survival (Fleming-Harrington)	
 Kaplan-Meier survival	
@@ -3234,10 +3234,10 @@ Running forecast horse-race
 Error running forecast: 	
 Rolling-origin CV: {a} of {n} origins × horizon {h}	
 Rolling-origin CV: {n} origins × horizon {h}	
-Rolling-origin CV requested but series too short — skipped	
+Rolling-origin CV requested but series too short – skipped	
 Holdout: {n} observations	
-Holdout requested but series too short — skipped	
-No validation — methods listed in original order	
+Holdout requested but series too short – skipped	
+No validation – methods listed in original order	
 Enable at least one of Periodogram or Breakpoints	
 Running spectral analysis	
 Error running spectral analysis: 	
@@ -3248,21 +3248,21 @@ MAE (holdout)
 Exploration	
 Smoothing	
 Forecasting	
-Sub-hourly spacing — frequency = 60 (per-hour cycle)	
-Hourly spacing — frequency = 24 (per-day cycle)	
-Daily spacing — frequency = 7 (weekly cycle)	
-Weekly spacing — frequency = 52 (yearly cycle)	
-Monthly spacing — frequency = 12 (yearly cycle)	
-Quarterly spacing — frequency = 4 (yearly cycle)	
-Yearly spacing — frequency = 1 (no shorter cycle)	
+Sub-hourly spacing – frequency = 60 (per-hour cycle)	
+Hourly spacing – frequency = 24 (per-day cycle)	
+Daily spacing – frequency = 7 (weekly cycle)	
+Weekly spacing – frequency = 52 (yearly cycle)	
+Monthly spacing – frequency = 12 (yearly cycle)	
+Quarterly spacing – frequency = 4 (yearly cycle)	
+Yearly spacing – frequency = 1 (no shorter cycle)	
 Using frequency override = {f}.	
 Time variable could not be parsed as numeric or date.	
-Numeric time variable — frequency = 1 (no seasonality assumed)	
+Numeric time variable – frequency = 1 (no seasonality assumed)	
 Using frequency override = {f} (auto-detected: {auto}).	
-Strong seasonal pattern — try SARIMA or Holt-Winters.	
-Non-stationary — try ARIMA with d ≥ 1.	
-Stationary — try exponential smoothing or stationary ARMA.	
-Series is short (< 30 observations) — favour naive baselines and watch for overfitting.	
+Strong seasonal pattern – try SARIMA or Holt-Winters.	
+Non-stationary – try ARIMA with d ≥ 1.	
+Stationary – try exponential smoothing or stationary ARMA.	
+Series is short (< 30 observations) – favour naive baselines and watch for overfitting.	
 Checking {n} observations across {s} series at frequency {f} ({g} groups).	
 Checking {n} observations across {s} series at frequency {f}.	
 Frequency used	
@@ -3284,16 +3284,16 @@ Replace {count} outlier(s) in this series before modelling?
 Time series data fitness	
 Data fitness	
 STL	
-Decomposition skipped — disabled in options.	
-Decomposition skipped — frequency must be greater than 1.	
-Decomposition skipped — series too short for the chosen frequency (need ≥ 2 × period observations).	
+Decomposition skipped – disabled in options.	
+Decomposition skipped – frequency must be greater than 1.	
+Decomposition skipped – series too short for the chosen frequency (need ≥ 2 × period observations).	
 Multiplicative decomposition requires strictly positive values; skipped.	
-Decomposition failed — the series may not support the requested method.	
+Decomposition failed – the series may not support the requested method.	
 Series is stationary	
 Series is non-stationary	
-Seasonality detection skipped — series too short (need ≥ 8 observations).	
-Seasonality detection failed — periodogram could not be computed.	
-Seasonality detection skipped — no usable spectral ordinates.	
+Seasonality detection skipped – series too short (need ≥ 8 observations).	
+Seasonality detection failed – periodogram could not be computed.	
+Seasonality detection skipped – no usable spectral ordinates.	
 uncorrected	
 Stationary at α = 0.05	
 Non-stationary at α = 0.05	
@@ -3301,15 +3301,15 @@ Inconclusive
 Exploring {n} observations across {s} series at frequency {f} ({g} groups).	
 Exploring {n} observations across {s} series at frequency {f}.	
 {count} missing value(s) interpolated in {name} before ACF / PACF and stationarity tests.	
-Interpolation failed for {name} — stationarity and Ljung-Box tests skipped.	
+Interpolation failed for {name} – stationarity and Ljung-Box tests skipped.	
 ACF / PACF: {name}	
 Decomposition ({method}): {name}	
 Decomposition: {name}	
 Null hypothesis	
 Conclusion	
 Stationarity tests: {name}	
-Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} — series shows serial dependence.	
-Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} — no significant autocorrelation.	
+Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} – series shows serial dependence.	
+Ljung-Box on raw {name}: Q({lag}) = {stat}, p = {p} – no significant autocorrelation.	
 Decomposition strength for {name}: trend = {trend}, seasonal = {seasonal} (0–1, higher = stronger).	
 No additional significant seasonal periods detected for {name} at α = {alpha} ({adjustment}).	
 Period (obs)	
@@ -3335,7 +3335,7 @@ Fitting auto.arima on {n} observations across {s} series at frequency {f}.
 Fitting manual ARIMA on {n} observations across {s} series at frequency {f} ({g} groups).	
 Fitting manual ARIMA on {n} observations across {s} series at frequency {f}.	
 ARIMA: {name}	
-ARIMA: {name} — {order}	
+ARIMA: {name} – {order}	
 σ² (residual variance)	
 z	
 Neighbouring orders (information criteria)	
@@ -3359,12 +3359,12 @@ Forecasting {h} periods on {n} observations across {s} series at frequency {f} (
 Forecasting {h} periods on {n} observations across {s} series at frequency {f}.	
 Forecast: {name}	
 No forecast methods could be fit on this series.	
-Periodogram skipped — disabled in options.	
-Periodogram skipped — series too short (need ≥ 8 observations).	
+Periodogram skipped – disabled in options.	
+Periodogram skipped – series too short (need ≥ 8 observations).	
 Periodogram failed on this series.	
-Breakpoints skipped — disabled in options.	
-Breakpoints skipped — strucchange package could not be loaded.	
-Breakpoints skipped — series too short (need ≥ 20 observations).	
+Breakpoints skipped – disabled in options.	
+Breakpoints skipped – strucchange package could not be loaded.	
+Breakpoints skipped – series too short (need ≥ 20 observations).	
 Breakpoint search failed on this series.	
 Periodogram skipped.	
 Periodogram: {name}	
@@ -3373,7 +3373,7 @@ Frequency (cycles/obs)
 Spectral power	
 Breakpoints skipped.	
 Breakpoints: {name}	
-No breakpoints detected — series mean is stable.	
+No breakpoints detected – series mean is stable.	
 Row	
 Mean before	
 Mean after	
