@@ -2173,6 +2173,7 @@ Somers' D	D Сомерса
 Goodman & Kruskal's γ	γ Гудмана и Краскала
 Point-biserial	Точечно-бисериальный
 Biserial	Бисериальный
+Correlation ratio (ε²)	Корреляционное отношение (ε²)
 Correlation ratio (η²)	Корреляционное отношение (η²)
 Normalized mutual information	Нормализованная взаимная информация
 Adjusted mutual information	Скорректированная взаимная информация
@@ -2181,6 +2182,8 @@ Theil's U	U Тейла
 Hoeffding's D	D Хёффдинга
 Chatterjee's ξ	ξ Чаттерджи
 Distance correlation	Дистанционная корреляция
+Mixed/auto · observed scores (Pearson, Spearman, point-biserial, φ, Cramér's V, ε²)	Смешанная/авто · наблюдаемые оценки (Пирсон, Спирмен, точечно-бисериальная, φ, V Крамера, ε²)
+Mixed/auto · latent variables (Pearson, polychoric, polyserial, biserial, tetrachoric, Cramér's V, ε²)	Смешанная/авто · латентные переменные (Пирсон, полихорическая, полисериальная, бисериальная, тетрахорическая, V Крамера, ε²)
 Mixed/auto (observed scores)	Смешанная/авто (наблюдаемые оценки)
 Mixed/auto (latent · hetcor)	Смешанная/авто (латентные · hetcor)
 Mixed/auto (automatically selects best method)	Смешанный/авто (автоматический выбор метода)
@@ -2190,8 +2193,17 @@ P-value method	Метод расчёта p-значения
 Analytic χ² (fast, tests independence)	Аналитический χ² (быстро, проверяет независимость)
 Analytic chi² (fast, tests independence)	Аналитический хи² (быстро, проверяет независимость)
 Permutation (slower, tests the reported coefficient)	Перестановочный (медленнее, проверяет указанный коэффициент)
+Discretization bins	Интервалы дискретизации
+Cube root of N (conservative)	Кубический корень из N (консервативно)
+Rice rule (twice the cube root of N)	Правило Райса (удвоенный кубический корень из N)
+Sturges' rule (log₂ N + 1)	Правило Стёрджеса (log₂ N + 1)
+Fixed count	Фиксированное число
+Bins per variable	Интервалов на переменную
+Applies to continuous variables only – a variable with few distinct values is coded level for level. Finer grids resolve more structure but sparsify the joint table, which inflates the coefficient itself.	Применяется только к непрерывным переменным – переменная с малым числом уникальных значений кодируется уровень в уровень. Более мелкая сетка выявляет больше структуры, но разрежает совместную таблицу, что завышает сам коэффициент.
 Permutation (slower, correctly sized)	Перестановочный (медленнее, с корректным уровнем значимости)
 Analytic t (fast, anti-conservative in the tail)	Аналитический t (быстро, антиконсервативен в хвосте)
+Analytic (fast, approximate under ties, non-normality or small samples)	Аналитический (быстро, приближённый при связях, ненормальности или малых выборках)
+Permutation (slower, exact independence test)	Перестановочный (медленнее, точный критерий независимости)
 Analytic (fast, approximate under heavy ties)	Аналитический (быстро, приближённый при множестве связей)
 Permutation (slower, robust to ties)	Перестановочный (медленнее, устойчив к связям)
 Analytic χ² (fast, needs adequate expected counts)	Аналитический χ² (быстро, требует достаточных ожидаемых частот)
@@ -2209,6 +2221,7 @@ Analytic (closed-form where supported)	Аналитические (формул�
 Bias-corrected percentile bootstrap (any method)	Перцентильный бутстрэп с коррекцией смещения (любой метод)
 Percentile bootstrap (any method)	Перцентильный бутстрэп (любой метод)
 Negligible-correlation margin (TOST)	Граница пренебрежимо малой корреляции (TOST)
+Tests evidence for absence of association (coefficient below Δ). Two-sided for the signed coefficients: Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, Goodman &amp; Kruskal's γ, Blomqvist's β, phi coefficient. One-sided for the unsigned measures: ε², Cramér's V, NMI, AMI, Rajski's coherence, Theil's U, Hoeffding's D, Chatterjee's ξ, distance correlation. Also covers any of these chosen automatically under Mixed/auto.	Проверяет свидетельства в пользу отсутствия связи (коэффициент ниже Δ). Двусторонний для знаковых коэффициентов: Пирсона, Спирмена, Кендалла, точечно-бисериального, бисериального, полисериального, полихорического, тетрахорического, D Сомерса, γ Гудмана и Краскала, β Бломквиста, коэффициента фи. Односторонний для беззнаковых мер: ε², V Крамера, NMI, AMI, когерентность Райского, U Тейла, D Хёффдинга, ξ Чаттерджи, дистанционная корреляция. Также поддерживает любой из них, выбранный автоматически в режиме «Смешанная/авто».
 Tests evidence for absence of association (coefficient below Δ). Two-sided for the signed coefficients: Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, Goodman &amp; Kruskal's γ, Blomqvist's β, phi coefficient. One-sided for the unsigned measures: η², Cramér's V, NMI, AMI, Rajski's coherence, Theil's U, Hoeffding's D, Chatterjee's ξ, distance correlation. Also covers any of these chosen automatically under Mixed/auto.	Проверяет свидетельства в пользу отсутствия связи (коэффициент ниже Δ). Двусторонний для знаковых коэффициентов: Пирсона, Спирмена, Кендалла, точечно-бисериального, бисериального, полисериального, полихорического, тетрахорического, D Сомерса, γ Гудмана и Краскала, β Бломквиста, коэффициента фи. Односторонний для беззнаковых мер: η², V Крамера, NMI, AMI, когерентность Райского, U Тейла, D Хёффдинга, ξ Чаттерджи, дистанционная корреляция. Также поддерживает любой из них, выбранный автоматически в режиме «Смешанная/авто».
 Tests evidence for absence of correlation (|r| &lt; Δ). Currently covers Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, Goodman &amp; Kruskal's γ, Blomqvist's β, phi coefficient, Chatterjee's ξ, and any of these chosen automatically under Mixed/auto.	Проверяет свидетельства в пользу отсутствия корреляции (|r| &lt; Δ). В настоящий момент поддерживает Пирсона, Спирмена, Кендалла, точечно-бисериальный, бисериальный, полисериальный, полихорический, тетрахорический, D Сомерса, γ Гудмана и Краскала, β Бломквиста, коэффициент фи, ξ Чаттерджи, а также любой из них, выбранный автоматически в режиме «Смешанная/авто».
 Tests evidence for absence of correlation (|r| &lt; Δ). Currently covers Pearson, Spearman, Kendall, point-biserial, biserial, polyserial, polychoric, tetrachoric, Somers' D, Goodman &amp; Kruskal's γ, Blomqvist's β, phi coefficient, and any of these chosen automatically under Mixed/auto.	Проверяет свидетельства в пользу отсутствия корреляции (|r| &lt; Δ). В настоящий момент поддерживает Пирсона, Спирмена, Кендалла, точечно-бисериальный, бисериальный, полисериальный, полихорический, тетрахорический, D Сомерса, γ Гудмана и Краскала, β Бломквиста, коэффициент фи, а также любой из них, выбранный автоматически в режиме «Смешанная/авто».
@@ -2235,6 +2248,9 @@ Pattern	Тип структуры
 All correlations equal (compound symmetry)	Все корреляции равны (составная симметрия)
 Equal within each row variable	Равны внутри каждой строковой переменной
 Equal within each column variable	Равны внутри каждой столбцовой переменной
+Dependent test	Критерий для зависимых корреляций
+Back-transformed average Fisher z (better under non-normality)	Обратно преобразованное среднее z Фишера (лучше при ненормальности)
+Raw average of the two coefficients (classic)	Простое среднее двух коэффициентов (классический)
 Compare across (variable)	Сравнить по (переменная)
 Signed correlations (−1 to +1)	Знаковые корреляции (−1…+1)
 Unsigned dependence measures (0 to 1)	Беззнаковые меры зависимости (0…1)
@@ -2250,9 +2266,12 @@ Joint	Совместные
 Picked from the data	Выбор по данным
 Pre-specified cell	Заранее заданная ячейка
 Constraint set the joint test evaluates	Набор ограничений, который проверяет совместный критерий
+Which average the covariance of two same-sample correlations is evaluated at	На каком среднем вычисляется ковариация двух корреляций из одной выборки
+Variable "{name}" has {count} unique values - verify it's categorical, not continuous. Each level runs its own correlation batch, so the wait scales with the level count.	Переменная «{name}» имеет {count} уникальных значений – убедитесь, что она категориальная, а не непрерывная. Для каждого уровня выполняется отдельный расчёт корреляций, поэтому время ожидания растёт с числом уровней.
 Calculating {var1} - {var2}	Расчёт {var1} - {var2}
 Computing confidence intervals	Вычисление доверительных интервалов
 Bootstrapping correlations	Бутстрэп корреляций
+No correlations to display	Нет корреляций для отображения
 Checking assumptions for {var}	Проверка допущений для {var}
 No significant correlations with current settings	Нет значимых корреляций при текущих настройках
 Zoom in	Приблизить
@@ -2262,6 +2281,11 @@ Pairs with adjusted p > {alpha} are drawn faded	Пары со скорректи
 Pairs with p > {alpha} are drawn faded	Пары с p > {alpha} показаны приглушённо
 Only pairs with adjusted p ≤ {alpha} are drawn; the rest are omitted	Показаны только пары со скорректированным p ≤ {alpha}; остальные не отображаются
 Only pairs with p ≤ {alpha} are drawn; the rest are omitted	Показаны только пары с p ≤ {alpha}; остальные не отображаются
+Cells with adjusted p > {alpha} are drawn faded and dashed	Ячейки со скорректированным p > {alpha} показаны приглушённо и пунктиром
+Cells with p > {alpha} are drawn faded and dashed	Ячейки с p > {alpha} показаны приглушённо и пунктиром
+Unsigned coefficients have no sign, so every ellipse tilts the same way	У беззнаковых коэффициентов нет знака, поэтому все эллипсы наклонены одинаково
+The ellipse tilts up to the right for a positive coefficient, down for a negative one; unsigned coefficients always tilt up	Эллипс наклонён вправо вверх для положительного коэффициента и вниз для отрицательного; беззнаковые коэффициенты всегда наклонены вверх
+The ellipse tilts up to the right for a positive coefficient, down for a negative one	Эллипс наклонён вправо вверх для положительного коэффициента и вниз для отрицательного
 Show non-significant links (faded)	Показывать незначимые связи (приглушённо)
 Association ({symbol}):	Связь ({symbol}):
 Insufficient data for scatterplot	Недостаточно данных для диаграммы рассеяния
@@ -2288,10 +2312,12 @@ Closed-form test unavailable for this cell; bootstrap not yet implemented.	Ан�
 Cauchy combination p ({k} component tests)	Комбинированное p по Коши ({k} компонентных тестов)
 Jennrich χ² (equality of 2 group matrices)	χ² Дженнриха (равенство 2 групповых матриц)
 Wald χ² on Olkin-Siotani Σ (equality of {k} group matrices)	χ² Вальда на Σ Олкина–Сиотани (равенство {k} групповых матриц)
+Pattern-equality Wald (bootstrap-calibrated)	Критерий Вальда равенства структуры (калиброван бутстрэпом)
 Steiger pattern-equality χ²	χ² равенства структуры по Стейгеру
 No p-value adjustment method selected. The more tests you run on the same data, the more likely you are to encounter a false discovery.	Метод коррекции p-значений не выбран. Чем больше тестов вы проводите на одних и тех же данных, тем выше вероятность ложного срабатывания.
 No appropriate variables for this correlation method.	Нет подходящих переменных для этого метода корреляции.
 {count} of this run's pairs need a polychoric fit on more than {levels} levels. Each such fit takes roughly 30 s at 20 levels a side and about a minute at 40.	Пар в этом расчёте, требующих полихорической оценки более чем на {levels} уровнях: {count}. Каждая такая оценка занимает примерно 30 с при 20 уровнях с каждой стороны и около минуты при 40.
+Permutation p-values recompute Kendall's τ {reps} times for each of this run's {pairs} pairs, on {rows} rows. Each replicate costs O(n²), so the run can take minutes.	Перестановочные p-значения пересчитывают τ Кендалла {reps} раз для каждой из {pairs} пар этого расчёта на {rows} строках. Каждый повтор стоит O(n²), поэтому расчёт может занять минуты.
 Calculating correlations	Вычисление корреляций
 This comparison structure requires a Compare-across variable.	Эта структура сравнения требует переменной «Сравнить по».
 An error occurred while running the correlation analysis:	Произошла ошибка при выполнении корреляционного анализа:
@@ -2303,8 +2329,10 @@ Checking assumptions for group {group}	Проверка допущений дл�
 heavy ties – use permutation p-values	много связей – используйте перестановочные p-значения
 heavy ties – use exact p-values	много связей – используйте точные p-значения
 heavy ties – interpret with caution	много связей – интерпретируйте с осторожностью
+heavy ties – D is attenuated and its test is conservative	много связей – D занижена, а её критерий консервативен
 {method} — not met:	{method} — не выполнены:
 rejected – affects the interval and p, not the coefficient; select Bootstrap CI	отвергнута – влияет на интервал и p, но не на коэффициент; выберите доверительные интервалы (бутстрэп)
+– these move r itself, not only its interval; select Bootstrap CI, or Kendall’s τ, which resists them	– они смещают сам r, а не только его интервал; выберите бутстреп-ДИ или τ Кендалла, устойчивую к ним
 sparse expected counts – the analytic χ² p is unreliable; set the p-value method to Monte Carlo	разреженные ожидаемые частоты – аналитическое p по χ² ненадёжно; выберите метод расчёта p-значения «Монте-Карло»
 {method}: {checks} not met	{method}: нарушены допущения ({checks})
 {method}: sparse cells, {fix}	{method}: разреженные ячейки, {fix}
@@ -2312,6 +2340,10 @@ primary	основной
 suitability check could not be run	проверку пригодности выполнить не удалось
 underlying bivariate normality rejected – polychoric/polyserial estimates may be biased	латентная двумерная нормальность отвергнута – оценки полихорической/полисериальной корреляции могут быть смещены
 sparse or empty cells – tetrachoric/polychoric estimates may sit near the ±1 boundary; interpret with caution	разреженные или пустые ячейки – оценки тетрахорической/полихорической корреляции могут лежать у границы ±1; интерпретируйте с осторожностью
+unequal group variances – affects the pooled t/F behind the p and the interval, not the coefficient; select Bootstrap CI, or Somers' D for a rank-based alternative	неравные дисперсии групп – влияет на объединённые t/F за p-значением и на интервал, но не на сам коэффициент; выберите бутстреп-ДИ или D Сомерса как ранговую альтернативу
+unequal group variances – affects the pooled t/F behind the p and the interval, not the coefficient; select Bootstrap CI	неравные дисперсии групп – влияет на объединённые t/F за p-значением и на интервал, но не на сам коэффициент; выберите бутстреп-ДИ
+non-normal within groups – point-biserial/ε² inference may be unreliable	распределение внутри групп не нормально – выводы для точечно-бисериальной корреляции / ε² могут быть ненадёжны
+the information-theoretic measures run on a sparse discretized table ({kx} × {ky} bins, smallest expected count {expected}) – mutual information runs high on it; collapse categories or reduce the bin count	информационно-теоретические меры считаются на разрежённой дискретизированной таблице ({kx} × {ky} интервалов, наименьшая ожидаемая частота {expected}) – взаимная информация на ней завышена; объедините категории или уменьшите число интервалов
 unequal group variances – prefer a Welch-corrected or rank-biserial measure	неравные дисперсии групп – предпочтите поправку Уэлча или ранговую бисериальную меру
 non-normal within groups – point-biserial/η² inference may be unreliable	распределение внутри групп не нормально – выводы для точечно-бисериальной корреляции / η² могут быть ненадёжны
 dependence beyond the monotone trend – consider distance correlation, mutual information, or Hoeffding's D	зависимость за пределами монотонного тренда – рассмотрите дистанционную корреляцию, взаимную информацию или D Хёффдинга
@@ -2397,16 +2429,22 @@ Not a 2×2 table	Не таблица 2×2
 Invalid table dimensions	Недопустимые размеры таблицы
 Constant variable – no information	Постоянная переменная – нет информации
 Insufficient non-tied data for Blomqvist's β	Недостаточно несвязанных данных для β Бломквиста
+Need at least 2 groups for ε²	Для ε² нужно не менее 2 групп
+ε² needs more observations than groups	Для ε² нужно больше наблюдений, чем групп
+ε² needs a categorical variable – both are continuous	ε² требует категориальную переменную – обе непрерывны
 Need at least 2 groups for η²	Для η² нужно не менее 2 групп
 η² needs a categorical variable – both are continuous	η² требует категориальную переменную – обе непрерывны
 Insufficient data for Chatterjee's ξ	Недостаточно данных для ξ Чаттерджи
 Insufficient data for Hoeffding's D (need at least 5)	Недостаточно данных для D Хёффдинга (нужно не менее 5)
 Insufficient data for distance correlation	Недостаточно данных для дистанционной корреляции
+Too many rows for an uninterruptible distance-correlation permutation test – select the analytic t p-value method	Слишком много строк для непрерываемого перестановочного критерия дистанционной корреляции – выберите аналитический метод расчёта p-значения (t)
 No concordant or discordant pairs	Нет конкордантных или дискордантных пар
 Too many distinct values for a contingency-table measure	Слишком много уникальных значений для меры на основе таблицы сопряжённости
 Tetrachoric requires both variables to be binary	Тетрахорическая корреляция требует двух бинарных переменных
 Insufficient complete cases for partial correlation given the covariates	Недостаточно полных наблюдений для частной корреляции с учётом ковариат
+Constant control variable – no information	Постоянная контрольная переменная – нет информации
 Collinear control variables – partial correlation is undefined	Коллинеарные контрольные переменные – частная корреляция не определена
+Variable collinear with the controls or with the other variable – partial correlation is undefined	Переменная коллинеарна контрольным переменным или другой переменной – частная корреляция не определена
 Significant very strong association	Значимая очень сильная связь
 Significant strong association	Значимая сильная связь
 Significant moderate association	Значимая умеренная связь
@@ -2432,6 +2470,8 @@ Weak association	Слабая связь
 Very weak association	Очень слабая связь
 Negligible association	Пренебрежимо малая связь
 Reference cell: {ref} (pre-specified, {symbol} = {r}, {p})	Опорная ячейка: {ref} (задана заранее, {symbol} = {r}, {p})
+Reference cell: {ref} (weakest |{symbol}|, {symbol} = {r}, {p})	Опорная ячейка: {ref} (наименьшее |{symbol}|, {symbol} = {r}, {p})
+Reference cell: {ref} (strongest |{symbol}|, {symbol} = {r}, {p})	Опорная ячейка: {ref} (наибольшее |{symbol}|, {symbol} = {r}, {p})
 Reference cell: {ref} (weakest |r|, {symbol} = {r}, {p})	Опорная ячейка: {ref} (наименьшее |r|, {symbol} = {r}, {p})
 Reference cell: {ref} (strongest |r|, {symbol} = {r}, {p})	Опорная ячейка: {ref} (наибольшее |r|, {symbol} = {r}, {p})
 The reference was selected from the observed coefficients, so its differences from the other cells are biased upward and these p-values read optimistically. Choose a pre-specified reference cell for an unbiased test.	Опорная ячейка выбрана по наблюдаемым коэффициентам, поэтому её различия с остальными ячейками смещены вверх, а эти p-значения выглядят оптимистично. Для несмещённого критерия задайте опорную ячейку заранее.
@@ -2461,12 +2501,18 @@ Too few complete cases in one of the groups for a difference test.	Слишко�
 Difference test available for this method – select Bootstrap confidence intervals to compute it.	Тест различий доступен для этого метода — переключите доверительные интервалы на бутстрэп, чтобы вычислить его.
 Statistic	Статистика
 Homogeneity across all groups (H₀: the correlation is the same in every group) – the omnibus over each cell's pairwise rows below.	Однородность по всем группам (H₀: корреляция одинакова в каждой группе) – общий критерий по попарным строкам каждой ячейки ниже.
+Test: bias-corrected percentile bootstrap (B = {B}) of Δr. Single-sample structures share row-index draws across pairs to preserve dependence; between-groups draws are independent per group.	Тест: процентильный бутстрэп с коррекцией смещения (B = {B}) для Δr. Структуры с одной выборкой используют общую выборку индексов строк по всем парам, чтобы сохранить зависимость; для групп выборки независимы.
 Test: percentile bootstrap (B = {B}) of Δr. Single-sample structures share row-index draws across pairs to preserve dependence; between-groups draws are independent per group.	Тест: процентильный бутстрэп (B = {B}) для Δr. Структуры с одной выборкой используют общую выборку индексов строк по всем парам, чтобы сохранить зависимость; для групп выборки независимы.
 Test: Wald z on the analytic (delta-method) SE for independent correlations.	Тест: z Вальда по аналитической стандартной ошибке (дельта-метод) для независимых корреляций.
+Test: Hittner, May & Silver's (2003) modification of Dunn & Clark's z for dependent overlapping correlations (Olkin ψ covariance at the back-transformed average Fisher z).	Тест: модификация z Данна и Кларка по Хиттнеру, Мэю и Сильверу (2003) для зависимых перекрывающихся корреляций (ковариация ψ Олкина при обратно преобразованном среднем z Фишера).
+Test: Williams' T2 for dependent overlapping correlations (Williams 1959, as reported in Steiger 1980).	Тест: T2 Уильямса для зависимых перекрывающихся корреляций (Уильямс, 1959, в изложении Стейгера, 1980).
+Test: Dunn & Clark's z at the back-transformed average Fisher z (Hittner, May & Silver 2003 for overlapping cells; Silver, Hittner & May 2004 for non-overlapping ones, Olkin–Siotani covariance).	Тест: z Данна и Кларка при обратно преобразованном среднем z Фишера (Хиттнер, Мэй и Сильвер, 2003, для перекрывающихся ячеек; Сильвер, Хиттнер и Мэй, 2004, для неперекрывающихся, ковариация Олкина–Сиотани).
+Test: Williams' T2 (overlapping cells) or Steiger's (1980) modification of Dunn & Clark's z (non-overlapping cells, Olkin–Siotani covariance).	Тест: T2 Уильямса (перекрывающиеся ячейки) или модификация z Данна и Кларка по Стейгеру (1980) (неперекрывающиеся ячейки, ковариация Олкина–Сиотани).
 Test: Fisher z for independent correlations.	Тест: z Фишера для независимых корреляций.
 Test: Williams' T2 for dependent overlapping correlations (Steiger 1980).	Тест: T2 Уильямса для зависимых перекрывающихся корреляций (Стейгер, 1980).
 Test: Williams' T2 (overlapping cells) or Steiger Z (non-overlapping cells, Olkin–Finn covariance).	Тест: T2 Уильямса (перекрывающиеся ячейки) или Z Стейгера (неперекрывающиеся ячейки, ковариация Олкина–Финна).
 Closed-form diff tests are derived for zero-order correlations; semi-partial mode routes through the bootstrap so the Δr variance comes from resampling rather than a plug-in Fisher-z formula.	Аналитические тесты различий выведены для корреляций нулевого порядка; полу-частный режим идёт через бутстрэп, поэтому дисперсия Δr берётся из перевыборки, а не из подстановочной формулы z Фишера.
+The Fisher-z variance is each method's own, but the normal-theory derivation around it is canonical only for Pearson; Spearman, Kendall, and point-biserial stay approximations.	Дисперсия z Фишера у каждого метода своя, но нормально-теоретический вывод вокруг неё каноничен только для Пирсона; для Спирмена, Кендалла и точечно-бисериальной корреляции он остаётся приближением.
 Closed-form variance is canonical for Pearson; Spearman, Kendall, and point-biserial use it as a plug-in approximation.	Аналитическая дисперсия канонична для Пирсона; для Спирмена, Кендалла и точечно-бисериальной корреляции она используется как подстановочное приближение.
 Closed-form variance is derived for zero-order correlations; partials use it as a plug-in with df = n − k − 3 (n − k − 4 for Kendall; Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware difference test.	Аналитическая дисперсия выведена для корреляций нулевого порядка; для частных корреляций она используется как подстановочное приближение с df = n − k − 3 (n − k − 4 для Кендалла; Wilcox 2009, §10.11). Переключитесь на бутстрэп-доверительные интервалы для теста различий, учитывающего частные корреляции.
 Closed-form variance is canonical for Pearson; Spearman/Kendall use it as a plug-in approximation (asymptotically valid for ranks).	Аналитическая дисперсия канонична для Пирсона; для Спирмена/Кендалла она используется как подстановочное приближение (асимптотически справедливо для рангов).
@@ -2481,6 +2527,10 @@ Pairwise – against a reference cell	Попарные – относитель�
 Pairwise – between groups (same pair, different groups)	Попарные – между группами (одна и та же пара, разные группы)
 Joint – pattern equality (single sample)	Совместные – равенство структуры (одна выборка)
 Joint – equality of correlation matrices across groups	Совместные – равенство корреляционных матриц между группами
+Difference tests for {methodName} need resampling. Between groups the closed form covers Pearson, Spearman, Kendall and point-biserial, plus the latent, ordinal and Blomqvist coefficients; set "Confidence intervals" to bootstrap to compare {methodName} cells.	Тесты различий для {methodName} требуют перевыборки. Между группами аналитический путь покрывает Пирсона, Спирмена, Кендалла и точечно-бисериальную корреляцию, а также латентные, порядковые коэффициенты и β Бломквиста; установите «Доверительные интервалы» в «бутстрэп», чтобы сравнить ячейки {methodName}.
+Difference tests for {methodName} are not available on this path. Between groups the closed form covers Pearson, Spearman, Kendall and point-biserial, plus the latent, ordinal and Blomqvist coefficients; mixed mode has no single-method difference test.	Тесты различий для {methodName} в этом режиме недоступны. Между группами аналитический путь покрывает Пирсона, Спирмена, Кендалла и точечно-бисериальную корреляцию, а также латентные, порядковые коэффициенты и β Бломквиста; в смешанном режиме нет теста различий для отдельного метода.
+Difference tests for {methodName} need resampling. Within one sample the closed form covers only Pearson, Spearman, Kendall and point-biserial; set "Confidence intervals" to bootstrap to compare {methodName} cells.	Тесты различий для {methodName} требуют перевыборки. В пределах одной выборки аналитический путь покрывает только Пирсона, Спирмена, Кендалла и точечно-бисериальную корреляцию; установите «Доверительные интервалы» в «бутстрэп», чтобы сравнить ячейки {methodName}.
+Difference tests for {methodName} are not available on this path. Within one sample the closed form covers Pearson, Spearman, Kendall and point-biserial (including partials); mixed mode has no single-method difference test.	Тесты различий для {methodName} в этом режиме недоступны. В пределах одной выборки аналитический путь покрывает Пирсона, Спирмена, Кендалла и точечно-бисериальную корреляцию (включая частные); в смешанном режиме нет теста различий для отдельного метода.
 Difference tests for {methodName} need resampling. Closed-form difference tests cover only Pearson, Spearman, and Kendall; set "Confidence intervals" to bootstrap to compare {methodName} cells.	Тесты различий для {methodName} требуют перевыборки. Аналитические тесты различий покрывают только Пирсона, Спирмена и Кендалла; установите «Доверительные интервалы» в «бутстрэп», чтобы сравнить ячейки {methodName}.
 Difference tests for {methodName} are not available on this path. Closed-form covers Pearson, Spearman, and Kendall (including partials); mixed mode has no single-method difference test.	Тесты различий для {methodName} в этом режиме недоступны. Аналитический путь покрывает Пирсона, Спирмена и Кендалла (включая частные); в смешанном режиме нет теста различий для отдельного метода.
 Difference tests for {methodName} are not available on this path. Closed-form covers Pearson, Spearman, and Kendall (including partials); bootstrap covers most other methods (including asymmetric ones) but is only run when "Confidence intervals" is set to analytic or bootstrap. Mixed mode has no diff test.	Тесты различий для {methodName} в этом режиме недоступны. Аналитический путь покрывает Пирсона, Спирмена и Кендалла (включая частные); бутстрэп покрывает большинство остальных методов (включая асимметричные), но запускается только когда «Доверительные интервалы» установлены в «аналитический» или «бутстрэп». В смешанном режиме теста различий нет.
@@ -2491,22 +2541,42 @@ None of the component comparisons could be computed, so no omnibus test is avail
 Cauchy combination p (component tests: {k})	Комбинированное p по Коши (компонентных тестов: {k})
 Test	Критерий
 H₀: every component comparison is null; the component p-values are combined by Cauchy combination.	H₀: все компонентные сравнения нулевые; компонентные p-значения объединены комбинацией Коши.
+H₀: the correlation matrices are equal across all {k} groups. N is each group's rows complete on every variable in the matrix.	H₀: корреляционные матрицы одинаковы во всех {k} группах. N – число строк группы, полных по каждой переменной матрицы.
+H₀: every independent equality constraint among cells sharing a row or column variable holds; df is the number of those constraints. The p-value is the share of bootstrap replicates whose recentred statistic reaches the observed one, not a χ² tail.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой или столбцовой переменной; df – число таких ограничений. p-значение – доля бутстрэп-повторов, у которых перецентрированная статистика достигает наблюдённой, а не хвост χ².
+H₀: every independent equality constraint among cells sharing a row variable holds; df is the number of those constraints. The p-value is the share of bootstrap replicates whose recentred statistic reaches the observed one, not a χ² tail.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой переменной; df – число таких ограничений. p-значение – доля бутстрэп-повторов, у которых перецентрированная статистика достигает наблюдённой, а не хвост χ².
+H₀: every independent equality constraint among cells sharing a column variable holds; df is the number of those constraints. The p-value is the share of bootstrap replicates whose recentred statistic reaches the observed one, not a χ² tail.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей столбцовой переменной; df – число таких ограничений. p-значение – доля бутстрэп-повторов, у которых перецентрированная статистика достигает наблюдённой, а не хвост χ².
+H₀: every independent equality constraint among cells sharing a row or column variable holds; df is the number of those constraints. N is the rows complete on every variable in the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой или столбцовой переменной; df – число таких ограничений. N – число строк, полных по каждой переменной матрицы.
+H₀: every independent equality constraint among cells sharing a row variable holds; df is the number of those constraints. N is the rows complete on every variable in the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой переменной; df – число таких ограничений. N – число строк, полных по каждой переменной матрицы.
+H₀: every independent equality constraint among cells sharing a column variable holds; df is the number of those constraints. N is the rows complete on every variable in the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей столбцовой переменной; df – число таких ограничений. N – число строк, полных по каждой переменной матрицы.
+The constraint covariance is estimated from the resampled Fisher-z estimates rather than from a normal-theory formula, over {reps} usable replicates.	Ковариация ограничений оценена по перевыборочным оценкам z Фишера, а не по нормально-теоретической формуле, на {reps} пригодных повторах.
 H₀: the correlation matrices are equal across all {k} groups. N is the smallest pairwise-complete n within each group.	H₀: корреляционные матрицы одинаковы во всех {k} группах. N – наименьшее попарно-полное n внутри каждой группы.
 H₀: every independent equality constraint among cells sharing a row or column variable holds; df is the number of those constraints. N is the smallest pairwise-complete n across the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой или столбцовой переменной; df – число таких ограничений. N – наименьшее попарно-полное n по всей матрице.
 H₀: every independent equality constraint among cells sharing a row variable holds; df is the number of those constraints. N is the smallest pairwise-complete n across the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей строковой переменной; df – число таких ограничений. N – наименьшее попарно-полное n по всей матрице.
 H₀: every independent equality constraint among cells sharing a column variable holds; df is the number of those constraints. N is the smallest pairwise-complete n across the matrix.	H₀: выполняется каждое независимое ограничение равенства между ячейками с общей столбцовой переменной; df – число таких ограничений. N – наименьшее попарно-полное n по всей матрице.
 no closed-form joint test exists for this method	для этого метода не существует совместного критерия в закрытой форме
 bootstrap confidence intervals are active, and the closed-form joint test is only defined on the analytic path	активны бутстрэп-доверительные интервалы, а совместный критерий в закрытой форме определён только на аналитическом пути
+fewer than two groups had a usable correlation matrix: a cell was missing, errored or carried no sample size, or the assembled matrix is not positive-definite	пригодная корреляционная матрица оказалась менее чем у двух групп: ячейка отсутствовала, содержала ошибку или не имела объёма выборки, либо собранная матрица не положительно определена
 a cell was missing or errored, or the assembled correlation matrix is not positive-definite	ячейка отсутствовала или содержала ошибку, либо собранная корреляционная матрица не положительно определена
 the effective sample size could not be determined	не удалось определить эффективный объём выборки
+too few complete cases for the joint test	слишком мало полных наблюдений для совместного критерия
+no resampled correlation matrix was available	перевыборочная корреляционная матрица недоступна
+too few usable bootstrap replicates, or their constraint covariance is singular	слишком мало пригодных бутстрэп-повторов, либо их ковариация ограничений вырождена
 no equality constraints could be formed from the selected cells	из выбранных ячеек не удалось сформировать ограничения равенства
 the constraint covariance matrix is singular	ковариационная матрица ограничений вырождена
 Jennrich's joint test was not used – {reason}. The card reports a Cauchy combination of the component comparisons instead.	Совместный критерий Дженнриха не использован – {reason}. Вместо него карточка приводит комбинацию Коши компонентных сравнений.
+The bootstrap joint test was not used – {reason}. The card reports a Cauchy combination of the component comparisons instead.	Бутстрэп-версия совместного критерия не использована – {reason}. Вместо неё карточка приводит комбинацию Коши компонентных сравнений.
 Steiger's joint test was not used – {reason}. The card reports a Cauchy combination of the component comparisons instead.	Совместный критерий Стейгера не использован – {reason}. Вместо него карточка приводит комбинацию Коши компонентных сравнений.
+Excluded from the joint test – no usable correlation matrix: {groups}.	Исключены из совместного критерия – нет пригодной корреляционной матрицы: {groups}.
 Asymptotic covariance is canonical for Pearson; Spearman, Kendall, and point-biserial use it as a plug-in approximation.	Асимптотическая ковариация канонична для Пирсона; для Спирмена, Кендалла и точечно-бисериальной корреляции она используется как подстановочное приближение.
 Closed-form variance is derived for zero-order correlations; partials use it as a plug-in (Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware test.	Аналитическая дисперсия выведена для корреляций нулевого порядка; для частных корреляций она используется как подстановочное приближение (Wilcox 2009, §10.11). Переключитесь на бутстрэп-доверительные интервалы для критерия, учитывающего частные корреляции.
 Olkin–Siotani covariance is derived for zero-order correlations; partials use it as a plug-in with an effective sample size of n − k (Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware omnibus test.	Ковариация Олкина–Сиотани выведена для корреляций нулевого порядка; для частных корреляций она используется как подстановочное приближение с эффективным объёмом выборки n − k (Wilcox 2009, §10.11). Переключитесь на бутстрэп-доверительные интервалы для общего критерия, учитывающего частные корреляции.
+Per-group coefficients	Коэффициенты по группам
 Component comparisons	Компонентные сравнения
+The pre-specified reference cell {ref} is not part of this matrix, so no comparisons could be formed. Pick a reference cell from the current selection.	Заранее заданная опорная ячейка {ref} не входит в эту матрицу, поэтому сравнения не сформированы. Выберите опорную ячейку из текущего набора.
+The pre-specified reference cell {ref} could not be computed, so no comparisons could be formed. Pick another reference cell.	Заранее заданную опорную ячейку {ref} вычислить не удалось, поэтому сравнения не сформированы. Выберите другую опорную ячейку.
+The pre-specified reference cell {ref} has no usable coefficient, so no comparisons could be formed. Pick another reference cell.	У заранее заданной опорной ячейки {ref} нет пригодного коэффициента, поэтому сравнения не сформированы. Выберите другую опорную ячейку.
+Equality within each column variable (H₀: that variable's correlations are all equal) – the omnibus over its pairwise rows below.	Равенство внутри каждой столбцовой переменной (H₀: все корреляции этой переменной равны) – общий критерий по её попарным строкам ниже.
+Equality within each row variable (H₀: that variable's correlations are all equal) – the omnibus over its pairwise rows below.	Равенство внутри каждой строковой переменной (H₀: все корреляции этой переменной равны) – общий критерий по её попарным строкам ниже.
 Direction: variable 1 → variable 2	Направление: переменная 1 → переменная 2
 Asymptotic covariance is canonical for Pearson; Spearman/Kendall use it as a plug-in approximation.	Асимптотическая ковариация канонична для Пирсона; для Спирмена/Кендалла она используется как подстановочное приближение.
 Olkin–Siotani covariance is derived for zero-order correlations; partials use it as a plug-in with df = n − k − 3 (Wilcox 2009, §10.11). Switch to bootstrap confidence intervals for a partial-aware omnibus test.	Ковариация Олкина–Сиотани выведена для корреляций нулевого порядка; для частных используется как plug-in с df = n − k − 3 (Wilcox 2009, §10.11). Для общего критерия с учётом частной структуры переключитесь на бутстрэп-доверительные интервалы.
@@ -2516,13 +2586,34 @@ Semi-partial: variable 2 residualized on {covariates}	Получастная: и
 Partial: both variables residualized on {covariates}	Частная: из обеих переменных удалено влияние ({covariates})
 Strength labels use Pearson r thresholds; this measure tends to run larger than r, so treat the labels as approximate.	Категории силы используют пороги r Пирсона; эта мера обычно даёт более высокие значения, чем r, поэтому считайте категории приблизительными.
 Cramér's V uses Cohen strength thresholds calibrated for large samples; treat the labels as approximate for small samples or large tables.	V Крамера использует пороги силы Коэна, откалиброванные для больших выборок; для малых выборок или больших таблиц считайте метки приблизительными.
+The correlation ratio is reported as ε², the bias-corrected estimate of the population η². It can fall slightly below 0 under independence, while its confidence interval starts at 0.	Корреляционное отношение приводится как ε² – оценка популяционного η² с коррекцией смещения. При независимости она может оказаться немного меньше 0, тогда как её доверительный интервал начинается с 0.
+Strength labels use Cohen's variance-explained thresholds for the population η².	Метки силы связи используют пороги Коэна по доле объяснённой дисперсии для популяционного η².
+Continuous variables were binned by Rice's rule (twice the cube root of N) instead of the default cube-root rule. Information-theoretic coefficients depend on the grid, so they are not comparable with a run at a different bin setting.	Непрерывные переменные разбиты по правилу Райса (удвоенный кубический корень из N) вместо кубического корня по умолчанию. Информационно-теоретические коэффициенты зависят от сетки, поэтому несравнимы с расчётом при другой настройке интервалов.
+Continuous variables were binned by Sturges' rule (log₂ N + 1) instead of the default cube-root rule. Information-theoretic coefficients depend on the grid, so they are not comparable with a run at a different bin setting.	Непрерывные переменные разбиты по правилу Стёрджеса (log₂ N + 1) вместо кубического корня по умолчанию. Информационно-теоретические коэффициенты зависят от сетки, поэтому несравнимы с расчётом при другой настройке интервалов.
+Continuous variables were binned into a fixed {bins} bins each instead of the default cube-root rule. Information-theoretic coefficients depend on the grid, so they are not comparable with a run at a different bin setting.	Непрерывные переменные разбиты на фиксированное число интервалов ({bins} на переменную) вместо кубического корня по умолчанию. Информационно-теоретические коэффициенты зависят от сетки, поэтому несравнимы с расчётом при другой настройке интервалов.
 The discretized joint table has expected cell counts below 5. Mutual-information estimates run high on a sparse table – the coefficient itself, not only its p-value – so read it as an upper bound. A variable with many distinct categories is the usual cause; collapsing categories or treating it as numeric gives a table the estimator can support.	В дискретизированной таблице сопряжённости ожидаемые частоты ячеек меньше 5. На разреженной таблице оценки взаимной информации завышены – завышен сам коэффициент, а не только его p-значение, – поэтому читайте его как верхнюю границу. Обычная причина – переменная со многими уникальными категориями; объединение категорий или трактовка переменной как числовой даёт таблицу, которую оценка способна поддержать.
 Analytic p-values for information-theoretic methods rely on a χ² approximation that is unreliable when the discretized joint table has low expected cell counts; use permutation p-values here.	Аналитические p-значения для информационно-теоретических методов опираются на аппроксимацию χ², которая ненадёжна, когда в дискретизированной таблице сопряжённости малы ожидаемые частоты в ячейках; используйте здесь перестановочные p-значения.
 The analytic p-value for adjusted mutual information is only approximate; use permutation p-values for an exact test.	Аналитическое p-значение для скорректированной взаимной информации является лишь приближённым; для точного критерия используйте перестановочные p-значения.
+Permutation p-values for partial and semi-partial correlations use the Freedman–Lane scheme: the control variables are held fixed and only the residual association is shuffled, so the test is approximate rather than exact.	Перестановочные p-значения для частных и получастных корреляций используют схему Фридмана–Лейна: контрольные переменные фиксируются, а перемешивается только остаточная связь, поэтому критерий приближённый, а не точный.
+The appended mutual-information and entropy values are in nats, carry the Miller–Madow bias correction, and describe the discretized (binned) variables rather than the raw ones.	Добавленные значения взаимной информации и энтропии выражены в натах, включают коррекцию смещения Миллера–Мэдоу и описывают дискретизированные (разбитые на интервалы) переменные, а не исходные.
+Distance correlation ran on a fixed-seed random subsample of {cap} rows out of {n} complete cases: its distance matrices grow with the square of the sample size and exceed the available memory above that. The reported N is the subsample size.	Дистанционная корреляция рассчитана на случайной подвыборке с фиксированным зерном из {cap} строк среди {n} полных наблюдений: её матрицы расстояний растут как квадрат объёма выборки и выше этого порога превышают доступную память. Указанное N – размер подвыборки.
+Distance correlation's permutation test cannot be interrupted once started, so it was limited to {reps} replicates instead of the configured number. Its p-value is correspondingly coarser.	Перестановочный критерий дистанционной корреляции невозможно прервать после запуска, поэтому он ограничен {reps} повторами вместо заданного числа. Его p-значение соответственно грубее.
+Blomqvist's β ignores observations that sit exactly on a median, so its N is not the pair's complete-case count: up to {dropped} of {n} rows were dropped in this run. A binary or coarse ordinal variable is the usual cause.	β Бломквиста игнорирует наблюдения, лежащие точно на медиане, поэтому её N не совпадает с числом полных наблюдений пары: в этом расчёте отброшено до {dropped} строк из {n}. Обычная причина – бинарная или грубая порядковая переменная.
 Latent-correlation analytic intervals run slightly narrow for many-category variables; select Bootstrap CI for a calibrated interval.	Аналитические интервалы латентных корреляций получаются несколько узкими для переменных со многими категориями; выберите доверительные интервалы (бутстрэп) для калиброванного интервала.
+Latent-correlation analytic intervals are built on atanh(ρ), whose standard error carries a 1/(1 − ρ²) factor, so a near-perfect association back-transforms to bounds spanning almost the whole range however precisely the coefficient was estimated. An interval covering 0 beside a coefficient this strong is that degeneracy, not weak evidence – select Bootstrap CI for a usable interval.	Аналитические интервалы латентных корреляций строятся на atanh(ρ), стандартная ошибка которого содержит множитель 1/(1 − ρ²), поэтому почти идеальная связь при обратном преобразовании даёт границы, охватывающие почти весь диапазон, как бы точно ни был оценён коэффициент. Интервал, накрывающий 0, рядом со столь сильным коэффициентом – это вырождение, а не слабое свидетельство: выберите доверительные интервалы (бутстрэп), чтобы получить пригодный интервал.
+Chatterjee's ξ analytic intervals under-cover: a nominal 95% interval measures about 92% at n = 200. Select Bootstrap CI for a calibrated interval.	Аналитические интервалы ξ Чаттерджи дают заниженное покрытие: номинальный 95% интервал фактически покрывает около 92% при n = 200. Выберите доверительные интервалы (бутстрэп) для откалиброванного интервала.
+The SE shown for Chatterjee's ξ is the envelope standard error behind its interval and equivalence test, not the null-independence standard error its p-value rests on – dividing ξ by it does not reproduce the printed p.	Показанная для ξ Чаттерджи стандартная ошибка – это огибающая стандартная ошибка, лежащая в основе её интервала и критерия эквивалентности, а не стандартная ошибка при нулевой гипотезе независимости, на которой построено её p-значение: деление ξ на неё не воспроизводит напечатанное p.
+Chatterjee's ξ breaks ties in its first variable at random, and cells in this run have them. The draw is seeded, so the reported value is reproducible – but it is one of several the same data supports: on a five-level variable, three draws gave 0.267, 0.219 and 0.200.	ξ Чаттерджи разрешает связи в своей первой переменной случайным образом, и в этом расчёте такие ячейки есть. Жеребьёвка выполняется с фиксированным зерном, поэтому приведённое значение воспроизводимо, – но это лишь одно из нескольких, которые допускают те же данные: на переменной с пятью уровнями три жеребьёвки дали 0,267, 0,219 и 0,200.
 No analytic confidence interval is available for the methods in this run; select Bootstrap CI to obtain intervals.	Для методов этого расчёта аналитические доверительные интервалы недоступны; выберите доверительные интервалы (бутстрэп), чтобы их получить.
+Some cells produced no bootstrap interval: fewer than 80% of their resamples returned a usable coefficient, too few to support the interval's nominal level. Raise the bootstrap replications setting.	Для некоторых ячеек бутстрэп-интервал не получен: менее 80% их перевыборок вернули пригодный коэффициент – слишком мало для номинального уровня интервала. Увеличьте настройку «Повторы бутстрэпа».
+Point-biserial's analytic interval assumes a roughly balanced binary variable: its Fisher-z variance depends on the group split and degrades past about 20/80. Select Bootstrap CI for a calibrated interval.	Аналитический интервал точечно-бисериальной корреляции предполагает примерно сбалансированную бинарную переменную: её дисперсия z Фишера зависит от соотношения групп и ухудшается за пределами примерно 20/80. Выберите доверительные интервалы (бутстрэп) для откалиброванного интервала.
 No analytic confidence interval is available for {method}; select Bootstrap CI to obtain intervals.	Для метода {method} аналитические доверительные интервалы недоступны; выберите доверительные интервалы (бутстрэп), чтобы их получить.
 Bootstrap intervals from {reps} replications under-cover: a nominal 95% interval measures about 91% at 100 replications and 93.5% at 1000. Raise the bootstrap replications setting for a better-calibrated interval.	Бутстрэп-интервалы по {reps} повторам дают заниженное покрытие: номинальный 95% интервал фактически покрывает около 91% при 100 повторах и 93,5% при 1000. Увеличьте настройку «Повторы бутстрэпа» для лучше откалиброванного интервала.
+Equivalence (TOST): H₀ is |coefficient| ≥ {delta}; p (Δ) is the larger of the two one-sided tests. Equivalently, the {level}% interval lies inside ±{delta}.	Эквивалентность (TOST): H₀ – |коэффициент| ≥ {delta}; p (Δ) – большее из p двух односторонних критериев. Равносильно: {level}% интервал целиком лежит внутри ±{delta}.
+Equivalence for the unsigned measures ({symbols}): H₀ is coefficient ≥ {delta}; p (Δ) is the one-sided non-inferiority test. Equivalently, the upper end of the {level}% interval falls below {delta}.	Эквивалентность для беззнаковых мер ({symbols}): H₀ – коэффициент ≥ {delta}; p (Δ) – одностороннее p-значение проверки того, что коэффициент меньше границы. Равносильно: верхняя граница {level}% интервала лежит ниже {delta}.
+Δ is applied to each coefficient exactly as it is reported: no measure is rescaled, so the same margin marks out a different amount of association on the correlation, variance-explained and information scales.	Δ применяется к каждому коэффициенту ровно в том виде, в каком он приводится: ни одна мера не пересчитывается, поэтому одна и та же граница отмечает разную величину связи на шкале корреляции, доли объяснённой дисперсии и информации.
+This run's cells do not all share one coefficient scale, so their equivalence verdicts are not comparable with one another even at the same margin.	Ячейки этого расчёта лежат не на одной шкале коэффициентов, поэтому их вердикты об эквивалентности несравнимы между собой даже при одной и той же границе.
+p (Δ) for {symbols} rests on a resampled standard error, so it is floored at the bootstrap's own resolution, 1/(B+1); a cell at that value is the strongest equivalence claim the replicate count supports, not a marginal result.	p (Δ) для {symbols} опирается на перевыборочную стандартную ошибку, поэтому ограничено снизу собственным разрешением бутстрэпа, 1/(B+1); ячейка с этим значением – самое сильное утверждение об эквивалентности, которое допускает число повторов, а не пограничный результат.
 Equivalence (TOST): H₀ is |coefficient| ≥ {delta}; p (Δ) is the larger of the two one-sided tests.	Эквивалентность (TOST): H₀ – |коэффициент| ≥ {delta}; p (Δ) – большее из p двух односторонних критериев.
 Equivalence for the unsigned measures ({symbols}): H₀ is coefficient ≥ {delta}; p (Δ) is the one-sided non-inferiority test.	Эквивалентность для беззнаковых мер ({symbols}): H₀ – коэффициент ≥ {delta}; p (Δ) – одностороннее p-значение проверки того, что коэффициент меньше границы.
 p (Δ) for the measures with no closed-form standard error ({symbols}) rests on a resampled one, so it is floored at the bootstrap's own resolution, 1/(B+1); a cell at that value is the strongest equivalence claim the replicate count supports, not a marginal result.	p (Δ) для мер без стандартной ошибки в закрытой форме ({symbols}) опирается на перевыборочную оценку, поэтому оно ограничено снизу собственным разрешением бутстрэпа, 1/(B+1); ячейка с этим значением – самое сильное утверждение об эквивалентности, которое допускает число повторов, а не пограничный результат.
@@ -2530,21 +2621,27 @@ Strength labels use Pearson r thresholds; Kendall's τ tends to run smaller than
 Strength labels use Pearson r thresholds; Blomqvist's β tends to run smaller than r for the same association, so treat the labels as approximate.	Метки силы связи основаны на порогах для r Пирсона; β Бломквиста при той же связи обычно меньше r, поэтому считайте метки приблизительными.
 Correlation analysis - {methodName}	Корреляционный анализ – {methodName}
 Correlation	Корреляция
+No variable pairs are left after removing the control and comparison variables.	После исключения контрольных переменных и переменной сравнения пар переменных не осталось.
 Control variables are active: marginal normality, the OLS-family columns, and the beyond-monotone (dCor) probe were computed on residuals after regressing out the controls, matching the partial estimates the analysis reports.	Активны контрольные переменные: маргинальная нормальность, столбцы семейства МНК и проверка зависимости сверх монотонной (dCor) вычислены по остаткам регрессии на контрольные переменные — так же, как частные оценки, которые даёт анализ.
 Control variables are active: the beyond-monotone (dCor) probe was computed on rank residuals after regressing out the controls, matching the partial estimates the analysis reports.	Активны контрольные переменные: проверка зависимости сверх монотонной (dCor) вычислена по ранговым остаткам регрессии на контрольные переменные — так же, как частные оценки, которые даёт анализ.
 Control variables are active: marginal normality and the OLS-family columns were computed on residuals after regressing out the controls, matching the partial estimates the analysis reports. Pairs involving a control variable carry no OLS diagnostics (a partial run does not estimate them).	Активны контрольные переменные: маргинальная нормальность и столбцы семейства МНК вычислены по остаткам регрессии на контрольные переменные — так же, как частные оценки, которые даёт анализ. Пары с участием контрольной переменной не получают МНК-диагностик (частный анализ их не оценивает).
 Group: {group}	Группа: {group}
 Comparison across groups is active: the assumption checks ran separately within each group of {variable}, on the same row subsets the per-group analysis uses. Pooled rows were not checked.	Активно сравнение между группами: проверки допущений выполнены отдельно внутри каждой группы переменной {variable} — на тех же подмножествах строк, что и погрупповой анализ. Объединённые данные не проверялись.
 Marginal normality (Shapiro-Wilk)	Маргинальная нормальность (Шапиро–Уилк)
+Normality is not tested above N = {n}: Shapiro-Wilk per variable and Mardia per pair are both capped there, and at that size rejection-based normality tests reject on deviations far too small to affect the correlation. Pearson's inference is at its most robust in this range.	Нормальность не проверяется при N выше {n}: критерий Шапиро–Уилка по переменным и критерий Мардиа по парам оба ограничены этим объёмом, и при таком объёме критерии нормальности отвергают гипотезу из-за отклонений, слишком малых, чтобы повлиять на корреляцию. В этом диапазоне выводы Пирсона наиболее устойчивы.
 Normality is not tested above N = {n}: Shapiro-Wilk is capped there, and at that size rejection-based normality tests reject on deviations far too small to affect the correlation. Pearson's inference is at its most robust in this range.	Нормальность не проверяется при N выше {n}: критерий Шапиро–Уилка на этом ограничен, и при таком объёме критерии нормальности отвергают гипотезу из-за отклонений, слишком малых, чтобы повлиять на корреляцию. В этом диапазоне выводы Пирсона наиболее устойчивы.
 Range restriction detected (a single value holds more than {threshold} of the observations for at least one variable). A dominant value or floor/ceiling pile-up shrinks the variable's range and attenuates any correlation through it.	Обнаружено ограничение диапазона (одно значение занимает более {threshold} наблюдений хотя бы у одной переменной). Доминирующее значение или скопление у пола/потолка сужает диапазон переменной и ослабляет любую корреляцию через неё.
 Within-group normality (Shapiro-Wilk)	Нормальность внутри групп (Шапиро–Уилк)
+Rejections marked here count against point-biserial / ε² only when the group is smaller than N = {n} – the t and F they rest on are robust to non-normality above it – and only when more groups reject than chance produces at α = {alpha}.	Отмеченные здесь отклонения нормальности засчитываются против точечно-бисериальной корреляции / ε² только когда группа меньше N = {n} – выше этого объёма t и F, на которых они основаны, устойчивы к ненормальности, – и только когда групп с отклонением больше, чем даёт случайность при α = {alpha}.
+Advisory screen: the residual distance correlation is compared against simulated data in which the pair's dependence is purely monotone, at its own margins and ties. The p-value comes from a finite number of draws, so it cannot resolve below 1/(draws + 1). Read a flag as a prompt to inspect the scatterplot, not as a failed assumption.	Ориентировочная проверка: остаточная дистанционная корреляция сравнивается с данными, смоделированными так, что зависимость пары строго монотонна, при тех же маргинальных распределениях и связях. p-значение получено по конечному числу жеребьёвок, поэтому не может разрешать значения ниже 1/(число жеребьёвок + 1). Отметку здесь стоит воспринимать как повод изучить диаграмму рассеяния, а не как нарушенное допущение.
 Rejections marked here count against point-biserial / η² only when the group is smaller than N = {n} – the t and F they rest on are robust to non-normality above it – and only when more groups reject than chance produces at α = {alpha}.	Отмеченные здесь отклонения нормальности засчитываются против точечно-бисериальной корреляции / η² только когда группа меньше N = {n} – выше этого объёма t и F, на которых они основаны, устойчивы к ненормальности, – и только когда групп с отклонением больше, чем даёт случайность при α = {alpha}.
 Heuristic screen, not a calibrated test: the probe runs on residuals of a monotone fit estimated from the same data, so its p-value is approximate. Read a flag here as a prompt to inspect the scatterplot, not as evidence at α.	Эвристическая проверка, а не откалиброванный критерий: проба выполняется на остатках монотонной подгонки, оценённой по тем же данным, поэтому её p-значение приблизительно. Отметку здесь стоит воспринимать как повод изучить диаграмму рассеяния, а не как свидетельство на уровне α.
 bivariate normality	двумерная нормальность
 linearity	линейность
 homoscedasticity	гомоскедастичность
 influential points	влиятельные точки
+latent bivariate normality	латентная двумерная нормальность
+equal group variances	равные дисперсии групп
 Rejections of {check} across the {m} assessed pairs are no more numerous than chance produces at α = {alpha}, so they stay visible in the column but are not counted against any method.	Отклонений допущения «{check}» по {m} проверенным парам не больше, чем даёт случайность при α = {alpha}, поэтому они остаются видны в столбце, но не засчитываются против какого-либо метода.
 Prefer Spearman/Kendall	Предпочесть Спирмена/Кендалла
 Pearson appropriate	Пирсон подходит
@@ -2565,6 +2662,10 @@ Control-variable collinearity could not be assessed.	Не удалось оце�
 {count} control/target pair(s) exceed |r| > 0.90 — a partial correlation conditioned on near-collinear controls is unstable.	Пар(ы) «контроль/цель» с |r| > 0,90: {count}. Частная корреляция при почти коллинеарных контрольных переменных неустойчива.
 Variable pair	Пара переменных
 No control/target pair exceeds |r| > {cutoff} (max |r| = {r}).	Ни одна пара «контроль/цель» не превышает |r| > {cutoff} (макс. |r| = {r}).
+{count} variable(s) reach VIF ≥ {cutoff} against the control set — the matrix a partial correlation inverts is near-singular, which no single pair's |r| has to show.	Переменных с VIF ≥ {cutoff} относительно набора контрольных: {count}. Матрица, которую обращает частная корреляция, почти вырождена, и |r| отдельной пары этого показывать не обязан.
+Control	Контроль
+Target	Цель
+No variable reaches VIF {cutoff} against the control set (max VIF = {vif}).	Ни у одной переменной VIF не достигает {cutoff} относительно набора контрольных (макс. VIF = {vif}).
 No control/target pair exceeds |r| > 0.90 (max |r| = {r}).	Ни одна пара «контроль/цель» не превышает |r| > 0,90 (макс. |r| = {r}).
 Max value share	Макс. доля значения
 Adequate spread	Достаточный разброс
@@ -2615,6 +2716,9 @@ p-value matrix	Матрица p-значений
 Method	Метод
 Coefficient	Коэффициент
 p (Δ)	p (Δ)
+MI (nats)	ИМ (наты)
+H(var₁) (nats)	H(перем₁) (наты)
+H(var₂) (nats)	H(перем₂) (наты)
 p (Δ, adj)	p (Δ, скорр.)
 MI	ИМ
 row	строка
@@ -2628,6 +2732,7 @@ Correlation network	Корреляционная сеть
 Force-directed graph - {methodName}	Силовой граф – {methodName}
 {var} (ranks) | {controls}	{var} (ранги) | {controls}
 {var} | {controls}	{var} | {controls}
+{var1} → {var2}	{var1} → {var2}
 {var1} – {var2}	{var1} – {var2}
 Scatterplots - {methodName}	Диаграммы рассеяния – {methodName}
 Grouped scatterplots - {methodName}	Сгруппированные диаграммы рассеяния – {methodName}
@@ -5312,6 +5417,7 @@ Variable clustering	Кластеризация переменных
 Biclustering	Бикластеризация
 Standardize variables (z-scores)	Стандартизировать переменные (z-оценки)
 Puts every variable on a common scale so none dominates the distance	Приводит все переменные к общей шкале, чтобы ни одна не доминировала в расстоянии
+Variable clustering measures similarity as a correlation, which is defined on standardized columns, so it always runs on them	Кластеризация переменных измеряет сходство корреляцией, которая определена на стандартизированных столбцах, поэтому она всегда выполняется на них
 Clustering algorithm	Алгоритм кластеризации
 K-means	К-средних
 K-medoids (PAM)	К-медоиды (PAM)
@@ -5334,6 +5440,7 @@ Minkowski	Минковского
 1 − |r| (absolute correlation)	1 − |r| (абсолютная корреляция)
 K-means minimizes Euclidean distance only; on standardized variables that is the 1 − r dissimilarity. Choose K-medoids or Hierarchical to reach another metric.	К-средних минимизирует только евклидово расстояние; на стандартизированных переменных это соответствует мере различия 1 − r. Чтобы использовать другую метрику, выберите К-медоиды или иерархическую кластеризацию.
 1 − r keeps oppositely-signed variables apart; 1 − |r| groups them together, which is what reverse-keyed items usually need	1 − r разводит переменные с противоположными знаками; 1 − |r| объединяет их, что обычно и требуется для обратно сформулированных пунктов
+1 − r and 1 − |r| compare the shape of a case's profile across the variables rather than its level, so they need columns measured on a comparable scale	1 − r и 1 − |r| сравнивают форму профиля наблюдения по переменным, а не его уровень, поэтому столбцы должны быть измерены в сопоставимом масштабе
 Minkowski exponent (p)	Показатель Минковского (p)
 p = 1 is Manhattan distance, p = 2 is Euclidean	p = 1 – манхэттенское расстояние, p = 2 – евклидово
 Linkage method	Метод слияния
@@ -5344,6 +5451,8 @@ Single	Одиночное
 Centroid	Центроид
 McQuitty (WPGMA)	МакКвитти (WPGMA)
 Ward's linkage assumes Euclidean distances. Results may be suboptimal with other metrics.	Метод Уорда предполагает евклидово расстояние. При других метриках результаты могут быть неоптимальными.
+Centroid and median linkage are not monotone: a merge can sit below the pair it joins, which draws the dendrogram with inversions.	Центроидный и медианный методы слияния не монотонны: слияние может располагаться ниже объединяемой пары, из-за чего дендрограмма рисуется с инверсиями.
+K-means algorithm	Алгоритм К-средних
 Centroid and median linkage are defined for squared Euclidean distances. Given a plain distance matrix they can merge at decreasing heights, which draws the dendrogram with inversions.	Центроидный и медианный методы слияния определены для квадратов евклидовых расстояний. На обычной матрице расстояний они могут выполнять слияния на убывающих высотах, из-за чего дендрограмма рисуется с инверсиями.
 Initialization method	Метод инициализации
 Hartigan-Wong	Хартиган-Вонг
@@ -5353,6 +5462,8 @@ MacQueen	Мак-Куин
 Number of random starts	Число случайных запусков
 Higher values reduce chance of suboptimal solution	Большие значения снижают вероятность неоптимального решения
 Maximum iterations	Максимальное число итераций
+Number of row and column groups	Число групп строк и столбцов
+Rows and variables are each split into this many groups; the biclusters are the group pairings that survive the size and spread filters below	Строки и переменные разбиваются на указанное число групп; бикластерами становятся те сочетания групп, которые проходят фильтры размера и разброса ниже
 Number of singular vectors	Число сингулярных векторов
 Number of eigenvectors to consider; cannot exceed the smaller of the case and variable counts	Число рассматриваемых собственных векторов; не может превышать меньшее из чисел наблюдений и переменных
 Number of eigenvectors to consider	Число рассматриваемых собственных векторов
@@ -5360,11 +5471,24 @@ Normalization method	Метод нормализации
 Log	Логарифм
 IRRC (iterative row/column)	IRRC (итеративные строки/столбцы)
 Bistochastization	Бистохастизация
+Maximum within-bicluster spread	Максимальный разброс внутри бикластера
+Spread a candidate bicluster may carry and still be kept, as a fraction of the matrix's own spread; raise it to accept more biclusters	Разброс, при котором кандидат в бикластеры ещё сохраняется, в долях от разброса самой матрицы; увеличьте его, чтобы принималось больше бикластеров
 Maximum within-bicluster variance	Максимальная дисперсия внутри бикластера
 Variance a candidate bicluster may carry and still be kept; raise it to accept more biclusters	Дисперсия, при которой кандидат в бикластеры ещё сохраняется; увеличьте её, чтобы принималось больше бикластеров
 Background model	Фоновая модель
 Row + column effects	Эффекты строк и столбцов
 Constant only	Только константа
+Background model:	Фоновая модель:
+Maximum layers (biclusters):	Максимальное число слоёв (бикластеров):
+Row release:	Удаление строк:
+Column release:	Удаление столбцов:
+Residue threshold (δ):	Порог остатков (δ):
+Alpha:	Альфа:
+Binarization quantile:	Квантиль бинаризации:
+Sparseness prior (loadings):	Априорная разреженность (нагрузки):
+Sparseness prior (factors):	Априорная разреженность (факторы):
+Membership threshold:	Порог принадлежности:
+Number of iterations:	Количество итераций:
 Maximum layers (biclusters)	Максимальное число слоёв (бикластеров)
 Upper limit for automatic detection	Верхний предел для автоматического определения
 Row release	Удаление строк
@@ -5377,13 +5501,21 @@ Scaling factor for node deletion	Масштабирующий коэффицие
 Binarization quantile	Квантиль бинаризации
 Each variable is cut at this quantile of its own values: above becomes 1, below becomes 0	Каждая переменная разделяется по этому квантилю собственных значений: выше – 1, ниже – 0
 Minimum rows	Минимальное число строк
+A candidate bicluster is kept only when it has more rows than this, so 2 keeps nothing smaller than three rows	Кандидат в бикластеры сохраняется, только если строк в нём больше указанного числа: при 2 остаются лишь бикластеры не менее чем из трёх строк
 Minimum columns	Минимальное число столбцов
+A candidate bicluster is kept only when it has more variables than this, so 2 keeps nothing narrower than three variables	Кандидат в бикластеры сохраняется, только если переменных в нём больше указанного числа: при 2 остаются лишь бикластеры не менее чем из трёх переменных
+Background layer	Фоновый слой
+Constant background layer	Постоянный фоновый слой
+No background layer	Без фонового слоя
+Fits one level shared by every case and variable before the layers, so the biclusters describe departures from it rather than from zero	Перед слоями подгоняется общий уровень для всех наблюдений и переменных, поэтому бикластеры описывают отклонения от него, а не от нуля
 Binarization threshold	Порог бинаризации
 Values above threshold become 1, below become 0	Значения выше порога становятся 1, ниже – 0
 Sparseness prior (loadings)	Априорная разреженность (нагрузки)
 Sparseness of factor loadings	Разреженность факторных нагрузок
 Sparseness prior (factors)	Априорная разреженность (факторы)
 Sparseness of factors	Разреженность факторов
+Membership threshold	Порог принадлежности
+Cut point that turns FABIA's continuous factors into membership; raising it admits more cases into each bicluster and fewer variables	Точка отсечения, превращающая непрерывные факторы FABIA в принадлежность; её повышение включает в каждый бикластер больше наблюдений и меньше переменных
 Number of iterations	Количество итераций
 Step 2: determine optimal k	Шаг 2: Определение оптимального k
 Compare solutions across a range of cluster numbers to find the optimal k	Сравните решения для различного числа кластеров, чтобы найти оптимальное k
@@ -5403,9 +5535,11 @@ Show coverage plot	Показать график покрытия
 Stability analysis (bootstrap, slower)	Анализ устойчивости (бутстрэп, медленнее)
 F-statistic diagnostics (slower)	Диагностика F-статистики (медленнее)
 Consensus scoring (slower)	Консенсусная оценка (медленнее)
+Stability and consensus refit the biclustering once per replicate, for every k in the range; the F-statistic diagnostics resample once per bicluster found at every k, so they cost the range width times the biclusters found times the replications below	Устойчивость и консенсус заново подгоняют бикластеризацию на каждом повторе и для каждого k из диапазона; диагностика по F-статистике выполняет ресемплирование для каждого бикластера, найденного при каждом k, поэтому её стоимость равна ширине диапазона, умноженной на число найденных бикластеров и на число повторов ниже
 Stability and consensus each refit the biclustering once per bootstrap replicate, for every k in the range, so their cost is the range width times the "Bootstrap replications" setting	Устойчивость и консенсус заново подгоняют бикластеризацию на каждом повторе бутстрэпа и для каждого k из диапазона, поэтому их стоимость равна ширине диапазона, умноженной на настройку «Повторы бутстрэпа»
 Automatic detection	Автоматическое определение
 This algorithm determines the number of biclusters from the data.	Этот алгоритм определяет число бикластеров по данным.
+Spectral keeps every candidate whose spread stays below the "Maximum within-bicluster spread" set in Step 1, so that control decides how many come back.	Спектральный алгоритм оставляет всех кандидатов с разбросом ниже значения «Максимальный разброс внутри бикластера», заданного на шаге 1, поэтому именно этот параметр определяет, сколько их будет найдено.
 Spectral keeps every candidate whose variance stays below the "Maximum within-bicluster variance" set in Step 1, so that control decides how many come back.	Спектральный алгоритм оставляет всех кандидатов с дисперсией ниже значения «Максимальная дисперсия внутри бикластера», заданного на шаге 1, поэтому именно этот параметр определяет, сколько их будет найдено.
 This algorithm determines the optimal number of biclusters automatically.	Этот алгоритм автоматически определяет оптимальное число бикластеров.
 Run clustering with selected number of clusters	Запустить кластеризацию с выбранным числом кластеров
@@ -5416,6 +5550,7 @@ Silhouette analysis	Силуэтный анализ
 Calinski-Harabasz index	Индекс Калинского-Харабаша
 Davies-Bouldin index	Индекс Дэвиса-Болдина
 Dunn index	Индекс Данна
+Every metric is recomputed for each k in the range, so switching off the ones you will not read is what makes a wide range affordable	Каждая метрика пересчитывается для каждого k из диапазона, поэтому широкий диапазон остаётся посильным лишь тогда, когда метрики, которые вы не будете читать, отключены
 Cluster stability (bootstrap Jaccard, slower)	Устойчивость кластеров (бутстрэп, Жаккар, медленнее)
 Reclusters each bootstrap resample and reports how much of every cluster survives, so a cluster that only exists in this one sample scores low	Заново кластеризует каждую бутстрэп-выборку и показывает, какая часть каждого кластера сохраняется, поэтому кластер, существующий только в этой выборке, получает низкую оценку
 Bootstrap replicates	Повторы бутстрэпа
@@ -5428,10 +5563,13 @@ Silhouette plot	Силуэтный график
 Hierarchical options	Параметры иерархической кластеризации
 Dendrogram	Дендрограмма
 Optimize leaf ordering	Оптимизировать порядок листьев
+Rotates branches so neighbouring leaves are as similar as the tree allows; the search is exact, so it adds a wait on several hundred cases	Поворачивает ветви так, чтобы соседние листья были настолько похожи, насколько это допускает дерево; поиск точный, поэтому на нескольких сотнях наблюдений добавляется заметное ожидание
 Variable contribution to clustering	Вклад переменных в кластеризацию
 Run biclustering analysis	Запустить анализ бикластеризации
 Number of biclusters (k)	Число бикластеров (k)
 Bicluster summary table	Сводная таблица бикластеров
+Stability (bootstrap Jaccard, slower)	Устойчивость (бутстрэп, Жаккар, медленнее)
+Refits the biclustering on each bootstrap resample of the cases and reports how much of every bicluster survives, so one that exists only in this sample scores low	Заново подгоняет бикластеризацию на каждой бутстрэп-выборке наблюдений и показывает, какая часть каждого бикластера сохраняется, поэтому бикластер, существующий только в этой выборке, получает низкую оценку
 Membership tables (rows and columns)	Таблицы принадлежности (строки и столбцы)
 Bicluster profiles (means per variable)	Профили бикластеров (средние по переменным)
 Coherence per bicluster	Когерентность по бикластерам
@@ -5441,7 +5579,9 @@ Row dendrogram	Дендрограмма строк
 Column dendrogram	Дендрограмма столбцов
 Failed to compare cluster solutions	Не удалось сравнить решения кластеризации
 Failed to run cluster analysis	Не удалось запустить кластерный анализ
+Optimizing leaf ordering	Оптимизация порядка листьев
 Computing gap statistic (Monte Carlo)	Вычисление статистики разрыва (Монте-Карло)
+Computing gap statistic ({done} of {total})	Вычисление статистики разрыва ({done} из {total})
 Assessing cluster tendency	Оценка тенденции к кластеризации
 Testing k = {k}	Проверка k = {k}
 Computing Hartigan's index	Вычисление индекса Хартигана
@@ -5466,6 +5606,7 @@ Computing overlap analysis	Вычисление анализа перекрыт�
 Preparing heatmap data	Подготовка данных тепловой карты
 Computing row dendrogram	Построение дендрограммы строк
 Computing column dendrogram	Построение дендрограммы столбцов
+Stability replicate {i} of {total}	Повтор устойчивости {i} из {total}
 Running stability analysis (bootstrap)	Выполняется анализ устойчивости (бутстрэп)
 Stability for k = {k}	Устойчивость при k = {k}
 Running F-statistic diagnostics	Выполняется диагностика по F-статистике
@@ -5480,11 +5621,18 @@ Could not build dendrogram structure	Не удалось построить ст
 No data to display	Нет данных для отображения
 No heatmap data available	Данные для тепловой карты недоступны
 Showing {shown} of {total} rows	Показано {shown} из {total} строк
+The row dendrogram is hidden while rows are sampled, since its leaves would not line up with the drawn rows	Дендрограмма строк скрыта, пока строки прорежены, поскольку её листья не совпали бы с нарисованными строками
 Per-cell tooltips are omitted above {limit} cells	Подсказки по ячейкам не показываются, если ячеек больше {limit}
 {row}, {col}: {value} (Biclusters {list})	{row}, {col}: {value} (бикластеры {list})
 Within-cluster SS	Внутрикластерная СК
+The ring marks the elbow: the k furthest from the line joining the first and last point	Кольцом отмечен локоть: k, наиболее удалённое от прямой, соединяющей первую и последнюю точки
+No elbow is marked: the curve bends too little for the heuristic to pick a k	Локоть не отмечен: кривая изгибается слишком слабо, чтобы эвристика могла выбрать k
 Silhouette score	Силуэтный коэффициент
+The highlighted point is the k with the highest average silhouette; the guides at 0.25, 0.5 and 0.7 separate weak, reasonable and strong structure	Выделена точка с наибольшим средним силуэтом; направляющие на 0,25, 0,5 и 0,7 разделяют слабую, достаточную и сильную структуру
+The gap statistic could not be computed: {error}	Не удалось вычислить статистику разрыва: {error}
 Gap statistic	Статистика разрыва
+Bars span ±1 SE. The highlighted k is the smallest whose gap reaches the next k's gap less its SE	Полосы охватывают ±1 SE. Выделено наименьшее k, разрыв которого достигает разрыва следующего k за вычетом его SE
+The rule's k = {k} lies outside the range tested here	Выбранное правилом k = {k} лежит вне проверенного здесь диапазона
 Avg: {value}	Ср.: {value}
 Some merges sit below the pair they join (inversions), which centroid and median linkage can produce	Некоторые слияния расположены ниже объединяемой пары (инверсии) – такое возможно при центроидном и медианном методах
 Drag the cut line to explore k, then click it to use that k in Step 3	Перетащите линию разреза, чтобы подобрать k, затем щёлкните по ней, чтобы использовать это k на шаге 3
@@ -5492,6 +5640,7 @@ Drag the cut line to explore k	Перетащите линию разреза, �
 Move the cut to the suggested k	Переместить разрез к рекомендуемому k
 Silhouette width	Ширина силуэта
 Height	Высота
+{n} variables	{n} переменных
 {n} observations	{n} наблюдений
 Column	Столбец
 Cell	Ячейка
@@ -5499,6 +5648,7 @@ Prop. significant (p < {alpha})	Доля значимых (p < {alpha})
 Coverage (%)	Покрытие (%)
 Row effects	Эффекты строки
 Column effects	Эффекты столбца
+Descriptive only: the biclusters were chosen to maximise these effects, and the null draws single cells from the whole matrix, so the proportions are inflated by construction and are not a valid significance test.	Только описательно: бикластеры выбирались так, чтобы максимизировать эти эффекты, а нулевое распределение строится по отдельным ячейкам всей матрицы, поэтому доли завышены по построению и не являются корректным критерием значимости.
 Prop. significant (p < 0.05)	Доля значимых (p < 0,05)
 {row}, {col}: {value} (Bicluster {n})	{row}, {col}: {value} (бикластер {n})
 Biclusters:	Бикластеры:
@@ -5512,8 +5662,10 @@ Comparing variable cluster solutions...	Сравнение решений кла
 Comparing cluster solutions...	Сравнение решений кластеризации...
 An error occurred during cluster comparison: 	Произошла ошибка при сравнении кластеров: 
 Number of clusters must be at least 2.	Число кластеров должно быть не менее 2.
+Number of clusters ({k}) must be fewer than the number of variables ({n}).	Число кластеров ({k}) должно быть меньше числа переменных ({n}).
 Number of clusters ({k}) cannot exceed the number of variables ({n}).	Число кластеров ({k}) не может превышать число переменных ({n}).
 Not enough complete cases ({n}) for {k} clusters.	Недостаточно полных наблюдений ({n}) для {k} кластеров.
+Hopkins and Duda-Hart are computed under Euclidean geometry, whatever distance metric is selected	Статистика Хопкинса и Дуда-Харт вычисляются в евклидовой геометрии независимо от выбранной метрики расстояния
 Cluster tendency	Тенденция к кластеризации
 Running variable cluster analysis...	Выполнение кластерного анализа переменных...
 Running cluster analysis...	Выполнение кластерного анализа...
@@ -5529,10 +5681,13 @@ Please select at least two numerical variables for biclustering analysis.	Пож
 Please enter a valid bicluster range.	Пожалуйста, укажите корректный диапазон числа бикластеров.
 Maximum biclusters must be greater than minimum.	Максимальное число бикластеров должно быть больше минимального.
 Not enough complete cases ({n}) for the requested maximum biclusters ({k}).	Недостаточно полных наблюдений ({n}) для запрошенного максимального числа бикластеров ({k}).
+FABIA cannot find more biclusters ({k}) than there are variables ({n}).	FABIA не может найти больше бикластеров ({k}), чем есть переменных ({n}).
+Biclustering needs at least two complete cases ({n} available).	Для бикластеризации нужно не менее двух полных наблюдений (доступно: {n}).
 Comparing bicluster solutions...	Сравнение бикластерных решений...
 An error occurred during bicluster comparison: 	Произошла ошибка при сравнении бикластеров: 
 Number of biclusters must be at least 1.	Число бикластеров должно быть не менее 1.
 Not enough complete cases ({n}) for {k} biclusters.	Недостаточно полных наблюдений ({n}) для {k} бикластеров.
+Variance explained (model, %)	Объяснённая дисперсия (модель, %)
 Running biclustering analysis...	Выполняется бикластерный анализ...
 An error occurred during biclustering analysis: 	Произошла ошибка при бикластерном анализе: 
 No biclusters were found. Try adjusting the algorithm parameters.	Бикластеры не найдены. Попробуйте изменить параметры алгоритма.
@@ -5551,6 +5706,7 @@ Between-cluster sum of squares:	Межкластерная сумма квадр
 Variance explained:	Объяснённая дисперсия:
 Distance metric:	Метрика расстояния:
 Linkage method:	Метод слияния:
+K-means algorithm:	Алгоритм К-средних:
 Initialization method:	Метод инициализации:
 Number of random starts:	Число случайных запусков:
 Maximum iterations:	Максимальное число итераций:
@@ -5558,6 +5714,9 @@ Standardized (z-scores):	Стандартизация (z-оценки):
 Click a cluster count to use it in Step 3	Нажмите на количество кластеров, чтобы использовать его на шаге 3
 Green marks the best value in a column; yellow marks a Hartigan index above 10, meaning another cluster is still worth adding	Зелёным отмечено лучшее значение в столбце; жёлтым – индекс Хартигана выше 10, означающий, что стоит добавить ещё один кластер
 The k = 1 row reports the unpartitioned data; the separation indices need at least two clusters and read N/A there	Строка k = 1 описывает неразбитые данные; индексы разделения требуют не менее двух кластеров и показывают там Н/Д
+Within-SS, variance explained, Calinski-Harabasz and Hartigan are computed under Euclidean geometry, whatever distance metric is selected	Внутрикластерная СК, объяснённая дисперсия, индекс Калинского-Харабаша и индекс Хартигана вычисляются в евклидовой геометрии независимо от выбранной метрики расстояния
+Gap scores the data against a uniform reference sample, which is not a structureless null for a correlation dissimilarity	Статистика разрыва сравнивает данные с равномерной эталонной выборкой, а она не является бесструктурной нулевой моделью для корреляционной меры различия
+The gap statistic could not be computed, so its column reads N/A	Статистику разрыва вычислить не удалось, поэтому её столбец показывает Н/Д
 Within-SS, variance explained, Calinski-Harabasz and Hartigan are computed from centroids under Euclidean geometry, whatever distance metric is selected	Внутрикластерная СК, объяснённая дисперсия, индекс Калинского-Харабаша и индекс Хартигана вычисляются по центроидам в евклидовой геометрии независимо от выбранной метрики расстояния
 Matrix size:	Размер матрицы:
 Not applicable: this algorithm is deterministic, so every run returns the same solution.	Неприменимо: алгоритм детерминирован, поэтому каждый запуск даёт одно и то же решение.
@@ -5570,9 +5729,15 @@ Column coverage:	Покрытие столбцов:
 Cell coverage:	Покрытие ячеек:
 Row overlap:	Перекрытие строк:
 Column overlap:	Перекрытие столбцов:
+Cell overlap:	Перекрытие ячеек:
+The fit failed for k = {k}	Не удалось подогнать модель при k = {k}
 Click a bicluster count to use it in Step 3	Нажмите на количество бикластеров, чтобы использовать его на шаге 3
+FABIA is a factor decomposition, so variance explained scores its own factorization rather than the bicluster blocks; the Δ var. column and the variance-explained elbow read the same figure	FABIA – это факторное разложение, поэтому объяснённая дисперсия оценивает саму факторизацию, а не блоки бикластеров; столбец «Δ Дисп.» и локоть по объяснённой дисперсии используют ту же величину
+MSR is undefined for a bicluster with fewer than two rows or two columns; where only some qualify, Avg MSR names how many it averaged	MSR не определён для бикластера, в котором меньше двух строк или двух столбцов; если подходят лишь некоторые, «Ср. MSR» указывает, по скольким он усреднён
 Green marks the best value in a column	Зелёным отмечено лучшее значение в столбце
+Descriptive only: the biclusters were chosen to maximise these effects, and the null draws single cells from the whole matrix, so the F columns are inflated by construction and are not a valid significance test	Только описательно: бикластеры выбирались так, чтобы максимизировать эти эффекты, а нулевое распределение строится по отдельным ячейкам всей матрицы, поэтому столбцы F завышены по построению и не являются корректным критерием значимости
 Yellow marks an average overlap above {threshold}, where the biclusters largely repeat one another	Жёлтым отмечено среднее перекрытие выше {threshold}, при котором бикластеры во многом повторяют друг друга
+Yellow in the Found column marks a count the algorithm could not fill, so the row repeats the largest solution it did find	Жёлтым в столбце «Найдено» отмечено число, которое алгоритм не смог набрать, поэтому строка повторяет наибольшее найденное им решение
 At least two of the selected variables must vary across the complete cases. No variance: {vars}	Как минимум две выбранные переменные должны варьировать по полным наблюдениям. Без дисперсии: {vars}
 Solution comparison	Сравнение решений
 Elbow plot (within-cluster SS)	График локтя (внутрикластерная СК)
@@ -5586,6 +5751,7 @@ Variable cluster comparison	Сравнение кластеров перемен
 Cluster comparison	Сравнение кластеров
 Within-SS, variance explained and Calinski-Harabasz are computed from centroids under Euclidean geometry, whatever distance metric is selected	Внутрикластерная СК, объяснённая дисперсия и индекс Калинского-Харабаша вычисляются по центроидам в евклидовой геометрии независимо от выбранной метрики расстояния
 Warnings	Предупреждения
+Unbalanced clusters: the smallest holds {n} cases ({pct}% of the total) and the largest is {ratio}x its size, so the solution may be unstable	Несбалансированные кластеры: наименьший содержит {n} наблюдений ({pct}% от общего числа), а наибольший превосходит его в {ratio} раз, поэтому решение может быть неустойчивым
 K-means stopped after {n} iterations without converging. Raise the iteration limit or the number of random starts.	К-средних остановился после {n} итераций, не достигнув сходимости. Увеличьте предел итераций или число случайных запусков.
 Cluster validity metrics	Метрики качества кластеризации
 Cluster stability (bootstrap Jaccard)	Устойчивость кластеров (бутстрэп, Жаккар)
@@ -5593,7 +5759,10 @@ Cluster sizes	Размеры кластеров
 Variable cluster assignments	Распределение переменных по кластерам
 Cluster profiles (variable means)	Профили кластеров (средние значения переменных)
 Medoids are actual observations that represent each cluster center.	Медоиды – это реальные наблюдения, представляющие центр каждого кластера.
+Overall mean	Общее среднее
 Cluster medoids	Медоиды кластеров
+Euclidean sums of squares over the transposed standardized matrix, where each variable is a point in case space	Евклидовы суммы квадратов по транспонированной стандартизированной матрице, где каждая переменная – точка в пространстве наблюдений
+Euclidean sums of squares over the transposed matrix, where each variable is a point in case space	Евклидовы суммы квадратов по транспонированной матрице, где каждая переменная – точка в пространстве наблюдений
 Euclidean sums of squares on the standardized analysis matrix, not on the original scale of the cluster profiles above	Евклидовы суммы квадратов на стандартизированной матрице анализа, а не в исходном масштабе профилей кластеров выше
 Euclidean sums of squares on the analysis matrix, whatever distance metric is selected	Евклидовы суммы квадратов на матрице анализа независимо от выбранной метрики расстояния
 Cluster Medoids	Медоиды кластеров
@@ -5610,13 +5779,26 @@ Some clusters have very few observations (n = {n}). Results may be unstable.	Н�
 Extreme size imbalance: largest cluster is {ratio}x bigger than smallest	Крайний дисбаланс размеров: наибольший кластер в {ratio} раз больше наименьшего
 Low silhouette score ({score}) suggests no substantial cluster structure	Низкий силуэтный коэффициент ({score}) указывает на отсутствие выраженной кластерной структуры
 Moderate silhouette score ({score}) indicates weak cluster structure	Умеренный силуэтный коэффициент ({score}) указывает на слабую кластерную структуру
+{pct}% of variables have negative silhouette (may be assigned to wrong cluster)	{pct}% переменных имеют отрицательный силуэт (возможно, отнесены не к тому кластеру)
 {pct}% of observations have negative silhouette (may be assigned to wrong cluster)	{pct}% наблюдений имеют отрицательный силуэт (возможно, отнесены не к тому кластеру)
+{n} of {total} clusters did not reproduce reliably across resamples (mean Jaccard below {cut}), so they may not reappear in another sample	{n} из {total} кластеров не воспроизвелись надёжно при ресемплировании (средний коэффициент Жаккара ниже {cut}), поэтому в другой выборке они могут не появиться
 Only {found} of the {requested} requested biclusters were found.	Найдено только {found} из {requested} запрошенных бикластеров.
 Some biclusters ({n} of {total}) have fewer than two rows or two columns, so their coherence (MSR) is undefined.	Некоторые бикластеры ({n} из {total}) содержат менее двух строк или двух столбцов, поэтому их когерентность (MSR) не определена.
+The biclusters share {pct}% of their cells with one another on average, so they largely repeat the same structure.	Бикластеры в среднем делят друг с другом {pct}% своих ячеек, поэтому во многом повторяют одну и ту же структуру.
 The biclusters cover only {pct}% of the data matrix, so most cells belong to no bicluster.	Бикластеры покрывают лишь {pct}% матрицы данных, поэтому большинство ячеек не входит ни в один бикластер.
 The biclusters cover {pct}% of the data matrix, so they describe it as a whole rather than local structure.	Бикластеры покрывают {pct}% матрицы данных, поэтому они описывают её целиком, а не локальную структуру.
+No biclusters were found at any of the counts tested. Try adjusting the algorithm parameters or widening the range.	Бикластеры не найдены ни при одном из проверенных значений. Попробуйте изменить параметры алгоритма или расширить диапазон.
+Every count tested overlaps above {threshold}, so the biclusters largely repeat one another whichever is chosen.	При каждом проверенном значении перекрытие превышает {threshold}, поэтому при любом выборе бикластеры во многом повторяют друг друга.
+Stability could not be measured at any count, so the suggested number of biclusters falls back to variance explained.	Устойчивость не удалось измерить ни при одном значении, поэтому рекомендуемое число бикластеров определяется по объяснённой дисперсии.
+Number of row and column groups:	Число групп строк и столбцов:
+Number of singular vectors:	Число сингулярных векторов:
+Normalization method:	Метод нормализации:
+Maximum within-bicluster spread:	Максимальный разброс внутри бикластера:
+Minimum rows:	Минимальное число строк:
+Minimum columns:	Минимальное число столбцов:
 Clustered structure	Кластерная структура
 Regularly spaced, not clustered	Регулярное расположение, без кластеров
+Weak or unclear tendency (0.5 is what random data gives)	Слабая или неясная тенденция (0,5 соответствует случайным данным)
 No cluster tendency (0.5 is what random data gives)	Нет тенденции к кластеризации (0,5 соответствует случайным данным)
 Two clusters beat one	Два кластера лучше одного
 One cluster is not rejected	Гипотеза об одном кластере не отвергается
@@ -5637,12 +5819,16 @@ Use this cluster count	Использовать это количество кл
 Average silhouette width	Средняя ширина силуэта
 Higher is better	Чем выше, тем лучше
 Lower is better	Чем ниже, тем лучше
+Cophenetic correlation	Кофенетическая корреляция
+How faithfully the tree reproduces the input dissimilarities; 0.75 and above is the usual mark of a good fit	Насколько точно дерево воспроизводит исходные меры различия; значения от 0,75 обычно считаются признаком хорошего соответствия
 Strong structure	Сильная структура
 Reasonable structure	Достаточная структура
 Weak structure	Слабая структура
 No substantial structure	Нет устойчивой структуры
 Highly stable	Высокоустойчивый
 Stable	Устойчивый
+Indicates a pattern, but membership is doubtful	Указывает на закономерность, но принадлежность сомнительна
+Not trustworthy	Не заслуживает доверия
 Measures a pattern, but is not stable	Отражает закономерность, но неустойчив
 Dissolved	Распалось
 Mean Jaccard	Средний Жаккар
@@ -5667,16 +5853,19 @@ Based on the highest bootstrap stability	На основе наибольшей 
 Bicluster solution comparison	Сравнение бикластерных решений
 Bicluster comparison	Сравнение бикластеров
 Overview	Обзор
+FABIA is a factor decomposition, so variance explained scores its own factorization rather than the bicluster blocks	FABIA – это факторное разложение, поэтому объяснённая дисперсия оценивает саму факторизацию, а не блоки бикластеров
 Bicluster summary	Сводка по бикластерам
 Case membership	Принадлежность наблюдений
 Variable membership	Принадлежность переменных
 Bicluster profiles (variable means)	Профили бикластеров (средние значения переменных)
 Overlap analysis (Jaccard Index)	Анализ перекрытия (индекс Жаккара)
+Cell overlap is the quantity the solution comparison reports as "Avg overlap": two biclusters can share most of their rows and most of their columns and still barely intersect as blocks	Перекрытие ячеек – это та величина, которую сравнение решений показывает как «Ср. перекрытие»: два бикластера могут совпадать по большинству строк и по большинству столбцов и при этом почти не пересекаться как блоки
 Heatmap	Тепловая карта
 Insert bicluster memberships into dataset	Добавить принадлежность к бикластерам в набор данных
 Biclustering results	Результаты бикластеризации
 Cheng & Church (CC)	Ченг и Чёрч (CC)
 Found	Найдено
+Var. Expl. (model, %)	Объясн. дисп. (модель, %)
 Var. Expl. (%)	Объясн. дисп. (%)
 Δ var. (%)	Δ Дисп. (%)
 Avg MSR	Ср. MSR
@@ -5692,8 +5881,12 @@ Use this bicluster count	Использовать это количество б
 Bicluster	Бикластер
 Rows	Строки
 Columns	Столбцы
+Mean value (z)	Среднее значение (z)
 Mean value	Среднее значение
 MSR	MSR
+Mean value is in analysis units (z-scores); the bicluster profiles table reports means on the variables' original scale.	Среднее значение приведено в единицах анализа (z-оценки); в таблице профилей бикластеров средние показаны в исходном масштабе переменных.
+Stability is the mean Jaccard between each bicluster and its closest counterpart when the cases are resampled and the algorithm refitted.	Стабильность – это средний коэффициент Жаккара между каждым бикластером и его ближайшим аналогом при ресемплировании наблюдений и повторной подгонке алгоритма.
+MSR / matrix MSR	MSR / MSR матрицы
 Bicluster {n}	Бикластер {n}
 Variance of row means	Дисперсия средних по строкам
 Variance of column means	Дисперсия средних по столбцам
